@@ -2,12 +2,15 @@ package com.hust.lw.controller;
 
 import com.hust.lw.model.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HelloController2 {
+
     @RequestMapping("hello2")
     public ModelAndView handleRequest2(javax.servlet.http.HttpServletRequest httpServletRequest, javax.servlet.http.HttpServletResponse httpServletResponse) throws Exception {
         ModelAndView mav = new ModelAndView("index.jsp");
@@ -52,6 +55,12 @@ public class HelloController2 {
         System.out.println("this is getpara3");
         System.out.println(user.getUserName());
         System.out.println(user.getPassword());
+        return null;
+    }
+
+    @RequestMapping(value="param/param4/{id}", method= RequestMethod.GET)
+    public ModelAndView getParam4(@PathVariable("id") Integer id) throws Exception {
+        System.out.println("this is id=" + id);
         return null;
     }
 }
