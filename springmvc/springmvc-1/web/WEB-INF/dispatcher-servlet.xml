@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="simpleUrlHandlerMapping"
-          class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-        <property name="mappings">
-            <props>
-                <!-- /hello 路径的请求交给 id 为 helloController 的控制器处理-->
+    <!-- 指明controller和context:component-scan不能存在
+        <bean id="simpleUrlHandlerMapping"
+              class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+            <property name="mappings">
+                <props>
+    -->
+                    <!-- /hello 路径的请求交给 id 为 helloController 的控制器处理-->
+    <!--
+
                 <prop key="/hello">helloController</prop>
             </props>
         </property>
     </bean>
     <bean id="helloController" class="com.hust.lw.controller.HelloController"></bean>
+    -->
 
+    <!-- 扫描ccom.hust.lw.controller下的组件 -->
+    <context:component-scan base-package="com.hust.lw.controller"/>
 </beans>
