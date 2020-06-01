@@ -7,11 +7,14 @@
 <title>Form</title>
 </head>
 <body>
-	<form:form action="../form/add" method="post" modelAttribute="user">
-		ids:<form:input path="id" /><form:errors path="id"/><br>
-		name:<form:input path="name" /><form:errors path="name"/><br>
-		birth:<form:input path="birth" /><form:errors path="birth"/><br>
-		<input type="submit" value="submit">
-	</form:form>
+<jsp:useBean id="user" class="com.spring.mvc.integrate.User" scope="request"/>
+<form:form action="../form/add" method="post" modelAttribute="user">
+	ids:<form:input path="id" /><form:errors path="id"/><br>
+	name:<form:input path="name" /><form:errors path="name"/><br>
+	birth:<form:input path="birth" /><form:errors path="birth"/><br>
+	<input type="submit" value="submit">
+</form:form>
+
+
 </body>
 </html>
