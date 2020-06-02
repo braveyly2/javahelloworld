@@ -1,11 +1,13 @@
 package com.spring.mvc.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -29,6 +31,10 @@ public class FormController {
 
 	@RequestMapping(value="/add", method=RequestMethod.POST)
 	public String add(@Valid User user, BindingResult br) {
+		List<ObjectError> ls=br.getAllErrors();
+		for (int i = 0; i < ls.size(); i++) {
+			System.out.println("error:"+ls.get(i).getDefaultMessage());
+		}
 		if(br.getErrorCount() > 0) {
 			return "addUser";
 		}
