@@ -22,7 +22,7 @@ public class HelloController3 {
     //使用modelandview
     @RequestMapping("value1")
     public ModelAndView showValue1(javax.servlet.http.HttpServletRequest httpServletRequest, javax.servlet.http.HttpServletResponse httpServletResponse) throws Exception {
-        ModelAndView mav = new ModelAndView("show.jsp");
+        ModelAndView mav = new ModelAndView("show");
         mav.addObject("message","succeed1");
         return mav;
     }
@@ -31,7 +31,7 @@ public class HelloController3 {
     @RequestMapping("value2")
     public String showValue2(Model model) throws Exception {
         model.addAttribute("message","succeed2");
-        return "show.jsp";
+        return "show";
     }
 
     //使用modelAttribute
@@ -42,6 +42,6 @@ public class HelloController3 {
 
     @RequestMapping("value3")
     public String showValue3() throws Exception {
-        return "show.jsp";
+        return "show";
     }
 }

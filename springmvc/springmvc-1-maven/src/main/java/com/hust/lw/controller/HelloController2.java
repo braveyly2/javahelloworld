@@ -13,7 +13,7 @@ public class HelloController2 {
 
     @RequestMapping("hello2")
     public ModelAndView handleRequest2(javax.servlet.http.HttpServletRequest httpServletRequest, javax.servlet.http.HttpServletResponse httpServletResponse) throws Exception {
-        ModelAndView mav = new ModelAndView("index.jsp");
+        ModelAndView mav = new ModelAndView("index");
         mav.addObject("message", "Hello Spring MVC2");
         mav.addObject("title", "LW");
         return mav;
