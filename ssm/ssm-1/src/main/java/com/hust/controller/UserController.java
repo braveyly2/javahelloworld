@@ -52,6 +52,13 @@ public class UserController {
         return "login";
     }
 
+    @RequestMapping(value="/user/sessionInfo",method=RequestMethod.GET)
+    public String sessionInfo(HttpSession session){
+        System.out.println("session.id=" + session.getId());
+        User user = (User) session.getAttribute("user");
+        System.out.println("username =" + (String) user.getName());
+        return "userInfo";
+    }
     @RequestMapping(value="/user/logout",method=RequestMethod.GET)
     public String logout(HttpSession session){
         session.invalidate();
