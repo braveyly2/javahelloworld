@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class messageController {
+public class MessageController {
     @RequestMapping("/message/go")
     public String redirect(){
         return "reach";

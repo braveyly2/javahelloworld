@@ -11,6 +11,9 @@
         <input id="reportCommit" type="submit" name="submmit"/>
     </form>
 </div>
+
+<a href="login"> goto login</a>
+<a href="register"> goto register</a>
 </body>
 </html>
 <script>
