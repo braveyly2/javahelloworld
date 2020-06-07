@@ -1,5 +1,6 @@
 package com.hust.controller;
 
+import com.hust.entity.RestBean;
 import com.hust.entity.User;
 import com.hust.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +25,13 @@ public class UserController {
         hashmap.put("code",200);
         hashmap.put("user",user);
         return hashmap;
+    }
+
+    @RequestMapping(value="hello2",method=RequestMethod.POST)
+    @ResponseBody
+    RestBean hello2(@RequestBody User user){
+        RestBean restBean = RestBean.ok("this is ok");
+        restBean.setObj((Object)user);
+        return restBean;
     }
 }
