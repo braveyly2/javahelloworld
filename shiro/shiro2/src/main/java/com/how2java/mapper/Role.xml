@@ -8,7 +8,7 @@
 			select r.id, r.name from user u 
 				left join user_role ur 
 					on u.id = ur.uid 
-				left join Role r 
+				left join role r
 					on r.id = ur.rid 
 			where u.name = #{0}
 	    </select>
