@@ -11,6 +11,12 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.JWTVerifier;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.JWTDecodeException;
+import com.auth0.jwt.interfaces.DecodedJWT;
+
 /**
  * @author 慌途L
  */
@@ -166,6 +172,20 @@ public class JwtUtilsHelper {
         return (nowDate > expiration) ? true : false;
     }
 
+    public static boolean verify(String token, String data, String secretKey) {
+        try {
+            Algorithm algorithm = Algorithm.HMAC512(secretKey);
+            JWTVerifier verifier = JWT.require(algorithm)
+                    .withClaim("user_id",169061)
+                    .withClaim("user_name","admin")
+                    .withClaim("ip","192.168.110.555")
+                    .build();
+            DecodedJWT jwt = verifier.verify(token);
+            return true;
+        } catch (Exception exception) {
+            return false;
+        }
+    }
 
     public static void main(String[] args) {
 
@@ -186,6 +206,9 @@ public class JwtUtilsHelper {
         System.out.println(jwt);
         System.out.println(jwt2);
         System.out.println("\n");
+        if(verify(jwt, JSONObject.fromObject(payload).toString(), SECRET_KEY)){
+            System.out.println("verify pass for token:" + jwt);
+        }
 
         //解析jwt
         Jwt parseJwt = accessTonkenDecodeAll(jwt);//四小时过期
