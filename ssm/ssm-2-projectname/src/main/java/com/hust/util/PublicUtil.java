@@ -269,9 +269,8 @@ public class PublicUtil {
     }
 
     public static BasicOutput getDefaultBasicOutputByInput(BasicInput basicInput){
-        return new BasicOutput();
+        return new BasicOutput(basicInput.getId(), basicInput.getTime(), 0, null, null);
     }
-
     /**
      * 获得请求id
      * 此id仅用于对应请求和应答数据，并发时不同线程产生相等的id没有影响

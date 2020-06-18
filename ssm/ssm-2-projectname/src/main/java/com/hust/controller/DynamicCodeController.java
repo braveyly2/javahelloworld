@@ -167,9 +167,7 @@ public class DynamicCodeController {
                         Map<String, String> keyMap = RSAUtil.createKeys(1024);
                         String publicKey = keyMap.get("publicKey");
                         String privateKey = keyMap.get("privateKey");
-                        //String publicKey = "publicKey";
-                        //String privateKey = "privateKey";
-                        //end
+
                         //将私钥，验证码放入缓存
                         //String codeKey = UserConstant.REDIS_REGISTER_CODE + getDynamicCodeDto.getLoginName() + UserConstant.REDIS_CODE;
                         //DynamicCodeRedisDto dynamicCodeDto = (DynamicCodeRedisDto) jedisUtils.get(codeKey);
