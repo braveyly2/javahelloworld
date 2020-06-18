@@ -26,6 +26,9 @@ public class RSAUtil {
     private static final String RSA_ALGORITHM = "RSA";
     private static final Provider provider = new BouncyCastleProvider();
 
+    public static int hello(){
+        return 1;
+    }
 
     public static Map<String, String> createKeys(int keySize) throws Exception {
         //为RSA算法创建一个KeyPairGenerator对象

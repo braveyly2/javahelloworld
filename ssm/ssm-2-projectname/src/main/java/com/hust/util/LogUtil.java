@@ -24,8 +24,9 @@ public class LogUtil {
     static {
         innerLogger = LoggerFactory.getLogger(LogUtil.class);
         try {
-            ResourceBundle resource = ResourceBundle.getBundle("commoncfg");
-            modelNameLen = Integer.parseInt(resource.getString("modelNameLen"));
+            //ResourceBundle resource = ResourceBundle.getBundle("commoncfg");
+            //modelNameLen = Integer.parseInt(resource.getString("modelNameLen"));
+            modelNameLen = 10;
             innerMethod = innerLogger.getClass().getDeclaredMethod("filterAndLog_0_Or3Plus", String.class, Marker.class, Level.class, String.class, Object[].class, Throwable.class);
             innerMethod.setAccessible(true);
 //            reloadcfg();

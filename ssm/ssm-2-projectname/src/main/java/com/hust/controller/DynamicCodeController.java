@@ -67,13 +67,14 @@ public class DynamicCodeController {
     //private UserService userService;
     @RequestMapping(value = "/hellocode", method = RequestMethod.POST)
     public int hello(){
+        int a = RSAUtil.hello();
         System.out.println("var=");
         try {
             Map<String, String> keyMap = RSAUtil.createKeys(1024);
         }catch (Exception e){
             System.out.println("e="+e);
         }
-        return 1;
+        return 2;
     }
 
     @RequestMapping(value = "/user/sms-code/no-token/get", method = RequestMethod.POST)
@@ -163,11 +164,11 @@ public class DynamicCodeController {
                 if (response.getBasic().getCode() == ErrorCodeEnum.TD200.code()) {
                     try {
                         //生成私钥、公钥对
-                        //Map<String, String> keyMap = RSAUtil.createKeys(1024);
-                        //String publicKey = keyMap.get("publicKey");
-                        //String privateKey = keyMap.get("privateKey");
-                        String publicKey = "publicKey";
-                        String privateKey = "privateKey";
+                        Map<String, String> keyMap = RSAUtil.createKeys(1024);
+                        String publicKey = keyMap.get("publicKey");
+                        String privateKey = keyMap.get("privateKey");
+                        //String publicKey = "publicKey";
+                        //String privateKey = "privateKey";
                         //end
                         //将私钥，验证码放入缓存
                         //String codeKey = UserConstant.REDIS_REGISTER_CODE + getDynamicCodeDto.getLoginName() + UserConstant.REDIS_CODE;
