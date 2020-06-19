@@ -1,6 +1,6 @@
 package com.hust.dao;
 
-import com.hust.entity.User;
+import com.hust.entity.domain.User;
 
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);

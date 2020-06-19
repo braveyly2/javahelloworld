@@ -1,8 +1,6 @@
 package com.hust.service;
 
-import com.hust.entity.User;
-
-import java.util.ArrayList;
+import com.hust.entity.domain.User;
 
 public interface UserService {
     int insert(User record);

@@ -13,13 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 /*
+/user/sms-code/no-token/get
 {
 	"basic": {
 		"ver": "1.0",
 		"time": 1592399555986,
-		"id": 2,
+		"id": 30,
 		"nonce": 1567246549,
-		"token": null
+		"token": null,
 	},
 	"data": {
 		"businessType": 15,
@@ -29,6 +30,22 @@ import java.util.Map;
 		"imgCode": "",
         "lang":""
 	}
+}
+
+
+{
+    "basic": {
+        "id": "30",
+        "time": 1592399555986,
+        "code": 200,
+        "msg": "operate successfully",
+        "sign": "d19d689aae5377db54829eb6d9f620b1"
+    },
+    "data": {
+        "idCode": "",
+        "imgData": "",
+        "publicKey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDX0SlB08yDcr4Ifz0dmvykLu9cnMyoxMVtX2oFfPIb5FJKIuEHQ/0lmsU38uqU/FoFu68Pk+rzGdZWQq3AK+v29jX9sYp/mzHczf0dPczBp2OowoYWEaWl481/UtH+6J3V849jA93X+y/HsBW5DB0gmkCJLRl41D8z1X7E6yBrWQIDAQAB"
+    }
 }
 */
 /*
@@ -167,7 +184,8 @@ public class DynamicCodeController {
                         Map<String, String> keyMap = RSAUtil.createKeys(1024);
                         String publicKey = keyMap.get("publicKey");
                         String privateKey = keyMap.get("privateKey");
-
+                        System.out.println("publicKey=" + publicKey);
+                        System.out.println("privateKey=" + privateKey);
                         //将私钥，验证码放入缓存
                         //String codeKey = UserConstant.REDIS_REGISTER_CODE + getDynamicCodeDto.getLoginName() + UserConstant.REDIS_CODE;
                         //DynamicCodeRedisDto dynamicCodeDto = (DynamicCodeRedisDto) jedisUtils.get(codeKey);

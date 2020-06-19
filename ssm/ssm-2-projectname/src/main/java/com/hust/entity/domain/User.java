@@ -1,4 +1,4 @@
-package com.hust.entity;
+package com.hust.entity.domain;
 
 public class User {
     private Integer id;

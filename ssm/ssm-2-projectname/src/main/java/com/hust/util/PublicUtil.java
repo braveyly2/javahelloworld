@@ -269,7 +269,7 @@ public class PublicUtil {
     }
 
     public static BasicOutput getDefaultBasicOutputByInput(BasicInput basicInput){
-        return new BasicOutput(basicInput.getId(), basicInput.getTime(), 0, null, null);
+        return new BasicOutput(basicInput.getId(), basicInput.getTime(), 200, "ok", null);
     }
     /**
      * 获得请求id

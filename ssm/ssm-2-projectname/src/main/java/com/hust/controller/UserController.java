@@ -1,14 +1,12 @@
 package com.hust.controller;
 
 import com.hust.entity.RestBean;
-import com.hust.entity.User;
+import com.hust.entity.domain.User;
 import com.hust.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,7 +33,7 @@ public class UserController {
         return restBean;
     }
 
-    @RequestMapping(value="/user/register",method=RequestMethod.POST)
+    @RequestMapping(value="/user/register1",method=RequestMethod.POST)
     @ResponseBody
     public String register(@RequestParam("userName") String name, @RequestParam("password") String password){
         User user = userService.selectByName(name);
