@@ -1,4 +1,5 @@
 package com.hust.util;
+import com.hust.entity.dto.TokenDataDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,4 +13,6 @@ public class TDRequest<T> {
 
 
     private T data;
+
+    private TokenDataDto tokenDataDto;
 }

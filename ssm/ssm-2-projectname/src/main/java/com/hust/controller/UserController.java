@@ -230,13 +230,18 @@ http://localhost:8080/user/login
         return tdResponse;
     }
 
-    @RequestMapping(value = "/innerapi/userInfoByName/get", method = RequestMethod.POST)
+    @RequestMapping(value = "/user/info", method = RequestMethod.POST)
+    @ResponseBody
     public TDResponse<IdDto> getUserInfoByName(@RequestBody TDRequest<GetUserInfoByNameDto> tdRequest) {
         TDResponse<IdDto> tdResponse = new TDResponse<>();
         BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
         try {
             //User user = userServiceImpl.getUserInfoByName(tdRequest.getData().getUserName());
             User user = new User();
+            user.setId(222);
+            user.setName("liwei");
+            user.setPassword("111111");
+            user.setMark("this is liwei mark");
             if (PublicUtil.isNotEmpty(user)) {
                 IdDto dto = new IdDto();
                 dto.setId((long)user.getId());

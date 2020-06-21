@@ -101,4 +101,6 @@
         <!-- 配置sqlSessionFactoryBeanName -->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
+
+    <bean id="AccessPurviewFilter" class="com.hust.filter.AccessPurviewFilter"></bean>
 </beans>
