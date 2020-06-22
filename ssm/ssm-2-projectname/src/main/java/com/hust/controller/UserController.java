@@ -1,5 +1,6 @@
 package com.hust.controller;
 
+import com.hust.annotation.TDResult;
 import com.hust.constant.GlobalConstant;
 import com.hust.constant.UserConstant;
 import com.hust.entity.RestBean;
@@ -232,6 +233,7 @@ http://localhost:8080/user/login
 
     @RequestMapping(value = "/user/info", method = RequestMethod.POST)
     @ResponseBody
+    @TDResult
     public TDResponse<IdDto> getUserInfoByName(@RequestBody TDRequest<GetUserInfoByNameDto> tdRequest) {
         TDResponse<IdDto> tdResponse = new TDResponse<>();
         BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
