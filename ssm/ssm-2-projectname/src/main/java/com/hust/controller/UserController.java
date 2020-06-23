@@ -116,7 +116,8 @@ http://localhost:8080/user/login
 	"data": {
 		"userName": "admin",
 		"type": "1",
-		"password": "8f137f2c4574c86221295af9c4e83b26",
+		"password": "8f137f2c4574c86221295af9c4e83b26",   //md5---tdRequest.getBasic().getNonce() + "#" + tdRequest.getBasic().getTime() + "#" + loginName + "#" + user.getPassword()
+		                                                  //1567246549#1592399555986#admin#e10adc3949ba59abbe56e057f20f883e
 		"idCode": "",
 		"imgCode": "",
 		"uuid": "",

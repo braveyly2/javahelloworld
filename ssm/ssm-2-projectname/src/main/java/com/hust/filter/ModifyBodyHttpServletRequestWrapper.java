@@ -2,6 +2,7 @@ package com.hust.filter;
 
 import org.apache.commons.lang.StringUtils;
 
+import javax.servlet.ReadListener;
 import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
@@ -31,6 +32,21 @@ class ModifyBodyHttpServletRequestWrapper extends HttpServletRequestWrapper {
             // 必须指定utf-8编码，否则json请求数据中如果包含中文，会出现异常
             final ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(bodyJsonStr.getBytes("utf-8"));
             ServletInputStream servletInputStream = new ServletInputStream() {
+                @Override
+                public boolean isFinished() {
+                    return false;
+                }
+
+                @Override
+                public boolean isReady() {
+                    return false;
+                }
+
+                @Override
+                public void setReadListener(ReadListener readListener) {
+
+                }
+
                 @Override
                 public int read() throws IOException {
                     return byteArrayInputStream.read();

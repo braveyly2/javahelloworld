@@ -38,8 +38,8 @@ public class AccessPurviewFilter extends HttpServlet implements Filter{
 
 
         String requestPath = ((HttpServletRequest)servletRequest).getServletPath();
-
-        if(requestPath.contains("/user/login")){
+        filterChain.doFilter(servletRequest,servletResponse);//just for debug TDRESULT
+        if(requestPath.contains("/user/login") || requestPath.contains("/user/sms-code/no-token/get") || requestPath.contains("/user/register")){
             filterChain.doFilter(servletRequest,servletResponse);
             return;
         }

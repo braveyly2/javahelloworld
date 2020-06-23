@@ -13,7 +13,34 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.UUID;
+/*
+{
+	"basic": {
+		"ver": "1.0",
+		"time": 1592399555986,
+		"id": 30,
+		"nonce": 1567246549,
+		"token": null,
+		"sign": "6b9856ff2ee4832fda9aec420530570d"   //md5(password#code)  ->md5(123456#888888)
+	},
+	"data": {
+		"loginName": "admin",
+		"loginType": 1,
+		"password": "ahtrKPPPt2us8NVWiP6ZMk1h+3zHeZ+3UzWZTGiMvw55yCqn8w43wGr3GUliZogz9E6zKdIz9ehGFYmK5tRIu1jWOHsYfrI5SHqKL1uRRntdtzDYzvRuqyF6nGhxIMDEatoJhVwAAbkT93HF/F2XjzwGHEfviGIPZJ1dqE73q6c="
+		// rsa public key(password)  123456
+	}
+}
 
+{
+    "basic": {
+        "id": "30",
+        "time": 1592399555986,
+        "code": 200,
+        "msg": "operate successfully"
+    },
+    "data": null
+}
+*/
 @RestController
 public class UserRegisterController {
     @RequestMapping(value = "/user/register", method = RequestMethod.POST)

@@ -51,8 +51,6 @@ public class ResultAspect {
         API_PARSER_FEATURE = features;
     }
 
-    @Autowired
-    private ConfigUtil configUtil;
 
     @Around("@annotation(tdResult)")
     public TDResponse<Object> processTx(ProceedingJoinPoint joinPoint, TDResult tdResult) throws Throwable {
@@ -67,16 +65,7 @@ public class ResultAspect {
             basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
             logModelName = LogUtil.getLogModelName(tdRequest, "tdResult");
 
-            if (PublicUtil.isNotEmpty(configUtil.getDisabledApi()) && !"false".equals(configUtil.getDisabledApi())) {
-                List<String> apiList = Arrays.stream(configUtil.getDisabledApi().split(",")).map(s -> s.trim()).collect(Collectors.toList());
-                if (apiList.contains(request.getRequestURI())) {
-                    LogUtil.info("服务降级，该接口不提供服务：" + request.getRequestURI(), logModelName);
-                    basicOutput.setCode(ErrorCodeEnum.TD9600.code());
-                    basicOutput.setMsg(ErrorCodeEnum.TD9600.msg());
-                    tdResponse.setBasic(basicOutput);
-                    return tdResponse;
-                }
-            }
+
 //            String res = JSON.toJSONString(tdRequest);
 //            tdRequest = JSON.parseObject(res, new TypeReference<TdRequest<String>>(){});
             LogUtil.info("方法为：" + request.getRequestURI() + ";参数json为：" + JSON.toJSONString(tdRequest), logModelName);
