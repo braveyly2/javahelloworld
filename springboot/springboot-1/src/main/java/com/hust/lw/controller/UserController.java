@@ -7,15 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 @RequestMapping(value="/users")
 public class UserController {
-    private static Map<Long, User> users = new HashMap<Long, User>();
+    private static Map<Long, User> users = Collections.synchronizedMap(new HashMap<Long, User>());
 
     @RequestMapping(value="/add", method= RequestMethod.POST)
     Long add(@RequestBody User user){
