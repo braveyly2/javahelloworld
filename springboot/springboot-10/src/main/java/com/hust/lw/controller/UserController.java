@@ -11,7 +11,7 @@ public class UserController {
 
     @RequestMapping(value="/add", method= RequestMethod.POST)
     @ResponseBody
-    User add(@RequestBody User user){
+    public User add(@RequestBody User user){
         if(null == user.getUserName() || user.getUserName().length() <=0){
             log.debug("username[debug] is null");
             log.info("username[info] is null");
