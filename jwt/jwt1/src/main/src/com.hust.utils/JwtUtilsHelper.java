@@ -1,5 +1,6 @@
 package com.hust.utils;
 
+import com.auth0.jwt.exceptions.JWTVerificationException;
 import io.jsonwebtoken.*;
 import net.sf.json.JSONObject;
 import org.slf4j.Logger;
@@ -54,7 +55,7 @@ public class JwtUtilsHelper {
         long time = new Date().getTime();
         header.put("alg","HS512-2");//表示签名的算法，默认也是这个，可选（header里面的字段也全是一些弱信息）
         header.put("iat", time/1000);//签发时间（单位均为utc时间的秒）
-        header.put("exp", (time/1000) + expiresDate);//过期时间
+        //header.put("exp", (time/1000) + expiresDate);//过期时间
         //header.put("exp222", (time/1000) + expiresDate);//header实际上也是可以自定义的
         /** header  END */
 
@@ -181,8 +182,13 @@ public class JwtUtilsHelper {
                     .withClaim("ip","192.168.110.555")
                     .build();
             DecodedJWT jwt = verifier.verify(token);
+            //Jwt parseJwt = accessTonkenDecodeAll(token);
+            if(isTokenExpired(jwt.getExpiresAt().getTime()/1000)){
+               return false;
+            }
+            System.out.println("verify ok");
             return true;
-        } catch (Exception exception) {
+        } catch (JWTVerificationException exception) {
             return false;
         }
     }
@@ -193,10 +199,12 @@ public class JwtUtilsHelper {
         int userId = 169061;
         String userName = "admin";
         String ip = "192.168.110.555";
+        long time = new Date().getTime();
         Map<String,Object> payload = new HashMap<String, Object>();
         payload.put("user_id",userId);
         payload.put("user_name",userName);
         payload.put("ip",ip);
+        payload.put("exp", (time/1000) + ACCESS_EXPIRES);
         /** payload  END */
 
 
@@ -208,6 +216,9 @@ public class JwtUtilsHelper {
         System.out.println("\n");
         if(verify(jwt, JSONObject.fromObject(payload).toString(), SECRET_KEY)){
             System.out.println("verify pass for token:" + jwt);
+        }
+        else{
+            System.out.println("verify not pass");
         }
 
         //解析jwt
