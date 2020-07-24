@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "14df1498-1c3f-46d1-9a98-1147c5b80b8a",
+		"name": "shiro-4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/login?username=smith&password=smith123",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/login?username=smith&password=smith123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "smith"
+						},
+						{
+							"key": "password",
+							"value": "smith123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/require_role",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTU1NTk1MjcsInVzZXJuYW1lIjoic21pdGgifQ.qMnsqXoVOrMmfWBW0C606fGprHQ4psDmB64BKaYFV0E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/require_role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"require_role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/article",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTU1NTk1MjcsInVzZXJuYW1lIjoic21pdGgifQ.qMnsqXoVOrMmfWBW0C606fGprHQ4psDmB64BKaYFV0E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/article",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
