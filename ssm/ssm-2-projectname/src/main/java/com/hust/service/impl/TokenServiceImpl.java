@@ -127,7 +127,7 @@ public class TokenServiceImpl implements TokenService {
             }
 
             //是否验证Token过期
-            if (isCheckTimeout) {
+            if (!isCheckTimeout) {
                 //Token已过期
                 if (tokenPayload.getExp() < currentTimeStamp) {
                     basicOutput.setCode(ErrorCodeEnum.TD7004.code());

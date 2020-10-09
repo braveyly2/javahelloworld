@@ -234,7 +234,7 @@ http://localhost:8080/user/login
 
     @RequestMapping(value = "/user/info", method = RequestMethod.POST)
     @ResponseBody
-    @TDResult
+    //@TDResult
     public TDResponse<IdDto> getUserInfoByName(@RequestBody TDRequest<GetUserInfoByNameDto> tdRequest) {
         TDResponse<IdDto> tdResponse = new TDResponse<>();
         BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());

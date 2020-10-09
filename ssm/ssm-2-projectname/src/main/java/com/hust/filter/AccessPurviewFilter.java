@@ -38,13 +38,14 @@ public class AccessPurviewFilter extends HttpServlet implements Filter{
 
 
         String requestPath = ((HttpServletRequest)servletRequest).getServletPath();
-        filterChain.doFilter(servletRequest,servletResponse);//just for debug TDRESULT
+        //filterChain.doFilter(servletRequest,servletResponse);//just for debug TDRESULT
         if(requestPath.contains("/user/login") || requestPath.contains("/user/sms-code/no-token/get") || requestPath.contains("/user/register")){
             filterChain.doFilter(servletRequest,servletResponse);
             return;
         }
 
         InputStream in = servletRequest.getInputStream();
+        LogUtil.info("body123: < before >", "AccessPurviewFilter");
         String body = StreamUtils.copyToString(in, Charset.forName(GlobalConstant.DEFAULT_CHARSET));
         LogUtil.info(String.format("body: < %s >", body), "AccessPurviewFilter");
         TDRequest requestInfo = JSON.parseObject(body, TDRequest.class);
