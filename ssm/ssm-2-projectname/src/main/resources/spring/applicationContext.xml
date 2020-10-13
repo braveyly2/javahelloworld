@@ -4,6 +4,7 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:beans="http://www.springframework.org/schema/beans"
        xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:redisson="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
          http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
          http://www.springframework.org/schema/context
@@ -11,6 +12,7 @@
          http://www.springframework.org/schema/mvc
          http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+    <context:property-placeholder location="classpath:*.properties" ignore-unresolvable="true" />
     <!-- ①：对com.springmvc包中的所有类进行扫描，以完成Bean创建和自动依赖注入的功能 -->
     <context:component-scan base-package="com.hust"/>
     <mvc:annotation-driven />
@@ -104,5 +106,8 @@
 
     <bean id="AccessPurviewFilter" class="com.hust.filter.AccessPurviewFilter"></bean>
 
-    <aop:aspectj-autoproxy />
+
+    <import resource="classpath*:spring-stringredistemplate.xml" />
+    <import resource="classpath*:spring-redis.xml" />
+    <!--<aop:aspectj-autoproxy />-->
 </beans>

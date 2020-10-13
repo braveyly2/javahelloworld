@@ -39,7 +39,15 @@ public class AccessPurviewFilter extends HttpServlet implements Filter{
 
         String requestPath = ((HttpServletRequest)servletRequest).getServletPath();
         //filterChain.doFilter(servletRequest,servletResponse);//just for debug TDRESULT
-        if(requestPath.contains("/user/login") || requestPath.contains("/user/sms-code/no-token/get") || requestPath.contains("/user/register")){
+        if(requestPath.contains("/user/login") ||
+                requestPath.contains("/user/sms-code/no-token/get") ||
+                requestPath.contains("/user/register") ||
+                requestPath.contains("hellocode") ||
+                requestPath.contains("hello") ||
+                requestPath.contains("hello2") ||
+                requestPath.contains("/user/register1") ||
+                requestPath.contains("/user/register2") ||
+                requestPath.contains("/user/register3") ){
             filterChain.doFilter(servletRequest,servletResponse);
             return;
         }

@@ -27,9 +27,14 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    JedisUtils jedisUtils;
+
     @RequestMapping(value="hello",method=RequestMethod.POST)
     @ResponseBody
     Map<String, Object> hello(@RequestBody User user){
+        System.out.println("this is Hello value:");
+        System.out.println(jedisUtils.getString("Hello"));
         Map<String, Object> hashmap = new HashMap<String, Object>();
         hashmap.put("status","success");
         hashmap.put("code",200);
