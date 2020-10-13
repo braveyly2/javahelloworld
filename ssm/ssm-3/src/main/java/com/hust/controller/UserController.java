@@ -2,9 +2,11 @@ package com.hust.controller;
 
 import com.hust.entity.User;
 import com.hust.service.UserService;
+import com.hust.util.JedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +21,9 @@ import javax.servlet.http.HttpSession;
 public class UserController {
     @Autowired
     private UserService userService;
+
+    @Autowired
+    JedisUtils jedisUtils;
 
     @RequestMapping(value="login",method= RequestMethod.GET)
     public String login(){
@@ -96,5 +101,23 @@ public class UserController {
         System.out.println(jc.get("Hello"));
         System.out.println("liwei");
         return "hello world!";
+    }
+
+    @RequestMapping(value="/hello2",method=RequestMethod.POST)
+    @ResponseBody
+    public String hello2(){
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-stringredistemplate.xml");
+        StringRedisTemplate stringRedisTemplate = ctx.getBean(StringRedisTemplate.class);
+        System.out.println(stringRedisTemplate.opsForValue().get("Hello"));
+        System.out.println("lijing2");
+        return "hello world2!";
+    }
+
+    @RequestMapping(value="/hello3",method=RequestMethod.POST)
+    @ResponseBody
+    public String hello3(){
+        System.out.println(jedisUtils.getString("Hello"));
+        System.out.println("lijing3");
+        return "hello world3!";
     }
 }

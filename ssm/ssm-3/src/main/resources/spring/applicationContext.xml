@@ -102,6 +102,6 @@
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
-    <import resource="classpath*:redis-cluster.xml" />
-
+    <import resource="classpath*:spring-stringredistemplate.xml" />
+    <import resource="classpath*:spring-redis.xml" />
 </beans>
