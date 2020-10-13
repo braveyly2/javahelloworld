@@ -9,10 +9,7 @@ import com.hust.entity.dto.LoginDto;
 import com.hust.entity.dto.LoginResultDto;
 import com.hust.entity.dto.TokenResultDto;
 import com.hust.service.UserService;
-import com.hust.util.MD5Util;
-import com.hust.util.PublicUtil;
-import com.hust.util.TDRequest;
-import com.hust.util.TokenUtil;
+import com.hust.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -94,5 +91,13 @@ public class UserServiceImpl implements UserService {
 
 
         return loginResultDto;
+    }
+
+    public boolean checkMobileExist(String name, BasicOutput basicOutput){
+        User user = userMapper.selectByName(name);
+        if(null != user) {
+            return true;
+        }
+        return false;
     }
 }

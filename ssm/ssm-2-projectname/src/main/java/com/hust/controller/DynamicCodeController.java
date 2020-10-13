@@ -2,9 +2,13 @@ package com.hust.controller;
 
 import com.hust.constant.GlobalVariable;
 import com.hust.constant.UserConstant;
+import com.hust.entity.dto.DynamicCodeRedisDto;
 import com.hust.entity.dto.GetDynamicCodeDto;
 import com.hust.entity.vo.DynamicCodeVo;
+import com.hust.service.UserService;
 import com.hust.util.*;
+import org.redisson.api.RBucket;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -80,10 +84,21 @@ import java.util.Map;
  */
 @RestController
 public class DynamicCodeController {
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    private JedisUtils jedisUtils;
+
     //@Autowired
-    //private UserService userService;
+    //private RedissonClient redissonClient;
+
     @RequestMapping(value = "/hellocode", method = RequestMethod.POST)
     public int hello(){
+
+        //RBucket<String> rBucket = redissonClient.getBucket("redisson");
+        //rBucket.set("firstValue");
+
         int a = RSAUtil.hello();
         System.out.println("var=");
         try {
@@ -143,7 +158,7 @@ public class DynamicCodeController {
                 String name = getDynamicCodeDto.getLoginName();
                 boolean isExist = false;
                 if (loginType == UserConstant.LOGIN_TYPE_MOBILE) {
-                    //isExist = userService.checkMobileExist(name, basicOutput);
+                    isExist = userService.checkMobileExist(name, basicOutput);
                     if(basicOutput.getCode() != ErrorCodeEnum.TD200.code()){
                         return tdResponse;
                     }
@@ -153,7 +168,7 @@ public class DynamicCodeController {
                         return tdResponse;
                     }
                 } else if (loginType == UserConstant.LOGIN_TYPE_EMAIL) {
-                    //isExist = userService.checkEmailExist(name);
+                    isExist = userService.checkMobileExist(name,basicOutput);
                     if (isExist) {
                         basicOutput.setCode(ErrorCodeEnum.TD7023.code());
                         basicOutput.setMsg(ErrorCodeEnum.TD7023.msg());
@@ -168,6 +183,13 @@ public class DynamicCodeController {
             if (15 == type) {
                 //注册发送成功后，生成publicKey
                 //TDResponse<DynamicCodeVo> response = sendDynamicCode(tdRequest.getData(), null, rediskey, tdRequest.getBasic());
+                DynamicCodeRedisDto dynamicCodeRedisDto = new DynamicCodeRedisDto();
+                dynamicCodeRedisDto.setCode(DynamicCodeUtil.getDynamicCode());
+                dynamicCodeRedisDto.setTarget(getDynamicCodeDto.getLoginName());
+                dynamicCodeRedisDto.setFailCount(0);
+                String codeKey = UserConstant.REDIS_REGISTER_CODE + getDynamicCodeDto.getLoginName() + UserConstant.REDIS_CODE;
+                jedisUtils.set(codeKey, dynamicCodeRedisDto);
+
                 TDResponse<DynamicCodeVo> response = new TDResponse<>();
                 basicOutput.setCode(ErrorCodeEnum.TD200.code());
                 basicOutput.setMsg(ErrorCodeEnum.TD200.msg());
@@ -188,14 +210,14 @@ public class DynamicCodeController {
                         System.out.println("privateKey=" + privateKey);
                         //将私钥，验证码放入缓存
                         //String codeKey = UserConstant.REDIS_REGISTER_CODE + getDynamicCodeDto.getLoginName() + UserConstant.REDIS_CODE;
-                        //DynamicCodeRedisDto dynamicCodeDto = (DynamicCodeRedisDto) jedisUtils.get(codeKey);
-                        //String dynamicCode = dynamicCodeDto.getCode();
-                        String dynamicCode = "888888";
+                        DynamicCodeRedisDto dynamicCodeDto = (DynamicCodeRedisDto) jedisUtils.get(codeKey);
+                        String dynamicCode = dynamicCodeDto.getCode();
+                        //String dynamicCode = "888888";
                         //end
 
-                        //String keyKey = UserConstant.REDIS_REGISTER_PRIVATE_KEY + getDynamicCodeDto.getLoginName();
-                        //jedisUtils.setString(keyKey, privateKey, 5 * 60L);
-                        GlobalVariable.PRIVATE_KEY = privateKey;
+                        String keyKey = UserConstant.REDIS_REGISTER_PRIVATE_KEY + getDynamicCodeDto.getLoginName();
+                        jedisUtils.setString(keyKey, privateKey, 5 * 60L);
+                        //GlobalVariable.PRIVATE_KEY = privateKey;
                         //end
 
                         basicOutput.setCode(ErrorCodeEnum.TD200.code());
