@@ -14,10 +14,9 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
-    <context:property-placeholder location="classpath:redis.properties" />
     <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
-        <property name="maxTotal" value="1000" />
-        <property name="maxIdle" value="10" />
+        <property name="maxTotal" value="${redis.maxTotal}" />
+        <property name="maxIdle" value="${redis.maxIdle}" />
         <property name="numTestsPerEvictionRun" value="1024" />
         <property name="timeBetweenEvictionRunsMillis" value="30000" />
         <property name="minEvictableIdleTimeMillis" value="1800000" />

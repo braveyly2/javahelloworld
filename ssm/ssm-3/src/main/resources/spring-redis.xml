@@ -14,12 +14,11 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
-    <context:property-placeholder location="classpath:redis.properties" />
     <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
-        <property name="maxIdle" value="10" />
-        <property name="maxTotal" value="1000" />
-        <property name="maxWaitMillis" value="30000" />
-        <property name="testOnBorrow" value="true" />
+        <property name="maxIdle" value="${redis.maxIdle}" />
+        <property name="maxTotal" value="${redis.maxTotal}" />
+        <property name="maxWaitMillis" value="${redis.maxWait}" />
+        <property name="testOnBorrow" value="${redis.testOnBorrow}" />
     </bean>
 
     <bean id="hostport1" class="redis.clients.jedis.HostAndPort">

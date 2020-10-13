@@ -96,9 +96,9 @@ public class UserController {
     @RequestMapping(value="/hello",method=RequestMethod.POST)
     @ResponseBody
     public String hello(){
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-redis.xml");
-        JedisCluster jc = ctx.getBean(JedisCluster.class);
-        System.out.println(jc.get("Hello"));
+        //ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-redis.xml");
+        //JedisCluster jc = ctx.getBean(JedisCluster.class);
+        //System.out.println(jc.get("Hello"));
         System.out.println("liwei");
         return "hello world!";
     }
@@ -106,9 +106,9 @@ public class UserController {
     @RequestMapping(value="/hello2",method=RequestMethod.POST)
     @ResponseBody
     public String hello2(){
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-stringredistemplate.xml");
-        StringRedisTemplate stringRedisTemplate = ctx.getBean(StringRedisTemplate.class);
-        System.out.println(stringRedisTemplate.opsForValue().get("Hello"));
+        //ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-stringredistemplate.xml");
+        //StringRedisTemplate stringRedisTemplate = ctx.getBean(StringRedisTemplate.class);
+        //System.out.println(stringRedisTemplate.opsForValue().get("Hello"));
         System.out.println("lijing2");
         return "hello world2!";
     }
