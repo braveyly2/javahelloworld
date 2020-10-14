@@ -8,7 +8,7 @@ public interface UserMapper {
     /**
      * @param record
      */
-    void insert(User record);
+    int insert(User record);
 
     int insertSelective(User record);
 

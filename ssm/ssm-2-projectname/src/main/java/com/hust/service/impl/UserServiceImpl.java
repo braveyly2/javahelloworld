@@ -23,8 +23,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int insert(User record) {
-        userMapper.insert(record);
-        return 0;
+        int n = userMapper.insert(record);
+        return n;
     }
 
     @Override
@@ -61,34 +61,30 @@ public class UserServiceImpl implements UserService {
         LoginResultDto loginResultDto = new LoginResultDto();
         String loginName = loginDto.getUserName();
         String language = PublicUtil.isEmpty(loginDto.getLang()) ? I18nConstant.DEFAULT_LANGUAGE : loginDto.getLang();
-        //User user = getUserInfoByName(loginName);
-        User user = new User();
-        user.setId(22);
-        user.setName("admin");
-        user.setPassword("e10adc3949ba59abbe56e057f20f883e");//123456
-        user.setMark("this is admin");
+        User user = getUserInfoByName(loginName);
+        //User user = new User();
+        //user.setId(IdWorker.getInstance().getId());
+        //user.setName("admin");
+        //user.setPassword("e10adc3949ba59abbe56e057f20f883e");//123456
+        //user.setMark("this is admin");
 
         if (PublicUtil.isEmpty(user)) {
             loginResultDto.setResultCode(ErrorCodeEnum.TD7002);
             return loginResultDto;
         }
-                //MD5值判断MD5(nonce#time#userName#MD5(PSW))
-                String md5Str = MD5Util.encrypt(tdRequest.getBasic().getNonce() + "#" + tdRequest.getBasic().getTime() + "#" + loginName + "#" + user.getPassword());
-                if (loginDto.getPassword().equals(md5Str)) {
-                    if (generateToken) {
-                        //密码正确（根据登录客户端类型，查询登录限制次数）
-
-                        //产生
-                        TokenResultDto tokenResultDto = tokenUtil.createToken(user.getId(), user.getPassword(), clientType, language);
-                        loginResultDto.setToken(tokenResultDto.getToken());
-                        loginResultDto.setSid(tokenResultDto.getSid());
-                        loginResultDto.setTid(tokenResultDto.getTid());
-                        loginResultDto.setUserId((long)user.getId());
-                    }
-                } else {
-                    loginResultDto.setResultCode(ErrorCodeEnum.TD7002);
-                }
-
+        //MD5????MD5(nonce#time#userName#MD5(PSW))
+        String md5Str = MD5Util.encrypt(tdRequest.getBasic().getNonce() + "#" + tdRequest.getBasic().getTime() + "#" + loginName + "#" + user.getPassword());
+        if (loginDto.getPassword().equals(md5Str)) {
+            if (generateToken) {
+                TokenResultDto tokenResultDto = tokenUtil.createToken(user.getId(), user.getPassword(), clientType, language);
+                loginResultDto.setToken(tokenResultDto.getToken());
+                loginResultDto.setSid(tokenResultDto.getSid());
+                loginResultDto.setTid(tokenResultDto.getTid());
+                loginResultDto.setUserId((long)user.getId());
+            }
+        } else {
+            loginResultDto.setResultCode(ErrorCodeEnum.TD7002);
+        }
 
         return loginResultDto;
     }
@@ -99,5 +95,10 @@ public class UserServiceImpl implements UserService {
             return true;
         }
         return false;
+    }
+
+    private User getUserInfoByName(String name){
+        User user = userMapper.selectByName(name);
+        return user;
     }
 }

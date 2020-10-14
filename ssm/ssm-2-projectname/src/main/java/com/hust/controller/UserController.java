@@ -14,6 +14,7 @@ import com.hust.entity.vo.LoginVo;
 import com.hust.service.UserService;
 import com.hust.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.annotation.Id;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -244,15 +245,17 @@ http://localhost:8080/user/login
         TDResponse<IdDto> tdResponse = new TDResponse<>();
         BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
         try {
-            //User user = userServiceImpl.getUserInfoByName(tdRequest.getData().getUserName());
-            User user = new User();
-            user.setId(222);
-            user.setName("liwei");
-            user.setPassword("111111");
-            user.setMark("this is liwei mark");
+            User user = userService.selectByName(tdRequest.getData().getUserName());
+            //User user = new User();
+            //user.setId(IdWorker.getInstance().getId());
+            //user.setName("liwei");
+            //user.setPassword("111111");
+            //user.setMark("this is liwei mark");
             if (PublicUtil.isNotEmpty(user)) {
                 IdDto dto = new IdDto();
                 dto.setId((long)user.getId());
+                dto.setName(user.getName());
+                dto.setMark(user.getMark());
                 tdResponse.setData(dto);
             } else {
                 basicOutput.setCode(ErrorCodeEnum.TD7001.code());

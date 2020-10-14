@@ -52,6 +52,7 @@ public class TokenUtil {
             //本次token有效时长（秒）
             long validTime = dPiKeyPackage.getWebTokenValidTime() * 60L;
             */
+            /*
             DPiKeyInfo dpiKeyObj = new DPiKeyInfo();
             dpiKeyObj.setDpiKey("swaottest");
             dpiKeyObj.setId(100);
@@ -59,11 +60,8 @@ public class TokenUtil {
             dpiKeyObj.setLastUpdateTime(LocalDateTime.now());
             dpiKeyObj.setDpiKeyStartTime(LocalDateTime.now());
             GlobalVariable.GDPIKEY_INFO = dpiKeyObj;
-
-
-            Map<String, String> keyMap = RSAUtil.createKeys(1024);
-            dpiKeyObj.setPrivateKey(keyMap.get("privateKey"));
-            dpiKeyObj.setPublicKey(keyMap.get("publicKey"));
+            */
+            DPiKeyInfo dpiKeyObj = DPiKeyInfoManager.getInstance().getDPiKeyInfo();
 
 
             long validTime = 600 * 60L;

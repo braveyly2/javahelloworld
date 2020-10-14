@@ -11,4 +11,6 @@ import lombok.Data;
 @Data
 public class IdDto {
     private Long id;
+    private String name;
+    private String mark;
 }

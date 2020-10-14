@@ -184,7 +184,9 @@ public class DynamicCodeController {
                 //注册发送成功后，生成publicKey
                 //TDResponse<DynamicCodeVo> response = sendDynamicCode(tdRequest.getData(), null, rediskey, tdRequest.getBasic());
                 DynamicCodeRedisDto dynamicCodeRedisDto = new DynamicCodeRedisDto();
-                dynamicCodeRedisDto.setCode(DynamicCodeUtil.getDynamicCode());
+                String dynamicCodeInput = DynamicCodeUtil.getDynamicCode();
+                System.out.println("dynamicCodeInput is " + dynamicCodeInput);
+                dynamicCodeRedisDto.setCode(dynamicCodeInput);
                 dynamicCodeRedisDto.setTarget(getDynamicCodeDto.getLoginName());
                 dynamicCodeRedisDto.setFailCount(0);
                 String codeKey = UserConstant.REDIS_REGISTER_CODE + getDynamicCodeDto.getLoginName() + UserConstant.REDIS_CODE;
@@ -216,7 +218,7 @@ public class DynamicCodeController {
                         //end
 
                         String keyKey = UserConstant.REDIS_REGISTER_PRIVATE_KEY + getDynamicCodeDto.getLoginName();
-                        jedisUtils.setString(keyKey, privateKey, 5 * 60L);
+                        jedisUtils.setString(keyKey, privateKey);
                         //GlobalVariable.PRIVATE_KEY = privateKey;
                         //end
 

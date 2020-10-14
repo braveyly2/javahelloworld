@@ -69,7 +69,7 @@ public class AccessPurviewFilter extends HttpServlet implements Filter{
                 filterChain.doFilter(modifyBodyHttpServletRequestWrapper,servletResponse);
             }else{
                 User user = new User();
-                user.setId(111);
+                user.setId(IdWorker.getInstance().getId());
                 user.setName("rrrr");
                 user.setPassword("rtttt");
                 user.setMark("this is rrrr");

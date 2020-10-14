@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "02a11f7f-8c9f-4d4a-9597-8da2ca7f6758",
+		"name": "ssm-2-projectname",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080//user/register1?userName=liwei&password=123456",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTIwMTE4MzAsInVzZXJuYW1lIjoic21pdGgifQ.k-n-XOIygKsnPsagErMnOArdbihC-Fi5eTuabkS06cs",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": null,\r\n\t\t\"sign\": \"6b9856ff2ee4832fda9aec420530570d\"\r\n\t},\r\n\t\"data\": {\r\n\t\t\"loginName\": \"admin\",\r\n\t\t\"loginType\": 1,\r\n\t\t\"password\": \"R4WbKQd1Gt9IQTqCkGbaEwQ1XBFpYucni4ZqvFAgYkMIPrWMesYpncHW6LbzotZMHgedtHENid69XtOxpmc2CmG7RBeTmTfOvyBiyX05UEHNxzcXxZoOPGrErJuIYDWa0MiRfbrkDdym1rgtxwEEffDJKqCIcVEStH7U/5HRAxQ=\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/register1?userName=liwei&password=123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"user",
+						"register1"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "liwei"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/hello2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTIwMTE4MzAsInVzZXJuYW1lIjoic21pdGgifQ.k-n-XOIygKsnPsagErMnOArdbihC-Fi5eTuabkS06cs",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 2,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": null\r\n\t},\r\n\t\"data\": {\r\n\t\t\"businessType\": 15,\r\n\t\t\"loginName\": \"admin\",\r\n\t\t\"loginType\": 1,\r\n\t\t\"idCode\": \"\",\r\n\t\t\"imgCode\": \"\",\r\n        \"lang\":\"\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hello2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/register2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTIwMTE4MzAsInVzZXJuYW1lIjoic21pdGgifQ.k-n-XOIygKsnPsagErMnOArdbihC-Fi5eTuabkS06cs",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 126,\r\n    \"name\": \"smith126\",\r\n    \"password\": \"smith123\",\r\n    \"mark\": \"this is a test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/register2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"register2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/hello3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTIwMTE4MzAsInVzZXJuYW1lIjoic21pdGgifQ.k-n-XOIygKsnPsagErMnOArdbihC-Fi5eTuabkS06cs",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 223,\r\n    \"name\": \"admin3\",\r\n    \"password\": \"123456\",\r\n    \"mark\": \"this is a test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTIwMTE4MzAsInVzZXJuYW1lIjoic21pdGgifQ.k-n-XOIygKsnPsagErMnOArdbihC-Fi5eTuabkS06cs",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549\r\n\t},\r\n\t\"data\": {\r\n\t\t\"userName\": \"admin5\",\r\n\t\t\"type\": \"1\",\r\n\t\t\"password\": \"b56c0f056168c91b30a11db69ea47d7e\",\r\n\t\t\"idCode\": \"\",\r\n\t\t\"imgCode\": \"\",\r\n\t\t\"uuid\": \"\",\r\n\t\t\"lang\": \"zh-CN2\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTIwMTE4MzAsInVzZXJuYW1lIjoic21pdGgifQ.k-n-XOIygKsnPsagErMnOArdbihC-Fi5eTuabkS06cs",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": \"eyJhbGciOiJITUFDU0hBMjU2IiwidmVyIjoiMS4wIn0=.eyJkYyI6MSwiZXhwIjoxNjAyNzAxMzYxLCJpYXQiOjE2MDI2NjUzNjEsInRpZCI6MTE5LCJ0eXBlIjoxLCJ1aWQiOjc4NDM2MjkxMzYwMjIwNzc0OH0=.aVpiaGdUKzJMNTZIZE5OM1VDdG9UYmJMczJlTENkK2Z2WDY5NEZyeXVOOUJkNlc2NmxQaUpvL2RtbDRpTnFPVzZBd0UwSzVSci9xSkN5RTlOK3puaUhxZWRBenF4R2ZxQ0JoU1poWkgwWGo1SDdTVHVPcy9ZaWt2MVRyaWhVZGZqVngrZytralF6RnluUEl3QlRCdGhWRDVNTUovbjdPYWlEUUE0cjJ5dVlzPQ==\"\r\n\t},\r\n\t\"data\": {\r\n\t\t\"userName\": \"admin5\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/hellocode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hellocode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hellocode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/user/sms-code/no-token/get",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": null\r\n\t},\r\n\t\"data\": {\r\n\t\t\"businessType\": 15,\r\n\t\t\"loginName\": \"admin5\",\r\n\t\t\"loginType\": 1,\r\n\t\t\"idCode\": \"\",\r\n\t\t\"imgCode\": \"\",\r\n        \"lang\":\"\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/user/sms-code/no-token/get",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"sms-code",
+						"no-token",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/user/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": null,\r\n        \"sign\": \"4a1570d03bbbafa8f2a3ba0d8a445763\"\r\n\t},\r\n\t\"data\": {\r\n\t\t\"loginName\": \"admin5\",\r\n\t\t\"loginType\": 1,\r\n        \"password\": \"hEXkP6IwxnU7OMOwejA7IglJF80TYE0k9eptVHg4bMOJlgsVB2v1F8iEo/+5DU3bd+tktdt4UZfGPxoa9pFba7HyyLLvBhuDKpA/zfNhZtj1ctK7z5hUv8PuM0eF8zKfI+go+80Sg/uPBnYaqSjwbGeBD0rhtOaDQu7XvFpWYQo=\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/user/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8080/user/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8080/user/register",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTIwMTE4MzAsInVzZXJuYW1lIjoic21pdGgifQ.k-n-XOIygKsnPsagErMnOArdbihC-Fi5eTuabkS06cs",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": \"eyJhbGciOiJITUFDU0hBMjU2IiwidmVyIjoiMS4wIn0=.eyJkYyI6MSwiZXhwIjoxNjAyNjk5MzIxLCJpYXQiOjE2MDI2NjMzMjEsInRpZCI6MTE5LCJ0eXBlIjoxLCJ1aWQiOjc4NDM1Mzg0NjkyNjI0NTg4OX0=.WDlEZGlhWjd3eDZVcFdlWUlNazY0VExWdWVDMTg0STFjT0FxRjJtKzYyZkJlUXM1dDFIeldxVTZEVlNFemluaDBieThlNDNHS1BwUWlrTE9PSzlmNXFyb2xtbm5oYVZPTm5YUjlUVGhPb1VtVCtUL1IwTGd3eEpVRTdPQjdORVpHaWxYMXgrWllFc0JQR1I3ZC85a3NEMzFqOXNnSnpsOWFtdFA5RnMvZ0NNPQ==\"\r\n\t},\r\n\t\"data\": {\r\n\t\t\"userName\": \"admin5\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"info"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

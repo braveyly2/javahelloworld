@@ -140,8 +140,8 @@ public class TokenServiceImpl implements TokenService {
             if (isCheckSignBlackList) {
                 //验证签名
                 //获取生成此Token使用的DPiKey
-                //DPiKeyInfo dPiKeyInfo = DpikeyUtil.getDpiObj(tokenPayload.getIat());
-                DPiKeyInfo dPiKeyInfo = GlobalVariable.GDPIKEY_INFO;
+                DPiKeyInfo dPiKeyInfo = DPiKeyInfoManager.getInstance().getDPiKeyInfo();
+                //DPiKeyInfo dPiKeyInfo = GlobalVariable.GDPIKEY_INFO;
                 if (dPiKeyInfo == null) {
                     basicOutput.setCode(ErrorCodeEnum.TD7005.code());
                     basicOutput.setMsg(ErrorCodeEnum.TD7005.msg());
