@@ -43,6 +43,11 @@
       org.springframework.web.context.ContextLoaderListener
     </listener-class>
   </listener>
+
+  <listener>
+    <listener-class>com.hust.listener.MyServletRequestListener</listener-class>
+  </listener>
+
   <!-- 取消对某一类文件的拦截-->
   <servlet-mapping>
     <servlet-name>default</servlet-name>
