@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ssm-aop-anno:war">
+    <output-path>$PROJECT_DIR$/ssm-aop-anno/target</output-path>
+    <root id="archive" name="ssm-aop-anno.war">
+      <element id="artifact" artifact-name="ssm-aop-anno:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/lw.iml" filepath="$PROJECT_DIR$/lw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm-aop-anno/ssm-aop-anno.iml" filepath="$PROJECT_DIR$/ssm-aop-anno/ssm-aop-anno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm-filter/ssm-filter.iml" filepath="$PROJECT_DIR$/ssm-filter/ssm-filter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm-listener/ssm-listener.iml" filepath="$PROJECT_DIR$/ssm-listener/ssm-listener.iml" />
+    </modules>
+  </component>
+</project>
