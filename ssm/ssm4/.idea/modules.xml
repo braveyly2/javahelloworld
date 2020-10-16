@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/lw.iml" filepath="$PROJECT_DIR$/lw.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm-aop-anno/ssm-aop-anno.iml" filepath="$PROJECT_DIR$/ssm-aop-anno/ssm-aop-anno.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm-filter/ssm-filter.iml" filepath="$PROJECT_DIR$/ssm-filter/ssm-filter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm-interceptor/ssm-interceptor.iml" filepath="$PROJECT_DIR$/ssm-interceptor/ssm-interceptor.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm-listener/ssm-listener.iml" filepath="$PROJECT_DIR$/ssm-listener/ssm-listener.iml" />
     </modules>
   </component>

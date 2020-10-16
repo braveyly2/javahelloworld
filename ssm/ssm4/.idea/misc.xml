@@ -3,6 +3,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/ssm-aop-anno" />
     <file type="web" url="file://$PROJECT_DIR$/ssm-filter" />
+    <file type="web" url="file://$PROJECT_DIR$/ssm-interceptor" />
     <file type="web" url="file://$PROJECT_DIR$/ssm-listener" />
   </component>
   <component name="MavenProjectsManager">

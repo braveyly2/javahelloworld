@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ssm-aop-anno" />
         <module name="ssm-filter" />
+        <module name="ssm-interceptor" />
         <module name="ssm-listener" />
       </profile>
     </annotationProcessing>
@@ -15,6 +16,7 @@
       <module name="lw" target="1.5" />
       <module name="ssm-aop-anno" target="1.7" />
       <module name="ssm-filter" target="1.7" />
+      <module name="ssm-interceptor" target="1.7" />
       <module name="ssm-listener" target="1.7" />
     </bytecodeTargetLevel>
   </component>

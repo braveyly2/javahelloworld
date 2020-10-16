@@ -12,6 +12,7 @@
         <module>ssm-aop-anno</module>
         <module>ssm-filter</module>
         <module>ssm-listener</module>
+        <module>ssm-interceptor</module>
     </modules>
 	<build>
         <plugins>
@@ -39,6 +40,12 @@
             <dependency>
                 <groupId>com.hust</groupId>
                 <artifactId>ssm-listener</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hust</groupId>
+                <artifactId>ssm-interceptor</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
