@@ -112,7 +112,7 @@ public class AspectAuth {
         //前置通知
         System.out.println("AspectAuth: target method run before ...");
         //执行目标方法
-        //result = pjd.proeed();
+        //result = pjd.proceed();
         //用新的参数值执行目标方法
         String o = (String) pjd.getArgs()[0];
         result = pjd.proceed(new Object[]{"newid" + o});

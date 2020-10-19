@@ -11,7 +11,9 @@
          http://www.springframework.org/schema/mvc
          http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+    <!--
     <aop:aspectj-autoproxy expose-proxy="true"></aop:aspectj-autoproxy>
+    -->
     <!-- ①：对com.springmvc包中的所有类进行扫描，以完成Bean创建和自动依赖注入的功能 -->
     <context:component-scan base-package="com.hust"/>
     <mvc:annotation-driven />
