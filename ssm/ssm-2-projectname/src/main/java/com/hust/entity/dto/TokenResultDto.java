@@ -15,15 +15,19 @@ public class TokenResultDto {
      */
     private Long tokenId;
     /**
+     * refreshToken唯一标识
+     */
+    private Long refreshTokenId;
+    /**
      * token字符串
      */
     private String token;
     /**
+     * refreshToken字符串
+     */
+    private String refreshToken;
+    /**
      * SID
      */
     private String sid;
-    /**
-     * TokenId
-     */
-    private Long tid;
 }

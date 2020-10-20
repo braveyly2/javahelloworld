@@ -41,5 +41,5 @@ public class TokenDataDto {
      */
     private String clientType;
 
-    private TokenPayload tokenPayload;
+    //private TokenPayload tokenPayload;
 }

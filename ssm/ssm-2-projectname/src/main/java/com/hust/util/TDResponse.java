@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 public class TDResponse<T> {
     private BasicOutput basic;
 
-    @JsonSerialize
+    //@JsonSerialize
     private T data;
 }

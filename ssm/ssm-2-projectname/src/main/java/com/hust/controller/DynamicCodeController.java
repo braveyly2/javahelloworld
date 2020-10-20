@@ -1,6 +1,5 @@
 package com.hust.controller;
 
-import com.hust.constant.GlobalVariable;
 import com.hust.constant.UserConstant;
 import com.hust.entity.dto.DynamicCodeRedisDto;
 import com.hust.entity.dto.GetDynamicCodeDto;

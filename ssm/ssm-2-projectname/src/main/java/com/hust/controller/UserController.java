@@ -6,10 +6,7 @@ import com.hust.constant.UserConstant;
 import com.hust.entity.RestBean;
 import com.hust.entity.domain.User;
 import com.hust.entity.domain.UserLogin;
-import com.hust.entity.dto.GetUserInfoByNameDto;
-import com.hust.entity.dto.IdDto;
-import com.hust.entity.dto.LoginDto;
-import com.hust.entity.dto.LoginResultDto;
+import com.hust.entity.dto.*;
 import com.hust.entity.vo.LoginVo;
 import com.hust.service.UserService;
 import com.hust.util.*;
@@ -30,6 +27,9 @@ public class UserController {
 
     @Autowired
     JedisUtils jedisUtils;
+
+    @Autowired
+    TokenUtil tokenUtil;
 
     @RequestMapping(value="hello",method=RequestMethod.POST)
     @ResponseBody
@@ -215,6 +215,7 @@ http://localhost:8080/user/login
             LoginResultDto dto = userService.login(tdRequest, clientType, true, isCheckImgCode);
             LoginVo vo = new LoginVo();
             vo.setToken(dto.getToken());
+            vo.setRefreshToken(dto.getRefreshToken());
             vo.setSid(dto.getSid());
             vo.setIdCode(dto.getIdCode());
             vo.setImgData(dto.getImgData());
@@ -268,6 +269,35 @@ http://localhost:8080/user/login
             basicOutput.setMsg(ErrorCodeEnum.TD9500.msg());
         }
         tdResponse.setBasic(basicOutput);
+        return tdResponse;
+    }
+
+    @RequestMapping(value = "/user/token/refresh", method = RequestMethod.POST)
+    @ResponseBody
+    public TDResponse<TokenResultDto> renewToken(@RequestBody TDRequest tdRequest, HttpServletRequest request) {
+        TDResponse<TokenResultDto> tdResponse = new TDResponse<>();
+        BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
+        String clientType = request.getHeader(GlobalConstant.ZUUL_HEADER_CLIENTTYPE);
+        TokenResultDto tokenResultDto = null;
+        try {
+            TokenDataDto tokenDataDto = tdRequest.getTokenDataDto();
+            User user = userService.selectByPrimaryKey(tokenDataDto.getUserId());
+
+            tokenResultDto = tokenUtil.createToken(user.getId(), user.getPassword(), clientType, null);
+
+            if (PublicUtil.isEmpty(tokenResultDto.getToken())) {
+                basicOutput.setCode(ErrorCodeEnum.TD7004.code());
+                basicOutput.setMsg(ErrorCodeEnum.TD7004.msg());
+                tdResponse.setBasic(basicOutput);
+                return tdResponse;
+            }
+        } catch (Exception e) {
+            basicOutput.setCode(ErrorCodeEnum.TD9500.code());
+            basicOutput.setMsg(ErrorCodeEnum.TD9500.msg());
+            LogUtil.error("tokenÐøÇ©Ê§°Ü", "user", e);
+        }
+        tdResponse.setBasic(basicOutput);
+        tdResponse.setData(tokenResultDto);
         return tdResponse;
     }
 

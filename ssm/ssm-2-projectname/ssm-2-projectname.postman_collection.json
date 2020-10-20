@@ -388,6 +388,36 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/token/refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"basic\": {\r\n\t    \"ver\": \"1.0\",\r\n\t    \"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": \"eyJhbGciOiJITUFDU0hBMjU2IiwidmVyIjoiMS4wIn0=.eyJkYyI6MSwiZXhwIjoxNjAzMTc4ODU0MCwiaWF0IjoxNjAzMTc4Nzk0LCJ0aWQiOjc4NjU2ODI1OTA0OTYxOTQ2NiwidHlwZSI6MSwidWlkIjo3ODY1NTEyMTY2MTkzODg5Mjl9.Q2grNTEzYWRva0F6M2hxdjEvRkhyUU9rcmFjaXpQaHRpVGRBWVlZSllWNXRGdm4yYmtrM2l6QndwVDZicmtvOERyVlBlelZMcC81bVNCZ0lDSUQ1eFFKVzVCRVpDZlFDODRjVURIa29iOWRnTzlpWGRabjBRK0xhUDRJS3dBUjQ5a0FYYlJ1Y2dBZlNUUVlBeVMvdlFxUEZvY3EzNVJXcENaQWthRmNGcHRFPQ==\"\r\n    },\r\n    \"data\": {\r\n\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/token/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"token",
+						"refresh"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}

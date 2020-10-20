@@ -2,7 +2,6 @@ package com.hust.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.hust.constant.GlobalConstant;
-import com.hust.constant.GlobalVariable;
 import com.hust.entity.bo.DPiKeyInfo;
 import com.hust.entity.bo.TokenHeader;
 import com.hust.entity.bo.TokenPayload;
@@ -127,7 +126,7 @@ public class TokenServiceImpl implements TokenService {
             }
 
             //是否验证Token过期
-            if (!isCheckTimeout) {
+            if (isCheckTimeout) {
                 //Token已过期
                 if (tokenPayload.getExp() < currentTimeStamp) {
                     basicOutput.setCode(ErrorCodeEnum.TD7004.code());
@@ -169,10 +168,10 @@ public class TokenServiceImpl implements TokenService {
 
             // TODO 需要明确哪些负载需要加密，什么方式加密
             //Token解析后的数据
-            TokenDataDto tokenDataDto = new TokenDataDto(tokenPayload.getUid(), tokenPayload.getRole(), tokenPayload.getAuth(), sid, tokenPayload.getTid(), null,null);
-            if (!isCheckTimeout) {
-                tokenDataDto.setTokenPayload(tokenPayload);
-            }
+            TokenDataDto tokenDataDto = new TokenDataDto(tokenPayload.getUid(), tokenPayload.getRole(), tokenPayload.getAuth(), sid, tokenPayload.getTid(), null);
+            //if (!isCheckTimeout) {
+            //    tokenDataDto.setTokenPayload(tokenPayload);
+            //}
 
             basicOutput.setCode(ErrorCodeEnum.TD200.code());
             basicOutput.setMsg(ErrorCodeEnum.TD200.msg());

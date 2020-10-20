@@ -22,6 +22,10 @@ public class LoginResultDto implements Serializable {
      */
     private String token;
     /**
+     * 登录成功返回的token
+     */
+    private String refreshToken;
+    /**
      * 服务器识别码
      */
     private String sid;
@@ -38,6 +42,10 @@ public class LoginResultDto implements Serializable {
      * TokenId
      */
     private Long tid;
+    /**
+     * TokenId
+     */
+    private Long refreshTokenId;
     /**
      * 用户ID
      */

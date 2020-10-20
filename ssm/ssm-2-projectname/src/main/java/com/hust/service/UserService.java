@@ -9,7 +9,7 @@ import com.hust.util.TDRequest;
 public interface UserService {
     int insert(User record);
 
-    User selectByPrimaryKey(int id);
+    User selectByPrimaryKey(long id);
 
     User selectByName(String name);
 

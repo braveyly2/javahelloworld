@@ -19,6 +19,10 @@ public class LoginVo implements Serializable {
      */
     private String token;
     /**
+     * 登录成功返回的refreshToken
+     */
+    private String refreshToken;
+    /**
      * 服务器识别码
      */
     private String sid;

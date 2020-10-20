@@ -2,7 +2,6 @@ package com.hust.util;
 
 import com.alibaba.fastjson.JSON;
 import com.hust.constant.GlobalConstant;
-import com.hust.constant.GlobalVariable;
 import com.hust.entity.bo.DPiKeyInfo;
 import com.hust.entity.bo.TokenHeader;
 import com.hust.entity.bo.TokenPayload;
@@ -36,12 +35,14 @@ public class TokenUtil {
      * @return
      */
     public TokenResultDto createToken(long userId, String pwdMd5, String clientType,String language) {
-        //long tokenId = IdWorker.getInstance().getId();
-        long tokenId = 119;
+        long tokenId = IdWorker.getInstance().getId();
+        long refreshTokenId = IdWorker.getInstance().getId();
         TokenResultDto tokenResultDto = new TokenResultDto();
         tokenResultDto.setTokenId(tokenId);
+        tokenResultDto.setRefreshTokenId(refreshTokenId);
         //授权中心ID
         String token;
+        String refreshToken;
         try {
             //签发时间
             long createTime = PublicUtil.getUtcTimestampOfSecond();
@@ -77,35 +78,61 @@ public class TokenUtil {
             String privateKey = dpiKeyObj.getPrivateKey();
             //动态口令
             String dpwd = MD5Util.encrypt(dpiKeyObj.getDpiKey() + "#" + createTime);
+
             //base64头
             TokenHeader header = new TokenHeader();
             header.setVer("1.0");
             header.setAlg("HMACSHA256");
             String base64Header = Base64Util.encryptBase64(JSON.toJSONString(header));
-            //base64负载
-            TokenPayload payload = new TokenPayload();
-            payload.setIat(createTime);
-            payload.setExp(expireTime);
-            payload.setDc(1);
-            payload.setUid(userId);
-            payload.setTid(tokenId);
-            payload.setType(GlobalConstant.TOKEN_TYPE_BUS);
-            //userId小于10000位运维系统访问业务系统的内置账号
-            if (userId < 10000) {
-                payload.setAuth(opsAuthList);
+
+            {
+                //base64负载
+                TokenPayload payload = new TokenPayload();
+                payload.setIat(createTime);
+                payload.setExp(expireTime);
+                payload.setDc(1);
+                payload.setUid(userId);
+                payload.setTid(tokenId);
+                payload.setType(GlobalConstant.TOKEN_TYPE_BUS);
+                //userId小于10000位运维系统访问业务系统的内置账号
+                if (userId < 10000) {
+                    payload.setAuth(opsAuthList);
+                }
+                String base64Payload = Base64Util.encryptBase64(JSON.toJSONString(payload));
+                //生成签名
+                String hashSign = HMACSHA256Util.encrypt(base64Header + "." + base64Payload, dpwd);
+                String rsaSign = RSAUtil.privateEncrypt(hashSign, privateKey);
+                String base64Sign = Base64Util.encryptBase64(rsaSign);
+
+                token = base64Header + "." + base64Payload + "." + base64Sign;
             }
-            String base64Payload = Base64Util.encryptBase64(JSON.toJSONString(payload));
-            //生成签名
-            String hashSign = HMACSHA256Util.encrypt(base64Header + "." + base64Payload, dpwd);
-            String rsaSign = RSAUtil.privateEncrypt(hashSign, privateKey);
-            String base64Sign = Base64Util.encryptBase64(rsaSign);
 
-            token = base64Header + "." + base64Payload + "." + base64Sign;
+            {
+                //base64负载
+                TokenPayload refreshTokenPayload = new TokenPayload();
+                refreshTokenPayload.setIat(createTime);
+                refreshTokenPayload.setExp(expireTime*10);
+                refreshTokenPayload.setDc(1);
+                refreshTokenPayload.setUid(userId);
+                refreshTokenPayload.setTid(refreshTokenId);
+                refreshTokenPayload.setType(GlobalConstant.TOKEN_TYPE_BUS);
+                //userId小于10000位运维系统访问业务系统的内置账号
+                if (userId < 10000) {
+                    refreshTokenPayload.setAuth(opsAuthList);
+                }
+                String base64Payload = Base64Util.encryptBase64(JSON.toJSONString(refreshTokenPayload));
+                //生成签名
+                String hashSign = HMACSHA256Util.encrypt(base64Header + "." + base64Payload, dpwd);
+                String rsaSign = RSAUtil.privateEncrypt(hashSign, privateKey);
+                String base64Sign = Base64Util.encryptBase64(rsaSign);
 
+                refreshToken = base64Header + "." + base64Payload + "." + base64Sign;
+            }
 
             tokenResultDto.setToken(token);
+            tokenResultDto.setRefreshToken(refreshToken);
             tokenResultDto.setSid(this.createSid(tokenId, userId, createTime, pwdMd5));
-            tokenResultDto.setTid(tokenId);
+            tokenResultDto.setRefreshTokenId(refreshTokenId);
         } catch (Exception e) {
             //LogUtil.error("产生token失败:" + e.getMessage(), 1, e);
             System.out.println("create token error");
@@ -235,7 +262,8 @@ public class TokenUtil {
     public String createSid(long tokenId, long userId, long time, String pwdMd5) {
         String sidStr = "";
         try {
-            String sid = MD5Util.encrypt(DpikeyUtil.getDPwd(time) + "#" + tokenId + "#" + userId);
+            String data = DpikeyUtil.getDPwd(time) + "#" + tokenId + "#" + userId;
+            String sid = MD5Util.encrypt(data);
             sidStr = AESUtil.aesEncrypt(sid, pwdMd5);
         } catch (Exception e) {
             //LogUtil.error("产生服务器器识别码sid加密串失败:" + e.getMessage(), MOD_LOGIN);

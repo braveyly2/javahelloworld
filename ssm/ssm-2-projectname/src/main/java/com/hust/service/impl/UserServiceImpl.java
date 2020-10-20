@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User selectByPrimaryKey(int id){
+    public User selectByPrimaryKey(long id){
         return userMapper.selectByPrimaryKey(id);
     }
 
@@ -62,24 +62,21 @@ public class UserServiceImpl implements UserService {
         String loginName = loginDto.getUserName();
         String language = PublicUtil.isEmpty(loginDto.getLang()) ? I18nConstant.DEFAULT_LANGUAGE : loginDto.getLang();
         User user = getUserInfoByName(loginName);
-        //User user = new User();
-        //user.setId(IdWorker.getInstance().getId());
-        //user.setName("admin");
-        //user.setPassword("e10adc3949ba59abbe56e057f20f883e");//123456
-        //user.setMark("this is admin");
 
         if (PublicUtil.isEmpty(user)) {
             loginResultDto.setResultCode(ErrorCodeEnum.TD7002);
             return loginResultDto;
         }
-        //MD5????MD5(nonce#time#userName#MD5(PSW))
+
         String md5Str = MD5Util.encrypt(tdRequest.getBasic().getNonce() + "#" + tdRequest.getBasic().getTime() + "#" + loginName + "#" + user.getPassword());
         if (loginDto.getPassword().equals(md5Str)) {
             if (generateToken) {
                 TokenResultDto tokenResultDto = tokenUtil.createToken(user.getId(), user.getPassword(), clientType, language);
                 loginResultDto.setToken(tokenResultDto.getToken());
+                loginResultDto.setRefreshToken(tokenResultDto.getRefreshToken());
                 loginResultDto.setSid(tokenResultDto.getSid());
                 loginResultDto.setTid(tokenResultDto.getTid());
+                loginResultDto.setRefreshTokenId(tokenResultDto.getRefreshTokenId());
                 loginResultDto.setUserId((long)user.getId());
             }
         } else {

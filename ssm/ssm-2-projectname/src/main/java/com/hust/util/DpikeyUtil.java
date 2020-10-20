@@ -1,7 +1,6 @@
 package com.hust.util;
 
 import com.alibaba.fastjson.JSON;
-import com.hust.constant.GlobalVariable;
 import com.hust.entity.bo.DPiKeyInfo;
 
 import java.text.ParseException;
@@ -23,7 +22,8 @@ public class DpikeyUtil {
      */
     public static String getDPwd(long time) {
         //获取离签发时间最近的dpikey
-        DPiKeyInfo dPiKeyInfo = getDpiObj(time);
+        //DPiKeyInfo dPiKeyInfo = getDpiObj(time);
+        DPiKeyInfo dPiKeyInfo = DPiKeyInfoManager.getInstance().getDPiKeyInfo();
         return MD5Util.encrypt(dPiKeyInfo.getDpiKey() + "#" + time);
     }
 
@@ -34,7 +34,7 @@ public class DpikeyUtil {
      * @return
      */
     public static DPiKeyInfo getDpiObj(long time) {
-        return GlobalVariable.GDPIKEY_INFO;
+        return null;
     }
 
     public static void main_bak(String[] args) throws ParseException {

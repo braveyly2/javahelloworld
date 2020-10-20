@@ -36,7 +36,6 @@ public class AccessPurviewFilter extends HttpServlet implements Filter{
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 
-
         String requestPath = ((HttpServletRequest)servletRequest).getServletPath();
         //filterChain.doFilter(servletRequest,servletResponse);//just for debug TDRESULT
         if(requestPath.contains("/user/login") ||
@@ -53,7 +52,6 @@ public class AccessPurviewFilter extends HttpServlet implements Filter{
         }
 
         InputStream in = servletRequest.getInputStream();
-        LogUtil.info("body123: < before >", "AccessPurviewFilter");
         String body = StreamUtils.copyToString(in, Charset.forName(GlobalConstant.DEFAULT_CHARSET));
         LogUtil.info(String.format("body: < %s >", body), "AccessPurviewFilter");
         TDRequest requestInfo = JSON.parseObject(body, TDRequest.class);
@@ -70,9 +68,9 @@ public class AccessPurviewFilter extends HttpServlet implements Filter{
             }else{
                 User user = new User();
                 user.setId(IdWorker.getInstance().getId());
-                user.setName("rrrr");
-                user.setPassword("rtttt");
-                user.setMark("this is rrrr");
+                //user.setName("rrrr");
+                //user.setPassword("rtttt");
+                user.setMark("Token invalid");
                 returnJson(servletResponse,user);
             }
         }
