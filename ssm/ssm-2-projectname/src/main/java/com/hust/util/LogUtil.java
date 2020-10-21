@@ -4,6 +4,7 @@ import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.joran.JoranConfigurator;
 import ch.qos.logback.core.util.StatusPrinter;
+import com.hust.util.apitemplate.TDRequest;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Marker;
 import org.springframework.util.ClassUtils;
@@ -12,7 +13,6 @@ import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Map;
-import java.util.ResourceBundle;
 
 public class LogUtil {
     private static org.slf4j.Logger innerLogger;

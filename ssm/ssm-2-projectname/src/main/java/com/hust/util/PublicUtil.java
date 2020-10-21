@@ -1,5 +1,8 @@
 package com.hust.util;
 
+import com.hust.util.apitemplate.BasicInput;
+import com.hust.util.apitemplate.BasicOutput;
+
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 import java.time.Instant;

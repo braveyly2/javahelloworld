@@ -7,15 +7,18 @@ import com.hust.entity.dto.DynamicCodeRedisDto;
 import com.hust.entity.dto.RegisterUserInputData;
 import com.hust.service.UserService;
 import com.hust.util.*;
-import com.hust.util.*;
+import com.hust.util.apitemplate.BasicInput;
+import com.hust.util.apitemplate.BasicOutput;
+import com.hust.util.apitemplate.TDRequest;
+import com.hust.util.apitemplate.TDResponse;
+import com.hust.util.ciper.MD5Util;
+import com.hust.util.ciper.RSAUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import redis.clients.jedis.Jedis;
 
-import java.util.UUID;
 /*
 {
 	"basic": {

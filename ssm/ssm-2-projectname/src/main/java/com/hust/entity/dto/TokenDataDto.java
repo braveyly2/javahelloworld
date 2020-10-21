@@ -1,6 +1,5 @@
 package com.hust.entity.dto;
 
-import com.hust.entity.bo.TokenPayload;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

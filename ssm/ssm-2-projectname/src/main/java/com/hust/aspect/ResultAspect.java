@@ -6,27 +6,25 @@ import com.alibaba.fastjson.parser.Feature;
 import com.alibaba.fastjson.parser.ParserConfig;
 //import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import com.hust.annotation.ApiVersionDesc;
 import com.hust.annotation.TDResult;
 import com.hust.entity.dto.TokenDataDto;
 import com.hust.util.*;
+import com.hust.util.apitemplate.BasicOutput;
+import com.hust.util.apitemplate.TDRequest;
+import com.hust.util.apitemplate.TDResponse;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author Lyh

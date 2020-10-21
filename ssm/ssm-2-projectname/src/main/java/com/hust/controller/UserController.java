@@ -1,23 +1,22 @@
 package com.hust.controller;
 
-import com.hust.annotation.TDResult;
 import com.hust.constant.GlobalConstant;
-import com.hust.constant.UserConstant;
 import com.hust.entity.RestBean;
 import com.hust.entity.domain.User;
-import com.hust.entity.domain.UserLogin;
 import com.hust.entity.dto.*;
 import com.hust.entity.vo.LoginVo;
 import com.hust.service.UserService;
 import com.hust.util.*;
+import com.hust.util.apitemplate.BasicOutput;
+import com.hust.util.apitemplate.TDRequest;
+import com.hust.util.apitemplate.TDResponse;
+import com.hust.util.token.TokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.annotation.Id;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -27,9 +26,6 @@ public class UserController {
 
     @Autowired
     JedisUtils jedisUtils;
-
-    @Autowired
-    TokenUtil tokenUtil;
 
     @RequestMapping(value="hello",method=RequestMethod.POST)
     @ResponseBody
@@ -274,7 +270,7 @@ http://localhost:8080/user/login
 
     @RequestMapping(value = "/user/token/refresh", method = RequestMethod.POST)
     @ResponseBody
-    public TDResponse<TokenResultDto> renewToken(@RequestBody TDRequest tdRequest, HttpServletRequest request) {
+    public TDResponse<TokenResultDto> refeshToken(@RequestBody TDRequest tdRequest, HttpServletRequest request) {
         TDResponse<TokenResultDto> tdResponse = new TDResponse<>();
         BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
         String clientType = request.getHeader(GlobalConstant.ZUUL_HEADER_CLIENTTYPE);
@@ -283,7 +279,7 @@ http://localhost:8080/user/login
             TokenDataDto tokenDataDto = tdRequest.getTokenDataDto();
             User user = userService.selectByPrimaryKey(tokenDataDto.getUserId());
 
-            tokenResultDto = tokenUtil.createToken(user.getId(), user.getPassword(), clientType, null);
+            tokenResultDto = userService.createToken(user.getId(), user.getPassword(), clientType, null);
 
             if (PublicUtil.isEmpty(tokenResultDto.getToken())) {
                 basicOutput.setCode(ErrorCodeEnum.TD7004.code());

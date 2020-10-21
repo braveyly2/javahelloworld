@@ -10,6 +10,10 @@ import com.hust.entity.dto.LoginResultDto;
 import com.hust.entity.dto.TokenResultDto;
 import com.hust.service.UserService;
 import com.hust.util.*;
+import com.hust.util.apitemplate.BasicOutput;
+import com.hust.util.apitemplate.TDRequest;
+import com.hust.util.ciper.MD5Util;
+import com.hust.util.token.TokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -75,7 +79,7 @@ public class UserServiceImpl implements UserService {
                 loginResultDto.setToken(tokenResultDto.getToken());
                 loginResultDto.setRefreshToken(tokenResultDto.getRefreshToken());
                 loginResultDto.setSid(tokenResultDto.getSid());
-                loginResultDto.setTid(tokenResultDto.getTid());
+                loginResultDto.setTid(tokenResultDto.getTokenId());
                 loginResultDto.setRefreshTokenId(tokenResultDto.getRefreshTokenId());
                 loginResultDto.setUserId((long)user.getId());
             }
@@ -97,5 +101,9 @@ public class UserServiceImpl implements UserService {
     private User getUserInfoByName(String name){
         User user = userMapper.selectByName(name);
         return user;
+    }
+
+    public TokenResultDto createToken(long userId, String pwdMd5, String clientType,String language){
+        return tokenUtil.createToken(userId, pwdMd5, clientType, null);
     }
 }

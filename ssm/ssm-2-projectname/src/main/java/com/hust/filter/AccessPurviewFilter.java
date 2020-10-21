@@ -1,14 +1,14 @@
 package com.hust.filter;
 import com.alibaba.fastjson.JSON;
-import com.hust.constant.ErrorCodeEnum;
 import com.hust.constant.GlobalConstant;
 import com.hust.entity.domain.User;
 import com.hust.entity.dto.TokenDataDto;
-import com.hust.service.TokenService;
-import com.hust.service.UserService;
 import com.hust.util.*;
+import com.hust.util.apitemplate.BasicOutput;
+import com.hust.util.apitemplate.TDRequest;
+import com.hust.util.apitemplate.TDResponse;
+import com.hust.util.token.TokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StreamUtils;
 
@@ -19,14 +19,15 @@ import java.nio.charset.Charset;
 import javax.servlet.*;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 @Component
 public class AccessPurviewFilter extends HttpServlet implements Filter{
 
+    //@Autowired
+    //TokenService tokenService;
+
     @Autowired
-    TokenService tokenService;
+    TokenUtil tokenUtil;
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -60,9 +61,11 @@ public class AccessPurviewFilter extends HttpServlet implements Filter{
         BasicOutput basicOutput;
 
         try {
-            tdResponse = tokenService.isTokenValid(requestInfo);
-            if(tdResponse.getBasic().getCode() == ErrorCodeEnum.TD200.code()){
-                requestInfo.setTokenDataDto(tdResponse.getData());
+            //tdResponse = tokenService.isTokenValid(requestInfo);
+            TokenDataDto tokenDataDto = tokenUtil.verify(requestInfo.getBasic().getToken(),true,true);
+
+            if(null != tokenDataDto){
+                requestInfo.setTokenDataDto(tokenDataDto);
                 ModifyBodyHttpServletRequestWrapper modifyBodyHttpServletRequestWrapper = new ModifyBodyHttpServletRequestWrapper((HttpServletRequest)servletRequest, JSON.toJSONString(requestInfo));
                 filterChain.doFilter(modifyBodyHttpServletRequestWrapper,servletResponse);
             }else{
