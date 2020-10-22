@@ -2,13 +2,14 @@ package com.hust.filter;
 import com.alibaba.fastjson.JSON;
 import com.hust.entity.domain.User;
 import com.hust.accountcommon.util.IdWorker;
-import com.hust.accountcommon.util.LogUtil;
+//import com.hust.accountcommon.util.LogUtil;
 import com.hust.accountcommon.constant.GlobalConstant;
 import com.hust.accountcommon.entity.dto.TokenDataDto;
 import com.hust.accountcommon.util.apitemplate.BasicOutput;
 import com.hust.accountcommon.util.apitemplate.TDRequest;
 import com.hust.accountcommon.util.apitemplate.TDResponse;
 import com.hust.accountcommon.util.token.TokenUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StreamUtils;
@@ -22,6 +23,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 
 @Component
+@Slf4j
 public class AccessPurviewFilter extends HttpServlet implements Filter{
 
     //@Autowired
@@ -55,7 +57,7 @@ public class AccessPurviewFilter extends HttpServlet implements Filter{
 
         InputStream in = servletRequest.getInputStream();
         String body = StreamUtils.copyToString(in, Charset.forName(GlobalConstant.DEFAULT_CHARSET));
-        LogUtil.info(String.format("body: < %s >", body), "AccessPurviewFilter");
+        log.info(String.format("body: < %s >", body), "AccessPurviewFilter");
         TDRequest requestInfo = JSON.parseObject(body, TDRequest.class);
         //token有效性校验
         TDResponse<TokenDataDto> tdResponse;

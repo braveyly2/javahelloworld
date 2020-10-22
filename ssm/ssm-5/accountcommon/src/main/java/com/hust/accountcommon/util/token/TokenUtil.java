@@ -7,11 +7,12 @@ import com.hust.accountcommon.entity.domain.TokenPayload;
 import com.hust.accountcommon.entity.dto.TokenDataDto;
 import com.hust.accountcommon.entity.dto.TokenResultDto;
 import com.hust.accountcommon.util.IdWorker;
-import com.hust.accountcommon.util.LogUtil;
+////import com.hust.accountcommon.util.LogUtil;
 import com.hust.accountcommon.util.PublicUtil;
 import com.hust.accountcommon.util.ciper.*;
 import com.alibaba.fastjson.JSON;
 import com.hust.accountcommon.util.ciper.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ import java.util.List;
  * @date 2018/9/5 19:42
  */
 @Component
+@Slf4j
 public class TokenUtil {
 
 
@@ -139,7 +141,7 @@ public class TokenUtil {
             tokenResultDto.setSid(this.createSid(tokenId, userId, createTime, pwdMd5));
             tokenResultDto.setRefreshTokenId(refreshTokenId);
         } catch (Exception e) {
-            //LogUtil.error("产生token失败:" + e.getMessage(), 1, e);
+            log.error("产生token失败:" + e.getMessage(), 1, e);
             System.out.println("create token error");
         }
         return tokenResultDto;
@@ -163,7 +165,7 @@ public class TokenUtil {
             String sid = MD5Util.encrypt(data);
             sidStr = AESUtil.aesEncrypt(sid, pwdMd5);
         } catch (Exception e) {
-            //LogUtil.error("产生服务器器识别码sid加密串失败:" + e.getMessage(), MOD_LOGIN);
+            log.error("产生服务器器识别码sid加密串失败:" + e.getMessage(), "MOD_LOGIN");
             System.out.println("产生服务器器识别码sid加密串失败:" + e.getMessage());
         }
         return sidStr;
@@ -189,7 +191,7 @@ public class TokenUtil {
 
             //Token由3段点分内容组成
             if (tokenEle.length != 3) {
-                LogUtil.error(String.format("Token格式错误: [%s]", token), "Token Module");
+                log.error(String.format("Token格式错误: [%s]", token), "Token Module");
                 return null;
             }
 
@@ -203,7 +205,7 @@ public class TokenUtil {
             TokenHeader tokenHeader = JSON.parseObject(stringHeader, TokenHeader.class);
             //说明Json转换失败，FastJson不报异常
             if (tokenHeader.getVer() == null) {
-                LogUtil.error(String.format("TokenHeader转换错误: [%s]", token), "Token Module");
+                log.error(String.format("TokenHeader转换错误: [%s]", token), "Token Module");
                 return null;
             }
 
@@ -214,14 +216,14 @@ public class TokenUtil {
                 if(tokenPayload.getType() != GlobalConstant.TOKEN_TYPE_OPS){
                     basicOutput.setCode(ErrorCodeEnum.TD7003.code());
                     basicOutput.setMsg(ErrorCodeEnum.TD7003.msg());
-                    LogUtil.error(String.format("业务用户不允许访问运维: [%s]", token), MOD_TOKEN);
+                    log.error(String.format("业务用户不允许访问运维: [%s]", token), MOD_TOKEN);
                     return tdResponse;
                 }
             }
             */
             //说明Json转换失败，FastJson不报异常
             if (tokenPayload.getIat() == 0 && tokenPayload.getExp() == 0) {
-                LogUtil.error(String.format("TokenPayload转换错误: [%s]", token), "Token Module");
+                log.error(String.format("TokenPayload转换错误: [%s]", token), "Token Module");
                 return null;
             }
 
@@ -229,7 +231,7 @@ public class TokenUtil {
             if (isCheckTimeout) {
                 //Token已过期
                 if (tokenPayload.getExp() < currentTimeStamp) {
-                    LogUtil.error(String.format("Token已过期: [%s]", token), "Token Module");
+                    log.error(String.format("Token已过期: [%s]", token), "Token Module");
                     return null;
                 }
             }
@@ -240,7 +242,7 @@ public class TokenUtil {
                 DPiKeyInfo dPiKeyInfo = DPiKeyInfoManager.getInstance().getDPiKeyInfo();
                 //DPiKeyInfo dPiKeyInfo = GlobalVariable.GDPIKEY_INFO;
                 if (dPiKeyInfo == null) {
-                    LogUtil.error(String.format("Dpikey为空: [%s]", token), "Token Module");
+                    log.error(String.format("Dpikey为空: [%s]", token), "Token Module");
                     return null;
                 }
                 //动态口令生成
@@ -251,7 +253,7 @@ public class TokenUtil {
                 String stringHashSign = HMACSHA256Util.encrypt(tokenEle[0] + "." + tokenEle[1], DPwd);
                 //签名错误
                 if (!stringTokenSign.equals(stringHashSign)) {
-                    LogUtil.error(String.format("签名验证失败，请求中的签名：[%s]，计算出的签名：[%s]",
+                    log.error(String.format("签名验证失败，请求中的签名：[%s]，计算出的签名：[%s]",
                                                 stringTokenSign, stringHashSign), "Token Module");
                     return null;
                 }
@@ -272,7 +274,7 @@ public class TokenUtil {
             return tokenDataDto;
         }
         catch (Exception ex){
-            LogUtil.error("解析Token异常:" + ex.getMessage(), "Token Module");
+            log.error("解析Token异常:" + ex.getMessage(), "Token Module");
             return null;
         }
     }

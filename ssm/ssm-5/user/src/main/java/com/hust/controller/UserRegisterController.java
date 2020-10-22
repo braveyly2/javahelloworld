@@ -50,6 +50,7 @@ import org.springframework.web.bind.annotation.RestController;
 }
 */
 @RestController
+@Slf4j
 public class UserRegisterController {
     @Autowired
     UserService userServiceImpl;
@@ -146,7 +147,7 @@ public class UserRegisterController {
                 }
             }
         } catch (Exception e) {
-            com.hust.accountcommon.util.LogUtil.error("用户注册异常", "ms-user", e);
+            log.error("用户注册异常", "ms-user", e);
             basicOutput.setCode(ErrorCodeEnum.TD9500.code());
             basicOutput.setMsg(ErrorCodeEnum.TD9500.msg());
         }

@@ -7,7 +7,7 @@ import com.hust.entity.dto.*;
 import com.hust.service.UserService;
 import com.hust.util.ErrorCodeEnum;
 import com.hust.util.JedisUtils;
-import com.hust.accountcommon.util.LogUtil;
+//import com.hust.accountcommon.util.LogUtil;
 import com.hust.accountcommon.constant.GlobalConstant;
 import com.hust.entity.RestBean;
 import com.hust.accountcommon.util.PublicUtil;
@@ -15,6 +15,9 @@ import com.hust.entity.vo.LoginVo;
 import com.hust.accountcommon.util.apitemplate.BasicOutput;
 import com.hust.accountcommon.util.apitemplate.TDRequest;
 import com.hust.accountcommon.util.apitemplate.TDResponse;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -24,9 +27,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Controller
+@Slf4j
 public class UserController {
     @Autowired
     private UserService userService;
+
+    //private Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     JedisUtils jedisUtils;
@@ -153,7 +159,7 @@ http://localhost:8080/user/login
     @RequestMapping(value = "/user/login", method = RequestMethod.POST)
     @ResponseBody
     public TDResponse<LoginVo> login(@RequestBody TDRequest<LoginDto> tdRequest, HttpServletRequest request) {
-        LogUtil.info("收到登录请求", "Login");
+        log.info("收到登录请求", "Login");
         TDResponse<LoginVo> tdResponse = new TDResponse<>();
         BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
         try {
@@ -211,7 +217,7 @@ http://localhost:8080/user/login
             }
             */
 
-            LogUtil.info(String.format("收到登录请求: UserName: %s, ClientType: %s", tdRequest.getData().getUserName(), clientType), "Login");
+            log.info(String.format("收到登录请求: UserName: %s, ClientType: %s", tdRequest.getData().getUserName(), clientType), "Login");
             LoginResultDto dto = userService.login(tdRequest, clientType, true, isCheckImgCode);
             LoginVo vo = new LoginVo();
             vo.setToken(dto.getToken());
@@ -232,7 +238,7 @@ http://localhost:8080/user/login
             tdResponse.setBasic(basicOutput);
             tdResponse.setData(vo);
         } catch (Exception ex) {
-            LogUtil.error("登录失败异常：" + ex.getMessage(), "Login", ex);
+            log.error("登录失败异常：" + ex.getMessage(), "Login", ex);
             basicOutput.setCode(ErrorCodeEnum.TD9500.code());
             basicOutput.setMsg(ex.getMessage());
         }
@@ -261,10 +267,10 @@ http://localhost:8080/user/login
             } else {
                 basicOutput.setCode(ErrorCodeEnum.TD7001.code());
                 basicOutput.setMsg(ErrorCodeEnum.TD7001.msg());
-                LogUtil.error("用户不存在", "ms-user");
+                log.error("用户不存在", "ms-user");
             }
         } catch (Exception e) {
-            LogUtil.error("查询用户信息失败", "ms-user", e);
+            log.error("查询用户信息失败", "ms-user", e);
             basicOutput.setCode(ErrorCodeEnum.TD9500.code());
             basicOutput.setMsg(ErrorCodeEnum.TD9500.msg());
         }
@@ -294,7 +300,7 @@ http://localhost:8080/user/login
         } catch (Exception e) {
             basicOutput.setCode(ErrorCodeEnum.TD9500.code());
             basicOutput.setMsg(ErrorCodeEnum.TD9500.msg());
-            LogUtil.error("token续签失败", "user", e);
+            log.error("token续签失败", "user", e);
         }
         tdResponse.setBasic(basicOutput);
         tdResponse.setData(tokenResultDto);

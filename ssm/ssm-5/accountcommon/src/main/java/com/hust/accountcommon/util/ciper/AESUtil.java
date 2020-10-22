@@ -1,9 +1,10 @@
 package com.hust.accountcommon.util.ciper;
 
 
-import com.hust.accountcommon.util.LogUtil;
+////import com.hust.accountcommon.util.LogUtil;
 //import org.apache.tomcat.util.codec.binary.Base64;
 //import java.util.Base64;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
 import sun.misc.BASE64Decoder;
 //import sun.misc.BASE64Decoder;
@@ -18,6 +19,7 @@ import java.util.Arrays;
  * AES的加密和解密
  *
  */
+@Slf4j
 public class AESUtil {
     //密钥 (需要前端和后端保持一致)
     private static final String KEY = "e9bc0e13a8a16cbb07b175d92a113126";
@@ -34,7 +36,7 @@ public class AESUtil {
         try {
             return aesDecrypt(encrypt, KEY);
         } catch (Exception e) {
-            LogUtil.error("", "", e);
+            log.error("", "", e);
 //            e.printStackTrace();
             return "";
         }
@@ -50,7 +52,7 @@ public class AESUtil {
         try {
             return aesEncrypt(content, KEY);
         } catch (Exception e) {
-            LogUtil.error("", "", e);
+            log.error("", "", e);
 //            e.printStackTrace();
             return "";
         }

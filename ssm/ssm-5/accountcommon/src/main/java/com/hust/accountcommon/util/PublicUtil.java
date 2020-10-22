@@ -2,6 +2,7 @@ package com.hust.accountcommon.util;
 
 import com.hust.accountcommon.util.apitemplate.BasicOutput;
 import com.hust.accountcommon.util.apitemplate.BasicInput;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
@@ -14,6 +15,7 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.UUID;
 
+@Slf4j
 public class PublicUtil {
     /**
      * 判断对象是否Empty(null或元素为0)
@@ -463,7 +465,7 @@ public class PublicUtil {
             String[] versions = devVersionInDB.split("\\.");
             return versions[0] + "." + versions[1] + "." + versions[2];
         } catch (Exception e) {
-            LogUtil.error("将db中的设备版本长串换为精简设备版本时出错", "Public Method", e);
+            log.error("将db中的设备版本长串换为精简设备版本时出错", "Public Method", e);
             return null;
         }
     }
@@ -484,7 +486,7 @@ public class PublicUtil {
                 }
             }
         } catch (Exception e) {
-            LogUtil.error("读取文件异常", "", e);
+            log.error("读取文件异常", "", e);
         }
         finally {
             try {
@@ -493,7 +495,7 @@ public class PublicUtil {
                 if (fileReader != null)
                     fileReader.close();
             } catch (IOException e) {
-                LogUtil.error("关闭文件异常", "", e);
+                log.error("关闭文件异常", "", e);
             }
         }
         //去掉最后部分
@@ -510,14 +512,14 @@ public class PublicUtil {
             fileWriter = new FileWriter(filePath);
             fileWriter.write(content);
         } catch (Exception e) {
-            LogUtil.error("写文件异常", "", e);
+            log.error("写文件异常", "", e);
         }
         finally {
             try {
                 if (fileWriter != null)
                     fileWriter.close();
             } catch (IOException e) {
-                LogUtil.error("关闭文件异常", "", e);
+                log.error("关闭文件异常", "", e);
             }
         }
     }

@@ -1,7 +1,8 @@
 package com.hust.accountcommon.util.ciper;
 
 import com.hust.accountcommon.constant.GlobalConstant;
-import com.hust.accountcommon.util.LogUtil;
+////import com.hust.accountcommon.util.LogUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
@@ -22,7 +23,7 @@ import java.util.Map;
  * @Description:
  * @date 2018/8/23 10:00
  */
-
+@Slf4j
 public class RSAUtil {
     private static final String RSA_ALGORITHM = "RSA";
     private static final Provider provider = new BouncyCastleProvider();
@@ -54,7 +55,7 @@ public class RSAUtil {
         Map<String, String> keyPairMap = new HashMap<String, String>();
         keyPairMap.put("publicKey", publicKeyStr);
         keyPairMap.put("privateKey", privateKeyStr);
-        LogUtil.debug(String.format("生成RSA秘钥对，PublicKey: [ %s ], PrivateKey:[ %s ]", publicKeyStr, privateKeyStr), "RSA");
+        log.debug(String.format("生成RSA秘钥对，PublicKey: [ %s ], PrivateKey:[ %s ]", publicKeyStr, privateKeyStr), "RSA");
 
         return keyPairMap;
     }
@@ -121,7 +122,7 @@ public class RSAUtil {
      * @return
      */
     public static String publicEncrypt(String data, String publicKey) {
-//        LogUtil.debug(String.format("-- RSA公钥加密 -- data: %s, publicKey: %s", data, publicKey), "RSA");
+        log.debug(String.format("-- RSA公钥加密 -- data: %s, publicKey: %s", data, publicKey), "RSA");
         return publicEncrypt(data, RSAUtil.getPublicKey(publicKey));
     }
 
@@ -150,7 +151,7 @@ public class RSAUtil {
      * @return
      */
     public static String privateDecrypt(String data, String privateKey) {
-//        LogUtil.debug(String.format("-- RSA私钥解密 -- data: %s, privateKey: %s", data, privateKey), "RSA");
+        log.debug(String.format("-- RSA私钥解密 -- data: %s, privateKey: %s", data, privateKey), "RSA");
         return privateDecrypt(data, RSAUtil.getPrivateKey(privateKey));
     }
 
@@ -179,7 +180,7 @@ public class RSAUtil {
      * @return
      */
     public static String privateEncrypt(String data, String privateKey) {
-        LogUtil.debug(String.format("-- RSA私钥加密 -- data: %s, privateKey: %s", data, privateKey), "RSA");
+        log.debug(String.format("-- RSA私钥加密 -- data: %s, privateKey: %s", data, privateKey), "RSA");
         return privateEncrypt(data, RSAUtil.getPrivateKey(privateKey));
     }
 

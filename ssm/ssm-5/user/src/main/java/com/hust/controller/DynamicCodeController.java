@@ -14,6 +14,7 @@ import com.hust.accountcommon.util.apitemplate.BasicOutput;
 import com.hust.accountcommon.util.apitemplate.TDRequest;
 import com.hust.accountcommon.util.apitemplate.TDResponse;
 import com.hust.accountcommon.util.ciper.RSAUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -88,6 +89,7 @@ import java.util.Map;
 }
  */
 @RestController
+@Slf4j
 public class DynamicCodeController {
     @Autowired
     private UserService userService;
@@ -236,7 +238,7 @@ public class DynamicCodeController {
                         response.setBasic(basicOutput);
                         return response;
                     } catch (Exception e) {
-                        //LogUtil.error("注册时生成私钥失败", "ms-user", e);
+                        log.error("注册时生成私钥失败", "ms-user", e);
                         System.out.println("e="+e);
                         basicOutput.setCode(ErrorCodeEnum.TD9500.code());
                         basicOutput.setMsg(ErrorCodeEnum.TD9500.msg());

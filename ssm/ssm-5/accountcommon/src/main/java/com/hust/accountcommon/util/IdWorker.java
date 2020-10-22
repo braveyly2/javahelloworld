@@ -1,10 +1,12 @@
 package com.hust.accountcommon.util;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
 @Component
+@Slf4j
 public class IdWorker {
 
     private static SnowflakeIdWorker idWorker;
@@ -26,12 +28,12 @@ public class IdWorker {
         int workerId = 1;
         int dataCenterId = 1;
         if(workerId == -1){
-            LogUtil.info("本服务不支持IdWorker", "IdWorker");
+            log.info("本服务不支持IdWorker", "IdWorker");
             idWorker = null;
         }
         else{
             idWorker = new SnowflakeIdWorker(workerId, dataCenterId);
-            LogUtil.info("初始化机器ID：" + workerId + ",数据中心ID：" + dataCenterId, "IdWorker");
+            log.info("初始化机器ID：" + workerId + ",数据中心ID：" + dataCenterId, "IdWorker");
         }
     }
 

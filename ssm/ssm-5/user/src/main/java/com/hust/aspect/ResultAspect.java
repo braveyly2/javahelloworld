@@ -12,11 +12,12 @@ import com.hust.annotation.ApiVersionDesc;
 import com.hust.annotation.TDResult;
 import com.hust.accountcommon.entity.dto.TokenDataDto;
 import com.hust.util.ErrorCodeEnum;
-import com.hust.accountcommon.util.LogUtil;
+//import com.hust.accountcommon.util.LogUtil;
 import com.hust.accountcommon.util.PublicUtil;
 import com.hust.accountcommon.util.apitemplate.BasicOutput;
 import com.hust.accountcommon.util.apitemplate.TDRequest;
 import com.hust.accountcommon.util.apitemplate.TDResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -36,6 +37,7 @@ import java.util.List;
  */
 @Aspect
 @Component
+@Slf4j
 public class ResultAspect {
 
     public static int API_PARSER_FEATURE;
@@ -63,12 +65,12 @@ public class ResultAspect {
         if (args != null && args.length > 0 && (args[0] instanceof TDRequest)) {
             TDRequest<Object> tdRequest = (TDRequest<Object>) args[0];
             basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
-            logModelName = LogUtil.getLogModelName(tdRequest, "tdResult");
-
+            //logModelName = LogUtil.getLogModelName(tdRequest, "tdResult");
+            logModelName = "abc";
 
 //            String res = JSON.toJSONString(tdRequest);
 //            tdRequest = JSON.parseObject(res, new TypeReference<TdRequest<String>>(){});
-            LogUtil.info("方法为：" + request.getRequestURI() + ";参数json为：" + JSON.toJSONString(tdRequest), logModelName);
+            log.info("方法为：" + request.getRequestURI() + ";参数json为：" + JSON.toJSONString(tdRequest), logModelName);
             basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
 
             //解析token用户权限,
@@ -77,7 +79,7 @@ public class ResultAspect {
                     basicOutput.setCode(ErrorCodeEnum.TD1011.code());
                     basicOutput.setMsg(ErrorCodeEnum.TD1011.msg());
                     tdResponse.setBasic(basicOutput);
-                    LogUtil.error("TokenData为空", logModelName);
+                    log.error("TokenData为空", logModelName);
                     return tdResponse;
                 } else {
                     TokenDataDto tokenDataDto = tdRequest.getTokenDataDto();
@@ -102,19 +104,19 @@ public class ResultAspect {
                 String curMethodName = joinPoint.getSignature().getName();
                 //根据协议报文中的版本号，调用对应的版本方法
                 String versionMethodName = curMethodName + "_v" + apiVer.replace(".", "_");
-                LogUtil.info(String.format("方法版本为：%s, 执行方法：%s", apiVer ,versionMethodName), logModelName);
+                log.info(String.format("方法版本为：%s, 执行方法：%s", apiVer ,versionMethodName), logModelName);
                 try {
                     callVersionMethod(controller, controllerClass, versionMethodName, tdRequest, tdResponse, basicOutput);
                 }
                 catch (NoSuchMethodException ex){
-                    LogUtil.error(String.format("API[%s]没有对应版本的方法", request.getRequestURI()), logModelName);
+                    log.error(String.format("API[%s]没有对应版本的方法", request.getRequestURI()), logModelName);
                     basicOutput.setCode(ErrorCodeEnum.TD6002.code());
                     basicOutput.setMsg("没有对应版本的API：" + request.getRequestURI() + ",版本为：" + apiVer);
                     tdResponse.setBasic(basicOutput);
                 }
                 catch (JSONException ex) {
                     String message = String.format("API[%s]入参的data数据格式错误,版本为：%s", request.getRequestURI(), apiVer);
-                    LogUtil.error(message, logModelName);
+                    log.error(message, logModelName);
                     basicOutput.setCode(ErrorCodeEnum.TD6003.code());
                     basicOutput.setMsg(message);
                     tdResponse.setBasic(basicOutput);
@@ -133,7 +135,7 @@ public class ResultAspect {
 //                        basicOutput.setCode(ErrorCodeEnum.TD1011.code());
 //                        basicOutput.setMsg(checkResults.toString());
 //                        tdResponse.setBasic(basicOutput);
-//                        LogUtil.error("参数校验不通过" + checkResults, "tdResult");
+//                        log.error("参数校验不通过" + checkResults, "tdResult");
 //                        return tdResponse;
 //                    }
 //                }
@@ -142,14 +144,14 @@ public class ResultAspect {
 
         try {
             TDResponse<Object> result = (TDResponse<Object>) joinPoint.proceed();
-            LogUtil.info("方法为：" + request.getRequestURI() + ";返回结果json为：" + JSON.toJSONString(result), logModelName);
+            log.info("方法为：" + request.getRequestURI() + ";返回结果json为：" + JSON.toJSONString(result), logModelName);
             if (PublicUtil.isNotEmpty(result.getBasic()) && PublicUtil.isNotEmpty(result.getBasic().getCode())) {
                 basicOutput = result.getBasic();
             }
             tdResponse.setData(result.getData());
             tdResponse.setBasic(basicOutput);
         } catch (Exception e) {
-            LogUtil.error("返回结果转换异常", logModelName, e);
+            log.error("返回结果转换异常", logModelName, e);
             basicOutput.setCode(ErrorCodeEnum.TD6000.code());
             basicOutput.setMsg(ErrorCodeEnum.TD6000.msg());
             tdResponse.setBasic(basicOutput);

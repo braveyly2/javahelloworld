@@ -1,6 +1,8 @@
 package com.hust.util;
 
+import com.alibaba.fastjson.JSON;
 import com.hust.accountcommon.util.PublicUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
@@ -16,6 +18,7 @@ import java.util.*;
  * @author yurj
  */
 @Component
+@Slf4j
 public class JedisUtils {
 
     @Autowired
@@ -34,23 +37,23 @@ public class JedisUtils {
      * @return
      */
     public boolean rename(String oldKey, String newKey) {
-        //LogUtil.debug(String.format("方法：rename，参数[oldKey:%s,newKey:%s]", oldKey, newKey), "redis");
+        log.debug(String.format("方法：rename，参数[oldKey:%s,newKey:%s]", oldKey, newKey), "redis");
         try {
             jedisCluster.rename(oldKey, newKey);
             return true;
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 jedisCluster.rename(oldKey, newKey);
                 return true;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return false;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return false;
         }
     }
@@ -63,7 +66,7 @@ public class JedisUtils {
      * @return
      */
     public boolean set(final String key, Object value) {
-        //LogUtil.debug(String.format("方法：set，参数[key:%s,value:%s]", key, value), "redis");
+        log.debug(String.format("方法：set，参数[key:%s,value:%s]", key, value), "redis");
         try {
             if(PublicUtil.isBaseType(value)) {
                 jedisCluster.set(key, value.toString());
@@ -74,7 +77,7 @@ public class JedisUtils {
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 if(PublicUtil.isBaseType(value)) {
                     jedisCluster.set(key, value.toString());
                 } else {
@@ -82,12 +85,12 @@ public class JedisUtils {
                 }
                 return true;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return false;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return false;
         }
     }
@@ -100,23 +103,23 @@ public class JedisUtils {
      * @return
      */
     public boolean setString(final String key, String value) {
-        //LogUtil.debug(String.format("方法：setString，参数[key:%s,value:%s]", key, value), "redis");
+        log.debug(String.format("方法：setString，参数[key:%s,value:%s]", key, value), "redis");
         try {
             jedisCluster.set(key, value);
             return true;
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 jedisCluster.set(key, value);
                 return true;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return false;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return false;
         }
     }
@@ -129,7 +132,7 @@ public class JedisUtils {
      * @return
      */
     public boolean set(final String key, Object value, long expireTime) {
-        //LogUtil.debug(String.format("方法：set，参数[key:%s,value:%s,expireTime:%s]", key, value,expireTime), "redis");
+        log.debug(String.format("方法：set，参数[key:%s,value:%s,expireTime:%s]", key, value,expireTime), "redis");
         try {
             if(PublicUtil.isBaseType(value)) {
                 jedisCluster.set(key, value.toString());
@@ -141,7 +144,7 @@ public class JedisUtils {
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 if(PublicUtil.isBaseType(value)) {
                     jedisCluster.set(key, value.toString());
                 } else {
@@ -150,12 +153,12 @@ public class JedisUtils {
                 jedisCluster.expire(key, (int)expireTime);
                 return true;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return false;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return false;
         }
     }
@@ -169,7 +172,7 @@ public class JedisUtils {
      * @return
      */
     public boolean setString(final String key, String value, long expireTime) {
-        //LogUtil.debug(String.format("方法：setString，参数[key:%s,value:%s,expireTime:%s]", key, value,expireTime), "redis");
+        log.debug(String.format("方法：setString，参数[key:%s,value:%s,expireTime:%s]", key, value,expireTime), "redis");
         try {
             jedisCluster.set(key, value);
             jedisCluster.expire(key, (int)expireTime);
@@ -177,17 +180,17 @@ public class JedisUtils {
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 jedisCluster.set(key, value);
                 jedisCluster.expire(key, (int)expireTime);
                 return true;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return false;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return false;
         }
     }
@@ -213,21 +216,21 @@ public class JedisUtils {
      * @return
      */
     public boolean setStringIfAbsent(final String key, String value, long expireTime) {
-        //LogUtil.debug(String.format("方法：setStringIfAbsent，参数[key:%s,value:%s,expireTime:%s]", key, value, expireTime), "redis");
+        log.debug(String.format("方法：setStringIfAbsent，参数[key:%s,value:%s,expireTime:%s]", key, value, expireTime), "redis");
         try {
             return setStringIfAbsentInner(key, value, (int)expireTime);
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 return setStringIfAbsentInner(key, value, (int)expireTime);
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return false;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return false;
         }
     }
@@ -249,21 +252,21 @@ public class JedisUtils {
      * @return
      */
     public boolean setIfAbsent(final String key, Object value, long expireTime) {
-        //LogUtil.debug(String.format("方法：setIfAbsent，参数[key:%s,value:%s,expireTime:%s]", key, JSON.toJSONString(value), expireTime), "redis");
+        log.debug(String.format("方法：setIfAbsent，参数[key:%s,value:%s,expireTime:%s]", key, JSON.toJSONString(value), expireTime), "redis");
         try {
             return setIfAbsentInner(key, value, (int)expireTime);
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 return setIfAbsentInner(key, value, (int)expireTime);
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return false;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return false;
         }
     }
@@ -293,22 +296,22 @@ public class JedisUtils {
     public long getExpire(final String key) {
         try {
             long expireTime = jedisCluster.ttl(key);
-            //LogUtil.debug(String.format("获取key:%s的过期时间：%s", key, expireTime), "redis");
+            log.debug(String.format("获取key:%s的过期时间：%s", key, expireTime), "redis");
             return expireTime;
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 long expireTime = jedisCluster.ttl(key);
-                //LogUtil.debug(String.format("获取key:%s的过期时间：%s", key, expireTime), "redis");
+                log.debug(String.format("获取key:%s的过期时间：%s", key, expireTime), "redis");
                 return expireTime;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return -1;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return -1;
         }
     }
@@ -324,14 +327,14 @@ public class JedisUtils {
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 jedisCluster.del(keys);
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
         }
     }
 
@@ -341,20 +344,20 @@ public class JedisUtils {
      * @param key
      */
     public void remove(final String key) {
-        //LogUtil.debug(String.format("方法：remove，参数[key:%s]", key), "redis");
+        log.debug(String.format("方法：remove，参数[key:%s]", key), "redis");
         try {
             jedisCluster.del(key);
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 jedisCluster.del(key);
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
         }
     }
 
@@ -367,22 +370,22 @@ public class JedisUtils {
     public boolean exists(final String key) {
         try {
             boolean isExist = jedisCluster.exists(key);
-            //LogUtil.debug(String.format("查询是否存在key:%s,结果：%s", key, isExist), "redis");
+            log.debug(String.format("查询是否存在key:%s,结果：%s", key, isExist), "redis");
             return isExist;
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 boolean isExist = jedisCluster.exists(key);
-                //LogUtil.debug(String.format("查询是否存在key:%s,结果：%s", key, isExist), "redis");
+                log.debug(String.format("查询是否存在key:%s,结果：%s", key, isExist), "redis");
                 return isExist;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return false;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return false;
         }
     }
@@ -396,22 +399,22 @@ public class JedisUtils {
     public Object get(final String key) {
         try {
             Object object =  PublicUtil.unserizlize(jedisCluster.get(key.getBytes()));
-            //LogUtil.debug(String.format("查询key:%s,值JSON：%s", key, JSON.toJSONString(object)), "redis");
+            log.debug(String.format("查询key:%s,值JSON：%s", key, JSON.toJSONString(object)), "redis");
             return object;
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 Object object =  PublicUtil.unserizlize(jedisCluster.get(key.getBytes()));
-                //LogUtil.debug(String.format("查询key:%s,值JSON：%s", key, JSON.toJSONString(object)), "redis");
+                log.debug(String.format("查询key:%s,值JSON：%s", key, JSON.toJSONString(object)), "redis");
                 return object;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return null;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return null;
         }
     }
@@ -425,22 +428,22 @@ public class JedisUtils {
     public String getString(final String key) {
         try {
             String result = jedisCluster.get(key);
-            //LogUtil.debug(String.format("查询key:%s,值：%s", key, result), "redis");
+            log.debug(String.format("查询key:%s,值：%s", key, result), "redis");
             return result;
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 String result = jedisCluster.get(key);
-                //LogUtil.debug(String.format("查询key:%s,值：%s", key, result), "redis");
+                log.debug(String.format("查询key:%s,值：%s", key, result), "redis");
                 return result;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return null;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return null;
         }
     }
@@ -453,21 +456,21 @@ public class JedisUtils {
      * @return
      */
     public long incr(final String key, long value) {
-        //LogUtil.debug(String.format("方法：incr，参数[keys:%s,value:%s]", key,value), "redis");
+        log.debug(String.format("方法：incr，参数[keys:%s,value:%s]", key,value), "redis");
         try {
             return jedisCluster.incrBy(key, value);
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 return jedisCluster.incrBy(key, value);
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return -1;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return -1;
         }
     }
@@ -481,7 +484,7 @@ public class JedisUtils {
      * @param value
      */
     public void hset(String key, String hashKey, Object value) {
-        //LogUtil.debug(String.format("方法：hset，参数[key:%s,hashKey:%s,value:%s]", key, hashKey, JSON.toJSONString(value)), "redis");
+        log.debug(String.format("方法：hset，参数[key:%s,hashKey:%s,value:%s]", key, hashKey, JSON.toJSONString(value)), "redis");
         try {
             if(PublicUtil.isBaseType(value)) {
                 jedisCluster.hset(key, hashKey, value.toString());
@@ -491,18 +494,18 @@ public class JedisUtils {
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 if(PublicUtil.isBaseType(value)) {
                     jedisCluster.hset(key, hashKey, value.toString());
                 } else {
                     jedisCluster.hset(key.getBytes(), hashKey.getBytes(), PublicUtil.serialize(value));
                 }
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
         }
     }
 
@@ -514,20 +517,20 @@ public class JedisUtils {
      * @param value
      */
     public void hsetString(String key, String hashKey, String value) {
-        //LogUtil.debug(String.format("方法：hsetString，参数[key:%s,hashKey:%s,value:%s]", key,hashKey,value), "redis");
+        log.debug(String.format("方法：hsetString，参数[key:%s,hashKey:%s,value:%s]", key,hashKey,value), "redis");
         try {
             jedisCluster.hset(key, hashKey, value);
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 jedisCluster.hset(key, hashKey, value);
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
         }
     }
 
@@ -537,20 +540,20 @@ public class JedisUtils {
      * @param expireTime
      */
     public void setExpire(String key, int expireTime) {
-        //LogUtil.debug(String.format("方法：hsetString，参数[key:%s,expireTime:%s]", key,expireTime), "redis");
+        log.debug(String.format("方法：hsetString，参数[key:%s,expireTime:%s]", key,expireTime), "redis");
         try {
             jedisCluster.expire(key, expireTime);
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 jedisCluster.expire(key, expireTime);
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
         }
     }
 
@@ -562,26 +565,26 @@ public class JedisUtils {
      * @return
      */
     public Object hget(String key, String hashKey) {
-        //LogUtil.debug(String.format("方法：hget，参数[key:%s,hashKey:%s]", key,hashKey), "redis");
+        log.debug(String.format("方法：hget，参数[key:%s,hashKey:%s]", key,hashKey), "redis");
         try {
             Object object =  PublicUtil.unserizlize(jedisCluster.hget(key.getBytes(), hashKey.getBytes()));
-            //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(object)), "redis");
+            log.debug(String.format("返回结果:%s", JSON.toJSONString(object)), "redis");
             return  object;
 
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 Object object =  PublicUtil.unserizlize(jedisCluster.hget(key.getBytes(), hashKey.getBytes()));
-                //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(object)), "redis");
+                log.debug(String.format("返回结果:%s", JSON.toJSONString(object)), "redis");
                 return  object;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return null;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return null;
         }
     }
@@ -594,25 +597,25 @@ public class JedisUtils {
      * @return
      */
     public String hgetString(String key, String hashKey) {
-        //LogUtil.debug(String.format("方法：hgetString，参数[key:%s,hashKey:%s]", key,hashKey), "redis");
+        log.debug(String.format("方法：hgetString，参数[key:%s,hashKey:%s]", key,hashKey), "redis");
         try {
             String result =  jedisCluster.hget(key, hashKey);
-            //LogUtil.debug(String.format("返回结果:%s", result), "redis");
+            log.debug(String.format("返回结果:%s", result), "redis");
             return result;
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 String result =  jedisCluster.hget(key, hashKey);
-                //LogUtil.debug(String.format("返回结果:%s", result), "redis");
+                log.debug(String.format("返回结果:%s", result), "redis");
                 return result;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return null;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return null;
         }
     }
@@ -623,26 +626,26 @@ public class JedisUtils {
      * @return
      */
     public Map<String,?> hgetAll(String key) {
-        //LogUtil.debug(String.format("方法：hgetAll，参数[key:%s]", key), "redis");
+        log.debug(String.format("方法：hgetAll，参数[key:%s]", key), "redis");
         try {
             Map<String,Object> object =  unserizlizeMap(jedisCluster.hgetAll(key.getBytes()));
-            //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(object)), "redis");
+            log.debug(String.format("返回结果:%s", JSON.toJSONString(object)), "redis");
             return  object;
 
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 Map<String,Object> object =  unserizlizeMap(jedisCluster.hgetAll(key.getBytes()));
-                //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(object)), "redis");
+                log.debug(String.format("返回结果:%s", JSON.toJSONString(object)), "redis");
                 return  object;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return null;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return null;
         }
     }
@@ -653,26 +656,26 @@ public class JedisUtils {
      * @return
      */
     public Map<String,String> hgetAllString(String key) {
-        //LogUtil.debug(String.format("方法：hgetAllString，参数[key:%s]", key), "redis");
+        log.debug(String.format("方法：hgetAllString，参数[key:%s]", key), "redis");
         try {
             Map<String,String> object =  jedisCluster.hgetAll(key);
-            //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(object)), "redis");
+            log.debug(String.format("返回结果:%s", JSON.toJSONString(object)), "redis");
             return  object;
 
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 Map<String,String> object =  jedisCluster.hgetAll(key);
-                //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(object)), "redis");
+                log.debug(String.format("返回结果:%s", JSON.toJSONString(object)), "redis");
                 return  object;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return null;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return null;
         }
     }
@@ -685,25 +688,25 @@ public class JedisUtils {
      * @return
      */
     public Set<String> hmKeys(String key) {
-        //LogUtil.debug(String.format("方法：hmKeys，参数[key:%s]", key), "redis");
+        log.debug(String.format("方法：hmKeys，参数[key:%s]", key), "redis");
         try {
             Set<String> result =  jedisCluster.hkeys(key);
-            //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
+            log.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
             return result;
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 Set<String> result =  jedisCluster.hkeys(key);
-                //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
+                log.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
                 return result;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return null;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return null;
         }
     }
@@ -716,21 +719,21 @@ public class JedisUtils {
      * @return
      */
     public boolean hmExists(String key, String hashKey){
-        //LogUtil.debug(String.format("方法：hmExists，参数[key:%s,hashKey:%s]", key,hashKey), "redis");
+        log.debug(String.format("方法：hmExists，参数[key:%s,hashKey:%s]", key,hashKey), "redis");
         try {
             return jedisCluster.hexists(key, hashKey);
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 return jedisCluster.hexists(key, hashKey);
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return false;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return false;
         }
     }
@@ -742,20 +745,20 @@ public class JedisUtils {
      * @param hashKey
      */
     public void hmDelete(String key, String hashKey){
-        //LogUtil.debug(String.format("方法：hmDelete，参数[key:%s,hashKey:%s]", key,hashKey), "redis");
+        log.debug(String.format("方法：hmDelete，参数[key:%s,hashKey:%s]", key,hashKey), "redis");
         try {
             jedisCluster.hdel(key, hashKey);
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 jedisCluster.hdel(key, hashKey);
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
         }
     }
 
@@ -766,7 +769,7 @@ public class JedisUtils {
      * @param v
      */
     public void lPush(String k, Object v) {
-        //LogUtil.debug(String.format("方法：lPush，参数[k:%s,v:%s]", k, JSON.toJSONString(v)), "redis");
+        log.debug(String.format("方法：lPush，参数[k:%s,v:%s]", k, JSON.toJSONString(v)), "redis");
         try {
             if(PublicUtil.isBaseType(v)) {
                 jedisCluster.lpush(k, v.toString());
@@ -776,18 +779,18 @@ public class JedisUtils {
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 if(PublicUtil.isBaseType(v)) {
                     jedisCluster.lpush(k, v.toString());
                 } else {
                     jedisCluster.lpush(k.getBytes(), PublicUtil.serialize(v));
                 }
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
         }
     }
 
@@ -798,7 +801,7 @@ public class JedisUtils {
      * @param v
      */
     public void rPush(String k, Object v) {
-        //LogUtil.debug(String.format("方法：rPush，参数[k:%s,v:%s]", k, JSON.toJSONString(v)), "redis");
+        log.debug(String.format("方法：rPush，参数[k:%s,v:%s]", k, JSON.toJSONString(v)), "redis");
         try {
             if(PublicUtil.isBaseType(v)) {
                 jedisCluster.rpush(k, v.toString());
@@ -808,18 +811,18 @@ public class JedisUtils {
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 if(PublicUtil.isBaseType(v)) {
                     jedisCluster.rpush(k, v.toString());
                 } else {
                     jedisCluster.rpush(k.getBytes(), PublicUtil.serialize(v));
                 }
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
         }
     }
 
@@ -831,20 +834,20 @@ public class JedisUtils {
      * @param v
      */
     public void lPushString(String k, String v) {
-        //LogUtil.debug(String.format("方法：lPushString，参数[k:%s,v:%s]", k, v), "redis");
+        log.debug(String.format("方法：lPushString，参数[k:%s,v:%s]", k, v), "redis");
         try {
             jedisCluster.lpush(k, v);
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 jedisCluster.lpush(k, v);
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
         }
     }
 
@@ -856,20 +859,20 @@ public class JedisUtils {
      * @param v
      */
     public void rPushString(String k, String v) {
-        //LogUtil.debug(String.format("方法：rPushString，参数[k:%s,v:%s]", k, v), "redis");
+        log.debug(String.format("方法：rPushString，参数[k:%s,v:%s]", k, v), "redis");
         try {
             jedisCluster.rpush(k, v);
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 jedisCluster.rpush(k, v);
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
         }
     }
 
@@ -882,25 +885,25 @@ public class JedisUtils {
      * @return
      */
     public List<Object> lRange(String k, long start, long end) {
-        //LogUtil.debug(String.format("方法：lRange，参数[k:%s,start:%s,end:%s]", k, start, end), "redis");
+        log.debug(String.format("方法：lRange，参数[k:%s,start:%s,end:%s]", k, start, end), "redis");
         try {
             List<Object> result =  lRangeInner(k, start, end);
-            //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
+            log.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
             return result;
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 List<Object> result =  lRangeInner(k, start, end);
-                //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
+                log.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
                 return result;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return null;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return null;
         }
     }
@@ -937,25 +940,25 @@ public class JedisUtils {
      * @return
      */
     public List<String> lRangeString(String k, long start, long end) {
-        //LogUtil.debug(String.format("方法：lRangeString，参数[k:%s,start:%s,end:%s]", k, start, end), "redis");
+        log.debug(String.format("方法：lRangeString，参数[k:%s,start:%s,end:%s]", k, start, end), "redis");
         try {
             List<String> result = jedisCluster.lrange(k, start, end);
-            //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
+            log.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
             return result;
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 List<String> result = jedisCluster.lrange(k, start, end);
-                //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
+                log.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
                 return result;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return null;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return null;
         }
     }
@@ -967,25 +970,25 @@ public class JedisUtils {
      * @return
      */
     public Object lPop(String k) {
-        //LogUtil.debug(String.format("方法：lPop，参数[k:%s]", k), "redis");
+        log.debug(String.format("方法：lPop，参数[k:%s]", k), "redis");
         try {
             Object result =  PublicUtil.unserizlize(jedisCluster.lpop(k.getBytes()));
-            //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
+            log.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
             return result;
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 Object result =  PublicUtil.unserizlize(jedisCluster.lpop(k.getBytes()));
-                //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
+                log.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
                 return result;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return null;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return null;
         }
     }
@@ -997,25 +1000,25 @@ public class JedisUtils {
      * @return
      */
     public String lPopString(String k){
-        //LogUtil.debug(String.format("方法：lPopString，参数[k:%s]", k), "redis");
+        log.debug(String.format("方法：lPopString，参数[k:%s]", k), "redis");
         try {
             String result = jedisCluster.lpop(k);
-            //LogUtil.debug(String.format("返回结果:%s", result), "redis");
+            log.debug(String.format("返回结果:%s", result), "redis");
             return result;
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 String result = jedisCluster.lpop(k);
-                //LogUtil.debug(String.format("返回结果:%s", result), "redis");
+                log.debug(String.format("返回结果:%s", result), "redis");
                 return result;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return null;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return null;
         }
     }
@@ -1027,7 +1030,7 @@ public class JedisUtils {
      * @param value
      */
     public void sadd(String key, Object value) {
-        //LogUtil.debug(String.format("方法：sadd，参数[key:%s,value:%s]", key, JSON.toJSONString(value)), "redis");
+        log.debug(String.format("方法：sadd，参数[key:%s,value:%s]", key, JSON.toJSONString(value)), "redis");
         try {
             if(PublicUtil.isBaseType(value)) {
                 jedisCluster.sadd(key, value.toString());
@@ -1037,18 +1040,18 @@ public class JedisUtils {
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 if(PublicUtil.isBaseType(value)) {
                     jedisCluster.sadd(key, value.toString());
                 } else {
                     jedisCluster.sadd(key.getBytes(), PublicUtil.serialize(value));
                 }
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
         }
     }
 
@@ -1059,25 +1062,25 @@ public class JedisUtils {
      * @return
      */
     public Set<Object> smembers(String key) {
-        //LogUtil.debug(String.format("方法：smembers，参数[key:%s]", key), "redis");
+        log.debug(String.format("方法：smembers，参数[key:%s]", key), "redis");
         try {
             Set<Object> result =  smembersInner(key);
-            //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
+            log.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
             return result;
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 Set<Object> result =  smembersInner(key);
-                //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
+                log.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
                 return result;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return null;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return null;
         }
     }
@@ -1102,20 +1105,20 @@ public class JedisUtils {
      * @param value
      */
     public void saddString(String key, String value) {
-        //LogUtil.debug(String.format("方法：saddString，参数[key:%s,value:%s]", key, value), "redis");
+        log.debug(String.format("方法：saddString，参数[key:%s,value:%s]", key, value), "redis");
         try {
             jedisCluster.sadd(key, value);
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 jedisCluster.sadd(key, value);
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
         }
     }
 
@@ -1126,25 +1129,25 @@ public class JedisUtils {
      * @return
      */
     public Set<String> smembersString(String key) {
-        //LogUtil.debug(String.format("方法：smembersString，参数[key:%s]", key), "redis");
+        log.debug(String.format("方法：smembersString，参数[key:%s]", key), "redis");
         try {
             Set<String> result =  jedisCluster.smembers(key);
-            //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
+            log.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
             return result;
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 Set<String> result =  jedisCluster.smembers(key);
-                //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
+                log.debug(String.format("返回结果:%s", JSON.toJSONString(result)), "redis");
                 return result;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return null;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return null;
         }
     }
@@ -1156,23 +1159,23 @@ public class JedisUtils {
      * @param value
      */
     public boolean sismember(String key, String value) {
-        //LogUtil.debug(String.format("方法：sismember，参数[key:%s,value:%s]", key, value), "redis");
+        log.debug(String.format("方法：sismember，参数[key:%s,value:%s]", key, value), "redis");
         try {
             boolean exist = jedisCluster.sismember(key, value);
             return exist;
         }
         catch (JedisConnectionException ex) {
             try {
-                //LogUtil.error(connectFail + ex.getMessage(), "redis");
+                log.error(connectFail + ex.getMessage(), "redis");
                 boolean exist = jedisCluster.sismember(key, value);
                 return exist;
             } catch (Exception ex1) {
-                //LogUtil.error("", "redis", ex1);
+                log.error("", "redis", ex1);
                 return false;
             }
         }
         catch (Exception ex){
-            //LogUtil.error("", "redis", ex);
+            log.error("", "redis", ex);
             return false;
         }
     }
@@ -1184,7 +1187,7 @@ public class JedisUtils {
      * @param message 消息
      */
     public void publish(String channel, String message){
-        //LogUtil.debug(String.format("方法：publish，参数[channel:%s,message:%s]", channel, message), "redis");
+        log.debug(String.format("方法：publish，参数[channel:%s,message:%s]", channel, message), "redis");
         stringRedisTemplate.convertAndSend(channel, message);
     }
 
@@ -1209,7 +1212,7 @@ public class JedisUtils {
     }
 
     public List<String> getRedisKeys(String matchKey) {
-        //LogUtil.debug(String.format("方法：getRedisKeys，参数[matchKey:%s]", matchKey), "redis");
+        log.debug(String.format("方法：getRedisKeys，参数[matchKey:%s]", matchKey), "redis");
         List<String> list = new ArrayList<>();
         Map<String, JedisPool> clusterNodes = jedisCluster.getClusterNodes();
         for (Map.Entry<String, JedisPool> entry : clusterNodes.entrySet()) {
@@ -1223,7 +1226,7 @@ public class JedisUtils {
                 }
             } catch (Exception e) {
 //                e.printStackTrace();
-                //LogUtil.error("scan 异常", "redis", e);
+                log.error("scan 异常", "redis", e);
             } finally {
                 try {
                     if (jedis != null) {
@@ -1231,11 +1234,11 @@ public class JedisUtils {
                     }
                 } catch (Exception ex) {
 //                    ex.printStackTrace();
-                    //LogUtil.error("scan 异常", "redis", ex);
+                    log.error("scan 异常", "redis", ex);
                 }
             }
         }
-        //LogUtil.debug(String.format("返回结果:%s", JSON.toJSONString(list)), "redis");
+        log.debug(String.format("返回结果:%s", JSON.toJSONString(list)), "redis");
         return list;
     }
 }
