@@ -15,6 +15,7 @@ import com.hust.accountcommon.util.apitemplate.BasicOutput;
 import com.hust.accountcommon.util.apitemplate.TDRequest;
 import com.hust.accountcommon.util.apitemplate.TDResponse;
 import com.hust.accountcommon.util.ciper.RSAUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
