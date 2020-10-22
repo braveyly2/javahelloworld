@@ -8,6 +8,42 @@
   <component name="ChangeListManager">
     <list default="true" id="b073f68c-3768-4192-8cec-38592fbee979" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../JAVAHelloWorld.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../JAVAHelloWorld.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/.idea/artifacts/user_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ssm-5/.idea/artifacts/user_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ssm-5/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ssm-5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/account-common.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/constant/GlobalConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/DPiKeyInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/Token.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/TokenHeader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/TokenPayload.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/entity/dto/TokenDataDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/entity/dto/TokenResultDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/IdWorker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/LogUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/PublicUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/SnowflakeIdWorker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/BasicInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/BasicOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/TDRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/TDResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/AESUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/Base64Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/CRCUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/HMACSHA256Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/MD5Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/RSAUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/SHA1Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/SHA256Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/token/DPiKeyInfoManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/accountcommon/src/main/java/com/hust/accountcommon/util/token/TokenUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm-5/user/user.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,25 +92,27 @@
     <session id="1682853780">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.30" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.61" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="13" />
-          <entry key="java" value="18" />
+          <entry key="java" value="20" />
           <entry key="xml" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="13" />
-          <entry key="JAVA" value="18" />
+          <entry key="JAVA" value="20" />
           <entry key="XML" value="10" />
         </counts>
       </usages-collector>
@@ -94,23 +132,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ssm-filter/src/main/java/com/hust/filter/ModifyFilter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ssm-filter/src/main/java/com/hust/filter/MyRequestWrapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -144,10 +170,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.1.6.RELEASE/spring-web-4.1.6.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.1.6.RELEASE/spring-web-4.1.6.RELEASE-sources.jar!/org/springframework/web/filter/OncePerRequestFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="-8">
+              <caret line="85" column="22" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -173,11 +199,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.1.6.RELEASE/spring-web-4.1.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <file pinned="false" current-in-tab="true">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.1.6.RELEASE/spring-web-4.1.6.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="155">
+              <caret line="125" column="18" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -267,9 +293,8 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-11" />
     <option name="width" value="1944" />
     <option name="height" value="1044" />
   </component>
@@ -281,8 +306,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -299,131 +322,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="lw" type="b2602c69:ProjectViewProjectNode" />
               <item name="ssm4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm4" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm-filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm4" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm-filter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm4" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm-filter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm4" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm-filter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm4" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm-filter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hust" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm4" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm-filter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hust" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm4" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm-filter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hust" type="462c0819:PsiDirectoryNode" />
-              <item name="aspect" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm4" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm-filter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hust" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm4" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm-filter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hust" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm4" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm-filter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hust" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm4" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm-filter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm4" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm-filter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm4" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm-filter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm4" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm-filter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lw" type="b2602c69:ProjectViewProjectNode" />
@@ -519,13 +424,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1603105490719" />
-    <property name="last_opened_file_path" value="D:/software/apache-tomcat-8.5.55-windows-x64/apache-tomcat-8.5.55/lib/servlet-api.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ssm-5" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -632,17 +538,20 @@
       <workItem from="1602815934895" duration="6098000" />
       <workItem from="1603092369334" duration="9934000" />
       <workItem from="1603153780842" duration="1519000" />
-      <workItem from="1603240956350" duration="851000" />
+      <workItem from="1603240956350" duration="987000" />
+      <workItem from="1603279268649" duration="576000" />
+      <workItem from="1603327296833" duration="1934000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20229000" />
+    <option name="totallyTimeSpent" value="22875000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30153596" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31123686" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1070,6 +979,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.1.6.RELEASE/spring-web-4.1.6.RELEASE-sources.jar!/org/springframework/web/filter/OncePerRequestFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="85" column="22" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.1.6.RELEASE/spring-web-4.1.6.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="125" column="18" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
         </state>
       </provider>
     </entry>
