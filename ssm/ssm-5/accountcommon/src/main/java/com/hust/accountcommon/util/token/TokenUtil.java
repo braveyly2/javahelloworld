@@ -27,13 +27,6 @@ import java.util.List;
 @Component
 @Slf4j
 public class TokenUtil {
-
-
-
-    private List<String> opsAuthList = new ArrayList<String>(){{
-        add("ops");
-    }};
-
     /**
      * 产生token
      *
@@ -41,7 +34,7 @@ public class TokenUtil {
      * @param pwdMd5 用户密码M5D（或者短信验证码MD5或者旧SID）
      * @return
      */
-    public TokenResultDto createToken(long userId, String pwdMd5, String clientType, String language) {
+    public TokenResultDto createToken(long userId, String pwdMd5, String clientType, String language, String role, List<String> autoList) {
         long tokenId = IdWorker.getInstance().getId();
         long refreshTokenId = IdWorker.getInstance().getId();
         TokenResultDto tokenResultDto = new TokenResultDto();
@@ -100,10 +93,11 @@ public class TokenUtil {
                 payload.setDc(1);
                 payload.setUid(userId);
                 payload.setTid(tokenId);
+                payload.setRole(role);
                 payload.setType(GlobalConstant.TOKEN_TYPE_BUS);
                 //userId小于10000位运维系统访问业务系统的内置账号
                 if (userId < 10000) {
-                    payload.setAuth(opsAuthList);
+                    payload.setAuth(autoList);
                 }
                 String base64Payload = Base64Util.encryptBase64(JSON.toJSONString(payload));
                 //生成签名
@@ -122,10 +116,11 @@ public class TokenUtil {
                 refreshTokenPayload.setDc(1);
                 refreshTokenPayload.setUid(userId);
                 refreshTokenPayload.setTid(refreshTokenId);
+                refreshTokenPayload.setRole(role);
                 refreshTokenPayload.setType(GlobalConstant.TOKEN_TYPE_BUS);
                 //userId小于10000位运维系统访问业务系统的内置账号
                 if (userId < 10000) {
-                    refreshTokenPayload.setAuth(opsAuthList);
+                    refreshTokenPayload.setAuth(autoList);
                 }
                 String base64Payload = Base64Util.encryptBase64(JSON.toJSONString(refreshTokenPayload));
                 //生成签名

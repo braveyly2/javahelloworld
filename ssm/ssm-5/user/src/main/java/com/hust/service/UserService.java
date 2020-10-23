@@ -7,6 +7,8 @@ import com.hust.accountcommon.entity.dto.TokenResultDto;
 import com.hust.accountcommon.util.apitemplate.BasicOutput;
 import com.hust.accountcommon.util.apitemplate.TDRequest;
 
+import java.util.List;
+
 public interface UserService {
     int insert(User record);
 
@@ -18,5 +20,5 @@ public interface UserService {
 
     boolean checkMobileExist(String name, BasicOutput basicOutput);
 
-    public TokenResultDto createToken(long userId, String pwdMd5, String clientType, String language);
+    public TokenResultDto createToken(long userId, String pwdMd5, String clientType, String language, String role, List<String> authList);
 }

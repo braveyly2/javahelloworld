@@ -17,6 +17,8 @@ import com.hust.accountcommon.util.token.TokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
@@ -75,7 +77,7 @@ public class UserServiceImpl implements UserService {
         String md5Str = MD5Util.encrypt(tdRequest.getBasic().getNonce() + "#" + tdRequest.getBasic().getTime() + "#" + loginName + "#" + user.getPassword());
         if (loginDto.getPassword().equals(md5Str)) {
             if (generateToken) {
-                TokenResultDto tokenResultDto = tokenUtil.createToken(user.getId(), user.getPassword(), clientType, language);
+                TokenResultDto tokenResultDto = tokenUtil.createToken(user.getId(), user.getPassword(), clientType, language,"customer",null);
                 loginResultDto.setToken(tokenResultDto.getToken());
                 loginResultDto.setRefreshToken(tokenResultDto.getRefreshToken());
                 loginResultDto.setSid(tokenResultDto.getSid());
@@ -103,7 +105,7 @@ public class UserServiceImpl implements UserService {
         return user;
     }
 
-    public TokenResultDto createToken(long userId, String pwdMd5, String clientType,String language){
-        return tokenUtil.createToken(userId, pwdMd5, clientType, null);
+    public TokenResultDto createToken(long userId, String pwdMd5, String clientType,String language, String role, List<String> authList){
+        return tokenUtil.createToken(userId, pwdMd5, clientType, null,role,authList);
     }
 }

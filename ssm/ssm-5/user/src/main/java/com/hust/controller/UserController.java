@@ -159,14 +159,14 @@ http://localhost:8080/user/login
     @RequestMapping(value = "/user/login", method = RequestMethod.POST)
     @ResponseBody
     public TDResponse<LoginVo> login(@RequestBody TDRequest<LoginDto> tdRequest, HttpServletRequest request) {
-        log.info("ÊÕµ½µÇÂ¼ÇëÇó", "Login");
+        log.info("ï¿½Õµï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½", "Login");
         TDResponse<LoginVo> tdResponse = new TDResponse<>();
         BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
         try {
             /*
             String clientType = request.getHeader(GlobalConstant.ZUUL_HEADER_CLIENTTYPE);
             boolean isCheckImgCode = true;
-            //ÅÐ¶ÏÖ®Ç°ÐèÒªÅÐ¶Ï ÃÜÂëÐ£ÑéÊÇ·ñÕýÈ·(½öÏÞÓÚÃÜÂëµÇÂ¼)
+            //ï¿½Ð¶ï¿½Ö®Ç°ï¿½ï¿½Òªï¿½Ð¶ï¿½ ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½È·(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼)
             if (UserConstant.LOGIN_TYPE_PWD.equals(tdRequest.getData().getType())) {
                 LoginResultDto dtoFormer = userServiceImpl.login(tdRequest, clientType, false, true);
                 if (PublicUtil.isNotEmpty(dtoFormer.getResultCode())) {
@@ -189,7 +189,7 @@ http://localhost:8080/user/login
             String clientType = "web";
             boolean isCheckImgCode = false;
             //end
-            //ÅÐ¶ÏÊÇ·ñ¿ªÆôÖÕ¶ËÐ£Ñé ÒÔ¼°°ó¶¨Éè±¸ÊÇ·ñº¬ÓÐ±¾Éè±¸
+            //ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Õ¶ï¿½Ð£ï¿½ï¿½ ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½è±¸ï¿½Ç·ï¿½ï¿½Ð±ï¿½ï¿½è±¸
             /*
             int allowLogin = userServiceImpl.checkBindTerminal(tdRequest, clientType);
             if (allowLogin != UserConstant.TERMINAL_FRAME_NOT_POP) {
@@ -197,9 +197,9 @@ http://localhost:8080/user/login
                 basicOutput.setMsg(ErrorCodeEnum.TD7025.msg());
                 tdResponse.setBasic(basicOutput);
                 if (allowLogin == UserConstant.TERMINAL_FRAME_POP) {
-                    //ÐèÒª·µ»ØÍÑÃÜºóµÄÓÃ»§µÄÐÅÏ¢
+                    //ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Üºï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
                     List<UserLogin> userLoginList = userLoginService.getLoginListByUserName(tdRequest.getData().getUserName());
-                    //ÍÑÃô´¦Àí
+                    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                     for (UserLogin userLogin : userLoginList) {
                         if (userLogin.getLoginType() < 3) {
                             String loginName = LoginNameUtil.getSafeLoginName(userLogin.getLoginName());
@@ -217,7 +217,7 @@ http://localhost:8080/user/login
             }
             */
 
-            log.info(String.format("ÊÕµ½µÇÂ¼ÇëÇó: UserName: %s, ClientType: %s", tdRequest.getData().getUserName(), clientType), "Login");
+            log.info(String.format("ï¿½Õµï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½: UserName: %s, ClientType: %s", tdRequest.getData().getUserName(), clientType), "Login");
             LoginResultDto dto = userService.login(tdRequest, clientType, true, isCheckImgCode);
             LoginVo vo = new LoginVo();
             vo.setToken(dto.getToken());
@@ -230,7 +230,7 @@ http://localhost:8080/user/login
                 basicOutput.setCode(dto.getResultCode().code());
                 basicOutput.setMsg(dto.getResultCode().msg());
             } else {
-                //¼ÇÂ¼²Ù×÷ÈÕÖ¾
+                //ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾
                 //OpLog opLog = new OpLog();
                 //opLog.setIp(PublicUtil.getRemoteIp(request));
                 //opLogUtil.logBus(dto.getUserId(), dto.getTid(), OpLogUtil.login, opLog);
@@ -238,7 +238,7 @@ http://localhost:8080/user/login
             tdResponse.setBasic(basicOutput);
             tdResponse.setData(vo);
         } catch (Exception ex) {
-            log.error("µÇÂ¼Ê§°ÜÒì³££º" + ex.getMessage(), "Login", ex);
+            log.error("ï¿½ï¿½Â¼Ê§ï¿½ï¿½ï¿½ì³£ï¿½ï¿½" + ex.getMessage(), "Login", ex);
             basicOutput.setCode(ErrorCodeEnum.TD9500.code());
             basicOutput.setMsg(ex.getMessage());
         }
@@ -267,10 +267,10 @@ http://localhost:8080/user/login
             } else {
                 basicOutput.setCode(ErrorCodeEnum.TD7001.code());
                 basicOutput.setMsg(ErrorCodeEnum.TD7001.msg());
-                log.error("ÓÃ»§²»´æÔÚ", "ms-user");
+                log.error("ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ms-user");
             }
         } catch (Exception e) {
-            log.error("²éÑ¯ÓÃ»§ÐÅÏ¢Ê§°Ü", "ms-user", e);
+            log.error("ï¿½ï¿½Ñ¯ï¿½Ã»ï¿½ï¿½ï¿½Ï¢Ê§ï¿½ï¿½", "ms-user", e);
             basicOutput.setCode(ErrorCodeEnum.TD9500.code());
             basicOutput.setMsg(ErrorCodeEnum.TD9500.msg());
         }
@@ -289,7 +289,7 @@ http://localhost:8080/user/login
             TokenDataDto tokenDataDto = tdRequest.getTokenDataDto();
             User user = userService.selectByPrimaryKey(tokenDataDto.getUserId());
 
-            tokenResultDto = userService.createToken(user.getId(), user.getPassword(), clientType, null);
+            tokenResultDto = userService.createToken(user.getId(), user.getPassword(), clientType, null,"customer",null);
 
             if (PublicUtil.isEmpty(tokenResultDto.getToken())) {
                 basicOutput.setCode(ErrorCodeEnum.TD7004.code());
@@ -300,7 +300,7 @@ http://localhost:8080/user/login
         } catch (Exception e) {
             basicOutput.setCode(ErrorCodeEnum.TD9500.code());
             basicOutput.setMsg(ErrorCodeEnum.TD9500.msg());
-            log.error("tokenÐøÇ©Ê§°Ü", "user", e);
+            log.error("tokenï¿½ï¿½Ç©Ê§ï¿½ï¿½", "user", e);
         }
         tdResponse.setBasic(basicOutput);
         tdResponse.setData(tokenResultDto);
