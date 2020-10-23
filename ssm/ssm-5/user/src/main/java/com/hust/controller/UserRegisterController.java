@@ -22,34 +22,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-/*
-{
-	"basic": {
-		"ver": "1.0",
-		"time": 1592399555986,
-		"id": 30,
-		"nonce": 1567246549,
-		"token": null,
-		"sign": "6b9856ff2ee4832fda9aec420530570d"   //md5(password#code)  ->md5(123456#888888)
-	},
-	"data": {
-		"loginName": "admin",
-		"loginType": 1,
-		"password": "ahtrKPPPt2us8NVWiP6ZMk1h+3zHeZ+3UzWZTGiMvw55yCqn8w43wGr3GUliZogz9E6zKdIz9ehGFYmK5tRIu1jWOHsYfrI5SHqKL1uRRntdtzDYzvRuqyF6nGhxIMDEatoJhVwAAbkT93HF/F2XjzwGHEfviGIPZJ1dqE73q6c="
-		// rsa public key(password)  123456
-	}
-}
-
-{
-    "basic": {
-        "id": "30",
-        "time": 1592399555986,
-        "code": 200,
-        "msg": "operate successfully"
-    },
-    "data": null
-}
-*/
+/**
+ * @author lw
+ * @Title: UserRegisterController
+ * @Description: 用户注册的controller
+ * @date 2020/9/5 19:42
+ */
 @RestController
 @Slf4j
 public class UserRegisterController {
@@ -59,6 +37,12 @@ public class UserRegisterController {
     @Autowired
     JedisUtils jedisUtils;
 
+    /**
+     * 使用邮箱或手机号进行登录
+     *
+     * @param request 用户注册信息
+     * @return TDResponse  注册结果
+     */
     @RequestMapping(value = "/user/register", method = RequestMethod.POST)
     public TDResponse registerUser(@RequestBody TDRequest<RegisterUserInputData> request) {
         TDResponse response = new TDResponse<>();
@@ -100,9 +84,6 @@ public class UserRegisterController {
         }
         String code = dynamicCodeDto.getCode();
 
-        //String code = "888888";
-        //end
-
         try {
             User userBaseInfo = new User();
             if (inputData.getLoginType() == UserConstant.LOGIN_TYPE_MOBILE) {
@@ -113,8 +94,7 @@ public class UserRegisterController {
             //从缓存读取私钥
             String privateKeyKey = UserConstant.REDIS_REGISTER_PRIVATE_KEY + inputData.getLoginName();
             String privateKey = jedisUtils.getString(privateKeyKey);
-            //String privateKey = GlobalVariable.PRIVATE_KEY;
-            //end
+
             String password = inputData.getPassword();
             //用私钥解密密码
             password = RSAUtil.privateDecrypt(password, privateKey);
@@ -128,17 +108,11 @@ public class UserRegisterController {
                 basicOutput.setCode(ErrorCodeEnum.TD7005.code());
                 basicOutput.setMsg(ErrorCodeEnum.TD7005.msg());
             } else {
-                //userBaseInfo.setId((long)1);
                 UserLogin userLogin = new UserLogin();
-                //userLogin.setUserId((Long) userBaseInfo.getId());
                 userLogin.setLoginName(inputData.getLoginName());
                 userLogin.setLoginType(inputData.getLoginType());
-                //注册时，随机生成默认昵称
-                //String defaultName = UUID.randomUUID().toString().replaceAll("-", "").substring(0, 8);
-                //userBaseInfo.setNickName(defaultName);
+
                 int n = userServiceImpl.insert(userBaseInfo);
-                //int n = 1;
-                //end
                 if (n > 0) {
                     basicOutput.setCode(ErrorCodeEnum.TD200.code());
                     basicOutput.setMsg(ErrorCodeEnum.TD200.msg());

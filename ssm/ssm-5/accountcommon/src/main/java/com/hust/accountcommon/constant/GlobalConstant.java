@@ -1,11 +1,10 @@
 package com.hust.accountcommon.constant;
 
 /**
- * All rights Reserved ,Designed by TVT
- *
- * @author Yanjj
- * @Description:
- * @date 2018/8/23 10:00
+ * @author lw
+ * @Title: GlobalConstant
+ * @Description: 全局常量定义
+ * @date 2018/9/10 10:26
  */
 
 public interface GlobalConstant {

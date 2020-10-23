@@ -6,6 +6,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @author lw
+ * @Title: BasicOutput
+ * @Description: 通用响应报文头部类
+ * @date 2018/9/10 10:26
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

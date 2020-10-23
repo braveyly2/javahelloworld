@@ -7,8 +7,10 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 /**
- * @author TX
- * @Description: Token携带数据
+ * @author lw
+ * @Title: TokenDataDto
+ * @Description: 通用请求报文中的token信息类
+ * @date 2018/9/10 10:26
  */
 @Data
 @AllArgsConstructor
@@ -40,5 +42,4 @@ public class TokenDataDto {
      */
     private String clientType;
 
-    //private TokenPayload tokenPayload;
 }

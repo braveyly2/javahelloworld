@@ -15,10 +15,42 @@
     <list default="true" id="f7af53bb-1a3c-4801-8dd2-a0129938852e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../JAVAHelloWorld.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../JAVAHelloWorld.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/constant/GlobalConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/constant/GlobalConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/DPiKeyInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/DPiKeyInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/TokenHeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/TokenHeader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/TokenPayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/TokenPayload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/dto/TokenDataDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/dto/TokenDataDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/dto/TokenResultDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/dto/TokenResultDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/BasicInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/BasicInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/BasicOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/BasicOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/TDRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/TDRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/TDResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/TDResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/MD5Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/RSAUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/RSAUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/token/DPiKeyInfoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/token/DPiKeyInfoManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/token/TokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/token/TokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/annotation/ApiVersionDesc.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/annotation/ApiVersionDesc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/aspect/ResultAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/aspect/ResultAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/constant/ErrorCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/constant/ErrorCodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/constant/GlobalConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/constant/GlobalConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/constant/I18nConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/constant/I18nConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/constant/UserConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/constant/UserConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/controller/DynamicCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/controller/DynamicCodeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/controller/UserRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/controller/UserRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/DynamicCodeRedisDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/DynamicCodeRedisDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/GetDynamicCodeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/GetDynamicCodeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/GetUserInfoByNameDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/GetUserInfoByNameDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/IdDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/IdDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/LoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/LoginDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/LoginResultDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/LoginResultDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/RegisterUserInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/RegisterUserInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/filter/AccessPurviewFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/filter/AccessPurviewFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/util/DynamicCodeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/util/DynamicCodeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/util/ErrorCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/util/ErrorCodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/hust/util/JedisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/hust/util/JedisUtils.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/user/target/" />
@@ -49,7 +81,7 @@
           <entry key="0-SNAPSHOT" value="2" />
           <entry key="class" value="3" />
           <entry key="iml" value="1" />
-          <entry key="java" value="36" />
+          <entry key="java" value="96" />
           <entry key="properties" value="2" />
           <entry key="xml" value="14" />
         </counts>
@@ -58,7 +90,7 @@
         <counts>
           <entry key="CLASS" value="3" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="36" />
+          <entry key="JAVA" value="96" />
           <entry key="Properties" value="2" />
           <entry key="UML" value="2" />
           <entry key="XML" value="14" />
@@ -66,13 +98,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="279" />
+          <entry key="java" value="1059" />
           <entry key="xml" value="182" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="279" />
+          <entry key="JAVA" value="1059" />
           <entry key="XML" value="182" />
         </counts>
       </usages-collector>
@@ -110,74 +142,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/constant/CheckParaMsgFormat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/constant/GlobalConstant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/constant/I18nConstant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="6" column="2" selection-start-line="5" selection-end-line="9" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/constant/UserConstant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/token/TokenUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3839">
-              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="136" selection-start-line="22" selection-start-column="102" selection-end-line="22" selection-end-column="136" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/service/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="79" column="69" selection-start-line="79" selection-start-column="58" selection-end-line="79" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/TokenPayload.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/constant/GlobalConstant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/util/JedisUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6885">
-              <caret line="413" column="13" selection-start-line="413" selection-start-column="13" selection-end-line="413" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/controller/DynamicCodeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="93" column="6" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
+            <state relative-caret-position="146">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -188,8 +193,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/aspect/ResultAspect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="238">
+              <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -198,19 +203,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/controller/UserController.java">
+        <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/util/DynamicCodeUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1363">
-              <caret line="301" column="44" selection-start-line="301" selection-start-column="44" selection-end-line="301" selection-end-column="44" />
+            <state relative-caret-position="27">
+              <caret line="2" selection-start-line="2" selection-end-line="8" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/PublicUtil.java">
+        <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/util/ErrorCodeEnum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+            <state relative-caret-position="102">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/annotation/ApiVersionDesc.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/annotation/TDResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -237,6 +260,7 @@
       <find>//LogUtil.</find>
       <find>log</find>
       <find>createToken</find>
+      <find>TVT</find>
     </findStrings>
     <replaceStrings>
       <replace>//LogUtil</replace>
@@ -245,6 +269,7 @@
       <replace>//import com.hust.accountcommon.util.LogUtil</replace>
       <replace>log</replace>
       <replace>log.</replace>
+      <replace>LW</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\javahelloworld\ssm\ssm-5-bak\accountcommon</dir>
@@ -261,7 +286,6 @@
         <option value="$PROJECT_DIR$/user/src/main/java/com/hust/util/LogUtil.java" />
         <option value="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/LogUtil2.java" />
         <option value="$PROJECT_DIR$/user/src/main/java/com/hust/util/LogUtil2.java" />
-        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/controller/UserRegisterController.java" />
         <option value="$PROJECT_DIR$/accountcommon/pom.xml" />
         <option value="$PROJECT_DIR$/user/pom.xml" />
         <option value="$PROJECT_DIR$/user/src/main/resources/logbak.xml" />
@@ -269,14 +293,41 @@
         <option value="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/RSAUtil.java" />
         <option value="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/IdWorker.java" />
         <option value="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/PublicUtil.java" />
-        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/filter/AccessPurviewFilter.java" />
-        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/util/JedisUtils.java" />
-        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/controller/DynamicCodeController.java" />
-        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/aspect/ResultAspect.java" />
         <option value="$PROJECT_DIR$/user/src/main/java/com/hust/service/UserService.java" />
-        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/controller/UserController.java" />
         <option value="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/token/TokenUtil.java" />
+        <option value="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/token/DPiKeyInfoManager.java" />
+        <option value="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/TDRequest.java" />
+        <option value="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/TDResponse.java" />
+        <option value="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/BasicOutput.java" />
+        <option value="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/BasicInput.java" />
+        <option value="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/dto/TokenResultDto.java" />
+        <option value="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/dto/TokenDataDto.java" />
+        <option value="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/Token.java" />
+        <option value="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/TokenHeader.java" />
+        <option value="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/TokenPayload.java" />
+        <option value="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/DPiKeyInfo.java" />
+        <option value="$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/constant/GlobalConstant.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/controller/DynamicCodeController.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/controller/UserRegisterController.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/filter/AccessPurviewFilter.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/DynamicCodeRedisDto.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/GetDynamicCodeDto.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/GetUserInfoByNameDto.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/IdDto.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/LoginDto.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/LoginResultDto.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/RegisterUserInputData.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/constant/ErrorCodeEnum.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/constant/GlobalConstant.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/constant/I18nConstant.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/constant/UserConstant.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/annotation/ApiVersionDesc.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/aspect/ResultAspect.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/util/DynamicCodeUtil.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/util/JedisUtils.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/hust/util/ErrorCodeEnum.java" />
       </list>
     </option>
   </component>
@@ -314,6 +365,11 @@
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="accountcommon" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="accountcommon" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
@@ -379,62 +435,6 @@
             <path>
               <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="ssm-5" type="462c0819:PsiDirectoryNode" />
-              <item name="accountcommon" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm-5" type="462c0819:PsiDirectoryNode" />
-              <item name="accountcommon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm-5" type="462c0819:PsiDirectoryNode" />
-              <item name="accountcommon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm-5" type="462c0819:PsiDirectoryNode" />
-              <item name="accountcommon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm-5" type="462c0819:PsiDirectoryNode" />
-              <item name="accountcommon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="accountcommon" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm-5" type="462c0819:PsiDirectoryNode" />
-              <item name="accountcommon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="accountcommon" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm-5" type="462c0819:PsiDirectoryNode" />
-              <item name="accountcommon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="accountcommon" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="token" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm-5" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -466,6 +466,98 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="hust" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm-5" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hust" type="462c0819:PsiDirectoryNode" />
+              <item name="annotation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm-5" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hust" type="462c0819:PsiDirectoryNode" />
+              <item name="aspect" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm-5" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hust" type="462c0819:PsiDirectoryNode" />
+              <item name="constant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm-5" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hust" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm-5" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hust" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm-5" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hust" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm-5" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hust" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm-5" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hust" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm-5" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hust" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="userservice" type="b2602c69:ProjectViewProjectNode" />
@@ -507,7 +599,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1603425218474" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1603446370995" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ssm-3/log" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -619,17 +711,17 @@
       <workItem from="1603279273308" duration="1837000" />
       <workItem from="1603327429987" duration="15313000" />
       <workItem from="1603355307140" duration="3995000" />
-      <workItem from="1603423820401" duration="1299000" />
+      <workItem from="1603423820401" duration="7960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24416000" />
+    <option name="totallyTimeSpent" value="31077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37186742" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24494745" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -639,8 +731,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.55851066" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.43694493" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8384491" weight="0.13652483" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36589697" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8384491" weight="0.24689165" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -657,7 +749,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="right" id="Maven Projects" order="5" visible="true" weight="0.3912692" />
+      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.3912692" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -686,1416 +778,30 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/util/apitemplate/BasicInput.java" />
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/util/apitemplate/BasicOutput.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/PublicUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" selection-start-line="31" selection-end-line="35" selection-end-column="25" />
+        <state relative-caret-position="-325">
+          <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/util/apitemplate/TDRequest.java" />
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/util/apitemplate/TDResponse.java" />
-    <entry file="file://$PROJECT_DIR$/user/user.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/util/ciper/AESUtil.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar!/javax/servlet/ServletInputStream.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/software/apache-tomcat-8.5.55-windows-x64/apache-tomcat-8.5.55/lib/servlet-api.jar!/javax/servlet/ServletInputStream.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/filter/ModifyBodyHttpServletRequestWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/util/PublicUtil.java" />
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/GetDynamicCodeDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/CheckParaResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/hust/account-common/1.0-SNAPSHOT/account-common-1.0-SNAPSHOT.jar!/com/hust/accountcommon/util/apitemplate/TDResponse.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-823">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/DPiKeyInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="50" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/BasicInput.java">
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/SHA1Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="2124" column="18" selection-start-line="2124" selection-start-column="18" selection-end-line="2124" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://MAVEN/com.hust:user:1.0-SNAPSHOT">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MAVEN</ID>
-          <OriginalElement>com.hust:user:1.0-SNAPSHOT</OriginalElement>
-          <nodes>
-            <node x="3671.877961821855" y="1168.0">com.hust:user:1.0-SNAPSHOT</node>
-            <node x="7051.9512615815565" y="847.0">junit:junit:jar:4.11</node>
-            <node x="7023.9512615815565" y="626.0">junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3</node>
-            <node x="4353.736908431936" y="81.0">org.springframework:spring-core:jar:4.1.6.RELEASE</node>
-            <node x="4333.736908431936" y="0.0">org.springframework:spring-core:jar:4.1.6.RELEASE/commons-logging:commons-logging:jar:1.2</node>
-            <node x="5170.307030812325" y="495.0">org.springframework:spring-web:jar:4.1.6.RELEASE</node>
-            <node x="4652.611908431936" y="212.0">org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-beans:jar:4.1.6.RELEASE</node>
-            <node x="4921.482961821855" y="394.0">org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-context:jar:4.1.6.RELEASE</node>
-            <node x="4024.8579618218546" y="313.0">org.springframework:spring-oxm:jar:4.1.6.RELEASE</node>
-            <node x="2440.598182941739" y="313.0">org.springframework:spring-tx:jar:4.1.6.RELEASE</node>
-            <node x="2475.348182941739" y="394.0">org.springframework:spring-jdbc:jar:4.1.6.RELEASE</node>
-            <node x="5107.070241765269" y="626.0">org.springframework:spring-webmvc:jar:4.1.6.RELEASE</node>
-            <node x="4975.482961821855" y="313.0">org.springframework:spring-webmvc:jar:4.1.6.RELEASE/org.springframework:spring-expression:jar:4.1.6.RELEASE</node>
-            <node x="5191.024628488522" y="313.0">org.springframework:spring-aop:jar:4.1.6.RELEASE</node>
-            <node x="5249.524628488522" y="212.0">org.springframework:spring-aop:jar:4.1.6.RELEASE/aopalliance:aopalliance:jar:1.0</node>
-            <node x="4287.857961821855" y="495.0">org.springframework:spring-context-support:jar:4.1.6.RELEASE</node>
-            <node x="2949.598182941739" y="626.0">org.springframework:spring-test:jar:4.1.6.RELEASE</node>
-            <node x="7688.910708538268" y="847.0">org.mybatis:mybatis:jar:3.2.4</node>
-            <node x="3303.473182941739" y="847.0">org.mybatis:mybatis-spring:jar:1.2.2</node>
-            <node x="3125.473182941739" y="847.0">mysql:mysql-connector-java:jar:5.1.29</node>
-            <node x="5331.495241765269" y="626.0">javax.servlet:jstl:jar:1.2</node>
-            <node x="2402.002961821855" y="847.0">javax.servlet.jsp:jsp-api:jar:2.2.1-b03</node>
-            <node x="255.4318833904822" y="847.0">javax.servlet:javax.servlet-api:jar:3.1.0</node>
-            <node x="2302.598182941739" y="495.0">com.fasterxml.jackson.core:jackson-core:jar:2.7.1</node>
-            <node x="3701.7290418716016" y="626.0">com.fasterxml.jackson.core:jackson-annotations:jar:2.7.1</node>
-            <node x="3081.973182941739" y="626.0">com.fasterxml.jackson.core:jackson-databind:jar:2.7.1</node>
-            <node x="2427.598182941739" y="495.0">com.fasterxml.jackson.core:jackson-databind:jar:2.7.1/com.fasterxml.jackson.core:jackson-annotations:jar:2.7.0</node>
-            <node x="5718.051261581556" y="626.0">net.sf.json-lib:json-lib:jar:jdk15:2.4</node>
-            <node x="5513.063090026983" y="495.0">net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-beanutils:commons-beanutils:jar:1.8.0</node>
-            <node x="5714.460525924419" y="495.0">net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-collections:commons-collections:jar:3.2.1</node>
-            <node x="5375.063090026983" y="495.0">net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-lang:commons-lang:jar:2.5</node>
-            <node x="5888.460525924418" y="495.0">net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-logging:commons-logging:jar:1.1.1</node>
-            <node x="1102.4318833904822" y="847.0">commons-lang:commons-lang:jar:2.4</node>
-            <node x="2824.285364145658" y="847.0">commons-logging:commons-logging:jar:1.1</node>
-            <node x="3332.854041871601" y="626.0">commons-logging:commons-logging:jar:1.1/log4j:log4j:jar:1.2.12</node>
-            <node x="2596.598182941739" y="626.0">commons-logging:commons-logging:jar:1.1/logkit:logkit:jar:1.0.1</node>
-            <node x="2681.598182941739" y="626.0">commons-logging:commons-logging:jar:1.1/avalon-framework:avalon-framework:jar:4.1.3</node>
-            <node x="2837.598182941739" y="626.0">commons-logging:commons-logging:jar:1.1/javax.servlet:servlet-api:jar:2.3</node>
-            <node x="4828.350828382189" y="847.0">commons-pool:commons-pool:jar:1.5.6</node>
-            <node x="7382.910708538268" y="847.0">commons-dbcp:commons-dbcp:jar:1.4</node>
-            <node x="7384.910708538268" y="626.0">commons-dbcp:commons-dbcp:jar:1.4/commons-pool:commons-pool:jar:1.5.4</node>
-            <node x="507.4318833904822" y="847.0">commons-beanutils:commons-beanutils:jar:1.8.3</node>
-            <node x="511.4318833904822" y="626.0">commons-beanutils:commons-beanutils:jar:1.8.3/commons-logging:commons-logging:jar:1.1</node>
-            <node x="86.4318833904822" y="847.0">commons-httpclient:commons-httpclient:jar:3.1</node>
-            <node x="147.0" y="626.0">commons-httpclient:commons-httpclient:jar:3.1/commons-logging:commons-logging:jar:1.0.4</node>
-            <node x="0.0" y="626.0">commons-httpclient:commons-httpclient:jar:3.1/commons-codec:commons-codec:jar:1.2</node>
-            <node x="820.4318833904822" y="847.0">commons-collections:commons-collections:jar:3.1</node>
-            <node x="673.4318833904822" y="847.0">commons-codec:commons-codec:jar:1.9</node>
-            <node x="3957.287961821855" y="847.0">javax.annotation:jsr250-api:jar:1.0</node>
-            <node x="7086.2012615815565" y="495.0">net.sf.ezmorph:ezmorph:jar:1.0.6</node>
-            <node x="7068.7012615815565" y="394.0">net.sf.ezmorph:ezmorph:jar:1.0.6/commons-lang:commons-lang:jar:2.3</node>
-            <node x="994.4318833904822" y="847.0">javax.activation:activation:jar:1.1</node>
-            <node x="5273.995241765269" y="847.0">taglibs:standard:jar:1.1.2</node>
-            <node x="7207.410708538268" y="626.0">org.slf4j:slf4j-api:jar:1.6.6</node>
-            <node x="3526.930241765269" y="495.0">ch.qos.logback:logback-core:jar:1.1.3</node>
-            <node x="3423.729041871601" y="626.0">ch.qos.logback:logback-access:jar:1.1.3</node>
-            <node x="3562.729041871601" y="626.0">ch.qos.logback:logback-classic:jar:1.1.3</node>
-            <node x="3744.1478394414653" y="495.0">ch.qos.logback:logback-classic:jar:1.1.3/org.slf4j:slf4j-api:jar:1.7.7</node>
-            <node x="7526.910708538268" y="847.0">org.logback-extensions:logback-ext-spring:jar:0.1.4</node>
-            <node x="7538.410708538268" y="626.0">org.logback-extensions:logback-ext-spring:jar:0.1.4/ch.qos.logback:logback-classic:jar:1.1.1</node>
-            <node x="7158.9512615815565" y="847.0">org.slf4j:jcl-over-slf4j:jar:1.6.6</node>
-            <node x="2167.098182941739" y="847.0">commons-fileupload:commons-fileupload:jar:1.3.1</node>
-            <node x="2190.598182941739" y="626.0">commons-fileupload:commons-fileupload:jar:1.3.1/commons-io:commons-io:jar:2.2</node>
-            <node x="3869.7290418716016" y="626.0">commons-io:commons-io:jar:2.4</node>
-            <node x="5622.051261581556" y="626.0">org.projectlombok:lombok:jar:1.16.14</node>
-            <node x="4939.036908431936" y="626.0">org.bouncycastle:bcprov-jdk15on:jar:1.56</node>
-            <node x="4640.702375204935" y="626.0">com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.2</node>
-            <node x="4627.857961821855" y="495.0">com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.2/com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0</node>
-            <node x="4795.857961821855" y="495.0">com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.2/com.fasterxml.jackson.core:jackson-core:jar:2.9.2</node>
-            <node x="4475.857961821855" y="495.0">com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.2/com.fasterxml.jackson.core:jackson-databind:jar:2.9.2</node>
-            <node x="5399.495241765269" y="626.0">com.alibaba:fastjson:jar:1.2.47</node>
-            <node x="5586.551261581556" y="847.0">org.aspectj:aspectjrt:jar:1.6.12</node>
-            <node x="1649.2354548190538" y="847.0">org.aspectj:aspectjweaver:jar:1.6.12</node>
-            <node x="7302.910708538268" y="847.0">cglib:cglib:jar:2.2</node>
-            <node x="7305.410708538268" y="626.0">cglib:cglib:jar:2.2/asm:asm:jar:3.1</node>
-            <node x="1240.4318833904822" y="847.0">org.redisson:redisson:jar:3.5.0</node>
-            <node x="840.7413902246526" y="212.0">org.redisson:redisson:jar:3.5.0/io.netty:netty-common:jar:4.1.13.Final</node>
-            <node x="845.5535714285716" y="495.0">org.redisson:redisson:jar:3.5.0/io.netty:netty-codec:jar:4.1.13.Final</node>
-            <node x="1095.9913902246526" y="313.0">org.redisson:redisson:jar:3.5.0/io.netty:netty-buffer:jar:4.1.13.Final</node>
-            <node x="869.7413902246526" y="394.0">org.redisson:redisson:jar:3.5.0/io.netty:netty-transport:jar:4.1.13.Final</node>
-            <node x="844.2413902246526" y="313.0">org.redisson:redisson:jar:3.5.0/io.netty:netty-transport:jar:4.1.13.Final/io.netty:netty-resolver:jar:4.1.13.Final</node>
-            <node x="1033.3035714285716" y="626.0">org.redisson:redisson:jar:3.5.0/io.netty:netty-handler:jar:4.1.13.Final</node>
-            <node x="736.5535714285716" y="626.0">org.redisson:redisson:jar:3.5.0/javax.cache:cache-api:jar:1.0.0</node>
-            <node x="1963.9260244606203" y="626.0">org.redisson:redisson:jar:3.5.0/io.projectreactor:reactor-stream:jar:2.0.8.RELEASE</node>
-            <node x="1971.4260244606203" y="495.0">org.redisson:redisson:jar:3.5.0/io.projectreactor:reactor-stream:jar:2.0.8.RELEASE/io.projectreactor:reactor-core:jar:2.0.8.RELEASE</node>
-            <node x="1898.4260244606203" y="394.0">org.redisson:redisson:jar:3.5.0/io.projectreactor:reactor-stream:jar:2.0.8.RELEASE/io.projectreactor:reactor-core:jar:2.0.8.RELEASE/org.reactivestreams:reactive-streams:jar:1.0.0</node>
-            <node x="2044.4260244606203" y="394.0">org.redisson:redisson:jar:3.5.0/io.projectreactor:reactor-stream:jar:2.0.8.RELEASE/io.projectreactor:reactor-core:jar:2.0.8.RELEASE/org.slf4j:slf4j-api:jar:1.7.12</node>
-            <node x="1214.5510244606203" y="626.0">org.redisson:redisson:jar:3.5.0/org.slf4j:slf4j-api:jar:1.7.21</node>
-            <node x="1755.0510244606203" y="626.0">org.redisson:redisson:jar:3.5.0/com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.7.9</node>
-            <node x="1732.5510244606203" y="495.0">org.redisson:redisson:jar:3.5.0/com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.7.9/com.fasterxml.jackson.core:jackson-core:jar:2.7.9</node>
-            <node x="1856.5510244606203" y="495.0">org.redisson:redisson:jar:3.5.0/com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.7.9/org.yaml:snakeyaml:jar:1.15</node>
-            <node x="2386.065780617936" y="626.0">org.redisson:redisson:jar:3.5.0/com.fasterxml.jackson.core:jackson-core:jar:2.7.1</node>
-            <node x="881.3035714285716" y="626.0">org.redisson:redisson:jar:3.5.0/com.fasterxml.jackson.core:jackson-databind:jar:2.7.9</node>
-            <node x="1434.5510244606203" y="626.0">org.redisson:redisson:jar:3.5.0/net.openhft:zero-allocation-hashing:jar:0.8</node>
-            <node x="1313.5510244606203" y="626.0">org.redisson:redisson:jar:3.5.0/net.bytebuddy:byte-buddy:jar:1.6.14</node>
-            <node x="1622.5510244606203" y="626.0">org.redisson:redisson:jar:3.5.0/org.jodd:jodd-bean:jar:3.7.1</node>
-            <node x="1624.5510244606203" y="495.0">org.redisson:redisson:jar:3.5.0/org.jodd:jodd-bean:jar:3.7.1/org.jodd:jodd-core:jar:3.7.1</node>
-            <node x="399.4318833904822" y="847.0">redis.clients:jedis:jar:2.9.0</node>
-            <node x="365.4318833904822" y="626.0">redis.clients:jedis:jar:2.9.0/org.apache.commons:commons-pool2:jar:2.4.2</node>
-            <node x="6474.960525924418" y="847.0">org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE</node>
-            <node x="6304.9512615815565" y="626.0">org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE</node>
-            <node x="6046.460525924418" y="495.0">org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework.data:spring-data-commons:jar:1.12.1.RELEASE</node>
-            <node x="6389.604506108131" y="394.0">org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework.data:spring-data-commons:jar:1.12.1.RELEASE/org.springframework:spring-core:jar:4.2.5.RELEASE</node>
-            <node x="6135.710525924418" y="394.0">org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework.data:spring-data-commons:jar:1.12.1.RELEASE/org.springframework:spring-beans:jar:4.2.5.RELEASE</node>
-            <node x="5742.701261581556" y="394.0">org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework.data:spring-data-commons:jar:1.12.1.RELEASE/org.slf4j:slf4j-api:jar:1.7.19</node>
-            <node x="6012.710525924418" y="394.0">org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework.data:spring-data-commons:jar:1.12.1.RELEASE/org.slf4j:jcl-over-slf4j:jar:1.7.19</node>
-            <node x="6600.604506108131" y="495.0">org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework:spring-context:jar:4.2.5.RELEASE</node>
-            <node x="6350.460525924418" y="495.0">org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework:spring-tx:jar:4.2.5.RELEASE</node>
-            <node x="6502.604506108131" y="495.0">org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.slf4j:slf4j-api:jar:1.6.6</node>
-            <node x="6227.460525924418" y="495.0">org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.slf4j:jcl-over-slf4j:jar:1.6.6</node>
-            <node x="6034.160708538268" y="626.0">org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework:spring-tx:jar:4.1.6.RELEASE</node>
-            <node x="6789.9512615815565" y="626.0">org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework:spring-oxm:jar:4.2.5.RELEASE</node>
-            <node x="6907.9512615815565" y="626.0">org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework:spring-aop:jar:4.2.5.RELEASE</node>
-            <node x="6602.9512615815565" y="626.0">org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework:spring-context-support:jar:4.2.5.RELEASE</node>
-            <node x="4189.857961821855" y="495.0">org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.slf4j:slf4j-api:jar:1.6.6</node>
-            <node x="6479.9512615815565" y="626.0">org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.slf4j:jcl-over-slf4j:jar:1.6.6</node>
-            <node x="4098.857961821855" y="847.0">com.hust:account-common:jar:1.0-SNAPSHOT</node>
-            <node x="4113.357961821855" y="626.0">com.hust:account-common:jar:1.0-SNAPSHOT/org.slf4j:slf4j-log4j12:jar:1.6.6</node>
-            <node x="4108.857961821855" y="495.0">com.hust:account-common:jar:1.0-SNAPSHOT/org.slf4j:slf4j-log4j12:jar:1.6.6/log4j:log4j:jar:1.2.17</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="net.sf.json-lib:json-lib:jar:jdk15:2.4" target="net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-collections:commons-collections:jar:3.2.1">
-              <point x="0.0" y="-15.5" />
-              <point x="5775.051261581556" y="606.0" />
-              <point x="5791.460525924419" y="606.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-aop:jar:4.1.6.RELEASE" target="org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-beans:jar:4.1.6.RELEASE">
-              <point x="-32.0" y="-15.5" />
-              <point x="5207.024628488522" y="263.0" />
-              <point x="4753.861908431936" y="263.0" />
-              <point x="47.25" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="net.sf.json-lib:json-lib:jar:jdk15:2.4">
-              <point x="16.470588235294144" y="-15.5" />
-              <point x="3716.3485500571487" y="1048.0" />
-              <point x="5803.551261581556" y="1048.0" />
-              <point x="28.5" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.slf4j:slf4j-api:jar:1.6.6">
-              <point x="5.320000000000164" y="-15.5" />
-              <point x="4170.677961821855" y="717.0" />
-              <point x="4228.857961821855" y="717.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-beans:jar:4.1.6.RELEASE" target="org.springframework:spring-core:jar:4.1.6.RELEASE">
-              <point x="0.0" y="-15.5" />
-              <point x="4706.611908431936" y="192.0" />
-              <point x="4410.275369970397" y="192.0" />
-              <point x="7.5384615384614335" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="javax.annotation:jsr250-api:jar:1.0">
-              <point x="2.1960784313723707" y="-15.5" />
-              <point x="3702.0740402532274" y="918.0" />
-              <point x="4002.287961821855" y="918.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="com.fasterxml.jackson.core:jackson-databind:jar:2.7.1">
-              <point x="-53.19999999999982" y="-15.5" />
-              <point x="4112.157961821855" y="767.0" />
-              <point x="3180.973182941739" y="767.0" />
-              <point x="33.0" y="15.5" />
-            </edge>
-            <edge source="com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.2" target="com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.2/com.fasterxml.jackson.core:jackson-core:jar:2.9.2">
-              <point x="57.333333333333485" y="-15.5" />
-              <point x="4784.035708538268" y="606.0" />
-              <point x="4847.857961821855" y="606.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE">
-              <point x="17.56862745098033" y="-15.5" />
-              <point x="3717.446589272835" y="1058.0" />
-              <point x="6541.460525924418" y="1058.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="org.projectlombok:lombok:jar:1.16.14">
-              <point x="53.19999999999982" y="-15.5" />
-              <point x="4218.557961821854" y="807.0" />
-              <point x="5641.051261581556" y="807.0" />
-              <point x="-19.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="commons-io:commons-io:jar:2.4">
-              <point x="-26.59999999999991" y="-15.5" />
-              <point x="4138.757961821855" y="717.0" />
-              <point x="3947.7290418716016" y="717.0" />
-              <point x="26.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="org.springframework:spring-webmvc:jar:4.1.6.RELEASE">
-              <point x="37.23999999999978" y="-15.5" />
-              <point x="4202.597961821854" y="777.0" />
-              <point x="5137.320241765269" y="777.0" />
-              <point x="-30.25" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.springframework:spring-tx:jar:4.1.6.RELEASE">
-              <point x="-15.372549019607959" y="-15.5" />
-              <point x="3684.5054128022466" y="1038.0" />
-              <point x="2155.500143726053" y="1038.0" />
-              <point x="2155.500143726053" y="374.0" />
-              <point x="2461.598182941739" y="374.0" />
-              <point x="-21.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.aspectj:aspectjweaver:jar:1.6.12">
-              <point x="-17.56862745098033" y="-15.5" />
-              <point x="3682.3093343708742" y="1058.0" />
-              <point x="1705.2354548190538" y="1058.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="javax.activation:activation:jar:1.1">
-              <point x="-20.86274509803934" y="-15.5" />
-              <point x="3679.0152167238157" y="1088.0" />
-              <point x="1038.4318833904822" y="1088.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0" target="org.redisson:redisson:jar:3.5.0/org.slf4j:slf4j-api:jar:1.7.21">
-              <point x="-2.857142857143117" y="-15.5" />
-              <point x="1277.574740533339" y="767.0" />
-              <point x="1253.5510244606203" y="767.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.1.6.RELEASE" target="org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-context:jar:4.1.6.RELEASE">
-              <point x="-24.199999999999818" y="-15.5" />
-              <point x="5143.370241765269" y="586.0" />
-              <point x="5019.890364145658" y="586.0" />
-              <point x="5019.890364145658" y="465.0" />
-              <point x="4979.482961821855" y="465.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="commons-logging:commons-logging:jar:1.1" target="commons-logging:commons-logging:jar:1.1/javax.servlet:servlet-api:jar:2.3">
-              <point x="17.25" y="-15.5" />
-              <point x="2910.535364145658" y="807.0" />
-              <point x="2883.598182941739" y="807.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework.data:spring-data-commons:jar:1.12.1.RELEASE" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework.data:spring-data-commons:jar:1.12.1.RELEASE/org.springframework:spring-beans:jar:4.2.5.RELEASE">
-              <point x="20.125" y="-15.5" />
-              <point x="6147.085525924418" y="465.0" />
-              <point x="6189.710525924418" y="465.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.logback-extensions:logback-ext-spring:jar:0.1.4">
-              <point x="26.352941176470722" y="-15.5" />
-              <point x="3726.2309029983253" y="1138.0" />
-              <point x="7597.910708538268" y="1138.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-oxm:jar:4.1.6.RELEASE" target="org.springframework:spring-core:jar:4.1.6.RELEASE">
-              <point x="-24.5" y="-15.5" />
-              <point x="4049.3579618218546" y="182.0" />
-              <point x="4395.198446893475" y="182.0" />
-              <point x="-7.5384615384614335" y="15.5" />
-            </edge>
-            <edge source="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework:spring-tx:jar:4.1.6.RELEASE">
-              <point x="-57.0" y="-15.5" />
-              <point x="6484.460525924418" y="827.0" />
-              <point x="6097.160708538268" y="827.0" />
-              <point x="21.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="com.fasterxml.jackson.core:jackson-annotations:jar:2.7.1">
-              <point x="0.0" y="-15.5" />
-              <point x="3699.877961821855" y="898.0" />
-              <point x="3652.9103641456586" y="898.0" />
-              <point x="3652.9103641456586" y="827.0" />
-              <point x="3738.7290418716016" y="827.0" />
-              <point x="-37.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-tx:jar:4.1.6.RELEASE" target="org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-beans:jar:4.1.6.RELEASE">
-              <point x="21.0" y="-15.5" />
-              <point x="2503.598182941739" y="263.0" />
-              <point x="4659.361908431936" y="263.0" />
-              <point x="-47.25" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="javax.servlet.jsp:jsp-api:jar:2.2.1-b03">
-              <point x="-10.980392156862763" y="-15.5" />
-              <point x="3688.8975696649923" y="998.0" />
-              <point x="2438.002961821855" y="998.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="cglib:cglib:jar:2.2">
-              <point x="23.05882352941171" y="-15.5" />
-              <point x="3722.9367853512667" y="1108.0" />
-              <point x="7332.910708538268" y="1108.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-web:jar:4.1.6.RELEASE" target="org.springframework:spring-aop:jar:4.1.6.RELEASE">
-              <point x="12.25" y="-15.5" />
-              <point x="5231.557030812325" y="475.0" />
-              <point x="5251.024628488522" y="475.0" />
-              <point x="12.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="org.springframework:spring-aop:jar:4.1.6.RELEASE">
-              <point x="15.960000000000036" y="-15.5" />
-              <point x="4181.317961821855" y="737.0" />
-              <point x="4465.357961821855" y="737.0" />
-              <point x="4465.357961821855" y="475.0" />
-              <point x="5056.482961821855" y="475.0" />
-              <point x="5056.482961821855" y="374.0" />
-              <point x="5227.024628488522" y="374.0" />
-              <point x="-12.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.redisson:redisson:jar:3.5.0">
-              <point x="-18.666666666666515" y="-15.5" />
-              <point x="3681.211295155188" y="1068.0" />
-              <point x="1280.4318833904822" y="1068.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0" target="org.redisson:redisson:jar:3.5.0/com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.7.9">
-              <point x="25.714285714285325" y="-15.5" />
-              <point x="1306.1461691047675" y="807.0" />
-              <point x="1843.5510244606203" y="807.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="mysql:mysql-connector-java:jar:5.1.29">
-              <point x="-5.4901960784313815" y="-15.5" />
-              <point x="3694.387765743423" y="948.0" />
-              <point x="3203.973182941739" y="948.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0/com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.7.9" target="org.redisson:redisson:jar:3.5.0/com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.7.9/org.yaml:snakeyaml:jar:1.15">
-              <point x="44.25" y="-15.5" />
-              <point x="1887.8010244606203" y="606.0" />
-              <point x="1902.5510244606203" y="606.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="commons-dbcp:commons-dbcp:jar:1.4">
-              <point x="24.156862745097897" y="-15.5" />
-              <point x="3724.034824566953" y="1118.0" />
-              <point x="7444.410708538268" y="1118.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.aspectj:aspectjrt:jar:1.6.12">
-              <point x="14.274509803921774" y="-15.5" />
-              <point x="3714.1524716257763" y="1028.0" />
-              <point x="5627.551261581556" y="1028.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0" target="org.redisson:redisson:jar:3.5.0/com.fasterxml.jackson.core:jackson-core:jar:2.7.1">
-              <point x="37.14285714285688" y="-15.5" />
-              <point x="1317.574740533339" y="827.0" />
-              <point x="2412.065780617936" y="827.0" />
-              <point x="-26.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-tx:jar:4.1.6.RELEASE" target="org.springframework:spring-core:jar:4.1.6.RELEASE">
-              <point x="-21.0" y="-15.5" />
-              <point x="2461.598182941739" y="152.0" />
-              <point x="4372.58306227809" y="152.0" />
-              <point x="-30.15384615384619" y="15.5" />
-            </edge>
-            <edge source="org.logback-extensions:logback-ext-spring:jar:0.1.4" target="org.logback-extensions:logback-ext-spring:jar:0.1.4/ch.qos.logback:logback-classic:jar:1.1.1">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.slf4j:jcl-over-slf4j:jar:1.6.6">
-              <point x="-31.0" y="-15.5" />
-              <point x="6351.4512615815565" y="546.0" />
-              <point x="6278.960525924418" y="546.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="com.alibaba:fastjson:jar:1.2.47">
-              <point x="47.88000000000011" y="-15.5" />
-              <point x="4213.237961821855" y="797.0" />
-              <point x="5418.495241765269" y="797.0" />
-              <point x="-19.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-context:jar:4.1.6.RELEASE" target="org.springframework:spring-webmvc:jar:4.1.6.RELEASE/org.springframework:spring-expression:jar:4.1.6.RELEASE">
-              <point x="14.5" y="-15.5" />
-              <point x="4993.982961821855" y="374.0" />
-              <point x="5008.982961821855" y="374.0" />
-              <point x="-33.5" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="org.springframework:spring-test:jar:4.1.6.RELEASE">
-              <point x="-58.51999999999998" y="-15.5" />
-              <point x="4106.837961821855" y="777.0" />
-              <point x="3020.848182941739" y="777.0" />
-              <point x="23.75" y="15.5" />
-            </edge>
-            <edge source="commons-logging:commons-logging:jar:1.1" target="commons-logging:commons-logging:jar:1.1/log4j:log4j:jar:1.2.12">
-              <point x="51.75" y="-15.5" />
-              <point x="2945.035364145658" y="827.0" />
-              <point x="3348.104041871601" y="827.0" />
-              <point x="-15.25" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="ch.qos.logback:logback-access:jar:1.1.3">
-              <point x="-2.1960784313723707" y="-15.5" />
-              <point x="3697.6818833904827" y="918.0" />
-              <point x="3433.973182941739" y="918.0" />
-              <point x="3433.973182941739" y="827.0" />
-              <point x="3453.479041871601" y="827.0" />
-              <point x="-29.75" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="redis.clients:jedis:jar:2.9.0">
-              <point x="-25.254901960784537" y="-15.5" />
-              <point x="3674.62305986107" y="1128.0" />
-              <point x="428.4318833904822" y="1128.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.fasterxml.jackson.core:jackson-databind:jar:2.7.1" target="com.fasterxml.jackson.core:jackson-databind:jar:2.7.1/com.fasterxml.jackson.core:jackson-annotations:jar:2.7.0">
-              <point x="33.0" y="-15.5" />
-              <point x="3180.973182941739" y="586.0" />
-              <point x="2501.598182941739" y="586.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework:spring-tx:jar:4.2.5.RELEASE">
-              <point x="0.0" y="-15.5" />
-              <point x="6382.4512615815565" y="596.0" />
-              <point x="6392.460525924418" y="596.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.1.6.RELEASE" target="org.springframework:spring-core:jar:4.1.6.RELEASE">
-              <point x="48.40000000000009" y="-15.5" />
-              <point x="5215.970241765269" y="606.0" />
-              <point x="5364.563090026983" y="606.0" />
-              <point x="5364.563090026983" y="142.0" />
-              <point x="4447.967677662706" y="142.0" />
-              <point x="45.230769230769056" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="com.hust:account-common:jar:1.0-SNAPSHOT">
-              <point x="3.294117647059011" y="-15.5" />
-              <point x="3703.1720794689136" y="928.0" />
-              <point x="4165.357961821855" y="928.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0" target="org.redisson:redisson:jar:3.5.0/io.projectreactor:reactor-stream:jar:2.0.8.RELEASE">
-              <point x="31.42857142857156" y="-15.5" />
-              <point x="1311.8604548190538" y="817.0" />
-              <point x="2022.4260244606203" y="817.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.springframework:spring-web:jar:4.1.6.RELEASE">
-              <point x="13.176470588235134" y="-15.5" />
-              <point x="3713.05443241009" y="1018.0" />
-              <point x="5485.995241765269" y="1018.0" />
-              <point x="5485.995241765269" y="596.0" />
-              <point x="5251.973697478992" y="596.0" />
-              <point x="32.666666666666515" y="15.5" />
-            </edge>
-            <edge source="cglib:cglib:jar:2.2" target="cglib:cglib:jar:2.2/asm:asm:jar:3.1">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="junit:junit:jar:4.11">
-              <point x="18.666666666666515" y="-15.5" />
-              <point x="3718.544628488521" y="1068.0" />
-              <point x="7080.9512615815565" y="1068.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-context-support:jar:4.1.6.RELEASE" target="org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-context:jar:4.1.6.RELEASE">
-              <point x="55.666666666666515" y="-15.5" />
-              <point x="4427.024628488522" y="465.0" />
-              <point x="4940.8162951551885" y="465.0" />
-              <point x="-38.666666666666515" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="ch.qos.logback:logback-classic:jar:1.1.3">
-              <point x="-37.24000000000001" y="-15.5" />
-              <point x="4128.117961821855" y="737.0" />
-              <point x="3651.979041871601" y="737.0" />
-              <point x="29.75" y="15.5" />
-            </edge>
-            <edge source="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework.data:spring-data-commons:jar:1.12.1.RELEASE" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework.data:spring-data-commons:jar:1.12.1.RELEASE/org.springframework:spring-core:jar:4.2.5.RELEASE">
-              <point x="60.375" y="-15.5" />
-              <point x="6187.335525924418" y="475.0" />
-              <point x="6438.604506108131" y="475.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-context:jar:4.1.6.RELEASE" target="org.springframework:spring-aop:jar:4.1.6.RELEASE">
-              <point x="43.5" y="-15.5" />
-              <point x="5022.982961821855" y="364.0" />
-              <point x="5203.024628488522" y="364.0" />
-              <point x="-36.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0/io.netty:netty-codec:jar:4.1.13.Final" target="org.redisson:redisson:jar:3.5.0/io.netty:netty-transport:jar:4.1.13.Final">
-              <point x="0.0" y="-15.5" />
-              <point x="896.0535714285716" y="475.0" />
-              <point x="929.7413902246526" y="475.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.2" target="com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.2/com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0">
-              <point x="0.0" y="-15.5" />
-              <point x="4726.702375204935" y="606.0" />
-              <point x="4701.857961821855" y="606.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0/io.netty:netty-buffer:jar:4.1.13.Final" target="org.redisson:redisson:jar:3.5.0/io.netty:netty-common:jar:4.1.13.Final">
-              <point x="0.0" y="-15.5" />
-              <point x="1146.4913902246526" y="293.0" />
-              <point x="939.0747235579856" y="293.0" />
-              <point x="39.33333333333303" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-aop:jar:4.1.6.RELEASE" target="org.springframework:spring-core:jar:4.1.6.RELEASE">
-              <point x="0.0" y="-15.5" />
-              <point x="5239.024628488522" y="162.0" />
-              <point x="4432.890754585782" y="162.0" />
-              <point x="30.15384615384619" y="15.5" />
-            </edge>
-            <edge source="net.sf.ezmorph:ezmorph:jar:1.0.6" target="net.sf.ezmorph:ezmorph:jar:1.0.6/commons-lang:commons-lang:jar:2.3">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="ch.qos.logback:logback-classic:jar:1.1.3" target="ch.qos.logback:logback-classic:jar:1.1.3/org.slf4j:slf4j-api:jar:1.7.7">
-              <point x="29.75" y="-15.5" />
-              <point x="3651.979041871601" y="606.0" />
-              <point x="3783.1478394414653" y="606.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="org.springframework:spring-web:jar:4.1.6.RELEASE">
-              <point x="26.59999999999991" y="-15.5" />
-              <point x="4191.957961821855" y="757.0" />
-              <point x="4928.536908431936" y="757.0" />
-              <point x="4928.536908431936" y="606.0" />
-              <point x="5186.640364145658" y="606.0" />
-              <point x="-32.666666666666515" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0/io.netty:netty-transport:jar:4.1.13.Final/io.netty:netty-resolver:jar:4.1.13.Final" target="org.redisson:redisson:jar:3.5.0/io.netty:netty-common:jar:4.1.13.Final">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="net.sf.json-lib:json-lib:jar:jdk15:2.4" target="net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-lang:commons-lang:jar:2.5">
-              <point x="-45.59999999999991" y="-15.5" />
-              <point x="5729.451261581556" y="586.0" />
-              <point x="5434.063090026983" y="586.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="com.alibaba:fastjson:jar:1.2.47">
-              <point x="12.078431372548948" y="-15.5" />
-              <point x="3711.956393194404" y="1008.0" />
-              <point x="5456.495241765269" y="1008.0" />
-              <point x="19.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0/io.netty:netty-transport:jar:4.1.13.Final" target="org.redisson:redisson:jar:3.5.0/io.netty:netty-transport:jar:4.1.13.Final/io.netty:netty-resolver:jar:4.1.13.Final">
-              <point x="-30.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="net.sf.json-lib:json-lib:jar:jdk15:2.4" target="net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-logging:commons-logging:jar:1.1.1">
-              <point x="22.800000000000182" y="-15.5" />
-              <point x="5797.851261581556" y="596.0" />
-              <point x="5957.460525924418" y="596.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-aop:jar:4.1.6.RELEASE" target="org.springframework:spring-aop:jar:4.1.6.RELEASE/aopalliance:aopalliance:jar:1.0">
-              <point x="32.0" y="-15.5" />
-              <point x="5271.024628488522" y="293.0" />
-              <point x="5298.024628488522" y="293.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.2" target="com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.2/com.fasterxml.jackson.core:jackson-databind:jar:2.9.2">
-              <point x="-57.333333333333485" y="-15.5" />
-              <point x="4669.369041871601" y="606.0" />
-              <point x="4541.857961821855" y="606.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="commons-codec:commons-codec:jar:1.9">
-              <point x="-23.05882352941171" y="-15.5" />
-              <point x="3676.8191382924433" y="1108.0" />
-              <point x="736.9318833904822" y="1108.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="net.sf.json-lib:json-lib:jar:jdk15:2.4" target="net.sf.ezmorph:ezmorph:jar:1.0.6">
-              <point x="45.59999999999991" y="-15.5" />
-              <point x="5820.651261581555" y="606.0" />
-              <point x="7106.9512615815565" y="606.0" />
-              <point x="-20.75" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="javax.servlet:jstl:jar:1.2">
-              <point x="10.980392156862763" y="-15.5" />
-              <point x="3710.858353978718" y="998.0" />
-              <point x="5367.495241765269" y="998.0" />
-              <point x="12.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-context:jar:4.1.6.RELEASE" target="org.springframework:spring-core:jar:4.1.6.RELEASE">
-              <point x="-14.5" y="-15.5" />
-              <point x="4964.982961821855" y="182.0" />
-              <point x="4417.813831508859" y="182.0" />
-              <point x="15.076923076922867" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0" target="org.redisson:redisson:jar:3.5.0/io.netty:netty-handler:jar:4.1.13.Final">
-              <point x="-8.571428571428442" y="-15.5" />
-              <point x="1271.8604548190538" y="777.0" />
-              <point x="1088.8035714285716" y="777.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="org.springframework:spring-oxm:jar:4.1.6.RELEASE">
-              <point x="-5.320000000000164" y="-15.5" />
-              <point x="4160.037961821855" y="677.0" />
-              <point x="4098.357961821855" y="677.0" />
-              <point x="24.5" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0/io.netty:netty-transport:jar:4.1.13.Final" target="org.redisson:redisson:jar:3.5.0/io.netty:netty-buffer:jar:4.1.13.Final">
-              <point x="30.0" y="-15.5" />
-              <point x="959.7413902246526" y="374.0" />
-              <point x="1112.8247235579856" y="374.0" />
-              <point x="-33.66666666666697" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-web:jar:4.1.6.RELEASE" target="org.springframework:spring-core:jar:4.1.6.RELEASE">
-              <point x="36.75" y="-15.5" />
-              <point x="5256.057030812325" y="475.0" />
-              <point x="5357.024628488522" y="475.0" />
-              <point x="5357.024628488522" y="152.0" />
-              <point x="4440.429216124244" y="152.0" />
-              <point x="37.69230769230762" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0/io.netty:netty-handler:jar:4.1.13.Final" target="org.redisson:redisson:jar:3.5.0/io.netty:netty-buffer:jar:4.1.13.Final">
-              <point x="37.0" y="-15.5" />
-              <point x="1125.8035714285716" y="606.0" />
-              <point x="1146.4913902246526" y="606.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.mybatis:mybatis:jar:3.2.4">
-              <point x="27.450980392156907" y="-15.5" />
-              <point x="3727.3289422140115" y="1148.0" />
-              <point x="7727.910708538268" y="1148.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="commons-beanutils:commons-beanutils:jar:1.8.3">
-              <point x="-24.156862745097897" y="-15.5" />
-              <point x="3675.721099076757" y="1118.0" />
-              <point x="580.4318833904822" y="1118.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0/io.netty:netty-handler:jar:4.1.13.Final" target="org.redisson:redisson:jar:3.5.0/io.netty:netty-transport:jar:4.1.13.Final">
-              <point x="0.0" y="-15.5" />
-              <point x="1088.8035714285716" y="606.0" />
-              <point x="1101.8035714285716" y="606.0" />
-              <point x="1101.8035714285716" y="475.0" />
-              <point x="969.7413902246526" y="475.0" />
-              <point x="40.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="ch.qos.logback:logback-access:jar:1.1.3">
-              <point x="-42.559999999999945" y="-15.5" />
-              <point x="4122.797961821855" y="747.0" />
-              <point x="3512.979041871601" y="747.0" />
-              <point x="29.75" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0/io.projectreactor:reactor-stream:jar:2.0.8.RELEASE/io.projectreactor:reactor-core:jar:2.0.8.RELEASE" target="org.redisson:redisson:jar:3.5.0/io.projectreactor:reactor-stream:jar:2.0.8.RELEASE/io.projectreactor:reactor-core:jar:2.0.8.RELEASE/org.reactivestreams:reactive-streams:jar:1.0.0">
-              <point x="-25.5" y="-15.5" />
-              <point x="1996.9260244606203" y="475.0" />
-              <point x="1961.4260244606203" y="475.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0" target="org.redisson:redisson:jar:3.5.0/net.openhft:zero-allocation-hashing:jar:0.8">
-              <point x="14.285714285714675" y="-15.5" />
-              <point x="1294.7175976761969" y="787.0" />
-              <point x="1518.5510244606203" y="787.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.slf4j:jcl-over-slf4j:jar:1.6.6" target="org.slf4j:slf4j-api:jar:1.6.6">
-              <point x="0.0" y="-15.5" />
-              <point x="7210.4512615815565" y="827.0" />
-              <point x="7226.910708538268" y="827.0" />
-              <point x="-19.5" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT/org.slf4j:slf4j-log4j12:jar:1.6.6" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.slf4j:slf4j-api:jar:1.6.6">
-              <point x="26.0" y="-15.5" />
-              <point x="4191.357961821855" y="606.0" />
-              <point x="4202.857961821855" y="606.0" />
-              <point x="-26.0" y="15.5" />
-            </edge>
-            <edge source="commons-httpclient:commons-httpclient:jar:3.1" target="commons-httpclient:commons-httpclient:jar:3.1/commons-codec:commons-codec:jar:1.2">
-              <point x="-37.25" y="-15.5" />
-              <point x="123.6818833904822" y="827.0" />
-              <point x="63.5" y="827.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework.data:spring-data-commons:jar:1.12.1.RELEASE" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework.data:spring-data-commons:jar:1.12.1.RELEASE/org.slf4j:slf4j-api:jar:1.7.19">
-              <point x="-60.375" y="-15.5" />
-              <point x="6066.585525924418" y="475.0" />
-              <point x="5781.701261581556" y="475.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="commons-logging:commons-logging:jar:1.1" target="commons-logging:commons-logging:jar:1.1/logkit:logkit:jar:1.0.1">
-              <point x="-51.75" y="-15.5" />
-              <point x="2841.535364145658" y="807.0" />
-              <point x="2629.098182941739" y="807.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0" target="org.redisson:redisson:jar:3.5.0/io.netty:netty-transport:jar:4.1.13.Final">
-              <point x="-25.714285714285325" y="-15.5" />
-              <point x="1254.7175976761969" y="807.0" />
-              <point x="835.0535714285716" y="807.0" />
-              <point x="835.0535714285716" y="475.0" />
-              <point x="889.7413902246526" y="475.0" />
-              <point x="-40.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0/io.netty:netty-handler:jar:4.1.13.Final" target="org.redisson:redisson:jar:3.5.0/io.netty:netty-codec:jar:4.1.13.Final">
-              <point x="-37.0" y="-15.5" />
-              <point x="1051.8035714285716" y="606.0" />
-              <point x="921.3035714285716" y="606.0" />
-              <point x="25.25" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.projectlombok:lombok:jar:1.16.14">
-              <point x="15.372549019607959" y="-15.5" />
-              <point x="3715.2505108414625" y="1038.0" />
-              <point x="5679.051261581556" y="1038.0" />
-              <point x="19.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.springframework:spring-aop:jar:4.1.6.RELEASE">
-              <point x="25.254901960784537" y="-15.5" />
-              <point x="3725.132863782639" y="1128.0" />
-              <point x="7516.410708538268" y="1128.0" />
-              <point x="7516.410708538268" y="374.0" />
-              <point x="5275.024628488522" y="374.0" />
-              <point x="36.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0" target="org.redisson:redisson:jar:3.5.0/io.netty:netty-buffer:jar:4.1.13.Final">
-              <point x="2.857142857143117" y="-15.5" />
-              <point x="1283.2890262476253" y="767.0" />
-              <point x="1303.0510244606203" y="767.0" />
-              <point x="1303.0510244606203" y="374.0" />
-              <point x="1180.1580568913196" y="374.0" />
-              <point x="33.66666666666697" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-jdbc:jar:4.1.6.RELEASE" target="org.springframework:spring-core:jar:4.1.6.RELEASE">
-              <point x="0.0" y="-15.5" />
-              <point x="2524.848182941739" y="374.0" />
-              <point x="2535.098182941739" y="374.0" />
-              <point x="2535.098182941739" y="162.0" />
-              <point x="4380.121523816551" y="162.0" />
-              <point x="-22.615384615384755" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.mybatis:mybatis-spring:jar:1.2.2">
-              <point x="-3.294117647059011" y="-15.5" />
-              <point x="3696.5838441747956" y="928.0" />
-              <point x="3363.473182941739" y="928.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="com.fasterxml.jackson.core:jackson-databind:jar:2.7.1">
-              <point x="-6.588235294117567" y="-15.5" />
-              <point x="3693.289726527737" y="958.0" />
-              <point x="3114.973182941739" y="958.0" />
-              <point x="-33.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.1.6.RELEASE" target="org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-beans:jar:4.1.6.RELEASE">
-              <point x="-48.40000000000009" y="-15.5" />
-              <point x="5119.170241765269" y="596.0" />
-              <point x="4910.357961821855" y="596.0" />
-              <point x="4910.357961821855" y="293.0" />
-              <point x="4713.361908431936" y="293.0" />
-              <point x="6.75" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.1.6.RELEASE/org.springframework:spring-expression:jar:4.1.6.RELEASE" target="org.springframework:spring-core:jar:4.1.6.RELEASE">
-              <point x="0.0" y="-15.5" />
-              <point x="5042.482961821855" y="172.0" />
-              <point x="4425.352293047321" y="172.0" />
-              <point x="22.615384615384755" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.springframework:spring-test:jar:4.1.6.RELEASE">
-              <point x="-8.784313725490392" y="-15.5" />
-              <point x="3691.0936480963646" y="978.0" />
-              <point x="2813.785364145658" y="978.0" />
-              <point x="2813.785364145658" y="817.0" />
-              <point x="2973.348182941739" y="817.0" />
-              <point x="-23.75" y="15.5" />
-            </edge>
-            <edge source="com.fasterxml.jackson.core:jackson-databind:jar:2.7.1" target="com.fasterxml.jackson.core:jackson-core:jar:2.7.1">
-              <point x="-33.0" y="-15.5" />
-              <point x="3114.973182941739" y="596.0" />
-              <point x="2380.598182941739" y="596.0" />
-              <point x="26.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="com.fasterxml.jackson.core:jackson-core:jar:2.7.1">
-              <point x="-12.078431372548948" y="-15.5" />
-              <point x="3687.799530449306" y="1008.0" />
-              <point x="2328.598182941739" y="1008.0" />
-              <point x="-26.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.springframework:spring-jdbc:jar:4.1.6.RELEASE">
-              <point x="-14.274509803921774" y="-15.5" />
-              <point x="3685.603452017933" y="1028.0" />
-              <point x="2156.598182941739" y="1028.0" />
-              <point x="2156.598182941739" y="475.0" />
-              <point x="2500.098182941739" y="475.0" />
-              <point x="-24.75" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-context-support:jar:4.1.6.RELEASE" target="org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-beans:jar:4.1.6.RELEASE">
-              <point x="0.0" y="-15.5" />
-              <point x="4371.357961821855" y="293.0" />
-              <point x="4699.861908431936" y="293.0" />
-              <point x="-6.75" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-web:jar:4.1.6.RELEASE" target="org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-context:jar:4.1.6.RELEASE">
-              <point x="-36.75" y="-15.5" />
-              <point x="5182.557030812325" y="455.0" />
-              <point x="5018.149628488522" y="455.0" />
-              <point x="38.666666666666515" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="com.hust:account-common:jar:1.0-SNAPSHOT/org.slf4j:slf4j-log4j12:jar:1.6.6">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="commons-collections:commons-collections:jar:3.1">
-              <point x="-21.960784313725526" y="-15.5" />
-              <point x="3677.9171775081295" y="1098.0" />
-              <point x="897.4318833904822" y="1098.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.springframework:spring-context-support:jar:4.1.6.RELEASE">
-              <point x="4.392156862745196" y="-15.5" />
-              <point x="3704.2701186845998" y="938.0" />
-              <point x="4376.857961821855" y="938.0" />
-              <point x="4376.857961821855" y="606.0" />
-              <point x="4413.107961821855" y="606.0" />
-              <point x="41.75" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="com.fasterxml.jackson.core:jackson-annotations:jar:2.7.1">
-              <point x="-31.920000000000073" y="-15.5" />
-              <point x="4133.4379618218545" y="727.0" />
-              <point x="3812.7290418716016" y="727.0" />
-              <point x="37.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework:spring-context:jar:4.2.5.RELEASE">
-              <point x="62.0" y="-15.5" />
-              <point x="6444.4512615815565" y="596.0" />
-              <point x="6658.604506108131" y="596.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="commons-logging:commons-logging:jar:1.1" target="commons-logging:commons-logging:jar:1.1/avalon-framework:avalon-framework:jar:4.1.3">
-              <point x="-17.25" y="-15.5" />
-              <point x="2876.035364145658" y="797.0" />
-              <point x="2749.598182941739" y="797.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="commons-lang:commons-lang:jar:2.4">
-              <point x="-19.764705882353155" y="-15.5" />
-              <point x="3680.113255939502" y="1078.0" />
-              <point x="1161.4318833904822" y="1078.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="net.sf.json-lib:json-lib:jar:jdk15:2.4">
-              <point x="58.51999999999998" y="-15.5" />
-              <point x="4223.877961821855" y="817.0" />
-              <point x="5746.551261581556" y="817.0" />
-              <point x="-28.5" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.1.6.RELEASE" target="org.springframework:spring-webmvc:jar:4.1.6.RELEASE/org.springframework:spring-expression:jar:4.1.6.RELEASE">
-              <point x="0.0" y="-15.5" />
-              <point x="5167.570241765269" y="576.0" />
-              <point x="5075.982961821855" y="576.0" />
-              <point x="33.5" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-core:jar:4.1.6.RELEASE" target="org.springframework:spring-core:jar:4.1.6.RELEASE/commons-logging:commons-logging:jar:1.2">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="ch.qos.logback:logback-access:jar:1.1.3" target="ch.qos.logback:logback-core:jar:1.1.3">
-              <point x="0.0" y="-15.5" />
-              <point x="3483.229041871601" y="606.0" />
-              <point x="3567.430241765269" y="606.0" />
-              <point x="-13.5" y="15.5" />
-            </edge>
-            <edge source="commons-httpclient:commons-httpclient:jar:3.1" target="commons-httpclient:commons-httpclient:jar:3.1/commons-logging:commons-logging:jar:1.0.4">
-              <point x="37.25" y="-15.5" />
-              <point x="198.1818833904822" y="827.0" />
-              <point x="216.0" y="827.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework.data:spring-data-commons:jar:1.12.1.RELEASE">
-              <point x="-62.0" y="-15.5" />
-              <point x="6320.4512615815565" y="556.0" />
-              <point x="6126.960525924418" y="556.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0/io.projectreactor:reactor-stream:jar:2.0.8.RELEASE" target="org.redisson:redisson:jar:3.5.0/io.projectreactor:reactor-stream:jar:2.0.8.RELEASE/io.projectreactor:reactor-core:jar:2.0.8.RELEASE">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0/org.jodd:jodd-bean:jar:3.7.1" target="org.redisson:redisson:jar:3.5.0/org.jodd:jodd-bean:jar:3.7.1/org.jodd:jodd-core:jar:3.7.1">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-context-support:jar:4.1.6.RELEASE" target="org.springframework:spring-core:jar:4.1.6.RELEASE">
-              <point x="-55.666666666666515" y="-15.5" />
-              <point x="4315.6912951551885" y="475.0" />
-              <point x="4313.390364145658" y="475.0" />
-              <point x="4313.390364145658" y="192.0" />
-              <point x="4402.736908431936" y="192.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework:spring-tx:jar:4.1.6.RELEASE">
-              <point x="63.840000000000146" y="-15.5" />
-              <point x="4229.197961821855" y="827.0" />
-              <point x="6055.160708538268" y="827.0" />
-              <point x="-21.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.springframework:spring-webmvc:jar:4.1.6.RELEASE">
-              <point x="8.784313725490392" y="-15.5" />
-              <point x="3708.6622755473454" y="978.0" />
-              <point x="5197.820241765269" y="978.0" />
-              <point x="30.25" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.2">
-              <point x="21.2800000000002" y="-15.5" />
-              <point x="4186.637961821855" y="747.0" />
-              <point x="4683.702375204935" y="747.0" />
-              <point x="-43.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0" target="org.redisson:redisson:jar:3.5.0/com.fasterxml.jackson.core:jackson-databind:jar:2.7.9">
-              <point x="-14.285714285714675" y="-15.5" />
-              <point x="1266.1461691047675" y="787.0" />
-              <point x="947.3035714285716" y="787.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.springframework:spring-oxm:jar:4.1.6.RELEASE">
-              <point x="-9.882352941176578" y="-15.5" />
-              <point x="3689.9956088806784" y="988.0" />
-              <point x="2586.098182941739" y="988.0" />
-              <point x="2586.098182941739" y="374.0" />
-              <point x="4049.3579618218546" y="374.0" />
-              <point x="-24.5" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="net.sf.ezmorph:ezmorph:jar:1.0.6">
-              <point x="19.764705882353155" y="-15.5" />
-              <point x="3719.642667704208" y="1078.0" />
-              <point x="7148.4512615815565" y="1078.0" />
-              <point x="20.75" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="commons-httpclient:commons-httpclient:jar:3.1">
-              <point x="-27.450980392156907" y="-15.5" />
-              <point x="3672.4269814296977" y="1148.0" />
-              <point x="160.9318833904822" y="1148.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-jdbc:jar:4.1.6.RELEASE" target="org.springframework:spring-tx:jar:4.1.6.RELEASE">
-              <point x="-33.0" y="-15.5" />
-              <point x="2491.848182941739" y="374.0" />
-              <point x="2503.598182941739" y="374.0" />
-              <point x="21.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="commons-io:commons-io:jar:2.4">
-              <point x="1.0980392156861853" y="-15.5" />
-              <point x="3700.976001037541" y="908.0" />
-              <point x="3809.910364145658" y="908.0" />
-              <point x="3809.910364145658" y="827.0" />
-              <point x="3895.7290418716016" y="827.0" />
-              <point x="-26.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="org.bouncycastle:bcprov-jdk15on:jar:1.56">
-              <point x="31.920000000000073" y="-15.5" />
-              <point x="4197.277961821855" y="767.0" />
-              <point x="4970.036908431936" y="767.0" />
-              <point x="-31.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="javax.servlet:jstl:jar:1.2">
-              <point x="42.559999999999945" y="-15.5" />
-              <point x="4207.917961821855" y="787.0" />
-              <point x="5343.495241765269" y="787.0" />
-              <point x="-12.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-oxm:jar:4.1.6.RELEASE" target="org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-beans:jar:4.1.6.RELEASE">
-              <point x="24.5" y="-15.5" />
-              <point x="4098.357961821855" y="283.0" />
-              <point x="4686.361908431936" y="283.0" />
-              <point x="-20.25" y="15.5" />
-            </edge>
-            <edge source="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework:spring-context-support:jar:4.2.5.RELEASE">
-              <point x="19.0" y="-15.5" />
-              <point x="6560.460525924418" y="807.0" />
-              <point x="6686.4512615815565" y="807.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="ch.qos.logback:logback-classic:jar:1.1.3">
-              <point x="-1.0980392156861853" y="-15.5" />
-              <point x="3698.779922606169" y="908.0" />
-              <point x="3506.660364145658" y="908.0" />
-              <point x="3506.660364145658" y="827.0" />
-              <point x="3592.479041871601" y="827.0" />
-              <point x="-29.75" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.2">
-              <point x="5.4901960784313815" y="-15.5" />
-              <point x="3705.368157900286" y="948.0" />
-              <point x="4769.702375204935" y="948.0" />
-              <point x="43.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.slf4j:slf4j-api:jar:1.6.6">
-              <point x="-38.0" y="-15.5" />
-              <point x="6503.460525924418" y="817.0" />
-              <point x="6128.660708538268" y="817.0" />
-              <point x="6128.660708538268" y="566.0" />
-              <point x="4254.857961821855" y="566.0" />
-              <point x="26.0" y="15.5" />
-            </edge>
-            <edge source="junit:junit:jar:4.11" target="junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="redis.clients:jedis:jar:2.9.0" target="redis.clients:jedis:jar:2.9.0/org.apache.commons:commons-pool2:jar:2.4.2">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework:spring-aop:jar:4.2.5.RELEASE">
-              <point x="57.0" y="-15.5" />
-              <point x="6598.460525924418" y="827.0" />
-              <point x="6955.9512615815565" y="827.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0" target="org.redisson:redisson:jar:3.5.0/io.netty:netty-codec:jar:4.1.13.Final">
-              <point x="-20.0" y="-15.5" />
-              <point x="1260.4318833904822" y="797.0" />
-              <point x="870.8035714285716" y="797.0" />
-              <point x="-25.25" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="javax.servlet:javax.servlet-api:jar:3.1.0">
-              <point x="-26.352941176470722" y="-15.5" />
-              <point x="3673.525020645384" y="1138.0" />
-              <point x="317.4318833904822" y="1138.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0" target="org.redisson:redisson:jar:3.5.0/org.jodd:jodd-bean:jar:3.7.1">
-              <point x="20.0" y="-15.5" />
-              <point x="1300.4318833904822" y="797.0" />
-              <point x="1668.5510244606203" y="797.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="commons-fileupload:commons-fileupload:jar:1.3.1" target="commons-fileupload:commons-fileupload:jar:1.3.1/commons-io:commons-io:jar:2.2">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="ch.qos.logback:logback-core:jar:1.1.3">
-              <point x="-4.392156862745196" y="-15.5" />
-              <point x="3695.4858049591094" y="938.0" />
-              <point x="3292.973182941739" y="938.0" />
-              <point x="3292.973182941739" y="596.0" />
-              <point x="3540.430241765269" y="596.0" />
-              <point x="-40.5" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-web:jar:4.1.6.RELEASE" target="org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-beans:jar:4.1.6.RELEASE">
-              <point x="-12.25" y="-15.5" />
-              <point x="5207.057030812325" y="445.0" />
-              <point x="5180.524628488522" y="445.0" />
-              <point x="5180.524628488522" y="273.0" />
-              <point x="4740.361908431936" y="273.0" />
-              <point x="33.75" y="15.5" />
-            </edge>
-            <edge source="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.slf4j:jcl-over-slf4j:jar:1.6.6">
-              <point x="0.0" y="-15.5" />
-              <point x="6541.460525924418" y="827.0" />
-              <point x="6531.4512615815565" y="827.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.slf4j:slf4j-api:jar:1.6.6">
-              <point x="31.0" y="-15.5" />
-              <point x="6413.4512615815565" y="586.0" />
-              <point x="6541.604506108131" y="586.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="org.redisson:redisson:jar:3.5.0/com.fasterxml.jackson.core:jackson-core:jar:2.7.1">
-              <point x="-63.83999999999992" y="-15.5" />
-              <point x="4101.517961821855" y="787.0" />
-              <point x="2464.065780617936" y="787.0" />
-              <point x="26.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="commons-logging:commons-logging:jar:1.1">
-              <point x="-7.686274509803752" y="-15.5" />
-              <point x="3692.191687312051" y="968.0" />
-              <point x="2893.285364145658" y="968.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="commons-beanutils:commons-beanutils:jar:1.8.3" target="commons-beanutils:commons-beanutils:jar:1.8.3/commons-logging:commons-logging:jar:1.1">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-context:jar:4.1.6.RELEASE" target="org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-beans:jar:4.1.6.RELEASE">
-              <point x="-43.5" y="-15.5" />
-              <point x="4935.982961821855" y="374.0" />
-              <point x="4921.357961821855" y="374.0" />
-              <point x="4921.357961821855" y="283.0" />
-              <point x="4726.861908431936" y="283.0" />
-              <point x="20.25" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="commons-fileupload:commons-fileupload:jar:1.3.1">
-              <point x="-13.176470588235134" y="-15.5" />
-              <point x="3686.70149123362" y="1018.0" />
-              <point x="2242.598182941739" y="1018.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="commons-dbcp:commons-dbcp:jar:1.4" target="commons-dbcp:commons-dbcp:jar:1.4/commons-pool:commons-pool:jar:1.5.4">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.springframework:spring-core:jar:4.1.6.RELEASE">
-              <point x="-16.470588235294144" y="-15.5" />
-              <point x="3683.4073735865604" y="1048.0" />
-              <point x="2154.402104510367" y="1048.0" />
-              <point x="2154.402104510367" y="132.0" />
-              <point x="4357.506139201167" y="132.0" />
-              <point x="-45.230769230769056" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT/org.slf4j:slf4j-log4j12:jar:1.6.6" target="com.hust:account-common:jar:1.0-SNAPSHOT/org.slf4j:slf4j-log4j12:jar:1.6.6/log4j:log4j:jar:1.2.17">
-              <point x="-26.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0" target="org.redisson:redisson:jar:3.5.0/javax.cache:cache-api:jar:1.0.0">
-              <point x="-31.42857142857156" y="-15.5" />
-              <point x="1249.0033119619106" y="817.0" />
-              <point x="780.5535714285716" y="817.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0/io.projectreactor:reactor-stream:jar:2.0.8.RELEASE/io.projectreactor:reactor-core:jar:2.0.8.RELEASE" target="org.redisson:redisson:jar:3.5.0/io.projectreactor:reactor-stream:jar:2.0.8.RELEASE/io.projectreactor:reactor-core:jar:2.0.8.RELEASE/org.slf4j:slf4j-api:jar:1.7.12">
-              <point x="25.5" y="-15.5" />
-              <point x="2047.9260244606203" y="475.0" />
-              <point x="2083.4260244606203" y="475.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.slf4j:jcl-over-slf4j:jar:1.6.6">
-              <point x="20.86274509803934" y="-15.5" />
-              <point x="3720.7407069198944" y="1088.0" />
-              <point x="7210.4512615815565" y="1088.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework:spring-oxm:jar:4.2.5.RELEASE">
-              <point x="38.0" y="-15.5" />
-              <point x="6579.460525924418" y="817.0" />
-              <point x="6838.9512615815565" y="817.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.bouncycastle:bcprov-jdk15on:jar:1.56">
-              <point x="7.686274509803752" y="-15.5" />
-              <point x="3707.5642363316583" y="968.0" />
-              <point x="5032.036908431936" y="968.0" />
-              <point x="31.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="org.springframework:spring-context-support:jar:4.1.6.RELEASE">
-              <point x="10.639999999999873" y="-15.5" />
-              <point x="4175.997961821855" y="727.0" />
-              <point x="4365.857961821855" y="727.0" />
-              <point x="4365.857961821855" y="606.0" />
-              <point x="4329.607961821855" y="606.0" />
-              <point x="-41.75" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-test:jar:4.1.6.RELEASE" target="org.springframework:spring-core:jar:4.1.6.RELEASE">
-              <point x="0.0" y="-15.5" />
-              <point x="2997.098182941739" y="606.0" />
-              <point x="2417.098182941739" y="606.0" />
-              <point x="2417.098182941739" y="142.0" />
-              <point x="4365.044600739629" y="142.0" />
-              <point x="-37.69230769230762" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0/com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.7.9" target="org.redisson:redisson:jar:3.5.0/com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.7.9/com.fasterxml.jackson.core:jackson-core:jar:2.7.9">
-              <point x="-44.25" y="-15.5" />
-              <point x="1799.3010244606203" y="606.0" />
-              <point x="1784.5510244606203" y="606.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0" target="org.redisson:redisson:jar:3.5.0/io.netty:netty-common:jar:4.1.13.Final">
-              <point x="-37.14285714285688" y="-15.5" />
-              <point x="1243.2890262476253" y="827.0" />
-              <point x="726.0535714285716" y="827.0" />
-              <point x="726.0535714285716" y="293.0" />
-              <point x="860.4080568913196" y="293.0" />
-              <point x="-39.33333333333303" y="15.5" />
-            </edge>
-            <edge source="org.redisson:redisson:jar:3.5.0" target="org.redisson:redisson:jar:3.5.0/net.bytebuddy:byte-buddy:jar:1.6.14">
-              <point x="8.571428571428442" y="-15.5" />
-              <point x="1289.0033119619106" y="777.0" />
-              <point x="1364.0510244606203" y="777.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework.data:spring-data-commons:jar:1.12.1.RELEASE" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE/org.springframework.data:spring-data-commons:jar:1.12.1.RELEASE/org.slf4j:jcl-over-slf4j:jar:1.7.19">
-              <point x="-20.125" y="-15.5" />
-              <point x="6106.835525924418" y="465.0" />
-              <point x="6064.210525924418" y="465.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="commons-logging:commons-logging:jar:1.1/log4j:log4j:jar:1.2.12">
-              <point x="-47.87999999999988" y="-15.5" />
-              <point x="4117.4779618218545" y="757.0" />
-              <point x="3378.604041871601" y="757.0" />
-              <point x="15.25" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="org.slf4j:slf4j-api:jar:1.6.6">
-              <point x="21.960784313725526" y="-15.5" />
-              <point x="3721.8387461355805" y="1098.0" />
-              <point x="7272.4512615815565" y="1098.0" />
-              <point x="7272.4512615815565" y="827.0" />
-              <point x="7265.910708538268" y="827.0" />
-              <point x="19.5" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="commons-pool:commons-pool:jar:1.5.6">
-              <point x="6.588235294117567" y="-15.5" />
-              <point x="3706.466197115972" y="958.0" />
-              <point x="4887.850828382189" y="958.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="org.springframework:spring-jdbc:jar:4.1.6.RELEASE">
-              <point x="-15.960000000000036" y="-15.5" />
-              <point x="4149.397961821855" y="697.0" />
-              <point x="4009.037961821855" y="697.0" />
-              <point x="4009.037961821855" y="475.0" />
-              <point x="2549.598182941739" y="475.0" />
-              <point x="24.75" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="ch.qos.logback:logback-core:jar:1.1.3">
-              <point x="-21.2800000000002" y="-15.5" />
-              <point x="4144.077961821855" y="707.0" />
-              <point x="3984.2290418716016" y="707.0" />
-              <point x="3984.2290418716016" y="596.0" />
-              <point x="3621.430241765269" y="596.0" />
-              <point x="40.5" y="15.5" />
-            </edge>
-            <edge source="com.hust:account-common:jar:1.0-SNAPSHOT" target="org.springframework:spring-core:jar:4.1.6.RELEASE">
-              <point x="-10.639999999999873" y="-15.5" />
-              <point x="4154.717961821855" y="687.0" />
-              <point x="4014.3579618218546" y="687.0" />
-              <point x="4014.3579618218546" y="172.0" />
-              <point x="4387.659985355013" y="172.0" />
-              <point x="-15.076923076922867" y="15.5" />
-            </edge>
-            <edge source="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE" target="org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE">
-              <point x="-19.0" y="-15.5" />
-              <point x="6522.460525924418" y="807.0" />
-              <point x="6382.4512615815565" y="807.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.1.6.RELEASE" target="org.springframework:spring-web:jar:4.1.6.RELEASE">
-              <point x="24.199999999999818" y="-15.5" />
-              <point x="5191.770241765269" y="596.0" />
-              <point x="5219.307030812325" y="596.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.hust:user:1.0-SNAPSHOT" target="taglibs:standard:jar:1.1.2">
-              <point x="9.882352941176578" y="-15.5" />
-              <point x="3709.7603147630316" y="988.0" />
-              <point x="5315.495241765269" y="988.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-jdbc:jar:4.1.6.RELEASE" target="org.springframework:spring-web:jar:4.1.6.RELEASE/org.springframework:spring-beans:jar:4.1.6.RELEASE">
-              <point x="33.0" y="-15.5" />
-              <point x="2557.848182941739" y="374.0" />
-              <point x="2580.065780617936" y="374.0" />
-              <point x="2580.065780617936" y="273.0" />
-              <point x="4672.861908431936" y="273.0" />
-              <point x="-33.75" y="15.5" />
-            </edge>
-            <edge source="ch.qos.logback:logback-classic:jar:1.1.3" target="ch.qos.logback:logback-core:jar:1.1.3">
-              <point x="-29.75" y="-15.5" />
-              <point x="3592.479041871601" y="606.0" />
-              <point x="3594.430241765269" y="606.0" />
-              <point x="13.5" y="15.5" />
-            </edge>
-            <edge source="net.sf.json-lib:json-lib:jar:jdk15:2.4" target="net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-beanutils:commons-beanutils:jar:1.8.0">
-              <point x="-22.800000000000182" y="-15.5" />
-              <point x="5752.251261581556" y="576.0" />
-              <point x="5586.063090026983" y="576.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.8526572999389126" x="4098.0" y="653.0" />
-          <SelectedNodes>
-            <node>com.hust:account-common:jar:1.0-SNAPSHOT</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>All</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/LogUtil2.java" />
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/controller/UserRegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accountcommon/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4148">
-          <caret line="244" column="23" selection-start-line="244" selection-start-column="23" selection-end-line="244" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/resources/redis.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/resources/spring-redis.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/BasicOutput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/resources/spring/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/pom.xml">
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/SHA256Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="25" />
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/util/LogUtil2.java" />
-    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/AESUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/resources/logback.xml" />
     <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/RSAUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -2109,82 +815,168 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/IdWorker.java">
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/HMACSHA256Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="119">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/filter/AccessPurviewFilter.java">
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/MD5Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="163">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/constant/GlobalConstant.java">
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/Base64Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state relative-caret-position="119">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/util/JedisUtils.java">
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/ciper/AESUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6885">
-          <caret line="413" column="13" selection-start-line="413" selection-start-column="13" selection-end-line="413" selection-end-column="13" />
+        <state relative-caret-position="136">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/controller/DynamicCodeController.java">
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/TDResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="93" column="6" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
+        <state relative-caret-position="119">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/TDRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" selection-start-line="6" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/BasicInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/aspect/ResultAspect.java">
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/apitemplate/BasicOutput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="10" column="4" selection-start-line="8" selection-end-line="13" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/PublicUtil.java">
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/dto/TokenResultDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        <state relative-caret-position="119">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/dto/TokenDataDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="8" selection-start-line="8" selection-end-line="13" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/TokenPayload.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="110">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/TokenHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" selection-start-line="6" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/entity/domain/DPiKeyInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="19" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/constant/GlobalConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/SnowflakeIdWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/token/TokenUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="30" column="6" selection-start-line="28" selection-end-line="34" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/entity/vo/DynamicCodeVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/controller/DynamicCodeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="3" lean-forward="true" selection-start-line="25" selection-end-line="30" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/controller/UserRegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1147">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="372">
           <caret line="22" column="136" selection-start-line="22" selection-start-column="102" selection-end-line="22" selection-end-column="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="79" column="69" selection-start-line="79" selection-start-column="58" selection-end-line="79" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2193,15 +985,195 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1363">
-          <caret line="301" column="44" selection-start-line="301" selection-start-column="44" selection-end-line="301" selection-end-column="44" />
+        <state relative-caret-position="187">
+          <caret line="125" column="12" lean-forward="true" selection-start-line="121" selection-end-line="126" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accountcommon/src/main/java/com/hust/accountcommon/util/token/TokenUtil.java">
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3839">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+        <state relative-caret-position="-603">
+          <caret line="55" selection-start-line="55" selection-end-line="63" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/filter/AccessPurviewFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="76" column="35" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/filter/ModifyBodyHttpServletRequestWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/CheckParaResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/DynamicCodeRedisDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/GetDynamicCodeDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/GetUserInfoByNameDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/IdDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/LoginDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/LoginResultDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="7" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/entity/dto/RegisterUserInputData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/entity/domain/UserLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/entity/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/dao/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/constant/ErrorCodeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/constant/CheckParaMsgFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/constant/GlobalConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/constant/I18nConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="2" selection-start-line="5" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/constant/UserConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/annotation/ApiVersionDesc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/annotation/TDResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/aspect/ResultAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/util/DynamicCodeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="2" selection-start-line="2" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/util/ErrorCodeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/hust/util/JedisUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

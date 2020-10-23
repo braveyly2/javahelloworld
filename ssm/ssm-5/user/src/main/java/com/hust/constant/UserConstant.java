@@ -1,5 +1,10 @@
 package com.hust.constant;
 
+/**
+ * user常量
+ * @author lw
+ * @date 2019/11/12 15:10
+ */
 public interface UserConstant {
     String REDIS_PICTURE_CODE = "userService:pictureCode:";
 

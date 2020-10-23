@@ -3,9 +3,9 @@ package com.hust.accountcommon.entity.dto;
 import lombok.Data;
 
 /**
- * @author Lyh
+ * @author lw
  * @Title: TokenResultDto
- * @Description: TOKEN 结果类
+ * @Description: TOKEN 结果类，用于响应给客户端
  * @date 2018/9/10 10:26
  */
 @Data

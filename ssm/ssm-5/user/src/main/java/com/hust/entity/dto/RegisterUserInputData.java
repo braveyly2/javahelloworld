@@ -6,6 +6,10 @@ import com.hust.accountcommon.util.PublicUtil;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+/**
+ * @author lw
+ * @Description: 用户注册数据结构
+ */
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class RegisterUserInputData extends CheckParaResult {

@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author Lyh
+ * @author lw
  * @Title: DynamicCodeRedisDto
  * @Description: 动态码缓存中的数据结构（通用）
  * @date 2018/9/1 13:45

@@ -3,7 +3,7 @@ package com.hust.entity.dto;
 import lombok.Data;
 
 /**
- * @author Lyh
+ * @author lw
  * @Title: GetUserInfoByName
  * @Description:
  * @date 2018/10/30 16:25

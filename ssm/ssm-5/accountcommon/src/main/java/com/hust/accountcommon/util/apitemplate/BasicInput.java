@@ -5,6 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
+/**
+ * @author lw
+ * @Title: BasicInput
+ * @Description: 通用请求报文头部类
+ * @date 2018/9/10 10:26
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

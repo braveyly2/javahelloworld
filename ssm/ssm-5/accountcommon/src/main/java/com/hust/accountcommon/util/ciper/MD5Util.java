@@ -6,7 +6,7 @@ import com.hust.accountcommon.constant.GlobalConstant;
 import java.security.MessageDigest;
 
 /**
- * All rights Reserved ,Designed by TVT
+ * All rights Reserved ,Designed by LW
  *
  * @author:
  * @Description:MD5加密

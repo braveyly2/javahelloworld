@@ -47,20 +47,20 @@ public class UserServiceImpl implements UserService {
     public LoginResultDto login(TDRequest<LoginDto> tdRequest, String clientType, boolean generateToken, boolean isCheckImgCode) {
         LoginDto loginDto = tdRequest.getData();
         if (UserConstant.LOGIN_TYPE_PWD.equals(loginDto.getType())) {
-            //�����¼
             return this.loginByPwd(tdRequest, clientType, generateToken, isCheckImgCode);
         } else {
-            //��̬���¼
-            //return this.loginBySms(tdRequest, clientType);
             return null;
         }
     }
 
     /**
-     * �����¼
+     * 根据密码登录
      *
-     * @param tdRequest ��¼����
-     * @return
+     * @param tdRequest 用户名和密码
+     * @param clientType 客户端类型
+     * @param generateToken 是否产生token
+     * @param isCheckImgCode 是否检查图片验证码
+     * @return LoginResultDto  AT/RT/userid等信息
      */
     private LoginResultDto loginByPwd(TDRequest<LoginDto> tdRequest, String clientType, boolean generateToken, boolean isCheckImgCode) {
         LoginDto loginDto = tdRequest.getData();

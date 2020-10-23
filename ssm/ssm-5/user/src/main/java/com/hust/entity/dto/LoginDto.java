@@ -6,7 +6,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author lyh
+ * @author lw
  * @Description: 登录数据结构
  */
 @Data

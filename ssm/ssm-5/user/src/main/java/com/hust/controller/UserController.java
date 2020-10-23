@@ -26,13 +26,17 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author lw
+ * @Title: UserController
+ * @Description: 用户登录/获取用户信息/刷新token的controller
+ * @date 2020/9/5 19:42
+ */
 @Controller
 @Slf4j
 public class UserController {
     @Autowired
     private UserService userService;
-
-    //private Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     JedisUtils jedisUtils;
@@ -72,7 +76,6 @@ public class UserController {
         userAdd.setMark("thisisforregister");
 
         userService.insert(userAdd);
-        // model.addAttribute("status","0");
         return "ok";
     }
 
@@ -92,9 +95,9 @@ public class UserController {
         userAdd.setMark(user.getMark());
 
         userService.insert(userAdd);
-        // model.addAttribute("status","0");
         return "ok";
     }
+
 
     @RequestMapping(value="/user/register3",method=RequestMethod.POST)
     @ResponseBody
@@ -116,108 +119,22 @@ public class UserController {
         return RestBean.ok("Succeed to add user",userAdd);
     }
 
-    /*
-http://localhost:8080/user/login
-{
-	"basic": {
-		"ver": "1.0",
-		"time": 1592399555986,
-		"id": 30,
-		"nonce": 1567246549
-	},
-	"data": {
-		"userName": "admin",
-		"type": "1",
-		"password": "8f137f2c4574c86221295af9c4e83b26",   //md5---tdRequest.getBasic().getNonce() + "#" + tdRequest.getBasic().getTime() + "#" + loginName + "#" + user.getPassword()
-		                                                  //1567246549#1592399555986#admin#e10adc3949ba59abbe56e057f20f883e
-		"idCode": "",
-		"imgCode": "",
-		"uuid": "",
-		"lang": "zh-CN2"
-	}
-}
-
-
-{
-    "basic": {
-        "id": "30",
-        "time": 1592399555986,
-        "code": 200,
-        "msg": "ok"
-    },
-    "data": {
-        "token": "eyJhbGciOiJITUFDU0hBMjU2IiwidmVyIjoiMS4wIn0=.eyJhdXRoIjpbIm9wcyJdLCJkYyI6MSwiZXhwIjoxNTkyNjYyMTY4LCJpYXQiOjE1OTI2MjYxNjgsInRpZCI6MTE5LCJ0eXBlIjoxLCJ1aWQiOjIyfQ==.WGJ0N09CMm13MSt1eXVyc0dxaFIxa0l4Q0UydzAyNlRuRVFxeVRnVHJhQitHclBKRGo3RTZ3Vmd5Ui8rQm1rL0creWJ3WURnNWVZMnRXMTJ2dUVzaDI5RFZsd1ZIZXEyTTMvUTdyNGxvMm1ZK0gzRURaemRITXV2YTlpMkQ2SmVESDNCRTJ2c1FvdFNpbzJ3dS9QY1ZWTmJHRHBPZHNwTzZuNzd3cCszK1dNPQ==",
-        "sid": "zMEEdN5vPCd/Fee638ZcFaStOka45NYER+5v1h/5FCU=",
-        "idCode": null,
-        "imgData": null,
-        "p2pId": "119",
-        "userLoginList": null
-    }
-}
-    */
-
+    /**
+     * 使用邮箱或手机号进行登录
+     *
+     * @param tdRequest 邮箱名或手机号
+     * @return TDResponse<DynamicCodeVo>  RSA公钥
+     */
     @RequestMapping(value = "/user/login", method = RequestMethod.POST)
     @ResponseBody
     public TDResponse<LoginVo> login(@RequestBody TDRequest<LoginDto> tdRequest, HttpServletRequest request) {
-        log.info("�յ���¼����", "Login");
         TDResponse<LoginVo> tdResponse = new TDResponse<>();
         BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
         try {
-            /*
-            String clientType = request.getHeader(GlobalConstant.ZUUL_HEADER_CLIENTTYPE);
-            boolean isCheckImgCode = true;
-            //�ж�֮ǰ��Ҫ�ж� ����У���Ƿ���ȷ(�����������¼)
-            if (UserConstant.LOGIN_TYPE_PWD.equals(tdRequest.getData().getType())) {
-                LoginResultDto dtoFormer = userServiceImpl.login(tdRequest, clientType, false, true);
-                if (PublicUtil.isNotEmpty(dtoFormer.getResultCode())) {
-                    basicOutput.setCode(dtoFormer.getResultCode().code());
-                    basicOutput.setMsg(dtoFormer.getResultCode().msg());
-                    tdResponse.setBasic(basicOutput);
-                    LoginVo vo = new LoginVo();
-                    vo.setToken(dtoFormer.getToken());
-                    vo.setSid(dtoFormer.getSid());
-                    vo.setIdCode(dtoFormer.getIdCode());
-                    vo.setImgData(dtoFormer.getImgData());
-                    vo.setP2pId(dtoFormer.getTid() == null ? "" : dtoFormer.getTid().toString());
-                    tdResponse.setData(vo);
-                    return tdResponse;
-                }
-                isCheckImgCode = false;
-            }
-            */
-            //start
             String clientType = "web";
             boolean isCheckImgCode = false;
-            //end
-            //�ж��Ƿ����ն�У�� �Լ����豸�Ƿ��б��豸
-            /*
-            int allowLogin = userServiceImpl.checkBindTerminal(tdRequest, clientType);
-            if (allowLogin != UserConstant.TERMINAL_FRAME_NOT_POP) {
-                basicOutput.setCode(ErrorCodeEnum.TD7025.code());
-                basicOutput.setMsg(ErrorCodeEnum.TD7025.msg());
-                tdResponse.setBasic(basicOutput);
-                if (allowLogin == UserConstant.TERMINAL_FRAME_POP) {
-                    //��Ҫ�������ܺ���û�����Ϣ
-                    List<UserLogin> userLoginList = userLoginService.getLoginListByUserName(tdRequest.getData().getUserName());
-                    //��������
-                    for (UserLogin userLogin : userLoginList) {
-                        if (userLogin.getLoginType() < 3) {
-                            String loginName = LoginNameUtil.getSafeLoginName(userLogin.getLoginName());
-                            userLogin.setLoginName(loginName);
-                        } else {
-                            userLogin.setLoginName("" + "");
-                        }
-                    }
-                    LoginVo loginVo = new LoginVo();
-                    loginVo.setUserLoginList(userLoginList);
-                    tdResponse.setData(loginVo);
-                }
 
-                return tdResponse;
-            }
-            */
-
-            log.info(String.format("�յ���¼����: UserName: %s, ClientType: %s", tdRequest.getData().getUserName(), clientType), "Login");
+            log.info(String.format("收到登录信息: UserName: %s, ClientType: %s", tdRequest.getData().getUserName(), clientType), "Login");
             LoginResultDto dto = userService.login(tdRequest, clientType, true, isCheckImgCode);
             LoginVo vo = new LoginVo();
             vo.setToken(dto.getToken());
@@ -230,7 +147,7 @@ http://localhost:8080/user/login
                 basicOutput.setCode(dto.getResultCode().code());
                 basicOutput.setMsg(dto.getResultCode().msg());
             } else {
-                //��¼������־
+                //写入操作日志
                 //OpLog opLog = new OpLog();
                 //opLog.setIp(PublicUtil.getRemoteIp(request));
                 //opLogUtil.logBus(dto.getUserId(), dto.getTid(), OpLogUtil.login, opLog);
@@ -238,13 +155,19 @@ http://localhost:8080/user/login
             tdResponse.setBasic(basicOutput);
             tdResponse.setData(vo);
         } catch (Exception ex) {
-            log.error("��¼ʧ���쳣��" + ex.getMessage(), "Login", ex);
+            log.error("登录出错" + ex.getMessage(), "Login", ex);
             basicOutput.setCode(ErrorCodeEnum.TD9500.code());
             basicOutput.setMsg(ex.getMessage());
         }
         return tdResponse;
     }
 
+    /**
+     * 根据用户名获取用户信息
+     *
+     * @param  tdRequest 邮箱名或手机号
+     * @return TDResponse<IdDto>  用户id和名称
+     */
     @RequestMapping(value = "/user/info", method = RequestMethod.POST)
     @ResponseBody
     //@TDResult
@@ -253,11 +176,6 @@ http://localhost:8080/user/login
         BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
         try {
             User user = userService.selectByName(tdRequest.getData().getUserName());
-            //User user = new User();
-            //user.setId(IdWorker.getInstance().getId());
-            //user.setName("liwei");
-            //user.setPassword("111111");
-            //user.setMark("this is liwei mark");
             if (PublicUtil.isNotEmpty(user)) {
                 IdDto dto = new IdDto();
                 dto.setId((long)user.getId());
@@ -267,10 +185,10 @@ http://localhost:8080/user/login
             } else {
                 basicOutput.setCode(ErrorCodeEnum.TD7001.code());
                 basicOutput.setMsg(ErrorCodeEnum.TD7001.msg());
-                log.error("�û�������", "ms-user");
+                log.error("用户信息为空", "ms-user");
             }
         } catch (Exception e) {
-            log.error("��ѯ�û���Ϣʧ��", "ms-user", e);
+            log.error("获取用户信息异常", "ms-user", e);
             basicOutput.setCode(ErrorCodeEnum.TD9500.code());
             basicOutput.setMsg(ErrorCodeEnum.TD9500.msg());
         }
@@ -278,6 +196,12 @@ http://localhost:8080/user/login
         return tdResponse;
     }
 
+    /**
+     * 刷新token
+     *
+     * @param  tdRequest 头部含有token信息
+     * @return TDResponse<TokenResultDto>  返回新的AT和RT
+     */
     @RequestMapping(value = "/user/token/refresh", method = RequestMethod.POST)
     @ResponseBody
     public TDResponse<TokenResultDto> refeshToken(@RequestBody TDRequest tdRequest, HttpServletRequest request) {
@@ -300,7 +224,7 @@ http://localhost:8080/user/login
         } catch (Exception e) {
             basicOutput.setCode(ErrorCodeEnum.TD9500.code());
             basicOutput.setMsg(ErrorCodeEnum.TD9500.msg());
-            log.error("token��ǩʧ��", "user", e);
+            log.error("token create异常", "user", e);
         }
         tdResponse.setBasic(basicOutput);
         tdResponse.setData(tokenResultDto);

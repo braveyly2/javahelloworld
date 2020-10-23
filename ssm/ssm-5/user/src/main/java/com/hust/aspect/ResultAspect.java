@@ -30,9 +30,9 @@ import java.lang.reflect.Method;
 import java.util.List;
 
 /**
- * @author Lyh
+ * @author lw
  * @Title: ResultAspect
- * @Description: 自定义注解实现
+ * @Description: 自定义注释：权限控制、校验token开关、API兼容
  * @date 2018/9/13 17:00
  */
 @Aspect

@@ -3,7 +3,7 @@ package com.hust.entity.dto;
 import lombok.Data;
 
 /**
- * @author Lyh
+ * @author lw
  * @Title: IdDto
  * @Description: ID
  * @date 2018/10/6 13:58

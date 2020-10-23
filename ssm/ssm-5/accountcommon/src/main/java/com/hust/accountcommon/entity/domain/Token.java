@@ -5,8 +5,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @author TX
- * @Description: Token
+ * @author lw
+ * @Title: Token
+ * @Description: Token包含header、payload和sign
+ * @date 2018/9/10 10:26
  */
 @Data
 @AllArgsConstructor

@@ -7,7 +7,6 @@ import com.hust.accountcommon.entity.domain.TokenPayload;
 import com.hust.accountcommon.entity.dto.TokenDataDto;
 import com.hust.accountcommon.entity.dto.TokenResultDto;
 import com.hust.accountcommon.util.IdWorker;
-////import com.hust.accountcommon.util.LogUtil;
 import com.hust.accountcommon.util.PublicUtil;
 import com.hust.accountcommon.util.ciper.*;
 import com.alibaba.fastjson.JSON;
@@ -19,10 +18,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Lyh
+ * @author lw
  * @Title: DPwdUtil
  * @Description: token生成工具类
- * @date 2018/9/5 19:42
+ * @date 2020/9/5 19:42
  */
 @Component
 @Slf4j
@@ -40,28 +39,11 @@ public class TokenUtil {
         TokenResultDto tokenResultDto = new TokenResultDto();
         tokenResultDto.setTokenId(tokenId);
         tokenResultDto.setRefreshTokenId(refreshTokenId);
-        //授权中心ID
         String token;
         String refreshToken;
         try {
             //签发时间
             long createTime = PublicUtil.getUtcTimestampOfSecond();
-            /*
-            DPiKeyInfo dpiKeyObj = DpikeyUtil.getDpiObj(createTime);
-            DPiKeyPackage dPiKeyPackage = MemoryDpikey.getDpiKeyPackage();
-
-            //本次token有效时长（秒）
-            long validTime = dPiKeyPackage.getWebTokenValidTime() * 60L;
-            */
-            /*
-            DPiKeyInfo dpiKeyObj = new DPiKeyInfo();
-            dpiKeyObj.setDpiKey("swaottest");
-            dpiKeyObj.setId(100);
-            dpiKeyObj.setCreatedTime(LocalDateTime.now());
-            dpiKeyObj.setLastUpdateTime(LocalDateTime.now());
-            dpiKeyObj.setDpiKeyStartTime(LocalDateTime.now());
-            GlobalVariable.GDPIKEY_INFO = dpiKeyObj;
-            */
             DPiKeyInfo dpiKeyObj = DPiKeyInfoManager.getInstance().getDPiKeyInfo();
 
 
@@ -69,7 +51,6 @@ public class TokenUtil {
 
             //手机用户7天
             if (GlobalConstant.CLIENT_TYPE_MOBILE.equals(clientType)) {
-                //validTime = dPiKeyPackage.getAppTokenValidTime() * 60L;
                 validTime = 600 * 60L;
             }
             //过期时间
@@ -169,15 +150,9 @@ public class TokenUtil {
     public TokenDataDto verify(String token, boolean isCheckTimeout, boolean isCheckSignBlackList) {
         //当前时间戳
         long currentTimeStamp = PublicUtil.getUtcTimestampOfSecond();
-        //BasicInput basicInput = requestInfo.getBasic();
-
-        //BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(basicInput);
-        //basicInput.setSn(basicInput.getSn());
-        //TDResponse<TokenDataDto> tdResponse = new TDResponse<>(basicOutput, null);
         TokenDataDto tokenDataDto = null;
 
         try {
-            //String token = basicInput.getToken();
             if (PublicUtil.isEmpty(token)) {
                 return null;
 
@@ -205,17 +180,7 @@ public class TokenUtil {
             }
 
             TokenPayload tokenPayload = JSON.parseObject(stringPayload, TokenPayload.class);
-            /*
-            //运维API网关，拦截业务token
-            if(appName.contains("-ops")){
-                if(tokenPayload.getType() != GlobalConstant.TOKEN_TYPE_OPS){
-                    basicOutput.setCode(ErrorCodeEnum.TD7003.code());
-                    basicOutput.setMsg(ErrorCodeEnum.TD7003.msg());
-                    log.error(String.format("业务用户不允许访问运维: [%s]", token), MOD_TOKEN);
-                    return tdResponse;
-                }
-            }
-            */
+
             //说明Json转换失败，FastJson不报异常
             if (tokenPayload.getIat() == 0 && tokenPayload.getExp() == 0) {
                 log.error(String.format("TokenPayload转换错误: [%s]", token), "Token Module");
@@ -262,9 +227,6 @@ public class TokenUtil {
             //Token解析后的数据
             tokenDataDto = new TokenDataDto(tokenPayload.getUid(), tokenPayload.getRole(), tokenPayload.getAuth(), sid,
                                             tokenPayload.getTid(), null);
-            //if (!isCheckTimeout) {
-            //    tokenDataDto.setTokenPayload(tokenPayload);
-            //}
 
             return tokenDataDto;
         }

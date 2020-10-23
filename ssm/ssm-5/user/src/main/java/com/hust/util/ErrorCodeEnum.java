@@ -1,5 +1,12 @@
 package com.hust.util;
 
+/**
+ * All rights Reserved ,Designed by LW
+ *
+ * @author lw
+ * @Description: 错误码枚举变量
+ * @date 2018/8/23 10:00
+ */
 public enum ErrorCodeEnum {
     TD200(200, "operate successfully"),//请求成功
     TD201(201, "operate partial failure"),//部分成功,部分失败

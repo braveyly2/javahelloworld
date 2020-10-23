@@ -7,8 +7,10 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 /**
- * @author TX
- * @Description: Token负载
+ * @author lw
+ * @Title: TokenPayload
+ * @Description: token的payload定义
+ * @date 2018/9/10 10:26
  */
 @Data
 @AllArgsConstructor

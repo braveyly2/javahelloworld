@@ -13,8 +13,10 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * @author TX
- * @Description: DPiKey信息
+ * @author lw
+ * @Title: DPiKeyInfo
+ * @Description: dpikey定义
+ * @date 2018/9/10 10:26
  */
 @Data
 @AllArgsConstructor

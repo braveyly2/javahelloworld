@@ -26,9 +26,6 @@ import javax.servlet.http.HttpServletRequest;
 @Slf4j
 public class AccessPurviewFilter extends HttpServlet implements Filter{
 
-    //@Autowired
-    //TokenService tokenService;
-
     @Autowired
     TokenUtil tokenUtil;
 
@@ -41,7 +38,6 @@ public class AccessPurviewFilter extends HttpServlet implements Filter{
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 
         String requestPath = ((HttpServletRequest)servletRequest).getServletPath();
-        //filterChain.doFilter(servletRequest,servletResponse);//just for debug TDRESULT
         if(requestPath.contains("/user/login") ||
                 requestPath.contains("/user/sms-code/no-token/get") ||
                 requestPath.contains("/user/register") ||
@@ -64,7 +60,6 @@ public class AccessPurviewFilter extends HttpServlet implements Filter{
         BasicOutput basicOutput;
 
         try {
-            //tdResponse = tokenService.isTokenValid(requestInfo);
             TokenDataDto tokenDataDto = tokenUtil.verify(requestInfo.getBasic().getToken(),true,true);
 
             if(null != tokenDataDto){
@@ -74,14 +69,12 @@ public class AccessPurviewFilter extends HttpServlet implements Filter{
             }else{
                 User user = new User();
                 user.setId(IdWorker.getInstance().getId());
-                //user.setName("rrrr");
-                //user.setPassword("rtttt");
                 user.setMark("Token invalid");
                 returnJson(servletResponse,user);
             }
         }
         catch (RuntimeException ex) {
-
+            log.error("token验签失败");
         }
     }
 

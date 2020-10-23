@@ -1,10 +1,10 @@
 package com.hust.constant;
 
 /**
- * All rights Reserved ,Designed by TVT
+ * All rights Reserved ,Designed by LW
  *
- * @author Yanjj
- * @Description:
+ * @author lw
+ * @Description: 错误码
  * @date 2018/8/23 10:00
  */
 

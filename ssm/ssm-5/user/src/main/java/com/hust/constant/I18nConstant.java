@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * 国际化常量
- * @author hht
+ * @author lw
  * @date 2019/11/12 15:10
  */
 public class I18nConstant {

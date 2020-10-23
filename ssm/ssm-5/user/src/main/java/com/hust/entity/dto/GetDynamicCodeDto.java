@@ -6,7 +6,7 @@ import com.hust.accountcommon.util.PublicUtil;
 import lombok.Data;
 
 /**
- * @author lyh
+ * @author lw
  * @Description: 获取验证码数据结构
  */
 @Data
