@@ -2,6 +2,7 @@ package com.hust.controller;
 
 import com.hust.accountcommon.entity.dto.TokenResultDto;
 import com.hust.accountcommon.entity.dto.TokenDataDto;
+import com.hust.constant.UserConstant;
 import com.hust.entity.domain.User;
 import com.hust.entity.dto.*;
 import com.hust.service.UserService;
@@ -25,6 +26,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
+
+import static com.hust.constant.UserConstant.LOGIN_TYPE_EMAIL;
+import static com.hust.constant.UserConstant.LOGIN_TYPE_MOBILE;
 
 /**
  * @author lw
@@ -64,14 +68,14 @@ public class UserController {
     @RequestMapping(value="/user/register1",method=RequestMethod.POST)
     @ResponseBody
     public String register(@RequestParam("userName") String name, @RequestParam("password") String password){
-        User user = userService.selectByName(name);
+        User user = userService.getUserInfoByAccount(name,1);
         //cannot register for the same username
         if(null != user){
             return "fail";
         }
 
         User userAdd = new User();
-        userAdd.setName(name);
+        userAdd.setPhone(name);
         userAdd.setPassword(password);
         userAdd.setMark("thisisforregister");
 
@@ -82,7 +86,7 @@ public class UserController {
     @RequestMapping(value="/user/register2",method=RequestMethod.POST)
     @ResponseBody
     public String register2(@RequestBody User user){
-        User userExist = userService.selectByName(user.getName());
+        User userExist = userService.getUserInfoByAccount(user.getPhone(),1);
         //cannot register for the same username
         if(null != userExist){
             return "fail";
@@ -90,7 +94,7 @@ public class UserController {
 
         User userAdd = new User();
         userAdd.setId(user.getId());
-        userAdd.setName(user.getName());
+        userAdd.setPhone(user.getPhone());
         userAdd.setPassword(user.getPassword());
         userAdd.setMark(user.getMark());
 
@@ -102,15 +106,15 @@ public class UserController {
     @RequestMapping(value="/user/register3",method=RequestMethod.POST)
     @ResponseBody
     public RestBean register3(@RequestBody User user){
-        User userExist = userService.selectByName(user.getName());
+        User userExist = userService.getUserInfoByAccount(user.getPhone(),1);
         //cannot register for the same username
         if(null != userExist){
-            return RestBean.error("user:" + user.getName() + " is exist");
+            return RestBean.error("user:" + user.getPhone() + " is exist");
         }
 
         User userAdd = new User();
         userAdd.setId(user.getId());
-        userAdd.setName(user.getName());
+        userAdd.setPhone(user.getPhone());
         userAdd.setPassword(user.getPassword());
         userAdd.setMark(user.getMark());
 
@@ -133,9 +137,23 @@ public class UserController {
         try {
             String clientType = "web";
             boolean isCheckImgCode = false;
+            LoginDto loginDto = tdRequest.getData();
+            int loginType = 0;
+            if(PublicUtil.isEmail(loginDto.getUserName())){
+                loginType = LOGIN_TYPE_EMAIL;
+            }
+            else if(PublicUtil.isPhone(loginDto.getUserName())){
+                loginType = LOGIN_TYPE_MOBILE;
+            }
+            else{
+                basicOutput.setCode(ErrorCodeEnum.TD1011.code());
+                basicOutput.setMsg(ErrorCodeEnum.TD1011.msg());
+                tdResponse.setBasic(basicOutput);
+                return tdResponse;
+            }
 
             log.info(String.format("收到登录信息: UserName: %s, ClientType: %s", tdRequest.getData().getUserName(), clientType), "Login");
-            LoginResultDto dto = userService.login(tdRequest, clientType, true, isCheckImgCode);
+            LoginResultDto dto = userService.login(tdRequest, clientType, loginType, true, isCheckImgCode);
             LoginVo vo = new LoginVo();
             vo.setToken(dto.getToken());
             vo.setRefreshToken(dto.getRefreshToken());
@@ -175,11 +193,11 @@ public class UserController {
         TDResponse<IdDto> tdResponse = new TDResponse<>();
         BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
         try {
-            User user = userService.selectByName(tdRequest.getData().getUserName());
+            User user = userService.getUserInfoByAccount(tdRequest.getData().getUserName(),1);
             if (PublicUtil.isNotEmpty(user)) {
                 IdDto dto = new IdDto();
                 dto.setId((long)user.getId());
-                dto.setName(user.getName());
+                dto.setName(user.getPhone());
                 dto.setMark(user.getMark());
                 tdResponse.setData(dto);
             } else {
@@ -231,4 +249,71 @@ public class UserController {
         return tdResponse;
     }
 
-}
+    /**
+     * 修改密码
+     *
+     * @param  tdRequest 头部含有token信息
+     * @return TDResponse<TokenResultDto>  返回新的AT和RT
+     */
+    @RequestMapping(value = "/user/password/update", method = RequestMethod.POST)
+    @ResponseBody
+    public TDResponse<TokenResultDto> updatePwd(@RequestBody TDRequest tdRequest, HttpServletRequest request) {
+        TDResponse<TokenResultDto> tdResponse = new TDResponse<>();
+        BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
+        String clientType = request.getHeader(GlobalConstant.ZUUL_HEADER_CLIENTTYPE);
+        TokenResultDto tokenResultDto = null;
+        try {
+            TokenDataDto tokenDataDto = tdRequest.getTokenDataDto();
+            User user = userService.selectByPrimaryKey(tokenDataDto.getUserId());
+
+            tokenResultDto = userService.createToken(user.getId(), user.getPassword(), clientType, null,"customer",null);
+
+            if (PublicUtil.isEmpty(tokenResultDto.getToken())) {
+                basicOutput.setCode(ErrorCodeEnum.TD7004.code());
+                basicOutput.setMsg(ErrorCodeEnum.TD7004.msg());
+                tdResponse.setBasic(basicOutput);
+                return tdResponse;
+            }
+        } catch (Exception e) {
+            basicOutput.setCode(ErrorCodeEnum.TD9500.code());
+            basicOutput.setMsg(ErrorCodeEnum.TD9500.msg());
+            log.error("token create异常", "user", e);
+        }
+        tdResponse.setBasic(basicOutput);
+        tdResponse.setData(tokenResultDto);
+        return tdResponse;
+    }
+
+    /**
+     * 找回密码
+     *
+     * @param  tdRequest 头部含有token信息
+     * @return TDResponse<TokenResultDto>  返回新的AT和RT
+     */
+    @RequestMapping(value = "/user/password/find", method = RequestMethod.POST)
+    @ResponseBody
+    public TDResponse findPwd(@RequestBody TDRequest<FindLoginPwdDto> tdRequest) {
+        TDResponse tdResponse = new TDResponse<>();
+        BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
+        tdResponse.setBasic(basicOutput);
+
+        FindLoginPwdDto findLoginPwdDto = tdRequest.getData();
+        String loginName = findLoginPwdDto.getLoginName();
+        int loginType = 0;
+        if(PublicUtil.isEmail(loginName)){
+            loginType = LOGIN_TYPE_EMAIL;
+        } else if(PublicUtil.isPhone(loginName)){
+            loginType = LOGIN_TYPE_MOBILE;
+        } else{
+            basicOutput.setCode(ErrorCodeEnum.TD9500.code());
+            basicOutput.setMsg(ErrorCodeEnum.TD9500.msg());
+            return tdResponse;
+        }
+
+        int retCode = userService.findPwd(findLoginPwdDto, loginType, tdRequest.getBasic());
+        basicOutput.setCode(ErrorCodeEnum.getEnum(retCode).code());
+        basicOutput.setMsg(ErrorCodeEnum.getEnum(retCode).msg());
+        return tdResponse;
+        }
+
+    }

@@ -20,7 +20,7 @@ public class LoginDto extends CheckParaResult implements Serializable {
     /**
      * 登录类型 1密码登录 2 手机短信动态码登录
      */
-    private String type;
+    private String loginMethod;
     /**
      * 密码MD5(nonce#time#userName#MD5(PSW))或者短信验证码
      */

@@ -21,7 +21,7 @@ public class GetDynamicCodeDto extends CheckParaResult {
      */
     private String loginName;
     /**
-     * 登录账号类型
+     * 登录的账号类型：手机号/邮箱/微信
      */
     private int loginType;
 

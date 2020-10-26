@@ -3,12 +3,13 @@
 <mapper namespace="com.hust.dao.UserMapper" >
   <resultMap id="BaseResultMap" type="com.hust.entity.domain.User" >
     <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
     <result column="mark" property="mark" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, name, password, mark
+    id, phone, email, password, mark
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
@@ -16,20 +17,26 @@
     from user
     where id = #{id,jdbcType=BIGINT}
   </select>
-  <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+  <select id="selectByPhone" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select
     <include refid="Base_Column_List" />
     from user
-    where name = #{name ,jdbcType=VARCHAR}
+    where phone = #{phone ,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByEmail" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where email = #{email ,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from user
     where id = #{id,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="com.hust.entity.domain.User" >
-    insert into user (id, name, password, 
+    insert into user (id, phone, email, password,
       mark)
-    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
+    values (#{id,jdbcType=BIGINT}, #{phone,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
       #{mark,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.hust.entity.domain.User" >
@@ -38,8 +45,11 @@
       <if test="id != null" >
         id,
       </if>
-      <if test="name != null" >
-        name,
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="email != null" >
+        email,
       </if>
       <if test="password != null" >
         password,
@@ -52,8 +62,11 @@
       <if test="id != null" >
         #{id,jdbcType=BIGINT},
       </if>
-      <if test="name != null" >
-        #{name,jdbcType=VARCHAR},
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
       </if>
       <if test="password != null" >
         #{password,jdbcType=VARCHAR},
@@ -66,8 +79,11 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.hust.entity.domain.User" >
     update user
     <set >
-      <if test="name != null" >
-        name = #{name,jdbcType=VARCHAR},
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
       </if>
       <if test="password != null" >
         password = #{password,jdbcType=VARCHAR},
@@ -80,7 +96,8 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.hust.entity.domain.User" >
     update user
-    set name = #{name,jdbcType=VARCHAR},
+    set phone = #{phone,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
       mark = #{mark,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}

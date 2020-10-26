@@ -38,7 +38,7 @@ public class UserRegisterController {
     JedisUtils jedisUtils;
 
     /**
-     * 使用邮箱或手机号进行登录
+     * 使用邮箱或手机号进行注册
      *
      * @param request 用户注册信息
      * @return TDResponse  注册结果
@@ -50,28 +50,39 @@ public class UserRegisterController {
         BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(request.getBasic());
         response.setBasic(basicOutput);
         RegisterUserInputData inputData = request.getData();
+        int loginType = inputData.getLoginType();
 
         if (basicOutput.getCode() != ErrorCodeEnum.TD200.code()) {
             return response;
         }
 
-        if (inputData.getLoginType() == UserConstant.LOGIN_TYPE_MOBILE) {
-            boolean isExist = userServiceImpl.checkMobileExist(inputData.getLoginName(), basicOutput);
-            if (isExist) {
-                basicOutput.setCode(ErrorCodeEnum.TD7006.code());
-                basicOutput.setMsg(ErrorCodeEnum.TD7006.msg());
-                return response;
+        boolean isAccountValid = true;
+        if (loginType == UserConstant.LOGIN_TYPE_MOBILE) {
+            if(!PublicUtil.isPhone(inputData.getLoginName())){
+                isAccountValid = false;
             }
-        } else if (inputData.getLoginType() == UserConstant.LOGIN_TYPE_EMAIL) {
-            boolean isExist = userServiceImpl.checkMobileExist(inputData.getLoginName(), basicOutput);
-            if (isExist) {
-                basicOutput.setCode(ErrorCodeEnum.TD7023.code());
-                basicOutput.setMsg(ErrorCodeEnum.TD7023.msg());
-                return response;
+        } else if (loginType == UserConstant.LOGIN_TYPE_EMAIL) {
+            if(!PublicUtil.isEmail(inputData.getLoginName())){
+                isAccountValid = false;
             }
-        } else {
+        }
+
+        if(!isAccountValid){
             basicOutput.setCode(ErrorCodeEnum.TD1011.code());
             basicOutput.setMsg(ErrorCodeEnum.TD1011.msg());
+            return response;
+        }
+
+        boolean isExist = userServiceImpl.checkAccountExist(inputData.getLoginName(), loginType);
+
+        if (isExist && UserConstant.LOGIN_TYPE_MOBILE == loginType) {
+            basicOutput.setCode(ErrorCodeEnum.TD7006.code());
+            basicOutput.setMsg(ErrorCodeEnum.TD7006.msg());
+            return response;
+        }
+        else if(isExist && UserConstant.LOGIN_TYPE_EMAIL == loginType){
+            basicOutput.setCode(ErrorCodeEnum.TD7023.code());
+            basicOutput.setMsg(ErrorCodeEnum.TD7023.msg());
             return response;
         }
 
@@ -87,9 +98,9 @@ public class UserRegisterController {
         try {
             User userBaseInfo = new User();
             if (inputData.getLoginType() == UserConstant.LOGIN_TYPE_MOBILE) {
-                userBaseInfo.setName(inputData.getLoginName());
+                userBaseInfo.setPhone(inputData.getLoginName());
             } else {
-                userBaseInfo.setName(inputData.getLoginName());
+                userBaseInfo.setEmail(inputData.getLoginName());
             }
             //从缓存读取私钥
             String privateKeyKey = UserConstant.REDIS_REGISTER_PRIVATE_KEY + inputData.getLoginName();

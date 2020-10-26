@@ -46,7 +46,8 @@ public class AccessPurviewFilter extends HttpServlet implements Filter{
                 requestPath.contains("hello2") ||
                 requestPath.contains("/user/register1") ||
                 requestPath.contains("/user/register2") ||
-                requestPath.contains("/user/register3") ){
+                requestPath.contains("/user/register3") ||
+                requestPath.contains("/user/password/find")){
             filterChain.doFilter(servletRequest,servletResponse);
             return;
         }

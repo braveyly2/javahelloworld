@@ -12,6 +12,9 @@ public interface UserConstant {
 
     String REDIS_REGISTER_PRIVATE_KEY = "userService:register:PRIVATE_KEY:";
 
+    String REDIS_FINDPWD_PRIVATE_KEY = "userService:findpwd:PRIVATE_KEY:";
+
+    String REDIS_UPDATEPWD_PRIVATE_KEY = "userService:updatepwd:PRIVATE_KEY:";
     /**
      * redis中登录短信动态码缓存前缀
      */
@@ -30,9 +33,14 @@ public interface UserConstant {
      */
     String REDIS_USER_TOKEN = "user_token:";
     /**
+     * 登录方法 -密码登录方法
+     */
+    String LOGIN_METHOD_PWD = "1";
+
+    /**
      * 登录类型 -密码登录
      */
-    String LOGIN_TYPE_PWD = "1";
+    String LOGIN_METHOD_DYNAMIC_CODE = "2";
 
     /**
      * 用户锁定状态(运维锁定)
@@ -61,7 +69,7 @@ public interface UserConstant {
     /**
      * redis中重置密码动态码缓存前缀
      */
-    String REDIS_RESETPWD_DYNAMIC_CODE = "userService:resetPwdDynamicCode:";
+    String REDIS_UPDATEPWD_DYNAMIC_CODE = "userService:updatePwdDynamicCode:";
 
     /**
      * redis中注销账户动态码缓存前缀

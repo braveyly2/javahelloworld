@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "8627ba4f-848e-48eb-9727-671bd145ba15",
+		"name": "ssm-5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8080/user/sms-code/no-token/get",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1603174417123,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": null\r\n\t},\r\n\t\"data\": {\r\n\t\t\"businessType\": 15,\r\n\t\t\"loginName\": \"13638679973\",\r\n\t\t\"loginType\": 1,\r\n\t\t\"idCode\": \"\",\r\n\t\t\"imgCode\": \"\",\r\n        \"lang\":\"\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/user/sms-code/no-token/get",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"sms-code",
+						"no-token",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/user/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": null,\r\n        \"sign\": \"bb16541501e725e7af75dd1dbcb11472\"\r\n\t},\r\n\t\"data\": {\r\n\t\t\"loginName\": \"13638679973\",\r\n\t\t\"loginType\": 1,\r\n        \"password\": \"qSL2DXAp+Dp5nkWsxdGsFTxzrhE4lJIpYI1IVDhxAe3ykDWIEEICw2b+i9rqVN5iiETpGg+F4B3j2VKW9eUJsOM38rGxDJ2K2x1VeaHq3hcDPkvJqf+tH/NF7dYH0FbFC0bxcdUM50dgfnhc8Y5CtrrOetd26sr7UMwFDzvqFE8=\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/user/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549\r\n\t},\r\n\t\"data\": {\r\n\t\t\"userName\": \"13638679973\",\r\n\t\t\"type\": \"1\",\r\n\t\t\"password\": \"6c08e4ea7bace0770ccafb13eac1e6c5\",\r\n\t\t\"idCode\": \"\",\r\n\t\t\"imgCode\": \"\",\r\n\t\t\"uuid\": \"\",\r\n\t\t\"lang\": \"zh-CN2\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/info",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": \"eyJhbGciOiJITUFDU0hBMjU2IiwidmVyIjoiMS4wIn0=.eyJkYyI6MSwiZXhwIjoxNjAzNjkxMDcwMCwiaWF0IjoxNjAzNjkxMDEwLCJyb2xlIjoiY3VzdG9tZXIiLCJ0aWQiOjc4ODc2ODIxMDAxODEwNzM5NCwidHlwZSI6MSwidWlkIjo3ODg3MzczNjc4NTc5NTQ4MTl9.aEJ6NlY3NTE2TmxQTk5HRkJvL2xWWHlZSTBQZk9iT21GVEtidGJSdE0reGtBeGxZWUFENXYyNjVQcytUSlJDajh6SU4vR08vbnpoa2E0RENrZXA3TWl5eVVFNzVDTDN2Q1lDNE9OYWJ4WjZua3NvNHhDaVdyYk1KRUQ0NXh3ajAybWpRNHV1Zi9rRTMyUnBFV2FYczlDdUlTWWxmbUVkU1lmRjBqTUdaQTdFPQ==\"\r\n\t},\r\n\t\"data\": {\r\n\t\t\"userName\": \"13638679973\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/password/find",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"sign\": \"b87c67887d445fbd874764a17c607f79\"\r\n\t},\r\n\t\"data\": {\r\n        \"loginName\": \"13638679973\",\r\n\t\t\"newPassword\": \"WgaPy2dYt3iSyaHYSlbMjnde40eWJz7ODBXpOOjD2vbTR9vHt5TIRBwAEK4jta2Pp1cgRMAsg6+L0LNMfO/0MPmBhBycEkIBHZuEbnLjZbs/o0GTCkXJ3IuQLcV1R0Alzo+u9tdNO1YeB34WL6AdvjrBjgsB1cJznj1C5C1Txg0=\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/password/find",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"password",
+						"find"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
