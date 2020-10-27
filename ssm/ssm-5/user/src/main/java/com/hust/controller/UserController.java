@@ -252,35 +252,27 @@ public class UserController {
     /**
      * 修改密码
      *
-     * @param  tdRequest 头部含有token信息
-     * @return TDResponse<TokenResultDto>  返回新的AT和RT
+     * @param  tdRequest 含有loginName、newPassword和oldPassword
+     * @return TDResponse<>
      */
     @RequestMapping(value = "/user/password/update", method = RequestMethod.POST)
     @ResponseBody
-    public TDResponse<TokenResultDto> updatePwd(@RequestBody TDRequest tdRequest, HttpServletRequest request) {
-        TDResponse<TokenResultDto> tdResponse = new TDResponse<>();
+    public TDResponse updatePwd(@RequestBody TDRequest<UpdatePwdDto> tdRequest) {
+        TDResponse tdResponse = new TDResponse<>();
         BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
-        String clientType = request.getHeader(GlobalConstant.ZUUL_HEADER_CLIENTTYPE);
-        TokenResultDto tokenResultDto = null;
-        try {
-            TokenDataDto tokenDataDto = tdRequest.getTokenDataDto();
-            User user = userService.selectByPrimaryKey(tokenDataDto.getUserId());
-
-            tokenResultDto = userService.createToken(user.getId(), user.getPassword(), clientType, null,"customer",null);
-
-            if (PublicUtil.isEmpty(tokenResultDto.getToken())) {
-                basicOutput.setCode(ErrorCodeEnum.TD7004.code());
-                basicOutput.setMsg(ErrorCodeEnum.TD7004.msg());
-                tdResponse.setBasic(basicOutput);
-                return tdResponse;
-            }
-        } catch (Exception e) {
-            basicOutput.setCode(ErrorCodeEnum.TD9500.code());
-            basicOutput.setMsg(ErrorCodeEnum.TD9500.msg());
-            log.error("token create异常", "user", e);
-        }
         tdResponse.setBasic(basicOutput);
-        tdResponse.setData(tokenResultDto);
+        long userId = tdRequest.getTokenDataDto().getUserId();
+        String loginName = tdRequest.getData().getLoginName();
+        UpdatePwdDto updatePwdDto = tdRequest.getData();
+        if(!PublicUtil.isEmail(loginName) && !PublicUtil.isPhone(loginName)){
+            tdResponse.getBasic().setCode(ErrorCodeEnum.TD9500.code());
+            tdResponse.getBasic().setMsg(ErrorCodeEnum.TD9500.msg());
+            return tdResponse;
+        }
+
+        int retCode = userService.updatePwd(userId, loginName, updatePwdDto.getNewPassword(), updatePwdDto.getOldPassword(), tdRequest.getBasic());
+        tdResponse.getBasic().setCode(ErrorCodeEnum.getEnum(retCode).code());
+        tdResponse.getBasic().setMsg(ErrorCodeEnum.getEnum(retCode).msg());
         return tdResponse;
     }
 

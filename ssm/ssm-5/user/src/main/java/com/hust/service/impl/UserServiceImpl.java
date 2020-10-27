@@ -4,9 +4,7 @@ import com.hust.accountcommon.util.IdWorker;
 import com.hust.accountcommon.util.apitemplate.BasicInput;
 import com.hust.accountcommon.util.ciper.RSAUtil;
 import com.hust.entity.domain.User;
-import com.hust.entity.dto.DynamicCodeRedisDto;
-import com.hust.entity.dto.FindLoginPwdDto;
-import com.hust.entity.dto.LoginResultDto;
+import com.hust.entity.dto.*;
 import com.hust.service.UserService;
 import com.hust.accountcommon.util.PublicUtil;
 import com.hust.accountcommon.util.ciper.MD5Util;
@@ -14,7 +12,6 @@ import com.hust.constant.ErrorCodeEnum;
 import com.hust.constant.I18nConstant;
 import com.hust.constant.UserConstant;
 import com.hust.dao.UserMapper;
-import com.hust.entity.dto.LoginDto;
 import com.hust.accountcommon.entity.dto.TokenResultDto;
 import com.hust.accountcommon.util.apitemplate.BasicOutput;
 import com.hust.accountcommon.util.apitemplate.TDRequest;
@@ -250,6 +247,42 @@ public class UserServiceImpl implements UserService {
         int n = userMapper.updateByPrimaryKeySelective(updUser);
         if(n < 1){
             log.error("操作数据库失败");
+            return ErrorCodeEnum.TD9500.code();
+        }
+        return ErrorCodeEnum.TD200.code();
+    }
+
+    public int updatePwd(long userId, String loginName, String newPassword, String oldPassword, BasicInput basicInput){
+        //1.获取loginName对应的验证码和rsa私钥
+        String codeKey = UserConstant.REDIS_UPDATEPWD_DYNAMIC_CODE + loginName + UserConstant.REDIS_CODE;
+        String rsaPriKeyKey = UserConstant.REDIS_UPDATEPWD_PRIVATE_KEY + loginName;
+        //2.rsa私钥解密newPassword和oldPassword
+        DynamicCodeRedisDto dynamicCodeRedisDto = (DynamicCodeRedisDto)jedisUtils.get(codeKey);
+        String rsaPriKey = jedisUtils.getString(rsaPriKeyKey);
+        String newPasswordMD5 = RSAUtil.privateDecrypt(newPassword,rsaPriKey);
+        String oldPasswordMD5 = RSAUtil.privateDecrypt(oldPassword,rsaPriKey);
+        //3.验证oldPassword是否正确
+        User user = userMapper.selectByPrimaryKey(userId);
+        if(PublicUtil.isEmpty(user)){
+            log.error("从db获取user失败，userId=" + userId);
+            return ErrorCodeEnum.TD9500.code();
+        }
+        if(!user.getPassword().equals(oldPasswordMD5)){
+            log.error("旧密码不正确");
+            return ErrorCodeEnum.TD9500.code();
+        }
+        //4.验签header中的sign
+        String signMd5 = MD5Util.encrypt(basicInput.getNonce() + "#" + basicInput.getTime() + "#" + loginName + "#" + newPasswordMD5
+                            + "#" + oldPasswordMD5 + "#" + dynamicCodeRedisDto.getCode());
+        if(!signMd5.equals(basicInput.getSign())){
+            log.error("签名不正确");
+            return ErrorCodeEnum.TD9500.code();
+        }
+        //5.更新密码
+        user.setPassword(newPasswordMD5);
+        int n = userMapper.updateByPrimaryKeySelective(user);
+        if(n<1){
+            log.error("user更新数据库失败");
             return ErrorCodeEnum.TD9500.code();
         }
         return ErrorCodeEnum.TD200.code();

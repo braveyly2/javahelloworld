@@ -9,6 +9,7 @@ import com.hust.entity.dto.LoginDto;
 import com.hust.accountcommon.entity.dto.TokenResultDto;
 import com.hust.accountcommon.util.apitemplate.BasicOutput;
 import com.hust.accountcommon.util.apitemplate.TDRequest;
+import com.hust.entity.dto.UpdatePwdDto;
 
 import java.util.List;
 
@@ -26,4 +27,6 @@ public interface UserService {
     public TokenResultDto createToken(long userId, String pwdMd5, String clientType, String language, String role, List<String> authList);
 
     public int findPwd(FindLoginPwdDto findLoginPwdDto, int loginType, BasicInput basicInput);
+
+    public int updatePwd(long userId, String loginName, String newPassword, String oldPassword, BasicInput basicInput);
 }

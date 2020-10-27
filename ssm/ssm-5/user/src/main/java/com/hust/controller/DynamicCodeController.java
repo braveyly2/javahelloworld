@@ -1,5 +1,6 @@
 package com.hust.controller;
 
+import com.hust.accountcommon.entity.dto.TokenDataDto;
 import com.hust.constant.UserConstant;
 import com.hust.entity.dto.DynamicCodeRedisDto;
 import com.hust.entity.dto.GetDynamicCodeDto;
@@ -22,6 +23,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
+
+import static com.hust.constant.UserConstant.REDIS_UPDATEPWD_PRIVATE_KEY;
 
 /**
  * @author lw
@@ -52,7 +55,7 @@ public class DynamicCodeController {
     }
 
     /**
-     * 不同的业务获取邮箱或手机动态验证码：登录、注册、修改密码、找回密码、微信登录后绑定手机号、终端绑定
+     * 在未登录时，不同的业务获取邮箱或手机动态验证码：登录、注册、修改密码、找回密码、微信登录后绑定手机号、终端绑定
      *
      * @param tdRequest 邮箱名或手机号
      * @return TDResponse<DynamicCodeVo>  RSA公钥
@@ -257,5 +260,67 @@ public class DynamicCodeController {
             basicOutput.setMsg(ErrorCodeEnum.TD4500.msg());
             return tdResponse;
         }
+    }
+
+    /**
+     * 在登录时，不同的业务获取邮箱或手机动态验证码：修改密码，更换账户信息
+     *
+     * @param tdRequest 邮箱名或手机号
+     * @return TDResponse<DynamicCodeVo>
+     */
+    @RequestMapping(value = "/user/sms-code/get", method = RequestMethod.POST)
+    public TDResponse<DynamicCodeVo> getTokenDynamicCode(@RequestBody TDRequest<GetDynamicCodeDto> tdRequest) {
+        GetDynamicCodeDto getDynamicCodeDto = tdRequest.getData();
+        TokenDataDto tokenDataDto = tdRequest.getTokenDataDto();
+        int businessType = getDynamicCodeDto.getBusinessType();
+        String loginName = getDynamicCodeDto.getLoginName();
+        String redisKey = null;
+        TDResponse<DynamicCodeVo> tdResponse = new TDResponse<>();
+        tdResponse.setBasic(PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic()));
+        DynamicCodeVo dynamicCodeVo = new DynamicCodeVo();
+        tdResponse.setData(dynamicCodeVo);
+        //1. 根据businesstype设置redisKey
+        switch(businessType){
+            case 16:
+                //登录后修改密码
+                redisKey = REDIS_UPDATEPWD_PRIVATE_KEY;
+                break;
+            case 17:
+                //登录后更换账户
+                //redisKey =
+                break;
+            default:
+                break;
+        }
+
+        if(16 == businessType){
+            //2. 生成验证码并存储到redis中
+            String codeKey = UserConstant.REDIS_UPDATEPWD_DYNAMIC_CODE + loginName + UserConstant.REDIS_CODE;
+            String priKeyKey = UserConstant.REDIS_UPDATEPWD_PRIVATE_KEY + loginName;
+            DynamicCodeRedisDto dynamicCodeRedisDto = new DynamicCodeRedisDto();
+            String dynamicCodeInput = DynamicCodeUtil.getDynamicCode();
+            System.out.println("dynamicCodeInput is " + dynamicCodeInput);
+            dynamicCodeRedisDto.setCode(dynamicCodeInput);
+            dynamicCodeRedisDto.setTarget(getDynamicCodeDto.getLoginName());
+            dynamicCodeRedisDto.setFailCount(0);
+            jedisUtils.set(codeKey,dynamicCodeRedisDto);
+            //3. 生成SA私钥并存储到redis中
+            try{
+            Map<String, String> keyMap = RSAUtil.createKeys(1024);
+            String publicKey = keyMap.get("publicKey");
+            String privateKey = keyMap.get("privateKey");
+            jedisUtils.setString(priKeyKey,privateKey);
+            tdResponse.getData().setPublicKey(publicKey);
+            }catch(Exception e){
+                log.error("生成rsa公私钥失败");
+                tdResponse.getBasic().setCode(ErrorCodeEnum.TD9500.code());
+                tdResponse.getBasic().setMsg(ErrorCodeEnum.TD9500.msg());
+                return tdResponse;
+            }
+            //4. 返回RSA公钥
+            return tdResponse;
+        }
+
+        return null;
     }
 }
