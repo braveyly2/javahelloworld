@@ -174,4 +174,10 @@ public interface UserConstant {
     String REDIS_CODE = ":code";
 
     String LogUserUp = "L$UserUp";
+
+    /**
+     * 图形验证码相关
+     */
+    String REDIS_SMS_24HOUR_COUNT = "userService:smsDayCount:";
+    String REDIS_SMS_5MINUTE_COUNT = "userServer:smsMiniteCount:";
 }

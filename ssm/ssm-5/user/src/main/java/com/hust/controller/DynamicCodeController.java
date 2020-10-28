@@ -4,6 +4,8 @@ import com.hust.accountcommon.entity.dto.TokenDataDto;
 import com.hust.constant.UserConstant;
 import com.hust.entity.dto.DynamicCodeRedisDto;
 import com.hust.entity.dto.GetDynamicCodeDto;
+import com.hust.entity.dto.PictureCodeDto;
+import com.hust.service.CodeGenerateService;
 import com.hust.service.UserService;
 import com.hust.util.DynamicCodeUtil;
 import com.hust.util.ErrorCodeEnum;
@@ -24,6 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
+import static com.hust.constant.UserConstant.REDIS_SEND;
 import static com.hust.constant.UserConstant.REDIS_UPDATEPWD_PRIVATE_KEY;
 
 /**
@@ -37,6 +40,9 @@ import static com.hust.constant.UserConstant.REDIS_UPDATEPWD_PRIVATE_KEY;
 public class DynamicCodeController {
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private CodeGenerateService codeGenerateService;
 
     @Autowired
     private JedisUtils jedisUtils;
@@ -68,7 +74,8 @@ public class DynamicCodeController {
         TDResponse<DynamicCodeVo> tdResponse = new TDResponse<>();
         BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
         tdResponse.setBasic(basicOutput);
-
+        DynamicCodeVo vo = new DynamicCodeVo();
+        tdResponse.setData(vo);
         //账号类型判断
         int loginType = getDynamicCodeDto.getLoginType();
         String name = getDynamicCodeDto.getLoginName();
@@ -91,6 +98,42 @@ public class DynamicCodeController {
 
         //账号是否存在判断
         isExist = userService.checkAccountExist(name, loginType);
+
+        //图形验证码
+        //1. 用户24小时内的SMS使用总条数，如果超过，则返回失败，不让使用了
+        String sms24HourCountKey = UserConstant.REDIS_SMS_24HOUR_COUNT + name + REDIS_SEND;
+        String sms24HourCount = null;
+        if(jedisUtils.exists(sms24HourCountKey)){
+            sms24HourCount = jedisUtils.getString(sms24HourCountKey);
+            if(Integer.valueOf(sms24HourCount).intValue() > 10){
+                basicOutput.setCode(ErrorCodeEnum.TD9500.code());
+                basicOutput.setMsg(ErrorCodeEnum.TD9500.msg());
+                return tdResponse;
+            }
+        }
+
+        //2. 判断用户使用SMS的5分钟总条数，如果超过，则校验图形验证码，校验失败，则返回图形验证码，其中图形验证码有效期为1分钟
+        String sms5MinCountKey = UserConstant.REDIS_SMS_5MINUTE_COUNT + name + REDIS_SEND;
+        String sms5MinCount = null;
+        if(jedisUtils.exists(sms5MinCountKey)){
+            sms5MinCount = jedisUtils.getString(sms5MinCountKey);
+            if(Integer.valueOf(sms5MinCount).intValue() > 1){
+                //2.1 校验图形验证码
+                log.info("待校验的图形验证码 idCode" + getDynamicCodeDto.getIdCode() + " imgCode" + getDynamicCodeDto.getImgCode());
+                boolean checkResult = codeGenerateService.checkPictureCode(getDynamicCodeDto.getIdCode(),getDynamicCodeDto.getImgCode());
+                if(!checkResult){
+                    //2.2 失败，则继续返回图形验证码
+                    PictureCodeDto pictureCodeDto = codeGenerateService.generatePictureCode();
+                    tdResponse.getData().setIdCode(pictureCodeDto.getIdCode());
+                    tdResponse.getData().setImgData(pictureCodeDto.getImgCodeImgData());
+                    log.info("生成图形验证码 idCode" + pictureCodeDto.getIdCode() + " imgCode");
+                    basicOutput.setCode(ErrorCodeEnum.TD1007.code());
+                    basicOutput.setMsg(ErrorCodeEnum.TD1007.msg());
+                    return tdResponse;
+                }
+                //2.3 成功，走后面的流程，发送验证码
+            }
+        }
 
         switch (type) {
             case 11:
@@ -145,7 +188,6 @@ public class DynamicCodeController {
                 basicOutput.setCode(ErrorCodeEnum.TD200.code());
                 basicOutput.setMsg(ErrorCodeEnum.TD200.msg());
                 tdResponse.setBasic(basicOutput);
-                DynamicCodeVo vo = new DynamicCodeVo();
                 vo.setIdCode("");
                 vo.setImgData("");
                 tdResponse.setData(vo);
@@ -169,7 +211,14 @@ public class DynamicCodeController {
                     basicOutput.setSign(sign);
                     tdResponse.getData().setPublicKey(publicKey);
                     tdResponse.setBasic(basicOutput);
-                    return tdResponse;
+
+                    if(sms24HourCount==null){
+                        sms24HourCount = Integer.toString(1);
+                    }else{
+                        sms24HourCount = Integer.toString(Integer.valueOf(sms24HourCount).intValue() + 1);
+                    }
+                    jedisUtils.setString(sms24HourCountKey,sms24HourCount);
+                    //return tdResponse;
                 } catch (Exception e) {
                     log.error("注册时生成私钥失败", "ms-user", e);
                     System.out.println("e="+e);
@@ -192,12 +241,11 @@ public class DynamicCodeController {
                 basicOutput.setCode(ErrorCodeEnum.TD200.code());
                 basicOutput.setMsg(ErrorCodeEnum.TD200.msg());
                 tdResponse.setBasic(basicOutput);
-                DynamicCodeVo vo = new DynamicCodeVo();
                 vo.setIdCode("");
                 vo.setImgData("");
                 tdResponse.setData(vo);
 
-                return tdResponse;
+                //return tdResponse;
             }
             else if(12 == type){
                 if(!isExist){
@@ -218,9 +266,6 @@ public class DynamicCodeController {
                 basicOutput.setCode(ErrorCodeEnum.TD200.code());
                 basicOutput.setMsg(ErrorCodeEnum.TD200.msg());
                 tdResponse.setBasic(basicOutput);
-                DynamicCodeVo vo = new DynamicCodeVo();
-                vo.setIdCode("");
-                vo.setImgData("");
                 tdResponse.setData(vo);
 
                 try{
@@ -242,7 +287,7 @@ public class DynamicCodeController {
                     basicOutput.setSign(sign);
                     tdResponse.getData().setPublicKey(publicKey);
                     tdResponse.setBasic(basicOutput);
-                    return tdResponse;
+                    //return tdResponse;
                 } catch (Exception e) {
                     log.error("找回密码时生成私钥失败", "ms-user", e);
                     System.out.println("e="+e);
@@ -260,6 +305,27 @@ public class DynamicCodeController {
             basicOutput.setMsg(ErrorCodeEnum.TD4500.msg());
             return tdResponse;
         }
+
+        //更新用户24小时总的发送短信数量
+        if(!jedisUtils.exists(sms24HourCountKey)){
+            sms24HourCount = Integer.toString(1);
+            jedisUtils.setString(sms24HourCountKey,sms24HourCount, 2*60L);
+        }else{
+            sms24HourCount = Integer.toString(Integer.valueOf(sms24HourCount).intValue() + 1);
+        }
+        jedisUtils.setString(sms24HourCountKey,sms24HourCount );
+
+        //更新用户5分钟总的发送短信数量
+        if(!jedisUtils.exists(sms5MinCountKey)){
+            sms5MinCount = Integer.toString(1);
+            jedisUtils.setString(sms5MinCountKey,sms5MinCount, 60L);
+        }else{
+            sms5MinCount = Integer.toString(Integer.valueOf(sms5MinCount).intValue() + 1);
+        }
+        jedisUtils.setString(sms5MinCountKey,sms5MinCount);
+
+        return tdResponse;
+
     }
 
     /**

@@ -285,6 +285,7 @@ public class UserServiceImpl implements UserService {
             log.error("user更新数据库失败");
             return ErrorCodeEnum.TD9500.code();
         }
+        //TODO: 将已登录用户的token去掉，确保在修改密码后必须要重新登录
         return ErrorCodeEnum.TD200.code();
     }
 }
