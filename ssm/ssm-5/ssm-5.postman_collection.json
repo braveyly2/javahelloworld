@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1603174417123,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": null\r\n\t},\r\n\t\"data\": {\r\n\t\t\"businessType\": 15,\r\n\t\t\"loginName\": \"13638679973\",\r\n\t\t\"loginType\": 1,\r\n\t\t\"idCode\": \"\",\r\n\t\t\"imgCode\": \"\",\r\n        \"lang\":\"\"\r\n\t}\r\n}",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1603174417123,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": null\r\n\t},\r\n\t\"data\": {\r\n\t\t\"businessType\": 12,\r\n\t\t\"loginName\": \"13638679973\",\r\n\t\t\"loginType\": 1,\r\n\t\t\"idCode\": \"45ed7dc5221c4d3ebecd39ea862e2202\",\r\n\t\t\"imgCode\": \"FWOW\",\r\n        \"lang\":\"\"\r\n\t}\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -78,7 +78,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549\r\n\t},\r\n\t\"data\": {\r\n\t\t\"userName\": \"13638679973\",\r\n\t\t\"type\": \"1\",\r\n\t\t\"password\": \"6c08e4ea7bace0770ccafb13eac1e6c5\",\r\n\t\t\"idCode\": \"\",\r\n\t\t\"imgCode\": \"\",\r\n\t\t\"uuid\": \"\",\r\n\t\t\"lang\": \"zh-CN2\"\r\n\t}\r\n}",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549\r\n\t},\r\n\t\"data\": {\r\n\t\t\"userName\": \"13638679973\",\r\n\t\t\"loginMethod\": \"1\",\r\n\t\t\"password\": \"4d9e96a621295ef86bd388d360a02856\",\r\n\t\t\"idCode\": \"\",\r\n\t\t\"imgCode\": \"\",\r\n\t\t\"uuid\": \"\",\r\n\t\t\"lang\": \"zh-CN2\"\r\n\t}\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -107,7 +107,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": \"eyJhbGciOiJITUFDU0hBMjU2IiwidmVyIjoiMS4wIn0=.eyJkYyI6MSwiZXhwIjoxNjAzNjkxMDcwMCwiaWF0IjoxNjAzNjkxMDEwLCJyb2xlIjoiY3VzdG9tZXIiLCJ0aWQiOjc4ODc2ODIxMDAxODEwNzM5NCwidHlwZSI6MSwidWlkIjo3ODg3MzczNjc4NTc5NTQ4MTl9.aEJ6NlY3NTE2TmxQTk5HRkJvL2xWWHlZSTBQZk9iT21GVEtidGJSdE0reGtBeGxZWUFENXYyNjVQcytUSlJDajh6SU4vR08vbnpoa2E0RENrZXA3TWl5eVVFNzVDTDN2Q1lDNE9OYWJ4WjZua3NvNHhDaVdyYk1KRUQ0NXh3ajAybWpRNHV1Zi9rRTMyUnBFV2FYczlDdUlTWWxmbUVkU1lmRjBqTUdaQTdFPQ==\"\r\n\t},\r\n\t\"data\": {\r\n\t\t\"userName\": \"13638679973\"\r\n\t}\r\n}",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": \"eyJhbGciOiJITUFDU0hBMjU2IiwidmVyIjoiMS4wIn0=.eyJkYyI6MSwiZXhwIjoxNjAzNjk4MzI3LCJpYXQiOjE2MDM2OTgyNjcsInJvbGUiOiJjdXN0b21lciIsInRpZCI6Nzg4Nzk5Mzc4NTk1Nzc0NDY2LCJ0eXBlIjoxLCJ1aWQiOjc4ODc5OTM3ODU5NTc3NDQ2NX0=.YXdjdGN2bUp0alQrdVpLZnF0WlFmYXg1NHlneXBYekhPeHAva2lsMTFWVFV2QlNFL2tMNWhwdGdCWGIvSDdBZmtDZnptb0ord0YzWC9xQkJCdzZha1R3M29aQjJBZFlMT2orSHd5VTlxR2VlTlpoVEhUSXFGZlYrOWh4TlRxTWpZdGJEdTZtZ2hudHpsZlk3TXdRZStXeUNoaXFqRU9ObUc3MEhVUkp4MGFvPQ==\"\r\n\t},\r\n\t\"data\": {\r\n\t\t\"userName\": \"13638679971\"\r\n\t}\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -154,6 +154,66 @@
 						"user",
 						"password",
 						"find"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/sms-code/get",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1603174417123,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": \"eyJhbGciOiJITUFDU0hBMjU2IiwidmVyIjoiMS4wIn0=.eyJkYyI6MSwiZXhwIjoxNjAzNzY4ODQ0MCwiaWF0IjoxNjAzNzY4Nzg0LCJyb2xlIjoiY3VzdG9tZXIiLCJ0aWQiOjc4OTEwMjI0NjgwNDU4NjUwNCwidHlwZSI6MSwidWlkIjo3ODg3MzczNjc4NTc5NTQ4MTl9.bnVUMWQxWGEzcXZTVFVYOFF4TXJ5dm0vNlVmSzg4cGh5MHdRQTczUXV2Mm14UUdSU1RyZ3E1endISThNVUhlSjhlZTFKbDNtQmVMQ2tzRnZpS0VEQlduZUVmNzlzSVdjemQ4SnU0VzFKTFk5NEpQOVNJNDQvQS8yWlp5R0daWkFYM3k3cjVGbGcwZm90NXV4SDdOSVp2WC9YNG1qQ3JVYlNWZXFhdkV1bEZvPQ==\"\r\n\t},\r\n\t\"data\": {\r\n\t\t\"businessType\": 16,\r\n\t\t\"loginName\": \"13638679973\",\r\n\t\t\"loginType\": 1,\r\n\t\t\"idCode\": \"\",\r\n\t\t\"imgCode\": \"\",\r\n        \"lang\":\"\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/sms-code/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"sms-code",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/password/update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n        \"token\": \"eyJhbGciOiJITUFDU0hBMjU2IiwidmVyIjoiMS4wIn0=.eyJkYyI6MSwiZXhwIjoxNjAzNzY4ODQ0MCwiaWF0IjoxNjAzNzY4Nzg0LCJyb2xlIjoiY3VzdG9tZXIiLCJ0aWQiOjc4OTEwMjI0NjgwNDU4NjUwNCwidHlwZSI6MSwidWlkIjo3ODg3MzczNjc4NTc5NTQ4MTl9.bnVUMWQxWGEzcXZTVFVYOFF4TXJ5dm0vNlVmSzg4cGh5MHdRQTczUXV2Mm14UUdSU1RyZ3E1endISThNVUhlSjhlZTFKbDNtQmVMQ2tzRnZpS0VEQlduZUVmNzlzSVdjemQ4SnU0VzFKTFk5NEpQOVNJNDQvQS8yWlp5R0daWkFYM3k3cjVGbGcwZm90NXV4SDdOSVp2WC9YNG1qQ3JVYlNWZXFhdkV1bEZvPQ==\",\r\n\t\t\"sign\": \"7a531fa21967554fab7505abb4ca091f\"\r\n        \r\n\t},\r\n\t\"data\": {\r\n        \"loginName\": \"13638679973\",\r\n\t\t\"newPassword\": \"Ra8ReCSU/fDD3CuBnEGbOg8Or1FJktG0YbE1Ojv/KId2Tmakk0VvD/uJ1hcfMteaPhkJ5G7iopUYhWRvN5zZFBlUQVHsWpv1y8acJwBIznjDaQX9rfjuNSIQYFTegp0PgfiN3i0XFySqj+8awu+Fw9u9nhZHFyB9L+mbWhy3KuA=\",\r\n        \"oldPassword\": \"cZA9KJUpGLXggknLq4eUFsaKPD6NNFCN1x6gI/VjlS5dnNxJizjJFq5yGemWvzo7wRjBjUUvBPnO8EH3r2tYqEa6VWqJ+JJEcpXzwgtnL0CLkDSYfVsouBy7NUn6ISIr/IsAI21N2VbzMGLJ5CrDcAGbyQquJjNY+0+L//CJSAY=\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/password/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"password",
+						"update"
 					]
 				}
 			},
