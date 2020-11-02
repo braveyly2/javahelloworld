@@ -7,6 +7,10 @@ public class User {
 
     private String email;
 
+    private String vxId;
+
+    private String vxNickname;
+
     private String password;
 
     private String mark;
@@ -34,6 +38,14 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getVxId() { return vxId; }
+
+    public void setVxId(String vxId) { this.vxId = vxId; }
+
+    public String getVxNickname() { return vxNickname; }
+
+    public void setVxNickname(String vxNickname) { this.vxNickname = vxNickname; }
 
     public String getPassword() {
         return password;

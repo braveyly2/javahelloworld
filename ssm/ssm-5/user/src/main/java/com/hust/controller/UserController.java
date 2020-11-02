@@ -2,7 +2,6 @@ package com.hust.controller;
 
 import com.hust.accountcommon.entity.dto.TokenResultDto;
 import com.hust.accountcommon.entity.dto.TokenDataDto;
-import com.hust.constant.UserConstant;
 import com.hust.entity.domain.User;
 import com.hust.entity.dto.*;
 import com.hust.service.UserService;
@@ -17,8 +16,6 @@ import com.hust.accountcommon.util.apitemplate.BasicOutput;
 import com.hust.accountcommon.util.apitemplate.TDRequest;
 import com.hust.accountcommon.util.apitemplate.TDResponse;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -308,4 +305,57 @@ public class UserController {
         return tdResponse;
         }
 
+    /**
+     * 账户绑定账户
+     *
+     * @param  tdRequest 头部含有token信息
+     * @return TDResponse  返回新的AT和RT
+     */
+    @RequestMapping(value = "/user/bindAccount", method = RequestMethod.POST)
+    @ResponseBody
+    public TDResponse bindAccount(@RequestBody TDRequest<BindAccountDto> tdRequest) {
+        TDResponse tdResponse = new TDResponse<>();
+        BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
+        tdResponse.setBasic(basicOutput);
+
+        long userId = tdRequest.getTokenDataDto().getUserId();
+        BindAccountDto bindAccountDto = tdRequest.getData();
+        String loginName = bindAccountDto.getLoginName();
+        int loginType = 0;
+        if(PublicUtil.isEmail(loginName)){
+            loginType = LOGIN_TYPE_EMAIL;
+        } else if(PublicUtil.isPhone(loginName)){
+            loginType = LOGIN_TYPE_MOBILE;
+        } else{
+            basicOutput.setCode(ErrorCodeEnum.TD9500.code());
+            basicOutput.setMsg(ErrorCodeEnum.TD9500.msg());
+            return tdResponse;
+        }
+
+        int retCode = userService.bindAccount(loginName, bindAccountDto.getDynCode(), bindAccountDto.getIsAgreeMerge(),userId);
+
+        basicOutput.setCode(ErrorCodeEnum.getEnum(retCode).code());
+        basicOutput.setMsg(ErrorCodeEnum.getEnum(retCode).msg());
+        return tdResponse;
     }
+
+    /**
+     * 账户解除绑定账户
+     *
+     * @param  tdRequest 头部含有token信息
+     * @return TDResponse  返回新的AT和RT
+     */
+    @RequestMapping(value = "/user/unbindAccount", method = RequestMethod.POST)
+    @ResponseBody
+    public TDResponse unbindAccount(@RequestBody TDRequest<UnbindAccountDto> tdRequest){
+        TDResponse tdResponse = new TDResponse<>();
+        BasicOutput basicOutput = PublicUtil.getDefaultBasicOutputByInput(tdRequest.getBasic());
+        tdResponse.setBasic(basicOutput);
+        Long userId=tdRequest.getTokenDataDto().getUserId();
+        UnbindAccountDto unbindAccountDto = tdRequest.getData();
+        int retCode = userService.unbindAccount(unbindAccountDto.getUnbindType(),unbindAccountDto.getDynCode(),userId);
+        tdResponse.getBasic().setCode(retCode);
+        tdResponse.getBasic().setMsg(ErrorCodeEnum.getEnum(retCode).msg());
+        return tdResponse;
+    }
+}

@@ -29,4 +29,8 @@ public interface UserService {
     public int findPwd(FindLoginPwdDto findLoginPwdDto, int loginType, BasicInput basicInput);
 
     public int updatePwd(long userId, String loginName, String newPassword, String oldPassword, BasicInput basicInput);
+
+    public int bindAccount(String loginName, String dynCode, Boolean isAgreeMerge, long userId);
+
+    public int unbindAccount(int unbindType, String dynCode, long userId);
 }

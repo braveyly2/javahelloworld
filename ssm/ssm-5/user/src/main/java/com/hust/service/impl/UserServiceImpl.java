@@ -24,6 +24,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 import static com.hust.constant.UserConstant.LOGIN_TYPE_EMAIL;
+import static com.hust.constant.UserConstant.LOGIN_TYPE_MOBILE;
 import static com.hust.constant.UserConstant.REDIS_CODE;
 
 @Slf4j
@@ -286,6 +287,137 @@ public class UserServiceImpl implements UserService {
             return ErrorCodeEnum.TD9500.code();
         }
         //TODO: 将已登录用户的token去掉，确保在修改密码后必须要重新登录
+        return ErrorCodeEnum.TD200.code();
+    }
+
+    /**
+     * 账户绑定账户
+     *
+     * @param loginName 被绑定账户名
+     * @param dynCode 被绑定账户动态验证码
+     * @param userId 用户id
+     * @return int  绑定结果
+     */
+    public int bindAccount(String loginName, String dynCode, Boolean isAgreeMerge, long userId){
+        //1. 被绑定账号的类型及已登录账号是否缺失此种类型的账号
+        int bindLoginType = 0;
+        if(PublicUtil.isEmail(loginName)){
+            bindLoginType = LOGIN_TYPE_EMAIL;
+        } else if(PublicUtil.isPhone(loginName)){
+            bindLoginType = LOGIN_TYPE_MOBILE;
+        }
+
+        User user = userMapper.selectByPrimaryKey(userId);
+        if(LOGIN_TYPE_EMAIL == bindLoginType){
+            String email = user.getEmail();
+            if(null!=email&&0!=email.length()){
+                log.error("此账户已有邮箱绑定了，请先解绑");
+                return ErrorCodeEnum.TD9500.code();
+            }
+        }
+        if(LOGIN_TYPE_MOBILE == bindLoginType){
+            String phone = user.getPhone();
+            if(null!=phone&&0!=phone.length()){
+                log.error("此账户已有手机号绑定了，请先解绑");
+                return ErrorCodeEnum.TD9500.code();
+            }
+        }
+
+        //2. 判断被绑定账号是否已注册
+        User bindUser = null;
+        if(LOGIN_TYPE_EMAIL == bindLoginType){
+            bindUser = userMapper.selectByEmail(loginName);
+            //2.1 已注册
+            if(null!=bindUser){
+                //2.1.1 已注册，可以合并
+                if(null==bindUser.getPhone()||""==bindUser.getPhone()){
+                    if(!isAgreeMerge){
+                        log.error("提示用户是否需要合并");
+                        return ErrorCodeEnum.TD9012.code();
+                    }
+                    //合并用户
+                    user.setEmail(bindUser.getEmail());
+                    userMapper.updateByPrimaryKey(user);
+                    userMapper.deleteByPrimaryKey(bindUser.getId());
+
+                //2.1.2 已注册，不可合并
+                }else{
+                    log.error("此用户已注册，不可绑定");
+                    return ErrorCodeEnum.TD9500.code();
+                }
+            }
+            //2.2 未注册走下面的流程
+        }
+        if(LOGIN_TYPE_MOBILE == bindLoginType){
+            bindUser = userMapper.selectByPhone(loginName);
+            //2.1.1 已注册，可以合并
+            if(null==bindUser.getEmail()||""==bindUser.getEmail()){
+                if(!isAgreeMerge){
+                    log.error("提示用户是否需要合并");
+                    return ErrorCodeEnum.TD9012.code();
+                }
+                user.setPhone(bindUser.getPhone());
+                userMapper.updateByPrimaryKey(user);
+                userMapper.deleteByPrimaryKey(bindUser.getId());
+                log.error("提示用户是否需要合并");
+                return ErrorCodeEnum.TD9012.code();
+                //2.1.2 已注册，不可合并
+            }else{
+                log.error("此用户已注册，不可绑定");
+                return ErrorCodeEnum.TD9500.code();
+            }
+        }
+
+
+        //3. 验证动态验证码是否正确
+        DynamicCodeRedisDto dynamicCodeRedisDto = (DynamicCodeRedisDto)jedisUtils.get(UserConstant.REDIS_LOGIN_DYNAMIC_CODE+loginName+REDIS_CODE);
+        if(!dynamicCodeRedisDto.getCode().equals(dynCode)){
+            log.error("动态验证码错误");
+            return ErrorCodeEnum.TD9500.code();
+        }
+
+        //4. 绑定
+        if(LOGIN_TYPE_EMAIL == bindLoginType){
+            user.setEmail(loginName);
+            userMapper.updateByPrimaryKey(user);
+        }
+        if(LOGIN_TYPE_MOBILE == bindLoginType){
+            user.setPhone(loginName);
+            userMapper.updateByPrimaryKey(user);
+        }
+        return ErrorCodeEnum.TD200.code();
+    }
+
+    public int unbindAccount(int unbindType, String dynCode, long userId){
+        User user = userMapper.selectByPrimaryKey(userId);
+        String userName = null;
+        if(LOGIN_TYPE_EMAIL==unbindType){
+            userName=user.getEmail();
+        }else if(LOGIN_TYPE_MOBILE==unbindType){
+            userName=user.getPhone();
+        }
+
+        DynamicCodeRedisDto dynamicCodeRedisDto=(DynamicCodeRedisDto)jedisUtils.get(UserConstant.REDIS_LOGIN_DYNAMIC_CODE+userName+UserConstant.REDIS_CODE);
+        if(!dynamicCodeRedisDto.equals(dynCode)){
+            log.error("动态验证码错误");
+            return ErrorCodeEnum.TD9500.code();
+        }
+
+        if(LOGIN_TYPE_EMAIL==unbindType){
+            if(null==user.getPhone()||user.getPhone().equals("")) {
+                log.error("此账户没有手机号，不支持解除邮箱");
+                return ErrorCodeEnum.TD9500.code();
+            }
+            user.setEmail("");
+        }else if(LOGIN_TYPE_MOBILE==unbindType){
+            if(null==user.getEmail()||user.getEmail().equals("")) {
+                log.error("此账户没有邮箱，不支持解除手机");
+                return ErrorCodeEnum.TD9500.code();
+            }
+            user.setPhone("");
+        }
+        userMapper.updateByPrimaryKey(user);
+
         return ErrorCodeEnum.TD200.code();
     }
 }

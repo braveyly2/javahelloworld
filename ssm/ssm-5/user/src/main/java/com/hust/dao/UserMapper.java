@@ -3,7 +3,7 @@ package com.hust.dao;
 import com.hust.entity.domain.User;
 
 public interface UserMapper {
-    int deleteByPrimaryKey(Integer id);
+    int deleteByPrimaryKey(long id);
 
     /**
      * @param record
@@ -21,4 +21,6 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+
+    User selectByWxId(String wxId);
 }
