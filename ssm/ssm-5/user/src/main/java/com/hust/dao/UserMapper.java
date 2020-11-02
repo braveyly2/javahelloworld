@@ -22,5 +22,5 @@ public interface UserMapper {
 
     int updateByPrimaryKey(User record);
 
-    User selectByWxId(String wxId);
+    User selectByVxId(String vxId);
 }

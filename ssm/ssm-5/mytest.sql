@@ -1,10 +1,10 @@
-create table if not exists user
+CREATE TABLE IF NOT EXISTS USER
 (
-  id bigint unsigned auto_increment primary key,
-  phone varchar(255) charset utf8 null,
-  email varchar(255) charset utf8 null,
-  wx_id varchar(255) charset utf8 null,
-  wx_nickname varchar(255) charset utf8 null,
-  password varchar(255) charset utf8 null,
-  mark varchar(255) charset utf8 null
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  phone VARCHAR(255) CHARSET utf8 NULL,
+  email VARCHAR(255) CHARSET utf8 NULL,
+  vx_id VARCHAR(255) CHARSET utf8 NULL,
+  vx_nickname VARCHAR(255) CHARSET utf8 NULL,
+  PASSWORD VARCHAR(255) CHARSET utf8 NULL,
+  mark VARCHAR(255) CHARSET utf8 NULL
 );

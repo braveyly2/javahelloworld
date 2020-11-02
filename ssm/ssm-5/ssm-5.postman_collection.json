@@ -218,6 +218,256 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/user/vxlogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549\r\n\t},\r\n\t\"data\": {\r\n\t\t\"code\": \"1234\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/user/vxlogin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"vxlogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/user/bindAccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1603174417123,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": \"eyJhbGciOiJITUFDU0hBMjU2IiwidmVyIjoiMS4wIn0=.eyJkYyI6MSwiZXhwIjoxNjA0MzAxMjY2MCwiaWF0IjoxNjA0MzAxMjA2LCJyb2xlIjoiY3VzdG9tZXIiLCJ0aWQiOjc5MTM4ODk4MTg4MjI1NzQxNCwidHlwZSI6MSwidWlkIjo3OTEzNjYyMjI4NTA1NTU5MDV9.TTE1MFdtQVJDMm9iNXV6WDVrQnVRYWVqeXRkbFYrYmhJMlVTbkliajN3Rk9CZnI0NnZ4RGlBWTFSVkhYWi8ycXdMUjdmOGoyTnhYeG12QUhndGJHdjI3RmhMR2o1TXRBa0Q5bTIwcm9IYUNpZ0lLQ1E2SU53eWtnakcxYU0zbUJRWm9GRW41RFA3QmZjcUV6Ti83VWE5Z1lDcGFTcEdBR3NXR21tdTVEM053PQ==\"\r\n\t},\r\n\t\"data\": {\r\n\t\t\"loginName\": \"sjliwei2002@126.com\",\r\n\t\t\"dynCode\": \"200063\",\r\n\t\t\"isAgreeMerge\": false\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/user/bindAccount",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"bindAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/vxBindAccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549\r\n\t},\r\n\t\"data\": {\r\n\t\t\"code\": \"1234\",\r\n        \"loginName\": \"13638679974\",\r\n        \"dynCode\": \"534555\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/vxBindAccount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"vxBindAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/user/vxlogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1592399555986,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549\r\n\t},\r\n\t\"data\": {\r\n\t\t\"code\": \"1234\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/user/vxlogin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"vxlogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/user/unbindAccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1603174417123,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": \"eyJhbGciOiJITUFDU0hBMjU2IiwidmVyIjoiMS4wIn0=.eyJkYyI6MSwiZXhwIjoxNjA0MzAyMzc4MCwiaWF0IjoxNjA0MzAyMzE4LCJyb2xlIjoiY3VzdG9tZXIiLCJ0aWQiOjc5MTM5Mzc1Nzg4NTg5MDU2NCwidHlwZSI6MSwidWlkIjo3OTEzNjYyMjI4NTA1NTU5MDV9.blZGRm1jeGdiVnhpQ1JLT1lxcE1qODNIYnJ6RlFKNTNiTEJUOTd5dHBlR3BnOHhldzEvQUQzcHZpOXVUelN5NTlROHd3UUY1a0tRbkN0Y3QvbFltRGVoLytoRmY2TkdobDUreWZER2xxSG14N3p6azN1SjQ1Y0NkY2svNmRLMkZEck9WZTVhdStudDFKRE1jTXBORHNmV1ZFRzVNQVZMaHVTVFkyQ0hNZjJjPQ==\"\r\n\t},\r\n\t\"data\": {\r\n        \"unbindType\": 2,\r\n\t\t\"dynCode\": \"795253\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/user/unbindAccount",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"unbindAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/accountUnbindVx",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1603174417123,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": \"eyJhbGciOiJITUFDU0hBMjU2IiwidmVyIjoiMS4wIn0=.eyJkYyI6MSwiZXhwIjoxNjA0MzAzODUyMCwiaWF0IjoxNjA0MzAzNzkyLCJyb2xlIjoiY3VzdG9tZXIiLCJ0aWQiOjc5MTQwMDA4ODY2NzY4NDg2OCwidHlwZSI6MSwidWlkIjo3OTEzOTc2NDA1MzYzMjYxNDh9.Zit0eS9YcGd3c0crZklVN0M5K0lON3dMT1F0ekpnaE13aHpWZzZkVmpxcGNmb1RyTzZSMEtCaWhia0p0bGxMR1B5eEZoTWZDTFB4RThlQjh0Uk5TcTBKcjlPNUVyQktnR0FUNWNiT25JeU5UL2g3dUlHdjFJSXJCdjNSWEg5RFNGT2V1RzNKbFNuNkdrMVNMTk5LT3ZVVDMrK2ZNUVhKTkRzYWd6VFJLZy9VPQ==\"\r\n\t},\r\n\t\"data\": {\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/accountUnbindVx",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"accountUnbindVx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/user/unbindAccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1603174417123,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": \"eyJhbGciOiJITUFDU0hBMjU2IiwidmVyIjoiMS4wIn0=.eyJkYyI6MSwiZXhwIjoxNjA0MzAyMzc4MCwiaWF0IjoxNjA0MzAyMzE4LCJyb2xlIjoiY3VzdG9tZXIiLCJ0aWQiOjc5MTM5Mzc1Nzg4NTg5MDU2NCwidHlwZSI6MSwidWlkIjo3OTEzNjYyMjI4NTA1NTU5MDV9.blZGRm1jeGdiVnhpQ1JLT1lxcE1qODNIYnJ6RlFKNTNiTEJUOTd5dHBlR3BnOHhldzEvQUQzcHZpOXVUelN5NTlROHd3UUY1a0tRbkN0Y3QvbFltRGVoLytoRmY2TkdobDUreWZER2xxSG14N3p6azN1SjQ1Y0NkY2svNmRLMkZEck9WZTVhdStudDFKRE1jTXBORHNmV1ZFRzVNQVZMaHVTVFkyQ0hNZjJjPQ==\"\r\n\t},\r\n\t\"data\": {\r\n        \"unbindType\": 2,\r\n\t\t\"dynCode\": \"795253\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/user/unbindAccount",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"unbindAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/user/bindAccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"basic\": {\r\n\t\t\"ver\": \"1.0\",\r\n\t\t\"time\": 1603174417123,\r\n\t\t\"id\": 30,\r\n\t\t\"nonce\": 1567246549,\r\n\t\t\"token\": \"eyJhbGciOiJITUFDU0hBMjU2IiwidmVyIjoiMS4wIn0=.eyJkYyI6MSwiZXhwIjoxNjA0MzA0NTE0MCwiaWF0IjoxNjA0MzA0NDU0LCJyb2xlIjoiY3VzdG9tZXIiLCJ0aWQiOjc5MTQwMjkzMTkzNjAzNDgxOCwidHlwZSI6MSwidWlkIjo3OTEzNjYyMjI4NTA1NTU5MDV9.VU9KbU8rcFV5L0hiMWd1UjFnbjZ5N2psM3NkTmVvcEozaXBOanExZFZFUjZzdEE1eVNsekhRajBrSWc1S0ZQRVJwWWMvbFpOeDdtQzJGR3VsMVlhOXBaRzkyTU8wZEpBbDZ2YTA1blN4Ukt2MjBNaTNkKy9ndmh6RTBvZUhqd0VmUVR2aFZ2S1k3enJnaGw4Q25TNDZDZi9veVN2dnZpOHVvYUE4Q2J4NGFnPQ==\"\r\n\t},\r\n\t\"data\": {\r\n\t\t\"loginName\": \"sjliwei2002@126.com\",\r\n\t\t\"dynCode\": \"467730\",\r\n\t\t\"isAgreeMerge\": true\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/user/bindAccount",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"bindAccount"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}

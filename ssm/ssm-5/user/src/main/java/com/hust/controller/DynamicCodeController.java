@@ -105,7 +105,7 @@ public class DynamicCodeController {
         String sms24HourCount = null;
         if(jedisUtils.exists(sms24HourCountKey)){
             sms24HourCount = jedisUtils.getString(sms24HourCountKey);
-            if(Integer.valueOf(sms24HourCount).intValue() > 10){
+            if(Integer.valueOf(sms24HourCount).intValue() > 20){
                 basicOutput.setCode(ErrorCodeEnum.TD9500.code());
                 basicOutput.setMsg(ErrorCodeEnum.TD9500.msg());
                 return tdResponse;
@@ -117,7 +117,7 @@ public class DynamicCodeController {
         String sms5MinCount = null;
         if(jedisUtils.exists(sms5MinCountKey)){
             sms5MinCount = jedisUtils.getString(sms5MinCountKey);
-            if(Integer.valueOf(sms5MinCount).intValue() > 1){
+            if(Integer.valueOf(sms5MinCount).intValue() > 10){
                 //2.1 校验图形验证码
                 log.info("待校验的图形验证码 idCode" + getDynamicCodeDto.getIdCode() + " imgCode" + getDynamicCodeDto.getImgCode());
                 boolean checkResult = codeGenerateService.checkPictureCode(getDynamicCodeDto.getIdCode(),getDynamicCodeDto.getImgCode());

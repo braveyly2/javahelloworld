@@ -398,7 +398,7 @@ public class UserServiceImpl implements UserService {
         }
 
         DynamicCodeRedisDto dynamicCodeRedisDto=(DynamicCodeRedisDto)jedisUtils.get(UserConstant.REDIS_LOGIN_DYNAMIC_CODE+userName+UserConstant.REDIS_CODE);
-        if(!dynamicCodeRedisDto.equals(dynCode)){
+        if(!(dynamicCodeRedisDto.getCode().equals(dynCode))){
             log.error("动态验证码错误");
             return ErrorCodeEnum.TD9500.code();
         }
