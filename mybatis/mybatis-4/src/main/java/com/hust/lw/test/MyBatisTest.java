@@ -34,7 +34,7 @@ public class MyBatisTest {
     @Before
     public void setUp() throws Exception {
         //1.读取配置文件
-        in = Resources.getResourceAsStream("SqlMapConfig.xml");
+        in = Resources.getResourceAsStream("MybatisConfig.xml");
         //2.创建SqlSessionFactory工厂
         SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
         //3.创建SqlSession工厂对象
