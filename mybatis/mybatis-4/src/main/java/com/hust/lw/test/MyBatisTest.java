@@ -58,9 +58,12 @@ public class MyBatisTest {
         //5.使用代理对象执行方法
         UserExample userExample = new UserExample();
         UserExample.Criteria criteria = userExample.createCriteria();
-        criteria.andIdEqualTo(1L);
+        criteria.andIdEqualTo(791366222850555906L);
         List<User> userList = userMapper.selectByExample(userExample);
         System.out.println(userList);
+        for(User user:userList){
+            System.out.println(user.getId()+"\t"+user.getEmail()+"\t"+user.getMark()+"\t"+user.getPhone());
+        }
     }
 
     //根据用户名模糊查询用户列表
@@ -72,7 +75,13 @@ public class MyBatisTest {
     //添加用户
     @Test
     public void testInsertUser() throws IOException {
-
+        User user = new User();
+        //user.setId(1L);
+        user.setEmail("sjliw@126.com");
+        user.setPassword("123456");
+        user.setPhone("13638679971");
+        user.setMark("thisishello");
+        userMapper.insert(user);
     }
 
     //更新用户
