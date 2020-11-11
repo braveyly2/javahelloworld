@@ -109,7 +109,7 @@ public class MyBatisTest {
     public void testCustomer() throws IOException {
         Customer customer = new Customer();
         customer.setId(1L);
-        customer.setGender(Gender.MALE);
+        customer.setGender(Gender.FEMALE);
         customer.setHobby(Hobby.FOOTBALL);
         customer.setMember(Member.FATHER);
         customer.setUseraddress("china");
@@ -120,10 +120,26 @@ public class MyBatisTest {
         List<Customer> customerList =  customerMapper.selectCustomerById2(1L);
         //System.out.println(customerList.getRegTime());
 
-        //CustomerExample customerExample = new CustomerExample();
-        //CustomerExample.Criteria criteria = customerExample.createCriteria();
-        //criteria.andGenderEqualTo(Gender.MALE);
+        {
+            CustomerExample customerExample = new CustomerExample();
+            CustomerExample.Criteria criteria = customerExample.createCriteria();
+            criteria.andHobbyEqualTo(Hobby.FOOTBALL);
 
+            List<Customer> customerList2 = customerMapper.selectByExample(customerExample);
+            for (Customer customer2 : customerList) {
+                System.out.println(customer2);
+            }
+        }
 
+        {
+            CustomerExample customerExample = new CustomerExample();
+            CustomerExample.Criteria criteria = customerExample.createCriteria();
+            criteria.andMemberEqualTo(Member.FATHER);
+
+            List<Customer> customerList2 = customerMapper.selectByExample(customerExample);
+            for (Customer customer2 : customerList) {
+                System.out.println(customer2);
+            }
+        }
     }
 }

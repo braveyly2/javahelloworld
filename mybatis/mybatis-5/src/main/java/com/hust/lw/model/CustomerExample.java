@@ -1,5 +1,8 @@
 package com.hust.lw.model;
 
+import com.hust.lw.enums.Hobby;
+import com.hust.lw.enums.Member;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -394,8 +397,8 @@ public class CustomerExample {
             return (Criteria) this;
         }
 
-        public Criteria andHobbyEqualTo(String value) {
-            addCriterion("hobby =", value, "hobby");
+        public Criteria andHobbyEqualTo(Hobby value) {
+            addCriterion("hobby =", value.name(), "hobby");
             return (Criteria) this;
         }
 
@@ -464,8 +467,8 @@ public class CustomerExample {
             return (Criteria) this;
         }
 
-        public Criteria andMemberEqualTo(Integer value) {
-            addCriterion("member =", value, "member");
+        public Criteria andMemberEqualTo(Member value) {
+            addCriterion("member =", value.getCode(), "member");
             return (Criteria) this;
         }
 

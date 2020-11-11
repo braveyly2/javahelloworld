@@ -227,3 +227,231 @@
 2020-11-11 11:25:02,883 12017  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
 2020-11-11 11:25:02,883 12017  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
 2020-11-11 11:25:02,884 12018  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1607792885 to pool.
+2020-11-11 13:42:47,627 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-11 13:42:47,852 225    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 13:42:47,852 225    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 13:42:47,852 225    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 13:42:47,852 225    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 13:42:48,162 535    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-11 13:42:48,483 856    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1607792885.
+2020-11-11 13:42:48,484 857    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 13:42:48,488 861    [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==>  Preparing: INSERT INTO customer(userName, userAge, gender, hobby, userAddress, reg_time) VALUES(?,?, ?, ?,?, ?) 
+2020-11-11 13:42:48,538 911    [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==> Parameters: null, 18(Integer), 0(Integer), FOOTBALL(String), china(String), 61565760000000(String)
+2020-11-11 13:42:48,543 916    [           main] DEBUG ao.CustomerMapper.addCustomer2  - <==    Updates: 1
+2020-11-11 13:42:51,041 3414   [           main] DEBUG omerMapper.selectCustomerById2  - ==>  Preparing: select * from Customer where id=?; 
+2020-11-11 13:42:51,041 3414   [           main] DEBUG omerMapper.selectCustomerById2  - ==> Parameters: 1(Long)
+2020-11-11 13:42:51,054 3427   [           main] DEBUG omerMapper.selectCustomerById2  - <==      Total: 1
+2020-11-11 13:44:29,750 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-11 13:44:29,904 154    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 13:44:29,904 154    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 13:44:29,904 154    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 13:44:29,904 154    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 13:44:30,078 328    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-11 13:44:30,346 596    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1607792885.
+2020-11-11 13:44:30,346 596    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 13:44:30,350 600    [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==>  Preparing: INSERT INTO customer(userName, userAge, gender, hobby, userAddress, reg_time) VALUES(?,?, ?, ?,?, ?) 
+2020-11-11 13:44:30,383 633    [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==> Parameters: null, 18(Integer), 0(Integer), FOOTBALL(String), china(String), 61565760000000(String)
+2020-11-11 13:44:30,387 637    [           main] DEBUG ao.CustomerMapper.addCustomer2  - <==    Updates: 1
+2020-11-11 13:44:38,251 8501   [           main] DEBUG omerMapper.selectCustomerById2  - ==>  Preparing: select * from Customer where id=?; 
+2020-11-11 13:44:38,252 8502   [           main] DEBUG omerMapper.selectCustomerById2  - ==> Parameters: 1(Long)
+2020-11-11 13:44:38,297 8547   [           main] DEBUG omerMapper.selectCustomerById2  - <==      Total: 1
+2020-11-11 13:44:43,122 13372  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 13:44:43,127 13377  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 13:44:43,128 13378  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 13:44:43,128 13378  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1607792885 to pool.
+2020-11-11 13:44:48,378 120751 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 13:44:48,389 120762 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 13:44:48,392 120765 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 13:44:48,392 120765 [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1607792885 to pool.
+2020-11-11 13:44:54,017 1      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-11 13:44:54,168 152    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 13:44:54,169 153    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 13:44:54,169 153    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 13:44:54,169 153    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 13:44:54,330 314    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-11 13:44:54,551 535    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1607792885.
+2020-11-11 13:44:54,551 535    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 13:44:54,554 538    [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==>  Preparing: INSERT INTO customer(userName, userAge, gender, hobby, userAddress, reg_time) VALUES(?,?, ?, ?,?, ?) 
+2020-11-11 13:44:54,585 569    [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==> Parameters: null, 18(Integer), 0(Integer), FOOTBALL(String), china(String), 61565760000000(String)
+2020-11-11 13:44:54,588 572    [           main] DEBUG ao.CustomerMapper.addCustomer2  - <==    Updates: 1
+2020-11-11 13:44:58,637 4621   [           main] DEBUG omerMapper.selectCustomerById2  - ==>  Preparing: select * from Customer where id=?; 
+2020-11-11 13:44:58,637 4621   [           main] DEBUG omerMapper.selectCustomerById2  - ==> Parameters: 1(Long)
+2020-11-11 13:44:58,655 4639   [           main] DEBUG omerMapper.selectCustomerById2  - <==      Total: 1
+2020-11-11 13:45:10,931 16915  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 13:45:10,947 16931  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 13:45:10,948 16932  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 13:45:10,948 16932  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1607792885 to pool.
+2020-11-11 16:19:20,398 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-11 16:19:20,583 185    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:19:20,583 185    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:19:20,583 185    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:19:20,583 185    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:19:20,853 455    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-11 16:19:21,184 786    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1607792885.
+2020-11-11 16:19:21,184 786    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:19:21,188 790    [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==>  Preparing: INSERT INTO customer(userName, userAge, gender, hobby, userAddress, reg_time) VALUES(?,?, ?, ?,?, ?) 
+2020-11-11 16:19:21,227 829    [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==> Parameters: null, 18(Integer), 0(Integer), FOOTBALL(String), china(String), 61565760000000(String)
+2020-11-11 16:19:21,232 834    [           main] DEBUG ao.CustomerMapper.addCustomer2  - <==    Updates: 1
+2020-11-11 16:19:27,084 6686   [           main] DEBUG omerMapper.selectCustomerById2  - ==>  Preparing: select * from Customer where id=?; 
+2020-11-11 16:19:27,085 6687   [           main] DEBUG omerMapper.selectCustomerById2  - ==> Parameters: 1(Long)
+2020-11-11 16:19:27,103 6705   [           main] DEBUG omerMapper.selectCustomerById2  - <==      Total: 1
+2020-11-11 16:19:29,325 8927   [           main] DEBUG CustomerMapper.selectByExample  - ==>  Preparing: select id, userName, gender, hobby, member, userAge, userAddress, reg_time from customer WHERE ( gender = ? ) 
+2020-11-11 16:19:29,325 8927   [           main] DEBUG CustomerMapper.selectByExample  - ==> Parameters: 1(Integer)
+2020-11-11 16:19:29,328 8930   [           main] DEBUG CustomerMapper.selectByExample  - <==      Total: 0
+2020-11-11 16:21:07,148 106750 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:21:07,153 106755 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:21:07,156 106758 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:21:07,156 106758 [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1607792885 to pool.
+2020-11-11 16:22:32,610 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-11 16:22:32,740 130    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:22:32,740 130    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:22:32,740 130    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:22:32,740 130    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:22:32,925 315    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-11 16:22:33,132 522    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 2050835901.
+2020-11-11 16:22:33,133 523    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@7a3d45bd]
+2020-11-11 16:22:33,137 527    [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==>  Preparing: INSERT INTO customer(userName, userAge, gender, hobby, userAddress, reg_time) VALUES(?,?, ?, ?,?, ?) 
+2020-11-11 16:22:33,180 570    [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==> Parameters: null, 18(Integer), 0(Integer), FOOTBALL(String), china(String), 61565760000000(String)
+2020-11-11 16:22:33,182 572    [           main] DEBUG ao.CustomerMapper.addCustomer2  - <==    Updates: 1
+2020-11-11 16:22:33,188 578    [           main] DEBUG omerMapper.selectCustomerById2  - ==>  Preparing: select * from Customer where id=?; 
+2020-11-11 16:22:33,188 578    [           main] DEBUG omerMapper.selectCustomerById2  - ==> Parameters: 1(Long)
+2020-11-11 16:22:33,208 598    [           main] DEBUG omerMapper.selectCustomerById2  - <==      Total: 1
+2020-11-11 16:22:33,256 646    [           main] DEBUG CustomerMapper.selectByExample  - ==>  Preparing: select id, userName, gender, hobby, member, userAge, userAddress, reg_time from customer WHERE ( gender = ? ) 
+2020-11-11 16:22:33,256 646    [           main] DEBUG CustomerMapper.selectByExample  - ==> Parameters: 1(Integer)
+2020-11-11 16:22:33,258 648    [           main] DEBUG CustomerMapper.selectByExample  - <==      Total: 0
+2020-11-11 16:22:33,258 648    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@7a3d45bd]
+2020-11-11 16:22:33,273 663    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@7a3d45bd]
+2020-11-11 16:22:33,276 666    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@7a3d45bd]
+2020-11-11 16:22:33,276 666    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 2050835901 to pool.
+2020-11-11 16:23:09,422 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-11 16:23:09,593 171    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:23:09,593 171    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:23:09,593 171    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:23:09,593 171    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:23:09,824 402    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-11 16:23:10,106 684    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1607792885.
+2020-11-11 16:23:10,107 685    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:23:10,110 688    [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==>  Preparing: INSERT INTO customer(userName, userAge, gender, hobby, userAddress, reg_time) VALUES(?,?, ?, ?,?, ?) 
+2020-11-11 16:23:10,148 726    [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==> Parameters: null, 18(Integer), 1(Integer), FOOTBALL(String), china(String), 61565760000000(String)
+2020-11-11 16:23:10,151 729    [           main] DEBUG ao.CustomerMapper.addCustomer2  - <==    Updates: 1
+2020-11-11 16:23:12,664 3242   [           main] DEBUG omerMapper.selectCustomerById2  - ==>  Preparing: select * from Customer where id=?; 
+2020-11-11 16:23:12,664 3242   [           main] DEBUG omerMapper.selectCustomerById2  - ==> Parameters: 1(Long)
+2020-11-11 16:23:12,677 3255   [           main] DEBUG omerMapper.selectCustomerById2  - <==      Total: 1
+2020-11-11 16:23:13,541 4119   [           main] DEBUG CustomerMapper.selectByExample  - ==>  Preparing: select id, userName, gender, hobby, member, userAge, userAddress, reg_time from customer WHERE ( gender = ? ) 
+2020-11-11 16:23:13,542 4120   [           main] DEBUG CustomerMapper.selectByExample  - ==> Parameters: 1(Integer)
+2020-11-11 16:23:13,543 4121   [           main] DEBUG CustomerMapper.selectByExample  - <==      Total: 1
+2020-11-11 16:23:13,544 4122   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:23:13,548 4126   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:23:13,549 4127   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:23:13,549 4127   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1607792885 to pool.
+2020-11-11 16:44:22,003 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-11 16:44:22,163 160    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:44:22,164 161    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:44:22,164 161    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:44:22,164 161    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:44:22,368 365    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-11 16:44:22,642 639    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1607792885.
+2020-11-11 16:44:22,642 639    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:44:22,646 643    [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==>  Preparing: INSERT INTO customer(userName, userAge, gender, hobby, userAddress, reg_time) VALUES(?,?, ?, ?,?, ?) 
+2020-11-11 16:44:22,690 687    [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==> Parameters: null, 18(Integer), 1(Integer), FOOTBALL(String), china(String), 61565760000000(String)
+2020-11-11 16:44:22,694 691    [           main] DEBUG ao.CustomerMapper.addCustomer2  - <==    Updates: 1
+2020-11-11 16:44:25,825 3822   [           main] DEBUG omerMapper.selectCustomerById2  - ==>  Preparing: select * from Customer where id=?; 
+2020-11-11 16:44:25,825 3822   [           main] DEBUG omerMapper.selectCustomerById2  - ==> Parameters: 1(Long)
+2020-11-11 16:44:25,841 3838   [           main] DEBUG omerMapper.selectCustomerById2  - <==      Total: 1
+2020-11-11 16:44:27,805 5802   [           main] DEBUG CustomerMapper.selectByExample  - ==>  Preparing: select id, userName, gender, hobby, member, userAge, userAddress, reg_time from customer WHERE ( gender = ? ) 
+2020-11-11 16:44:27,805 5802   [           main] DEBUG CustomerMapper.selectByExample  - ==> Parameters: 1(Integer)
+2020-11-11 16:44:27,811 5808   [           main] DEBUG CustomerMapper.selectByExample  - <==      Total: 2
+2020-11-11 16:46:03,442 101439 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:46:03,449 101446 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:46:03,451 101448 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:46:03,451 101448 [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1607792885 to pool.
+2020-11-11 16:53:50,851 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-11 16:53:51,139 288    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:53:51,140 289    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:53:51,140 289    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:53:51,140 289    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:53:51,462 611    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-11 16:53:51,888 1037   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1607792885.
+2020-11-11 16:53:51,888 1037   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:53:51,895 1044   [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==>  Preparing: INSERT INTO customer(userName, userAge, gender, hobby, userAddress, reg_time) VALUES(?,?, ?, ?,?, ?) 
+2020-11-11 16:53:51,952 1101   [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==> Parameters: null, 18(Integer), 1(Integer), FOOTBALL(String), china(String), 61565760000000(String)
+2020-11-11 16:53:51,957 1106   [           main] DEBUG ao.CustomerMapper.addCustomer2  - <==    Updates: 1
+2020-11-11 16:53:57,301 6450   [           main] DEBUG omerMapper.selectCustomerById2  - ==>  Preparing: select * from Customer where id=?; 
+2020-11-11 16:53:57,301 6450   [           main] DEBUG omerMapper.selectCustomerById2  - ==> Parameters: 1(Long)
+2020-11-11 16:53:57,325 6474   [           main] DEBUG omerMapper.selectCustomerById2  - <==      Total: 1
+2020-11-11 16:53:58,949 8098   [           main] DEBUG CustomerMapper.selectByExample  - ==>  Preparing: select id, userName, gender, hobby, member, userAge, userAddress, reg_time from customer WHERE ( hobby = ? ) 
+2020-11-11 16:53:58,951 8100   [           main] DEBUG CustomerMapper.selectByExample  - ==> Parameters: 足球(String)
+2020-11-11 16:53:58,955 8104   [           main] DEBUG CustomerMapper.selectByExample  - <==      Total: 0
+2020-11-11 16:54:13,328 22477  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:54:13,338 22487  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:54:13,339 22488  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:54:13,340 22489  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1607792885 to pool.
+2020-11-11 16:57:33,833 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-11 16:57:34,113 280    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:57:34,113 280    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:57:34,113 280    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:57:34,114 281    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 16:57:34,465 632    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-11 16:57:34,886 1053   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1607792885.
+2020-11-11 16:57:34,887 1054   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:57:34,893 1060   [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==>  Preparing: INSERT INTO customer(userName, userAge, gender, hobby, userAddress, reg_time) VALUES(?,?, ?, ?,?, ?) 
+2020-11-11 16:57:34,957 1124   [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==> Parameters: null, 18(Integer), 1(Integer), FOOTBALL(String), china(String), 61565760000000(String)
+2020-11-11 16:57:34,964 1131   [           main] DEBUG ao.CustomerMapper.addCustomer2  - <==    Updates: 1
+2020-11-11 16:57:40,209 6376   [           main] DEBUG omerMapper.selectCustomerById2  - ==>  Preparing: select * from Customer where id=?; 
+2020-11-11 16:57:40,211 6378   [           main] DEBUG omerMapper.selectCustomerById2  - ==> Parameters: 1(Long)
+2020-11-11 16:57:40,237 6404   [           main] DEBUG omerMapper.selectCustomerById2  - <==      Total: 1
+2020-11-11 16:57:57,243 23410  [           main] DEBUG CustomerMapper.selectByExample  - ==>  Preparing: select id, userName, gender, hobby, member, userAge, userAddress, reg_time from customer WHERE ( hobby = ? ) 
+2020-11-11 16:57:57,243 23410  [           main] DEBUG CustomerMapper.selectByExample  - ==> Parameters: FOOTBALL(String)
+2020-11-11 16:57:57,255 23422  [           main] DEBUG CustomerMapper.selectByExample  - <==      Total: 14
+2020-11-11 16:57:57,255 23422  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:57:57,264 23431  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:57:57,266 23433  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 16:57:57,266 23433  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1607792885 to pool.
+2020-11-11 17:00:42,423 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-11 17:00:42,719 296    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 17:00:42,720 297    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 17:00:42,720 297    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 17:00:42,720 297    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 17:00:43,063 640    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-11 17:00:43,479 1056   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1607792885.
+2020-11-11 17:00:43,479 1056   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 17:00:43,484 1061   [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==>  Preparing: INSERT INTO customer(userName, userAge, gender, hobby, userAddress, reg_time) VALUES(?,?, ?, ?,?, ?) 
+2020-11-11 17:00:43,538 1115   [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==> Parameters: null, 18(Integer), 1(Integer), FOOTBALL(String), china(String), 61565760000000(String)
+2020-11-11 17:00:43,542 1119   [           main] DEBUG ao.CustomerMapper.addCustomer2  - <==    Updates: 1
+2020-11-11 17:00:45,341 2918   [           main] DEBUG omerMapper.selectCustomerById2  - ==>  Preparing: select * from Customer where id=?; 
+2020-11-11 17:00:45,342 2919   [           main] DEBUG omerMapper.selectCustomerById2  - ==> Parameters: 1(Long)
+2020-11-11 17:00:45,373 2950   [           main] DEBUG omerMapper.selectCustomerById2  - <==      Total: 1
+2020-11-11 17:00:47,879 5456   [           main] DEBUG CustomerMapper.selectByExample  - ==>  Preparing: select id, userName, gender, hobby, member, userAge, userAddress, reg_time from customer WHERE ( hobby = ? ) 
+2020-11-11 17:00:47,881 5458   [           main] DEBUG CustomerMapper.selectByExample  - ==> Parameters: FOOTBALL(String)
+2020-11-11 17:00:47,932 5509   [           main] DEBUG CustomerMapper.selectByExample  - <==      Total: 15
+2020-11-11 17:01:10,378 27955  [           main] DEBUG CustomerMapper.selectByExample  - ==>  Preparing: select id, userName, gender, hobby, member, userAge, userAddress, reg_time from customer WHERE ( member = ? ) 
+2020-11-11 17:01:10,379 27956  [           main] DEBUG CustomerMapper.selectByExample  - ==> Parameters: 1(Integer)
+2020-11-11 17:01:10,380 27957  [           main] DEBUG CustomerMapper.selectByExample  - <==      Total: 0
+2020-11-11 17:01:17,148 34725  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 17:01:17,163 34740  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 17:01:17,169 34746  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 17:01:17,169 34746  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1607792885 to pool.
+2020-11-11 17:04:00,134 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-11 17:04:00,500 366    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 17:04:00,500 366    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 17:04:00,501 367    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 17:04:00,501 367    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-11 17:04:00,957 823    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-11 17:04:01,390 1256   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1607792885.
+2020-11-11 17:04:01,390 1256   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 17:04:01,394 1260   [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==>  Preparing: INSERT INTO customer(userName, userAge, gender, hobby, userAddress, member, reg_time) VALUES(?,?, ?, ?,?, ?, ?) 
+2020-11-11 17:04:01,445 1311   [           main] DEBUG ao.CustomerMapper.addCustomer2  - ==> Parameters: null, 18(Integer), 1(Integer), FOOTBALL(String), china(String), 1(Integer), 61565760000000(String)
+2020-11-11 17:04:01,449 1315   [           main] DEBUG ao.CustomerMapper.addCustomer2  - <==    Updates: 1
+2020-11-11 17:04:03,173 3039   [           main] DEBUG omerMapper.selectCustomerById2  - ==>  Preparing: select * from Customer where id=?; 
+2020-11-11 17:04:03,173 3039   [           main] DEBUG omerMapper.selectCustomerById2  - ==> Parameters: 1(Long)
+2020-11-11 17:04:03,205 3071   [           main] DEBUG omerMapper.selectCustomerById2  - <==      Total: 1
+2020-11-11 17:04:03,893 3759   [           main] DEBUG CustomerMapper.selectByExample  - ==>  Preparing: select id, userName, gender, hobby, member, userAge, userAddress, reg_time from customer WHERE ( hobby = ? ) 
+2020-11-11 17:04:03,893 3759   [           main] DEBUG CustomerMapper.selectByExample  - ==> Parameters: FOOTBALL(String)
+2020-11-11 17:04:03,913 3779   [           main] DEBUG CustomerMapper.selectByExample  - <==      Total: 16
+2020-11-11 17:04:04,745 4611   [           main] DEBUG CustomerMapper.selectByExample  - ==>  Preparing: select id, userName, gender, hobby, member, userAge, userAddress, reg_time from customer WHERE ( member = ? ) 
+2020-11-11 17:04:04,745 4611   [           main] DEBUG CustomerMapper.selectByExample  - ==> Parameters: 1(Integer)
+2020-11-11 17:04:04,752 4618   [           main] DEBUG CustomerMapper.selectByExample  - <==      Total: 1
+2020-11-11 17:04:04,753 4619   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 17:04:04,757 4623   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 17:04:04,762 4628   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fd4f8f5]
+2020-11-11 17:04:04,762 4628   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1607792885 to pool.
