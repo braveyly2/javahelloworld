@@ -43,5 +43,9 @@
     <mappers>
         <mapper resource="mapper/TWifeMapper.xml"/>
         <mapper resource="mapper/THusbandMapper.xml"/>
+        <mapper resource="mapper/TUserMapper.xml"/>
+        <mapper resource="mapper/TOrderMapper.xml"/>
+        <mapper resource="mapper/TStudentMapper.xml"/>
+        <mapper resource="mapper/TTeacherMapper.xml"/>
     </mappers>
 </configuration>
