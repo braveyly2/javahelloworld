@@ -95,4 +95,6 @@ public interface TTeacherMapper {
     int updateByPrimaryKey(TTeacher record);
 
     TTeacher selectAll(Long id);
+
+    List<TTeacher> selectTeachByStudentId(Long id);
 }

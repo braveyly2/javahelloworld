@@ -94,5 +94,5 @@ public interface TStudentMapper {
      */
     int updateByPrimaryKey(TStudent record);
 
-    TStudent selectAll(Long id);
+    List<TStudent> selectStudentByTeacherId(Long id);
 }

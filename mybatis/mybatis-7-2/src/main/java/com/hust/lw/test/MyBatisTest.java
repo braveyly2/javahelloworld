@@ -130,21 +130,21 @@ public class MyBatisTest {
     //测试多对多关联
     @Test
     public void testTeacherStudentMapperWrite() {
-
+        //TStudent tStudent = tStudentMapper.selectByPrimaryKey(1L);
+        //System.out.println(tStudent);
     }
 
     //测试多对多关联
     @Test
     public void testStudentMapperRead() {
-        TStudent tStudent = tStudentMapper.selectAll(1L);
-        System.out.println(tStudent.getTeacherList());
+        TStudent tStudent = tStudentMapper.selectByPrimaryKey(1L);
+        System.out.println(tStudent);
     }
 
     //测试多对多关联
     @Test
     public void testTeacherMapperRead() {
-        TTeacher tTeacher = tTeacherMapper.selectAll(3L);
+        TTeacher tTeacher = tTeacherMapper.selectByPrimaryKey(3L);
         System.out.println(tTeacher.getStudentList());
-
     }
 }

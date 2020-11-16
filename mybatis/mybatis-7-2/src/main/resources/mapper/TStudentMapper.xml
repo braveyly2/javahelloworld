@@ -10,17 +10,10 @@
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="age" jdbcType="INTEGER" property="age" />
     <result column="level" jdbcType="VARCHAR" property="level" />
+    <collection property="teacherList" column="id" select="com.hust.lw.dao.TTeacherMapper.selectTeachByStudentId" fetchType="eager" />
   </resultMap>
-  <resultMap id="CollectionBaseResultMap" type="com.hust.lw.model.TStudent" extends="BaseResultMap">
-    <collection property="teacherList" ofType="com.hust.lw.model.TTeacher">
-      <id property="id" column="teach_id" />
-      <result column="teach_name" jdbcType="VARCHAR" property="name" />
-      <result column="teach_age" jdbcType="INTEGER" property="age" />
-      <result column="dep" jdbcType="VARCHAR" property="dep" />
-    </collection>
-  </resultMap>
-  <select id="selectAll" parameterType="Long" resultMap="CollectionBaseResultMap">
-    select s.id,s.name,s.age,s.level,t.id teach_id,t.name teach_name,t.age teach_age,t.dep from t_student s left join t_stu_teach_rel r on s.id=r.stu_id left join t_teacher t on t.id=r.teach_id where s.id=#{id}
+  <select id="selectStudentByTeacherId" parameterType="Long" resultMap="BaseResultMap">
+      select t_student.* from t_student left join t_stu_teach_rel on t_student.id = t_stu_teach_rel.stu_id where t_stu_teach_rel.teach_id = #{id}
   </select>
   <sql id="Example_Where_Clause">
     <!--

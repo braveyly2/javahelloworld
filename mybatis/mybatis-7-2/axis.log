@@ -925,3 +925,153 @@
 2020-11-16 11:42:18,629 20832  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
 2020-11-16 11:42:18,630 20833  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
 2020-11-16 11:42:18,630 20833  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1150963491 to pool.
+2020-11-16 11:56:52,725 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 11:56:53,114 389    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 11:56:53,115 390    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 11:56:53,115 390    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 11:56:53,115 390    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 11:56:53,851 1126   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 11:56:54,262 1537   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 288958772.
+2020-11-16 11:56:54,262 1537   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@11392934]
+2020-11-16 11:56:54,271 1546   [           main] DEBUG udentMapper.selectByPrimaryKey  - ==>  Preparing: select id, name, age, level from t_student where id = ? 
+2020-11-16 11:56:54,327 1602   [           main] DEBUG udentMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 11:56:54,362 1637   [           main] DEBUG rMapper.selectTeachByStudentId  - ====>  Preparing: select t_teacher.* from t_teacher left join t_stu_teach_rel on t_teacher.id = t_stu_teach_rel.teach_id where t_stu_teach_rel.stu_id = ? 
+2020-11-16 11:56:54,363 1638   [           main] DEBUG rMapper.selectTeachByStudentId  - ====> Parameters: 1(Long)
+2020-11-16 11:56:54,369 1644   [           main] DEBUG rMapper.selectTeachByStudentId  - <====      Total: 3
+2020-11-16 11:56:54,370 1645   [           main] DEBUG udentMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 11:56:54,373 1648   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@11392934]
+2020-11-16 11:56:54,375 1650   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@11392934]
+2020-11-16 11:56:54,375 1650   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 288958772 to pool.
+2020-11-16 11:57:13,804 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 11:57:14,141 337    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 11:57:14,141 337    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 11:57:14,141 337    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 11:57:14,141 337    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 11:57:16,773 2969   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 11:57:17,276 3472   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1150963491.
+2020-11-16 11:57:17,277 3473   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 11:57:17,285 3481   [           main] DEBUG udentMapper.selectByPrimaryKey  - ==>  Preparing: select id, name, age, level from t_student where id = ? 
+2020-11-16 11:57:17,535 3731   [           main] DEBUG udentMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 11:57:17,691 3887   [           main] DEBUG rMapper.selectTeachByStudentId  - ====>  Preparing: select t_teacher.* from t_teacher left join t_stu_teach_rel on t_teacher.id = t_stu_teach_rel.teach_id where t_stu_teach_rel.stu_id = ? 
+2020-11-16 11:57:17,691 3887   [           main] DEBUG rMapper.selectTeachByStudentId  - ====> Parameters: 1(Long)
+2020-11-16 11:57:17,696 3892   [           main] DEBUG rMapper.selectTeachByStudentId  - <====      Total: 3
+2020-11-16 11:57:17,697 3893   [           main] DEBUG udentMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 11:57:28,242 14438  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 11:57:28,243 14439  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 11:57:28,243 14439  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1150963491 to pool.
+2020-11-16 13:41:01,577 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 13:41:02,052 475    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 13:41:02,052 475    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 13:41:02,052 475    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 13:41:02,053 476    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 13:41:04,659 3082   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 13:41:05,052 3475   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1150963491.
+2020-11-16 13:41:05,052 3475   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 13:41:05,057 3480   [           main] DEBUG acherMapper.selectByPrimaryKey  - ==>  Preparing: select id, name, age, dep from t_teacher where id = ? 
+2020-11-16 13:41:05,254 3677   [           main] DEBUG acherMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 13:41:05,497 3920   [           main] DEBUG acherMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 13:41:36,996 35419  [           main] DEBUG apper.selectStudentByTeacherId  - ==>  Preparing: select t_student.* from t_student left join t_stu_teach_rel on t_student.id = t_stu_teach_rel.stu_id where t_stu_teach_rel.teach_id = ? 
+2020-11-16 13:41:36,997 35420  [           main] DEBUG apper.selectStudentByTeacherId  - ==> Parameters: 1(Long)
+2020-11-16 13:41:36,999 35422  [           main] DEBUG rMapper.selectTeachByStudentId  - ====>  Preparing: select t_teacher.* from t_teacher left join t_stu_teach_rel on t_teacher.id = t_stu_teach_rel.teach_id where t_stu_teach_rel.stu_id = ? 
+2020-11-16 13:41:36,999 35422  [           main] DEBUG rMapper.selectTeachByStudentId  - ====> Parameters: 1(Long)
+2020-11-16 13:41:37,007 35430  [           main] DEBUG rMapper.selectTeachByStudentId  - <====      Total: 3
+2020-11-16 13:41:37,007 35430  [           main] DEBUG apper.selectStudentByTeacherId  - <==      Total: 1
+2020-11-16 13:41:37,008 35431  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 13:41:37,009 35432  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 13:41:37,009 35432  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1150963491 to pool.
+2020-11-16 13:41:40,791 1      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 13:41:41,233 443    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 13:41:41,234 444    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 13:41:41,234 444    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 13:41:41,234 444    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 13:41:44,874 4084   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 13:41:45,320 4530   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1150963491.
+2020-11-16 13:41:45,320 4530   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 13:41:45,327 4537   [           main] DEBUG acherMapper.selectByPrimaryKey  - ==>  Preparing: select id, name, age, dep from t_teacher where id = ? 
+2020-11-16 13:41:45,543 4753   [           main] DEBUG acherMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 13:41:45,683 4893   [           main] DEBUG apper.selectStudentByTeacherId  - ====>  Preparing: select t_student.* from t_student left join t_stu_teach_rel on t_student.id = t_stu_teach_rel.stu_id where t_stu_teach_rel.teach_id = ? 
+2020-11-16 13:41:45,684 4894   [           main] DEBUG apper.selectStudentByTeacherId  - ====> Parameters: 1(Long)
+2020-11-16 13:41:45,686 4896   [           main] DEBUG rMapper.selectTeachByStudentId  - ======>  Preparing: select t_teacher.* from t_teacher left join t_stu_teach_rel on t_teacher.id = t_stu_teach_rel.teach_id where t_stu_teach_rel.stu_id = ? 
+2020-11-16 13:41:45,687 4897   [           main] DEBUG rMapper.selectTeachByStudentId  - ======> Parameters: 1(Long)
+2020-11-16 13:41:45,694 4904   [           main] DEBUG apper.selectStudentByTeacherId  - ========>  Preparing: select t_student.* from t_student left join t_stu_teach_rel on t_student.id = t_stu_teach_rel.stu_id where t_stu_teach_rel.teach_id = ? 
+2020-11-16 13:41:45,695 4905   [           main] DEBUG apper.selectStudentByTeacherId  - ========> Parameters: 2(Long)
+2020-11-16 13:41:45,697 4907   [           main] DEBUG apper.selectStudentByTeacherId  - <========      Total: 1
+2020-11-16 13:41:45,698 4908   [           main] DEBUG apper.selectStudentByTeacherId  - ========>  Preparing: select t_student.* from t_student left join t_stu_teach_rel on t_student.id = t_stu_teach_rel.stu_id where t_stu_teach_rel.teach_id = ? 
+2020-11-16 13:41:45,699 4909   [           main] DEBUG apper.selectStudentByTeacherId  - ========> Parameters: 3(Long)
+2020-11-16 13:41:45,706 4916   [           main] DEBUG rMapper.selectTeachByStudentId  - ==========>  Preparing: select t_teacher.* from t_teacher left join t_stu_teach_rel on t_teacher.id = t_stu_teach_rel.teach_id where t_stu_teach_rel.stu_id = ? 
+2020-11-16 13:41:45,706 4916   [           main] DEBUG rMapper.selectTeachByStudentId  - ==========> Parameters: 2(Long)
+2020-11-16 13:41:45,709 4919   [           main] DEBUG rMapper.selectTeachByStudentId  - <==========      Total: 1
+2020-11-16 13:41:45,711 4921   [           main] DEBUG rMapper.selectTeachByStudentId  - ==========>  Preparing: select t_teacher.* from t_teacher left join t_stu_teach_rel on t_teacher.id = t_stu_teach_rel.teach_id where t_stu_teach_rel.stu_id = ? 
+2020-11-16 13:41:45,712 4922   [           main] DEBUG rMapper.selectTeachByStudentId  - ==========> Parameters: 4(Long)
+2020-11-16 13:41:45,720 4930   [           main] DEBUG rMapper.selectTeachByStudentId  - <==========      Total: 1
+2020-11-16 13:41:45,720 4930   [           main] DEBUG apper.selectStudentByTeacherId  - <========      Total: 3
+2020-11-16 13:41:45,723 4933   [           main] DEBUG rMapper.selectTeachByStudentId  - <======      Total: 3
+2020-11-16 13:41:45,724 4934   [           main] DEBUG apper.selectStudentByTeacherId  - <====      Total: 1
+2020-11-16 13:41:45,724 4934   [           main] DEBUG acherMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 13:42:23,868 43078  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 13:42:23,874 43084  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 13:42:23,874 43084  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1150963491 to pool.
+2020-11-16 13:42:27,843 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 13:42:28,173 330    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 13:42:28,174 331    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 13:42:28,174 331    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 13:42:28,174 331    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 13:42:30,941 3098   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 13:42:31,421 3578   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1150963491.
+2020-11-16 13:42:31,422 3579   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 13:42:31,429 3586   [           main] DEBUG acherMapper.selectByPrimaryKey  - ==>  Preparing: select id, name, age, dep from t_teacher where id = ? 
+2020-11-16 13:42:31,671 3828   [           main] DEBUG acherMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 13:42:31,845 4002   [           main] DEBUG apper.selectStudentByTeacherId  - ====>  Preparing: select t_student.* from t_student left join t_stu_teach_rel on t_student.id = t_stu_teach_rel.stu_id where t_stu_teach_rel.teach_id = ? 
+2020-11-16 13:42:31,845 4002   [           main] DEBUG apper.selectStudentByTeacherId  - ====> Parameters: 1(Long)
+2020-11-16 13:42:31,848 4005   [           main] DEBUG rMapper.selectTeachByStudentId  - ======>  Preparing: select t_teacher.* from t_teacher left join t_stu_teach_rel on t_teacher.id = t_stu_teach_rel.teach_id where t_stu_teach_rel.stu_id = ? 
+2020-11-16 13:42:31,849 4006   [           main] DEBUG rMapper.selectTeachByStudentId  - ======> Parameters: 1(Long)
+2020-11-16 13:42:31,859 4016   [           main] DEBUG apper.selectStudentByTeacherId  - ========>  Preparing: select t_student.* from t_student left join t_stu_teach_rel on t_student.id = t_stu_teach_rel.stu_id where t_stu_teach_rel.teach_id = ? 
+2020-11-16 13:42:31,860 4017   [           main] DEBUG apper.selectStudentByTeacherId  - ========> Parameters: 2(Long)
+2020-11-16 13:42:31,863 4020   [           main] DEBUG apper.selectStudentByTeacherId  - <========      Total: 1
+2020-11-16 13:42:31,864 4021   [           main] DEBUG apper.selectStudentByTeacherId  - ========>  Preparing: select t_student.* from t_student left join t_stu_teach_rel on t_student.id = t_stu_teach_rel.stu_id where t_stu_teach_rel.teach_id = ? 
+2020-11-16 13:42:31,865 4022   [           main] DEBUG apper.selectStudentByTeacherId  - ========> Parameters: 3(Long)
+2020-11-16 13:42:31,876 4033   [           main] DEBUG rMapper.selectTeachByStudentId  - ==========>  Preparing: select t_teacher.* from t_teacher left join t_stu_teach_rel on t_teacher.id = t_stu_teach_rel.teach_id where t_stu_teach_rel.stu_id = ? 
+2020-11-16 13:42:31,876 4033   [           main] DEBUG rMapper.selectTeachByStudentId  - ==========> Parameters: 2(Long)
+2020-11-16 13:42:31,880 4037   [           main] DEBUG rMapper.selectTeachByStudentId  - <==========      Total: 1
+2020-11-16 13:42:31,882 4039   [           main] DEBUG rMapper.selectTeachByStudentId  - ==========>  Preparing: select t_teacher.* from t_teacher left join t_stu_teach_rel on t_teacher.id = t_stu_teach_rel.teach_id where t_stu_teach_rel.stu_id = ? 
+2020-11-16 13:42:31,883 4040   [           main] DEBUG rMapper.selectTeachByStudentId  - ==========> Parameters: 4(Long)
+2020-11-16 13:42:31,886 4043   [           main] DEBUG rMapper.selectTeachByStudentId  - <==========      Total: 1
+2020-11-16 13:42:31,886 4043   [           main] DEBUG apper.selectStudentByTeacherId  - <========      Total: 3
+2020-11-16 13:42:31,888 4045   [           main] DEBUG rMapper.selectTeachByStudentId  - <======      Total: 3
+2020-11-16 13:42:31,888 4045   [           main] DEBUG apper.selectStudentByTeacherId  - <====      Total: 1
+2020-11-16 13:42:31,889 4046   [           main] DEBUG acherMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 13:43:07,808 39965  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 13:43:07,810 39967  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 13:43:07,811 39968  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1150963491 to pool.
+2020-11-16 13:43:12,087 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 13:43:12,425 338    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 13:43:12,425 338    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 13:43:12,425 338    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 13:43:12,425 338    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 13:43:14,911 2824   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 13:43:15,394 3307   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1150963491.
+2020-11-16 13:43:15,395 3308   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 13:43:15,402 3315   [           main] DEBUG acherMapper.selectByPrimaryKey  - ==>  Preparing: select id, name, age, dep from t_teacher where id = ? 
+2020-11-16 13:43:15,654 3567   [           main] DEBUG acherMapper.selectByPrimaryKey  - ==> Parameters: 3(Long)
+2020-11-16 13:43:15,837 3750   [           main] DEBUG apper.selectStudentByTeacherId  - ====>  Preparing: select t_student.* from t_student left join t_stu_teach_rel on t_student.id = t_stu_teach_rel.stu_id where t_stu_teach_rel.teach_id = ? 
+2020-11-16 13:43:15,837 3750   [           main] DEBUG apper.selectStudentByTeacherId  - ====> Parameters: 3(Long)
+2020-11-16 13:43:15,841 3754   [           main] DEBUG rMapper.selectTeachByStudentId  - ======>  Preparing: select t_teacher.* from t_teacher left join t_stu_teach_rel on t_teacher.id = t_stu_teach_rel.teach_id where t_stu_teach_rel.stu_id = ? 
+2020-11-16 13:43:15,841 3754   [           main] DEBUG rMapper.selectTeachByStudentId  - ======> Parameters: 1(Long)
+2020-11-16 13:43:15,846 3759   [           main] DEBUG apper.selectStudentByTeacherId  - ========>  Preparing: select t_student.* from t_student left join t_stu_teach_rel on t_student.id = t_stu_teach_rel.stu_id where t_stu_teach_rel.teach_id = ? 
+2020-11-16 13:43:15,847 3760   [           main] DEBUG apper.selectStudentByTeacherId  - ========> Parameters: 1(Long)
+2020-11-16 13:43:15,855 3768   [           main] DEBUG apper.selectStudentByTeacherId  - <========      Total: 1
+2020-11-16 13:43:15,857 3770   [           main] DEBUG apper.selectStudentByTeacherId  - ========>  Preparing: select t_student.* from t_student left join t_stu_teach_rel on t_student.id = t_stu_teach_rel.stu_id where t_stu_teach_rel.teach_id = ? 
+2020-11-16 13:43:15,857 3770   [           main] DEBUG apper.selectStudentByTeacherId  - ========> Parameters: 2(Long)
+2020-11-16 13:43:15,861 3774   [           main] DEBUG apper.selectStudentByTeacherId  - <========      Total: 1
+2020-11-16 13:43:15,862 3775   [           main] DEBUG rMapper.selectTeachByStudentId  - <======      Total: 3
+2020-11-16 13:43:15,868 3781   [           main] DEBUG rMapper.selectTeachByStudentId  - ======>  Preparing: select t_teacher.* from t_teacher left join t_stu_teach_rel on t_teacher.id = t_stu_teach_rel.teach_id where t_stu_teach_rel.stu_id = ? 
+2020-11-16 13:43:15,869 3782   [           main] DEBUG rMapper.selectTeachByStudentId  - ======> Parameters: 2(Long)
+2020-11-16 13:43:15,872 3785   [           main] DEBUG rMapper.selectTeachByStudentId  - <======      Total: 1
+2020-11-16 13:43:15,873 3786   [           main] DEBUG rMapper.selectTeachByStudentId  - ======>  Preparing: select t_teacher.* from t_teacher left join t_stu_teach_rel on t_teacher.id = t_stu_teach_rel.teach_id where t_stu_teach_rel.stu_id = ? 
+2020-11-16 13:43:15,873 3786   [           main] DEBUG rMapper.selectTeachByStudentId  - ======> Parameters: 4(Long)
+2020-11-16 13:43:15,879 3792   [           main] DEBUG rMapper.selectTeachByStudentId  - <======      Total: 1
+2020-11-16 13:43:15,879 3792   [           main] DEBUG apper.selectStudentByTeacherId  - <====      Total: 3
+2020-11-16 13:43:15,880 3793   [           main] DEBUG acherMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 13:43:39,785 27698  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 13:43:39,787 27700  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 13:43:39,787 27700  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1150963491 to pool.
