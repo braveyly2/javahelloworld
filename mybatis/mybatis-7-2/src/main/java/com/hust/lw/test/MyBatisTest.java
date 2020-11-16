@@ -121,9 +121,10 @@ public class MyBatisTest {
 
     }
 
+    //测试一对多关联
     @Test
     public void testUserMapperRead() {
-        TUser user = tUserMapper.selectAll(6L);
+        TUser user = tUserMapper.selectByPrimaryKey(1L);
         System.out.println(user.getOrderList());
     }
     //测试多对多关联

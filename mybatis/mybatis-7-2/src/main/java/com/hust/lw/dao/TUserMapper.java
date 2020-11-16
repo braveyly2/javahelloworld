@@ -94,5 +94,4 @@ public interface TUserMapper {
      */
     int updateByPrimaryKey(TUser record);
 
-    TUser selectAll(Long id);
 }

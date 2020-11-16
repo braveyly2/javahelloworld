@@ -93,4 +93,6 @@ public interface TOrderMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(TOrder record);
+
+    List<TOrder> selectOrderByUserId(Long id);
 }

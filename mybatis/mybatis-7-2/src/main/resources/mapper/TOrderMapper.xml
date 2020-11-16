@@ -11,6 +11,9 @@
     <result column="number" jdbcType="INTEGER" property="number" />
     <result column="create_time" jdbcType="VARCHAR" property="createTime" />
   </resultMap>
+  <select id="selectOrderByUserId" parameterType="Long" resultMap="BaseResultMap">
+          select t_order.* from t_order where user_id=#{id}
+  </select>
   <sql id="Example_Where_Clause">
     <!--
       WARNING - @mbg.generated

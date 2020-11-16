@@ -13,16 +13,8 @@
     <result column="vx_nickname" jdbcType="VARCHAR" property="vxNickname" />
     <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
     <result column="mark" jdbcType="VARCHAR" property="mark" />
-    <collection property="orderList" javaType="list" ofType="com.hust.lw.model.TOrder">
-      <id property="id" column="oid" />
-      <result property="userId" column="user_id" />
-      <result property="number" column="number" />
-      <result property="createTime" column="create_time" />
-    </collection>
+    <collection property="orderList" column="id" select="com.hust.lw.dao.TOrderMapper.selectOrderByUserId" fetchType="eager"/>
   </resultMap>
-  <select id="selectAll" parameterType="Long" resultMap="BaseResultMap">
-      SELECT u.id,u.phone,o.id oid,o.number from t_user u left join t_order o on u.id = o.user_id where u.id = #{id}
-  </select>
   <sql id="Example_Where_Clause">
     <!--
       WARNING - @mbg.generated
