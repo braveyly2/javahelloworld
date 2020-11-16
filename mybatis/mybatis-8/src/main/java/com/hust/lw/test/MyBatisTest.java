@@ -55,7 +55,7 @@ public class MyBatisTest {
     //通过Id查询一个用户
     @Test
     public void testPerson() {
-        TPerson tPerson = tPersonMapper.selectAll(1L,1);
+        TPerson tPerson = tPersonMapper.selectAll(1L,3);
         System.out.println(tPerson);
     }
 }

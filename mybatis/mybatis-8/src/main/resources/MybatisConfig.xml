@@ -6,7 +6,7 @@
 <configuration>
     <settings>
         <setting name="cacheEnabled" value="true"/>
-        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="lazyLoadingEnabled" value="false"/>
         <setting name="multipleResultSetsEnabled" value="true"/>
         <setting name="useColumnLabel" value="true"/>
         <setting name="useGeneratedKeys" value="false"/>
@@ -31,7 +31,7 @@
             <dataSource type="POOLED">
                 <!--配置连接数据库的4个基本信息-->
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://127.0.0.1:3306/mytest"/>
+                <property name="url" value="jdbc:mysql://127.0.0.1:3306/mytest2"/>
                 <property name="username" value="root"/>
                 <property name="password" value=""/>
             </dataSource>

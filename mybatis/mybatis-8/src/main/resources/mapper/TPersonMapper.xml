@@ -9,7 +9,7 @@
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
     <result column="age" jdbcType="INTEGER" property="age" />
-    <discriminator javaType="java.lang.Integer" column="age">
+    <discriminator javaType="java.lang.Integer" column="type_flag">
       <case value="1" resultMap="PartnerBaseResultMap"/>
       <case value="2" resultMap="ClassMateListBaseResultMap"/>
       <case value="3" resultMap="WorkMateListBaseResultMap"/>
@@ -21,8 +21,7 @@
                  select="com.hust.lw.dao.TPartnerMapper.selectByPersonId" column="id" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ClassMateListBaseResultMap" type="com.hust.lw.model.TPerson">
-    <collection property="classmateList" javaType="list" ofType="com.hust.lw.model.TClassmate"
-                select="com.hust.lw.dao.TClassmateMapper.selectAll" column="id" />
+    <collection property="classmateList" select="com.hust.lw.dao.TClassmateMapper.selectByPersonId" column="id" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="WorkMateListBaseResultMap" type="com.hust.lw.model.TPerson">
     <collection property="workmateList" javaType="list" ofType="com.hust.lw.model.TWorkmate"

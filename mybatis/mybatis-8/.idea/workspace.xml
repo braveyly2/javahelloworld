@@ -5,7 +5,13 @@
       <change beforePath="$PROJECT_DIR$/../../JAVAHelloWorld.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../JAVAHelloWorld.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mybatis-5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mybatis-5/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mybatis-6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mybatis-6/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybatis-7-2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mybatis-7-2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mybatis-7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mybatis-7/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axis.log" beforeDir="false" afterPath="$PROJECT_DIR$/axis.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/lw/test/MyBatisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/lw/test/MyBatisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MybatisConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MybatisConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TPersonMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TPersonMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,34 +63,37 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="623" />
-          <entry key="xml" value="809" />
+          <entry key="java" value="625" />
+          <entry key="xml" value="833" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="623" />
+          <entry key="JAVA" value="625" />
           <entry key="SQL" value="3" />
-          <entry key="XML" value="806" />
+          <entry key="XML" value="830" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="java" value="7" />
-          <entry key="xml" value="5" />
+          <entry key="java" value="15" />
+          <entry key="properties" value="1" />
+          <entry key="xml" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="7" />
-          <entry key="XML" value="5" />
+          <entry key="JAVA" value="15" />
+          <entry key="Properties" value="1" />
+          <entry key="XML" value="8" />
         </counts>
       </usages-collector>
     </session>
@@ -94,17 +103,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/model/TPerson.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="121" column="73" selection-start-line="121" selection-start-column="73" selection-end-line="121" selection-end-column="73" />
+            <state relative-caret-position="299">
+              <caret line="40" column="8" lean-forward="true" selection-start-line="39" selection-end-line="41" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TPersonMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+            <state relative-caret-position="-1190">
+              <caret line="20" column="72" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -112,17 +121,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/dao/TPersonMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
+            <state relative-caret-position="1581">
               <caret line="96" column="67" selection-start-line="96" selection-start-column="67" selection-end-line="96" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/dao/TClassmateMapper.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/model/TWorkmate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="96" column="37" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="37" />
+            <state relative-caret-position="183">
+              <caret line="26" column="25" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -130,8 +139,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/test/MyBatisTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="-75">
+              <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,28 +149,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/org/junit/runners/model/FrameworkMethod.class">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/model/TClassmate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/MybatisConfig.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="12" column="58" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="58" />
+            <state relative-caret-position="153">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/type/TypeAliasRegistry.class">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/model/TPartner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="90" selection-start-line="90" selection-end-line="90" />
+            <state relative-caret-position="-159">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -169,8 +169,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TClassmateMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="106" column="32" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="32" />
+            <state relative-caret-position="1445">
+              <caret line="85" column="25" lean-forward="true" selection-start-line="85" selection-start-column="14" selection-end-line="85" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -178,8 +178,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TPartnerMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="94" column="24" lean-forward="true" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
+            <state relative-caret-position="1598">
+              <caret line="94" column="24" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TWorkmateMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1462">
+              <caret line="86" column="61" selection-start-line="86" selection-start-column="61" selection-end-line="86" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -190,11 +199,11 @@
     <findStrings>
       <find>insert</find>
       <find>com.hust.lw.dao.TClassmateMapper</find>
-      <find>selectByPersonId</find>
       <find>SELECT</find>
       <find>type_flagtype</find>
       <find>type_flag</find>
       <find>PartnerBaseResultMap</find>
+      <find>selectByPersonId</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -217,11 +226,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/hust/lw/dao/TWorkmateMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/TWorkmateMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hust/lw/dao/TPersonMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hust/lw/test/MyBatisTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/TClassmateMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/TPartnerMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/TPersonMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/MybatisConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/TPersonMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hust/lw/test/MyBatisTest.java" />
       </list>
     </option>
   </component>
@@ -279,89 +288,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lw" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lw" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lw" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lw" type="462c0819:PsiDirectoryNode" />
-              <item name="type" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -471,7 +397,98 @@
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="generator" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="mybatis-8" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="mybatis-8" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="mapper" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lw" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lw" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lw" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lw" type="462c0819:PsiDirectoryNode" />
+              <item name="type" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -483,8 +500,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1605264323017" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1605511797957" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mybatis-7" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -635,49 +652,50 @@
       <workItem from="1604986736995" duration="5637000" />
       <workItem from="1605057382194" duration="3341000" />
       <workItem from="1605252049124" duration="7670000" />
+      <workItem from="1605487462630" duration="3782000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MyBatisTest_testPerson - 2020.11.13 at 16h 26m 03s.xml">
+    <history-entry file="MyBatisTest_testPerson - 2020.11.16 at 15h 07m 22s.xml">
       <configuration name="MyBatisTest.testPerson" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MyBatisTest_testPerson - 2020.11.13 at 16h 29m 22s.xml">
+    <history-entry file="MyBatisTest_testPerson - 2020.11.16 at 15h 11m 54s.xml">
       <configuration name="MyBatisTest.testPerson" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MyBatisTest_testPerson - 2020.11.13 at 17h 41m 12s.xml">
+    <history-entry file="MyBatisTest_testPerson - 2020.11.16 at 15h 12m 50s.xml">
       <configuration name="MyBatisTest.testPerson" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MyBatisTest_testPerson - 2020.11.13 at 17h 43m 21s.xml">
+    <history-entry file="MyBatisTest_testPerson - 2020.11.16 at 15h 13m 29s.xml">
       <configuration name="MyBatisTest.testPerson" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MyBatisTest_testPerson - 2020.11.13 at 17h 43m 54s.xml">
+    <history-entry file="MyBatisTest_testPerson - 2020.11.16 at 15h 13m 34s.xml">
       <configuration name="MyBatisTest.testPerson" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MyBatisTest_testPerson - 2020.11.13 at 17h 46m 25s.xml">
+    <history-entry file="MyBatisTest_testPerson - 2020.11.16 at 15h 15m 45s.xml">
       <configuration name="MyBatisTest.testPerson" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MyBatisTest_testPerson - 2020.11.13 at 17h 48m 50s.xml">
+    <history-entry file="MyBatisTest_testPerson - 2020.11.16 at 15h 16m 30s.xml">
       <configuration name="MyBatisTest.testPerson" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MyBatisTest_testPerson - 2020.11.13 at 18h 38m 58s.xml">
+    <history-entry file="MyBatisTest_testPerson - 2020.11.16 at 15h 17m 57s.xml">
       <configuration name="MyBatisTest.testPerson" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MyBatisTest_testPerson - 2020.11.13 at 18h 43m 55s.xml">
+    <history-entry file="MyBatisTest_testPerson - 2020.11.16 at 15h 18m 40s.xml">
       <configuration name="MyBatisTest.testPerson" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MyBatisTest_testPerson - 2020.11.13 at 18h 44m 36s.xml">
+    <history-entry file="MyBatisTest_testPerson - 2020.11.16 at 15h 19m 07s.xml">
       <configuration name="MyBatisTest.testPerson" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16648000" />
+    <option name="totallyTimeSpent" value="20430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23524657" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13662086" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -687,7 +705,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.20071048" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.22557727" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.1634103" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -704,7 +722,7 @@
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.13904607" />
+      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.025869038" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -730,13 +748,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/dao/UserMapper.java.1" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/dao/UserDao.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/sqlmap/User.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/dao/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="54" column="15" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/dao/UserMapper.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/generator/generatorConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -744,13 +756,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/model/User.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/type/MyMarkTypeHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -761,20 +767,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/model/UserExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="118" column="19" selection-start-line="118" selection-start-column="11" selection-end-line="118" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/model/UserExample.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -782,104 +776,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/model/TClassmate.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/org/junit/runners/model/FrameworkMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/dao/TPartnerMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="96" column="29" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/dao/TWorkmateMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="96" column="36" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TWorkmateMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="86" column="61" selection-start-line="86" selection-start-column="61" selection-end-line="86" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/model/TPerson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="121" column="73" selection-start-line="121" selection-start-column="73" selection-end-line="121" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/dao/TClassmateMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="96" column="37" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TClassmateMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="106" column="32" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/dao/TPersonMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="96" column="67" selection-start-line="96" selection-start-column="67" selection-end-line="96" selection-end-column="67" />
+        <state relative-caret-position="255">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/type/TypeAliasRegistry.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
+        <state relative-caret-position="1224">
           <caret line="90" selection-start-line="90" selection-end-line="90" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TPartnerMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/MybatisConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="94" column="24" lean-forward="true" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
+        <state relative-caret-position="136">
+          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/org/junit/runners/model/FrameworkMethod.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/dao/TPartnerMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="1581">
+          <caret line="96" column="29" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TPersonMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/dao/TClassmateMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+        <state relative-caret-position="285">
+          <caret line="96" column="37" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/dao/TWorkmateMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="96" column="36" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/test/MyBatisTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="-75">
+          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/MybatisConfig.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TClassmateMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="12" column="58" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="58" />
+        <state relative-caret-position="1445">
+          <caret line="85" column="25" lean-forward="true" selection-start-line="85" selection-start-column="14" selection-end-line="85" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TPartnerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="94" column="24" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TWorkmateMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="86" column="61" selection-start-line="86" selection-start-column="61" selection-end-line="86" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/model/TPerson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="40" column="8" lean-forward="true" selection-start-line="39" selection-end-line="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/model/TClassmate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/model/TPartner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-159">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/model/TWorkmate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/dao/TPersonMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="96" column="67" selection-start-line="96" selection-start-column="67" selection-end-line="96" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TPersonMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1190">
+          <caret line="20" column="72" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="72" />
         </state>
       </provider>
     </entry>
