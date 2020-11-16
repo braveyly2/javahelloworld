@@ -94,10 +94,11 @@ public class MyBatisTest {
     @Test
     public void testUserMapperWrite() {
         TUser user = new TUser();
-        user.setId(1L);
+        //user.setId(1L);
         user.setPhone("13638679973");
         tUserMapper.insert(user);
-
+        System.out.println("user id is " + user.getId());
+        /*
         TOrder order1 = new TOrder();
         //order1.setId(1L);
         order1.setUserId(1L);
@@ -118,6 +119,7 @@ public class MyBatisTest {
         order3.setNumber(30);
         tOrderMapper.insert(order3);
         session.commit();
+        */
 
     }
 
