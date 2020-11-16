@@ -13,7 +13,8 @@
     <result column="vx_nickname" jdbcType="VARCHAR" property="vxNickname" />
     <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
     <result column="mark" jdbcType="VARCHAR" property="mark" />
-    <collection property="orderList" column="id" select="com.hust.lw.dao.TOrderMapper.selectOrderByUserId" fetchType="eager"/>
+    <collection property="orderList" column="id"
+                select="com.hust.lw.dao.TOrderMapper.selectOrderByUserId" fetchType="eager"/>
   </resultMap>
   <sql id="Example_Where_Clause">
     <!--

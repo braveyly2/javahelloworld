@@ -10,10 +10,12 @@
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="age" jdbcType="INTEGER" property="age" />
     <result column="dep" jdbcType="VARCHAR" property="dep" />
-    <collection property="studentList" column="id" select="com.hust.lw.dao.TStudentMapper.selectStudentByTeacherId" fetchType="eager" />
+    <collection property="studentList" column="id"
+                select="com.hust.lw.dao.TStudentMapper.selectStudentByTeacherId" fetchType="eager" />
   </resultMap>
   <select id="selectTeachByStudentId" parameterType="Long" resultMap="BaseResultMap">
-      select t_teacher.* from t_teacher left join t_stu_teach_rel on t_teacher.id = t_stu_teach_rel.teach_id where t_stu_teach_rel.stu_id = #{id}
+      select t_teacher.* from t_teacher left join t_stu_teach_rel on t_teacher.id = t_stu_teach_rel.teach_id
+            where t_stu_teach_rel.stu_id = #{id}
   </select>
   <sql id="Example_Where_Clause">
     <!--
