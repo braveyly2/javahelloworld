@@ -1,0 +1,365 @@
+2020-11-13 16:02:15,632 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-13 16:02:15,993 361    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:02:15,993 361    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:02:15,993 361    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:02:15,993 361    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:08:27,665 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-13 16:08:27,839 174    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:08:27,839 174    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:08:27,839 174    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:08:27,839 174    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:24:34,257 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-13 16:24:34,497 240    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:24:34,497 240    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:24:34,498 241    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:24:34,498 241    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:24:34,849 592    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-13 16:24:35,101 844    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-13 16:24:35,101 844    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 16:24:35,105 848    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* where id=? 
+2020-11-13 16:24:35,147 890    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 1(Integer), 1(Long)
+2020-11-13 16:24:35,199 942    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 16:24:35,200 943    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 16:24:35,201 944    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-13 16:26:00,980 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-13 16:26:01,203 223    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:26:01,203 223    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:26:01,203 223    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:26:01,203 223    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:26:01,554 574    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-13 16:26:01,853 873    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-13 16:26:01,853 873    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 16:26:01,857 877    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-13 16:26:01,905 925    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 1(Integer), 1(Long)
+2020-11-13 16:26:02,012 1032   [           main] WARN  toMappingUnknownColumnBehavior  - Unknown column is detected on 'com.hust.lw.dao.TPersonMapper.selectAll' auto-mapping. Mapping parameters are [columnName=type_flag,propertyName=type_flag,propertyType=null]
+2020-11-13 16:26:02,015 1035   [           main] DEBUG lw.dao.TPersonMapper.selectAll  - <==      Total: 1
+2020-11-13 16:26:03,647 2667   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 16:26:03,648 2668   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 16:26:03,648 2668   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-13 16:29:21,439 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-13 16:29:21,762 323    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:29:21,762 323    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:29:21,762 323    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 16:29:21,762 323    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:41:12,564 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-13 17:41:12,730 166    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:41:12,730 166    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:41:12,730 166    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:41:12,730 166    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:43:20,712 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-13 17:43:20,893 181    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:43:20,893 181    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:43:20,893 181    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:43:20,893 181    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:43:51,936 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-13 17:43:52,105 169    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:43:52,105 169    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:43:52,105 169    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:43:52,105 169    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:43:52,366 430    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-13 17:43:52,650 714    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-13 17:43:52,651 715    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 17:43:52,654 718    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-13 17:43:52,698 762    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 1(Integer), 1(Long)
+2020-11-13 17:43:52,755 819    [           main] WARN  toMappingUnknownColumnBehavior  - Unknown column is detected on 'com.hust.lw.dao.TPersonMapper.selectAll' auto-mapping. Mapping parameters are [columnName=type_flag,propertyName=type_flag,propertyType=null]
+2020-11-13 17:43:52,757 821    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - <==      Total: 1
+2020-11-13 17:43:54,923 2987   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 17:43:54,924 2988   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 17:43:54,925 2989   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-13 17:44:51,367 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-13 17:44:51,535 168    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:44:51,535 168    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:44:51,535 168    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:44:51,535 168    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:44:51,823 456    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-13 17:44:52,079 712    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-13 17:44:52,079 712    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 17:44:52,083 716    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-13 17:44:52,129 762    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 1(Integer), 1(Long)
+2020-11-13 17:44:52,186 819    [           main] WARN  toMappingUnknownColumnBehavior  - Unknown column is detected on 'com.hust.lw.dao.TPersonMapper.selectAll' auto-mapping. Mapping parameters are [columnName=type_flag,propertyName=type_flag,propertyType=null]
+2020-11-13 17:44:52,188 821    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - <==      Total: 1
+2020-11-13 17:46:24,976 93609  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 17:46:24,978 93611  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 17:46:24,978 93611  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-13 17:48:42,692 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-13 17:48:42,884 192    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:48:42,884 192    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:48:42,884 192    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:48:42,884 192    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 17:48:43,149 457    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-13 17:48:43,422 730    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-13 17:48:43,422 730    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 17:48:43,426 734    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-13 17:48:43,470 778    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 1(Integer), 1(Long)
+2020-11-13 17:48:43,528 836    [           main] WARN  toMappingUnknownColumnBehavior  - Unknown column is detected on 'com.hust.lw.dao.TPersonMapper.selectAll' auto-mapping. Mapping parameters are [columnName=type_flag,propertyName=type_flag,propertyType=null]
+2020-11-13 17:48:43,531 839    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - <==      Total: 1
+2020-11-13 17:48:50,378 7686   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 17:48:50,379 7687   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 17:48:50,379 7687   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-13 18:38:51,934 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-13 18:38:52,165 231    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 18:38:52,165 231    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 18:38:52,165 231    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 18:38:52,165 231    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 18:38:52,496 562    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-13 18:38:52,749 815    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-13 18:38:52,749 815    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 18:38:52,753 819    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-13 18:38:52,800 866    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 1(Integer), 1(Long)
+2020-11-13 18:38:52,865 931    [           main] WARN  toMappingUnknownColumnBehavior  - Unknown column is detected on 'com.hust.lw.dao.TPersonMapper.selectAll' auto-mapping. Mapping parameters are [columnName=type_flag,propertyName=type_flag,propertyType=null]
+2020-11-13 18:38:52,867 933    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - <==      Total: 1
+2020-11-13 18:38:58,852 6918   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 18:38:58,854 6920   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 18:38:58,854 6920   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-13 18:43:51,853 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-13 18:43:52,037 184    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 18:43:52,037 184    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 18:43:52,037 184    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 18:43:52,037 184    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 18:43:52,470 617    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-13 18:43:52,848 995    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-13 18:43:52,848 995    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 18:43:52,853 1000   [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-13 18:43:52,895 1042   [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 1(Integer), 1(Long)
+2020-11-13 18:43:52,957 1104   [           main] WARN  toMappingUnknownColumnBehavior  - Unknown column is detected on 'com.hust.lw.dao.TPersonMapper.selectAll' auto-mapping. Mapping parameters are [columnName=type_flag,propertyName=type_flag,propertyType=null]
+2020-11-13 18:43:52,959 1106   [           main] DEBUG lw.dao.TPersonMapper.selectAll  - <==      Total: 1
+2020-11-13 18:43:55,277 3424   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 18:43:55,278 3425   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 18:43:55,278 3425   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-13 18:44:31,978 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-13 18:44:32,152 174    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 18:44:32,152 174    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 18:44:32,152 174    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 18:44:32,152 174    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-13 18:44:32,412 434    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-13 18:44:32,669 691    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-13 18:44:32,670 692    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 18:44:32,672 694    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-13 18:44:32,713 735    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 1(Integer), 1(Long)
+2020-11-13 18:44:32,736 758    [           main] WARN  toMappingUnknownColumnBehavior  - Unknown column is detected on 'com.hust.lw.dao.TPersonMapper.selectAll' auto-mapping. Mapping parameters are [columnName=type_flag,propertyName=type_flag,propertyType=null]
+2020-11-13 18:44:32,737 759    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - <==      Total: 1
+2020-11-13 18:44:36,286 4308   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 18:44:36,287 4309   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-13 18:44:36,287 4309   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-16 15:07:21,308 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 15:07:21,480 172    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:07:21,480 172    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:07:21,480 172    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:07:21,480 172    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:07:21,744 436    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 15:07:22,061 753    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-16 15:07:22,061 753    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:07:22,066 758    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-16 15:07:22,122 814    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 1(Integer), 1(Long)
+2020-11-16 15:07:22,171 863    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:07:22,172 864    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:07:22,173 865    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-16 15:11:31,402 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 15:11:31,575 173    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:11:31,575 173    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:11:31,575 173    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:11:31,575 173    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:11:31,843 441    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 15:11:32,119 717    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-16 15:11:32,119 717    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:11:32,122 720    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-16 15:11:32,167 765    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 1(Integer), 1(Long)
+2020-11-16 15:11:32,190 788    [           main] WARN  toMappingUnknownColumnBehavior  - Unknown column is detected on 'com.hust.lw.dao.TPersonMapper.selectAll' auto-mapping. Mapping parameters are [columnName=type_flag,propertyName=type_flag,propertyType=null]
+2020-11-16 15:11:32,190 788    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - <==      Total: 1
+2020-11-16 15:11:54,356 22954  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:11:54,357 22955  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:11:54,357 22955  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-16 15:11:57,398 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 15:11:57,584 186    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:11:57,584 186    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:11:57,584 186    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:11:57,584 186    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:11:57,863 465    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 15:11:58,280 882    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-16 15:11:58,280 882    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:11:58,286 888    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-16 15:11:58,351 953    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 1(Integer), 1(Long)
+2020-11-16 15:11:58,383 985    [           main] WARN  toMappingUnknownColumnBehavior  - Unknown column is detected on 'com.hust.lw.dao.TPersonMapper.selectAll' auto-mapping. Mapping parameters are [columnName=type_flag,propertyName=type_flag,propertyType=null]
+2020-11-16 15:11:58,383 985    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - <==      Total: 1
+2020-11-16 15:12:50,483 53085  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:12:50,485 53087  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:12:50,485 53087  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-16 15:12:54,036 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 15:12:54,203 167    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:12:54,203 167    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:12:54,203 167    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:12:54,203 167    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:12:54,509 473    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 15:12:54,831 795    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-16 15:12:54,831 795    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:12:54,837 801    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-16 15:12:54,890 854    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 1(Integer), 1(Long)
+2020-11-16 15:12:54,915 879    [           main] WARN  toMappingUnknownColumnBehavior  - Unknown column is detected on 'com.hust.lw.dao.TPersonMapper.selectAll' auto-mapping. Mapping parameters are [columnName=type_flag,propertyName=type_flag,propertyType=null]
+2020-11-16 15:12:54,917 881    [           main] DEBUG PartnerMapper.selectByPersonId  - ====>  Preparing: select t_partner.* from t_partner where person_id=? 
+2020-11-16 15:12:54,917 881    [           main] DEBUG PartnerMapper.selectByPersonId  - ====> Parameters: 1(Long)
+2020-11-16 15:12:54,920 884    [           main] DEBUG PartnerMapper.selectByPersonId  - <====      Total: 1
+2020-11-16 15:12:54,920 884    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - <==      Total: 1
+2020-11-16 15:13:29,755 35719  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:13:29,757 35721  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:13:29,757 35721  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-16 15:13:33,908 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 15:13:34,056 148    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:13:34,056 148    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:13:34,056 148    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:13:34,056 148    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:13:34,313 405    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 15:13:34,545 637    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-16 15:13:34,545 637    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:13:34,550 642    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-16 15:13:34,594 686    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 1(Integer), 1(Long)
+2020-11-16 15:13:34,617 709    [           main] WARN  toMappingUnknownColumnBehavior  - Unknown column is detected on 'com.hust.lw.dao.TPersonMapper.selectAll' auto-mapping. Mapping parameters are [columnName=type_flag,propertyName=type_flag,propertyType=null]
+2020-11-16 15:13:34,618 710    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:13:34,619 711    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:13:34,619 711    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-16 15:15:31,061 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 15:15:31,220 159    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:15:31,220 159    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:15:31,220 159    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:15:31,220 159    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:15:31,449 388    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 15:15:31,691 630    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-16 15:15:31,692 631    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:15:31,696 635    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-16 15:15:31,740 679    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 1(Integer), 1(Long)
+2020-11-16 15:15:31,760 699    [           main] WARN  toMappingUnknownColumnBehavior  - Unknown column is detected on 'com.hust.lw.dao.TPersonMapper.selectAll' auto-mapping. Mapping parameters are [columnName=type_flag,propertyName=type_flag,propertyType=null]
+2020-11-16 15:15:31,762 701    [           main] DEBUG assmateMapper.selectByPersonId  - ====>  Preparing: select t_classmate.* from t_classmate where person_id=? 
+2020-11-16 15:15:31,762 701    [           main] DEBUG assmateMapper.selectByPersonId  - ====> Parameters: 1(Long)
+2020-11-16 15:15:31,765 704    [           main] DEBUG assmateMapper.selectByPersonId  - <====      Total: 3
+2020-11-16 15:15:31,765 704    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - <==      Total: 1
+2020-11-16 15:15:44,979 13918  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:15:44,980 13919  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:15:44,980 13919  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-16 15:16:02,683 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 15:16:02,851 168    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:16:02,851 168    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:16:02,851 168    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:16:02,851 168    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:16:03,097 414    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 15:16:03,350 667    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-16 15:16:03,351 668    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:16:03,354 671    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-16 15:16:03,396 713    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 1(Integer), 1(Long)
+2020-11-16 15:16:03,418 735    [           main] WARN  toMappingUnknownColumnBehavior  - Unknown column is detected on 'com.hust.lw.dao.TPersonMapper.selectAll' auto-mapping. Mapping parameters are [columnName=type_flag,propertyName=type_flag,propertyType=null]
+2020-11-16 15:16:03,419 736    [           main] DEBUG orkmateMapper.selectByPersonId  - ====>  Preparing: select t_workmate.* from t_workmate where person_id=? 
+2020-11-16 15:16:03,420 737    [           main] DEBUG orkmateMapper.selectByPersonId  - ====> Parameters: 1(Long)
+2020-11-16 15:16:03,423 740    [           main] DEBUG orkmateMapper.selectByPersonId  - <====      Total: 3
+2020-11-16 15:16:03,424 741    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - <==      Total: 1
+2020-11-16 15:16:30,565 27882  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:16:30,567 27884  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:16:30,567 27884  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-16 15:17:47,892 1      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 15:17:48,030 139    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:17:48,030 139    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:17:48,030 139    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:17:48,030 139    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:17:48,261 370    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 15:17:48,517 626    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-16 15:17:48,518 627    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:17:48,521 630    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-16 15:17:48,559 668    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 1(Integer), 1(Long)
+2020-11-16 15:17:48,580 689    [           main] WARN  toMappingUnknownColumnBehavior  - Unknown column is detected on 'com.hust.lw.dao.TPersonMapper.selectAll' auto-mapping. Mapping parameters are [columnName=type_flag,propertyName=type_flag,propertyType=null]
+2020-11-16 15:17:48,581 690    [           main] DEBUG orkmateMapper.selectByPersonId  - ====>  Preparing: select t_workmate.* from t_workmate where person_id=? 
+2020-11-16 15:17:48,582 691    [           main] DEBUG orkmateMapper.selectByPersonId  - ====> Parameters: 1(Long)
+2020-11-16 15:17:48,584 693    [           main] DEBUG orkmateMapper.selectByPersonId  - <====      Total: 3
+2020-11-16 15:17:48,584 693    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - <==      Total: 1
+2020-11-16 15:17:56,987 9096   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:17:56,989 9098   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:17:56,989 9098   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-16 15:18:27,871 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 15:18:28,031 160    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:18:28,031 160    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:18:28,031 160    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:18:28,031 160    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:18:28,265 394    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 15:18:28,518 647    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-16 15:18:28,518 647    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:18:28,522 651    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-16 15:18:28,564 693    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 1(Integer), 1(Long)
+2020-11-16 15:18:28,583 712    [           main] WARN  toMappingUnknownColumnBehavior  - Unknown column is detected on 'com.hust.lw.dao.TPersonMapper.selectAll' auto-mapping. Mapping parameters are [columnName=type_flag,propertyName=type_flag,propertyType=null]
+2020-11-16 15:18:28,585 714    [           main] DEBUG PartnerMapper.selectByPersonId  - ====>  Preparing: select t_partner.* from t_partner where person_id=? 
+2020-11-16 15:18:28,585 714    [           main] DEBUG PartnerMapper.selectByPersonId  - ====> Parameters: 1(Long)
+2020-11-16 15:18:28,588 717    [           main] DEBUG PartnerMapper.selectByPersonId  - <====      Total: 1
+2020-11-16 15:18:28,588 717    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - <==      Total: 1
+2020-11-16 15:18:40,654 12783  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:18:40,656 12785  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:18:40,656 12785  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-16 15:18:44,816 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 15:18:44,987 171    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:18:44,987 171    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:18:44,987 171    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:18:44,987 171    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:18:45,298 482    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 15:18:45,592 776    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-16 15:18:45,593 777    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:18:45,597 781    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-16 15:18:45,645 829    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 2(Integer), 1(Long)
+2020-11-16 15:18:45,666 850    [           main] WARN  toMappingUnknownColumnBehavior  - Unknown column is detected on 'com.hust.lw.dao.TPersonMapper.selectAll' auto-mapping. Mapping parameters are [columnName=type_flag,propertyName=type_flag,propertyType=null]
+2020-11-16 15:18:45,668 852    [           main] DEBUG assmateMapper.selectByPersonId  - ====>  Preparing: select t_classmate.* from t_classmate where person_id=? 
+2020-11-16 15:18:45,669 853    [           main] DEBUG assmateMapper.selectByPersonId  - ====> Parameters: 1(Long)
+2020-11-16 15:18:45,671 855    [           main] DEBUG assmateMapper.selectByPersonId  - <====      Total: 3
+2020-11-16 15:18:45,672 856    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - <==      Total: 1
+2020-11-16 15:18:59,850 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 15:19:00,033 183    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:19:00,033 183    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:19:00,034 184    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:19:00,034 184    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 15:19:00,401 551    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 15:19:00,741 891    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 718068661.
+2020-11-16 15:19:00,742 892    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:19:00,746 896    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==>  Preparing: select ? as type_flag, t_person.* from t_person where id=? 
+2020-11-16 15:19:00,802 952    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - ==> Parameters: 3(Integer), 1(Long)
+2020-11-16 15:19:00,828 978    [           main] WARN  toMappingUnknownColumnBehavior  - Unknown column is detected on 'com.hust.lw.dao.TPersonMapper.selectAll' auto-mapping. Mapping parameters are [columnName=type_flag,propertyName=type_flag,propertyType=null]
+2020-11-16 15:19:00,832 982    [           main] DEBUG orkmateMapper.selectByPersonId  - ====>  Preparing: select t_workmate.* from t_workmate where person_id=? 
+2020-11-16 15:19:00,833 983    [           main] DEBUG orkmateMapper.selectByPersonId  - ====> Parameters: 1(Long)
+2020-11-16 15:19:00,837 987    [           main] DEBUG orkmateMapper.selectByPersonId  - <====      Total: 3
+2020-11-16 15:19:00,838 988    [           main] DEBUG lw.dao.TPersonMapper.selectAll  - <==      Total: 1
+2020-11-16 15:19:07,224 22408  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:19:07,226 22410  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:19:07,226 22410  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-16 15:19:07,228 7378   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:19:07,230 7380   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2accdbb5]
+2020-11-16 15:19:07,230 7380   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 718068661 to pool.
+2020-11-16 16:00:24,164 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 16:00:24,347 183    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 16:00:24,347 183    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 16:00:24,347 183    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 16:00:24,347 183    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 16:01:08,395 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 16:01:08,629 234    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 16:01:08,629 234    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 16:01:08,629 234    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 16:01:08,629 234    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 16:01:08,943 548    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 16:01:09,224 829    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1107217291.
+2020-11-16 16:01:09,224 829    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@41fecb8b]
+2020-11-16 16:01:09,227 832    [           main] DEBUG loyeeMapper.selectByPrimaryKey  - ==>  Preparing: select id, user_name, gender, age from t_employee where id = ? 
+2020-11-16 16:01:09,264 869    [           main] DEBUG loyeeMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 16:01:09,304 909    [           main] DEBUG eportMapper.selectByEmployeeId  - ====>  Preparing: select t_female_health_report.* from t_female_health_report where employee_id=? 
+2020-11-16 16:01:09,304 909    [           main] DEBUG eportMapper.selectByEmployeeId  - ====> Parameters: 1(Long)
+2020-11-16 16:01:09,306 911    [           main] DEBUG eportMapper.selectByEmployeeId  - <====      Total: 1
+2020-11-16 16:01:09,307 912    [           main] DEBUG loyeeMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 16:01:23,335 14940  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@41fecb8b]
+2020-11-16 16:01:23,336 14941  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@41fecb8b]
+2020-11-16 16:01:23,336 14941  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1107217291 to pool.
+2020-11-16 16:01:44,171 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 16:01:44,365 194    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 16:01:44,365 194    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 16:01:44,366 195    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 16:01:44,366 195    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 16:01:44,595 424    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 16:01:44,868 697    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1107217291.
+2020-11-16 16:01:44,869 698    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@41fecb8b]
+2020-11-16 16:01:44,872 701    [           main] DEBUG loyeeMapper.selectByPrimaryKey  - ==>  Preparing: select id, user_name, gender, age from t_employee where id = ? 
+2020-11-16 16:01:44,907 736    [           main] DEBUG loyeeMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 16:01:44,935 764    [           main] DEBUG eportMapper.selectByEmployeeId  - ====>  Preparing: select t_male_health_report.* from t_male_health_report where employee_id=? 
+2020-11-16 16:01:44,935 764    [           main] DEBUG eportMapper.selectByEmployeeId  - ====> Parameters: 1(Long)
+2020-11-16 16:01:44,938 767    [           main] DEBUG eportMapper.selectByEmployeeId  - <====      Total: 1
+2020-11-16 16:01:44,939 768    [           main] DEBUG loyeeMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 16:01:53,031 8860   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@41fecb8b]
+2020-11-16 16:01:53,032 8861   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@41fecb8b]
+2020-11-16 16:01:53,033 8862   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1107217291 to pool.
