@@ -95,4 +95,6 @@ public interface TWifeMapper {
     int updateByPrimaryKey(TWife record);
 
     TWife selectAll(Long id);
+
+    TWife selectWifeByHusbandId(Long id);
 }

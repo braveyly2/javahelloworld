@@ -11,12 +11,10 @@
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="beauty" jdbcType="VARCHAR" property="beauty" />
     <result column="husband_id" jdbcType="BIGINT" property="husband_id" />
-    <association property="husband" javaType="com.hust.lw.model.THusband">
-      <id property="id" column="husband_id" />
-      <result property="userName" column="user_name" />
-      <result property="userWork" column="user_work" />
-    </association>
   </resultMap>
+  <select id="selectWifeByHusbandId" parameterType="Long" resultMap="BaseResultMap">
+    select t_wife.* from t_wife where husband_id=#{id}
+  </select>
   <sql id="Example_Where_Clause">
     <!--
       WARNING - @mbg.generated

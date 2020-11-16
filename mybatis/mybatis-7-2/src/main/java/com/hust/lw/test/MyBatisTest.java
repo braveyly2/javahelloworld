@@ -77,12 +77,19 @@ public class MyBatisTest {
         tHusbandMapper.insert(husband);
     }
 
-    @Test
-    public void testWifeMapperRead() {
-        TWife wife = tWifeMapper.selectAll(1L);
-        System.out.println(wife);
-    }
+    //@Test
+    //public void testWifeMapperRead() {
+    //    TWife wife = tWifeMapper.selectAll(1L);
+    //    System.out.println(wife);
+    //}
 
+    @Test
+    public void testHusbandMapperRead() {
+        THusband husband = tHusbandMapper.selectByPrimaryKey(1L);
+        //TWife wife = husband.getWife();
+        System.out.println(husband);
+        //System.out.println(wife);
+    }
     //测试一对多关联
     @Test
     public void testUserMapperWrite() {

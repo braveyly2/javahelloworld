@@ -9,6 +9,7 @@
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
     <result column="user_work" jdbcType="VARCHAR" property="userWork" />
+    <association property="wife" column="id" select="com.hust.lw.dao.TWifeMapper.selectWifeByHusbandId" fetchType="lazy"/>
   </resultMap>
   <sql id="Example_Where_Clause">
     <!--

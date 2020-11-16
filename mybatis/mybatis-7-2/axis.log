@@ -597,3 +597,231 @@
 2020-11-13 10:12:37,818 36500  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
 2020-11-13 10:12:37,819 36501  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
 2020-11-13 10:12:37,820 36502  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1150963491 to pool.
+2020-11-16 09:35:04,562 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 09:35:04,897 335    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:35:04,897 335    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:35:04,897 335    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:35:04,897 335    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:35:05,258 696    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 09:35:05,514 952    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1226622409.
+2020-11-16 09:35:05,514 952    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@491cc5c9]
+2020-11-16 09:35:05,518 956    [           main] DEBUG t.lw.dao.TWifeMapper.selectAll  - ==>  Preparing: SELECT w.id,w.husband_id,w.age,w.name,w.beauty,h.user_name,h.user_work FROM t_wife w LEFT JOIN t_husband h ON w.husband_id = h.id WHERE w.id = ?; 
+2020-11-16 09:35:05,547 985    [           main] DEBUG t.lw.dao.TWifeMapper.selectAll  - ==> Parameters: 1(Long)
+2020-11-16 09:35:05,568 1006   [           main] DEBUG t.lw.dao.TWifeMapper.selectAll  - <==      Total: 1
+2020-11-16 09:35:05,569 1007   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@491cc5c9]
+2020-11-16 09:35:05,570 1008   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@491cc5c9]
+2020-11-16 09:35:05,570 1008   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1226622409 to pool.
+2020-11-16 09:35:29,658 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 09:35:30,204 546    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:35:30,205 547    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:35:30,205 547    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:35:30,205 547    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:35:36,841 7183   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 09:35:37,414 7756   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1150963491.
+2020-11-16 09:35:37,415 7757   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 09:35:37,424 7766   [           main] DEBUG t.lw.dao.TWifeMapper.selectAll  - ==>  Preparing: SELECT w.id,w.husband_id,w.age,w.name,w.beauty,h.user_name,h.user_work FROM t_wife w LEFT JOIN t_husband h ON w.husband_id = h.id WHERE w.id = ?; 
+2020-11-16 09:35:37,697 8039   [           main] DEBUG t.lw.dao.TWifeMapper.selectAll  - ==> Parameters: 1(Long)
+2020-11-16 09:35:37,881 8223   [           main] DEBUG t.lw.dao.TWifeMapper.selectAll  - <==      Total: 1
+2020-11-16 09:35:50,508 20850  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 09:35:50,510 20852  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 09:35:50,510 20852  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1150963491 to pool.
+2020-11-16 09:47:47,451 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 09:47:47,973 522    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:47:47,973 522    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:47:47,973 522    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:47:47,974 523    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:47:48,687 1236   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 09:47:49,138 1687   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 288958772.
+2020-11-16 09:47:49,138 1687   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@11392934]
+2020-11-16 09:47:49,149 1698   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==>  Preparing: select id, user_name, user_work from t_husband where id = ? 
+2020-11-16 09:47:49,222 1771   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 09:47:49,397 1946   [           main] DEBUG sbandMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 09:49:11,096 83645  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@11392934]
+2020-11-16 09:49:11,099 83648  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@11392934]
+2020-11-16 09:49:11,100 83649  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 288958772 to pool.
+2020-11-16 09:49:51,512 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 09:49:51,947 435    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:49:51,947 435    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:49:51,947 435    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:49:51,947 435    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:49:52,727 1215   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 09:49:53,183 1671   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 288958772.
+2020-11-16 09:49:53,183 1671   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@11392934]
+2020-11-16 09:49:53,192 1680   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==>  Preparing: select id, user_name, user_work from t_husband where id = ? 
+2020-11-16 09:49:53,251 1739   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 09:49:53,369 1857   [           main] DEBUG sbandMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 09:49:53,371 1859   [           main] DEBUG feMapper.selectWifeByHusbandId  - ==>  Preparing: select t_wife.* from t_wife where husband_id=? 
+2020-11-16 09:49:53,371 1859   [           main] DEBUG feMapper.selectWifeByHusbandId  - ==> Parameters: 1(Long)
+2020-11-16 09:49:53,379 1867   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@11392934]
+2020-11-16 09:49:53,380 1868   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@11392934]
+2020-11-16 09:49:53,381 1869   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 288958772 to pool.
+2020-11-16 09:53:38,976 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 09:53:39,524 548    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:53:39,524 548    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:53:39,524 548    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:53:39,524 548    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 09:53:40,142 1166   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 09:53:40,553 1577   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 288958772.
+2020-11-16 09:53:40,554 1578   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@11392934]
+2020-11-16 09:53:40,562 1586   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==>  Preparing: select id, user_name, user_work from t_husband where id = ? 
+2020-11-16 09:53:40,635 1659   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 09:53:40,808 1832   [           main] DEBUG sbandMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 09:53:40,810 1834   [           main] DEBUG feMapper.selectWifeByHusbandId  - ==>  Preparing: select t_wife.* from t_wife where husband_id=? 
+2020-11-16 09:53:40,811 1835   [           main] DEBUG feMapper.selectWifeByHusbandId  - ==> Parameters: 1(Long)
+2020-11-16 09:53:40,815 1839   [           main] DEBUG feMapper.selectWifeByHusbandId  - <==      Total: 1
+2020-11-16 09:54:22,223 43247  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@11392934]
+2020-11-16 09:54:22,224 43248  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@11392934]
+2020-11-16 09:54:22,224 43248  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 288958772 to pool.
+2020-11-16 10:28:36,620 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 10:28:37,044 424    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:28:37,044 424    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:28:37,044 424    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:28:37,045 425    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:28:43,258 6638   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 10:28:43,752 7132   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1150963491.
+2020-11-16 10:28:43,752 7132   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:28:43,759 7139   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==>  Preparing: select id, user_name, user_work from t_husband where id = ? 
+2020-11-16 10:28:44,022 7402   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 10:28:44,322 7702   [           main] DEBUG sbandMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 10:28:53,085 16465  [           main] DEBUG feMapper.selectWifeByHusbandId  - ==>  Preparing: select t_wife.* from t_wife where husband_id=? 
+2020-11-16 10:28:53,086 16466  [           main] DEBUG feMapper.selectWifeByHusbandId  - ==> Parameters: 1(Long)
+2020-11-16 10:28:53,089 16469  [           main] DEBUG feMapper.selectWifeByHusbandId  - <==      Total: 1
+2020-11-16 10:30:20,259 103639 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:30:20,261 103641 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:30:20,261 103641 [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1150963491 to pool.
+2020-11-16 10:30:41,849 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 10:30:42,218 369    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:30:42,219 370    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:30:42,219 370    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:30:42,219 370    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:30:47,160 5311   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 10:30:47,670 5821   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1150963491.
+2020-11-16 10:30:47,671 5822   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:30:47,677 5828   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==>  Preparing: select id, user_name, user_work from t_husband where id = ? 
+2020-11-16 10:30:47,915 6066   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 10:30:48,070 6221   [           main] DEBUG feMapper.selectWifeByHusbandId  - ====>  Preparing: select t_wife.* from t_wife where husband_id=? 
+2020-11-16 10:30:48,070 6221   [           main] DEBUG feMapper.selectWifeByHusbandId  - ====> Parameters: 1(Long)
+2020-11-16 10:30:48,073 6224   [           main] DEBUG feMapper.selectWifeByHusbandId  - <====      Total: 1
+2020-11-16 10:30:48,074 6225   [           main] DEBUG sbandMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 10:34:07,935 206086 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:34:07,936 206087 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:34:07,936 206087 [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1150963491 to pool.
+2020-11-16 10:35:24,373 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 10:35:24,792 419    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:35:24,792 419    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:35:24,793 420    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:35:24,793 420    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:35:27,773 3400   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 10:35:28,358 3985   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1150963491.
+2020-11-16 10:35:28,359 3986   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:35:28,367 3994   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==>  Preparing: select id, user_name, user_work from t_husband where id = ? 
+2020-11-16 10:35:28,643 4270   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 10:35:28,993 4620   [           main] DEBUG sbandMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 10:35:29,028 4655   [           main] DEBUG feMapper.selectWifeByHusbandId  - ==>  Preparing: select t_wife.* from t_wife where husband_id=? 
+2020-11-16 10:35:29,028 4655   [           main] DEBUG feMapper.selectWifeByHusbandId  - ==> Parameters: 1(Long)
+2020-11-16 10:35:29,031 4658   [           main] DEBUG feMapper.selectWifeByHusbandId  - <==      Total: 1
+2020-11-16 10:35:48,350 23977  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:35:48,351 23978  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:35:48,351 23978  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1150963491 to pool.
+2020-11-16 10:35:52,544 1      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 10:35:52,988 445    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:35:52,988 445    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:35:52,988 445    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:35:52,988 445    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:35:55,589 3046   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 10:35:56,135 3592   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1150963491.
+2020-11-16 10:35:56,136 3593   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:35:56,143 3600   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==>  Preparing: select id, user_name, user_work from t_husband where id = ? 
+2020-11-16 10:35:56,427 3884   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 10:35:56,795 4252   [           main] DEBUG sbandMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 10:39:11,083 198540 [           main] DEBUG feMapper.selectWifeByHusbandId  - ==>  Preparing: select t_wife.* from t_wife where husband_id=? 
+2020-11-16 10:39:11,084 198541 [           main] DEBUG feMapper.selectWifeByHusbandId  - ==> Parameters: 1(Long)
+2020-11-16 10:39:11,087 198544 [           main] DEBUG feMapper.selectWifeByHusbandId  - <==      Total: 1
+2020-11-16 10:39:11,088 198545 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:39:11,090 198547 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:39:11,090 198547 [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1150963491 to pool.
+2020-11-16 10:39:19,352 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 10:39:19,819 467    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:39:19,819 467    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:39:19,819 467    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:39:19,820 468    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:39:22,878 3526   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 10:39:23,172 3820   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1150963491.
+2020-11-16 10:39:23,173 3821   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:39:23,178 3826   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==>  Preparing: select id, user_name, user_work from t_husband where id = ? 
+2020-11-16 10:39:23,223 3871   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 10:39:23,307 3955   [           main] DEBUG sbandMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 10:39:23,308 3956   [           main] DEBUG feMapper.selectWifeByHusbandId  - ==>  Preparing: select t_wife.* from t_wife where husband_id=? 
+2020-11-16 10:39:23,308 3956   [           main] DEBUG feMapper.selectWifeByHusbandId  - ==> Parameters: 1(Long)
+2020-11-16 10:39:23,310 3958   [           main] DEBUG feMapper.selectWifeByHusbandId  - <==      Total: 1
+2020-11-16 10:39:24,323 4971   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:39:24,326 4974   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:39:24,326 4974   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1150963491 to pool.
+2020-11-16 10:39:29,220 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 10:39:29,791 571    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:39:29,792 572    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:39:29,792 572    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:39:29,792 572    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:39:33,609 4389   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 10:39:34,289 5069   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1150963491.
+2020-11-16 10:39:34,290 5070   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:39:34,299 5079   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==>  Preparing: select id, user_name, user_work from t_husband where id = ? 
+2020-11-16 10:39:34,623 5403   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 10:39:35,092 5872   [           main] DEBUG sbandMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 10:39:35,140 5920   [           main] DEBUG feMapper.selectWifeByHusbandId  - ==>  Preparing: select t_wife.* from t_wife where husband_id=? 
+2020-11-16 10:39:35,141 5921   [           main] DEBUG feMapper.selectWifeByHusbandId  - ==> Parameters: 1(Long)
+2020-11-16 10:39:35,144 5924   [           main] DEBUG feMapper.selectWifeByHusbandId  - <==      Total: 1
+2020-11-16 10:39:39,271 10051  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:39:39,272 10052  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:39:39,272 10052  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1150963491 to pool.
+2020-11-16 10:39:58,192 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 10:39:58,776 584    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:39:58,777 585    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:39:58,777 585    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:39:58,777 585    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:40:02,279 4087   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 10:40:02,917 4725   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1150963491.
+2020-11-16 10:40:02,918 4726   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:40:02,926 4734   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==>  Preparing: select id, user_name, user_work from t_husband where id = ? 
+2020-11-16 10:40:03,197 5005   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 10:40:03,523 5331   [           main] DEBUG sbandMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 10:40:03,548 5356   [           main] DEBUG feMapper.selectWifeByHusbandId  - ==>  Preparing: select t_wife.* from t_wife where husband_id=? 
+2020-11-16 10:40:03,548 5356   [           main] DEBUG feMapper.selectWifeByHusbandId  - ==> Parameters: 1(Long)
+2020-11-16 10:40:03,551 5359   [           main] DEBUG feMapper.selectWifeByHusbandId  - <==      Total: 1
+2020-11-16 10:43:15,665 197473 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:43:15,666 197474 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:43:15,666 197474 [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1150963491 to pool.
+2020-11-16 10:43:34,147 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 10:43:34,516 369    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:43:34,517 370    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:43:34,517 370    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:43:34,518 371    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:43:37,322 3175   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 10:43:37,859 3712   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1150963491.
+2020-11-16 10:43:37,860 3713   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:43:37,867 3720   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==>  Preparing: select id, user_name, user_work from t_husband where id = ? 
+2020-11-16 10:43:38,151 4004   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 10:43:38,488 4341   [           main] DEBUG sbandMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 10:43:38,519 4372   [           main] DEBUG feMapper.selectWifeByHusbandId  - ==>  Preparing: select t_wife.* from t_wife where husband_id=? 
+2020-11-16 10:43:38,519 4372   [           main] DEBUG feMapper.selectWifeByHusbandId  - ==> Parameters: 1(Long)
+2020-11-16 10:43:38,523 4376   [           main] DEBUG feMapper.selectWifeByHusbandId  - <==      Total: 1
+2020-11-16 10:43:56,647 22500  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:43:56,648 22501  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:43:56,648 22501  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1150963491 to pool.
+2020-11-16 10:44:08,893 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-11-16 10:44:09,429 536    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:44:09,429 536    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:44:09,430 537    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:44:09,430 537    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-11-16 10:44:12,381 3488   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-11-16 10:44:12,926 4033   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1150963491.
+2020-11-16 10:44:12,926 4033   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:44:12,935 4042   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==>  Preparing: select id, user_name, user_work from t_husband where id = ? 
+2020-11-16 10:44:13,241 4348   [           main] DEBUG sbandMapper.selectByPrimaryKey  - ==> Parameters: 1(Long)
+2020-11-16 10:44:13,543 4650   [           main] DEBUG sbandMapper.selectByPrimaryKey  - <==      Total: 1
+2020-11-16 10:44:13,567 4674   [           main] DEBUG feMapper.selectWifeByHusbandId  - ==>  Preparing: select t_wife.* from t_wife where husband_id=? 
+2020-11-16 10:44:13,567 4674   [           main] DEBUG feMapper.selectWifeByHusbandId  - ==> Parameters: 1(Long)
+2020-11-16 10:44:13,570 4677   [           main] DEBUG feMapper.selectWifeByHusbandId  - <==      Total: 1
+2020-11-16 10:46:05,576 116683 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:46:05,577 116684 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@449a4f23]
+2020-11-16 10:46:05,577 116684 [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1150963491 to pool.

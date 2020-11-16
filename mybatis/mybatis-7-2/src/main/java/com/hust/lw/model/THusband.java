@@ -34,6 +34,7 @@ public class THusband {
      * @mbg.generated
      */
     private String userWork;
+    private TWife wife;
 
 
     /**
@@ -107,5 +108,8 @@ public class THusband {
     public void setUserWork(String userWork) {
         this.userWork = userWork == null ? null : userWork.trim();
     }
+
+    public void setWife(TWife wife) { this.wife = wife; }
+    public TWife getWife() { return this.wife; }
 
 }
