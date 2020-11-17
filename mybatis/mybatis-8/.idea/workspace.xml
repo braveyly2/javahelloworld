@@ -6,12 +6,11 @@
       <change beforePath="$PROJECT_DIR$/../mybatis-5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mybatis-5/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mybatis-6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mybatis-6/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mybatis-7-2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mybatis-7-2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybatis-7-2/axis.log" beforeDir="false" afterPath="$PROJECT_DIR$/../mybatis-7-2/axis.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mybatis-7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mybatis-7/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybatis-7/axis.log" beforeDir="false" afterPath="$PROJECT_DIR$/../mybatis-7/axis.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybatis-8-2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mybatis-8-2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/axis.log" beforeDir="false" afterPath="$PROJECT_DIR$/axis.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/lw/test/MyBatisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/lw/test/MyBatisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MybatisConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MybatisConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TPersonMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TPersonMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,7 +60,7 @@
     <session id="-1464251520">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.opened" value="2" />
@@ -112,8 +111,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TPersonMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1190">
-              <caret line="20" column="72" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="72" />
+            <state relative-caret-position="204">
+              <caret line="18" column="24" selection-start-line="18" selection-end-line="21" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -169,7 +168,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TClassmateMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1445">
+            <state relative-caret-position="170">
               <caret line="85" column="25" lean-forward="true" selection-start-line="85" selection-start-column="14" selection-end-line="85" selection-end-column="30" />
             </state>
           </provider>
@@ -500,7 +499,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1605511797957" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1605533189752" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../mybatis-7" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -652,7 +651,7 @@
       <workItem from="1604986736995" duration="5637000" />
       <workItem from="1605057382194" duration="3341000" />
       <workItem from="1605252049124" duration="7670000" />
-      <workItem from="1605487462630" duration="3782000" />
+      <workItem from="1605487462630" duration="5511000" />
     </task>
     <servers />
   </component>
@@ -689,13 +688,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20430000" />
+    <option name="totallyTimeSpent" value="22159000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13662086" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25949878" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -705,7 +704,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.20071048" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.1634103" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.1634103" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -821,23 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/test/MyBatisTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TClassmateMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="85" column="25" lean-forward="true" selection-start-line="85" selection-start-column="14" selection-end-line="85" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TPartnerMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1598">
@@ -880,6 +862,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TClassmateMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="85" column="25" lean-forward="true" selection-start-line="85" selection-start-column="14" selection-end-line="85" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/test/MyBatisTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hust/lw/dao/TPersonMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1581">
@@ -889,8 +888,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TPersonMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1190">
-          <caret line="20" column="72" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="72" />
+        <state relative-caret-position="204">
+          <caret line="18" column="24" selection-start-line="18" selection-end-line="21" selection-end-column="14" />
         </state>
       </provider>
     </entry>
