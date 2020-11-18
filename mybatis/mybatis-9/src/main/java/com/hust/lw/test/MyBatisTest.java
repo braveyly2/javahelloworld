@@ -14,7 +14,9 @@ import org.junit.Test;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @ClassName: MybatisTest
@@ -66,33 +68,53 @@ public class MyBatisTest {
         }
     }
 
-    //根据用户名模糊查询用户列表
+    //添加用户
     @Test
-    public void testFindUserByUserName() {
-
+    public void testinsertproc() throws IOException {
+        User user = new User();
+        user.setPhone("159");
+        user.setEmail("sjliwei@126.com");
+        int n = userMapper.insertByProc(user);
+        if(n<1){
+            System.out.println("Failed to insert");
+        }
     }
 
     //添加用户
     @Test
-    public void testInsertUser() throws IOException {
+    public void testdeleteproc() throws IOException {
         User user = new User();
-        //user.setId(1L);
-        user.setEmail("sjliw@126.com");
-        user.setPassword("123456");
-        user.setPhone("13638679971");
-        user.setMark("thisishello");
-        userMapper.insert(user);
+        user.setId(1L);
+        int n = userMapper.deleteByProc(user);
+        if(n<1){
+            System.out.println("Failed to insert");
+        }
     }
 
-    //更新用户
+    //添加用户
     @Test
-    public void testUpdateUserById() throws IOException {
+    public void testdeleteprocmap() throws IOException {
+        Map<String,Object> map = new HashMap<>();
+        map.put("x_id",3);
+        map.put("x_phone","");
+        map.put("x_email","");
 
+        int n = userMapper.deleteByProcMap((HashMap) map);
+        if(n<1){
+            System.out.println("Failed to insert");
+        }
     }
 
-    //删除用户
     @Test
-    public void testDeleteUserById() throws IOException {
-        //userdao.deleteUserById(29);
+    public void testgetallbyproc() throws IOException {
+            List<User> userList = userMapper.selectAllByProc();
+        System.out.println(userList.size());
     }
+
+    @Test
+    public void testgetallbyprocmany() throws IOException {
+        List<List<User>> userListList = userMapper.selectAllByProcMany();
+        System.out.println(userListList.size());
+    }
+
 }

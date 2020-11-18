@@ -28,3 +28,13 @@ BEGIN
 END$$
 DELIMITER ;
 
+#4、select user 游标存储过程
+DROP PROCEDURE user_select_cursor;
+DELIMITER $$
+CREATE PROCEDURE user_select_cursor(IN u_vx_id VARCHAR(255),OUT user_cursor sys_refcursor)
+BEGIN 
+  open user_cursor for
+  select * from user where vx_id like concat('%',u_vx_id,'%')
+END$$
+DELIMITER ;
+

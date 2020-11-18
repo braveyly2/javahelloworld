@@ -2,6 +2,8 @@ package com.hust.lw.dao;
 
 import com.hust.lw.model.User;
 import com.hust.lw.model.UserExample;
+
+import java.util.HashMap;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
@@ -93,4 +95,14 @@ public interface UserMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(User record);
+
+    int insertByProc(User record);
+
+    int deleteByProc(User record);
+
+    int deleteByProcMap(HashMap map);
+
+    List<User> selectAllByProc();
+
+    List<List<User>> selectAllByProcMany();
 }
