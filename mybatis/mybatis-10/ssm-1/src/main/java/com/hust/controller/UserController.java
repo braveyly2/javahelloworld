@@ -1,5 +1,7 @@
 package com.hust.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.hust.ResultHandler.UserResultHandler;
 import com.hust.entity.User;
 import com.hust.service.UserService;
@@ -16,9 +18,7 @@ import org.springframework.batch.item.ExecutionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import java.util.Iterator;
@@ -161,5 +161,15 @@ public class UserController {
             System.out.println(iter.next());
         }
         return "login";
+    }
+
+        @RequestMapping(value="/user/getpagehelper",method=RequestMethod.POST)
+        @ResponseBody
+        public PageInfo<User> getpageinfouser(@RequestParam("pageNum") Integer pageNum, @RequestParam("pageSize") Integer pageSize, @RequestParam("userName") String userName){
+        //User user = userService.selectByName(name);
+        PageHelper.startPage(pageNum,pageSize);
+        List<User> userList = userService.selectAllByName(userName);
+        PageInfo<User> pageInfo = new PageInfo<User>(userList);
+        return pageInfo;
     }
 }

@@ -23,6 +23,13 @@
     where name = #{name ,jdbcType=VARCHAR}
   </select>
 
+  <select id="selectAllByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where name = #{name ,jdbcType=VARCHAR}
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from user
     where id = #{id,jdbcType=INTEGER}
@@ -86,7 +93,7 @@
       mark = #{mark,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <select id="selectAllByStream" resultSetType="ResultSetType.FORWARD_ONLY" resultMap="BaseResultMap" fetchSize="2" >
+  <select id="selectAllByStream"  resultMap="BaseResultMap" fetchSize="2" >
       select * from user;
   </select>
 </mapper>

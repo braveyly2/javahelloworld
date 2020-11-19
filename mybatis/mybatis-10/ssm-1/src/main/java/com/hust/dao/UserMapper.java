@@ -23,4 +23,6 @@ public interface UserMapper {
     int updateByPrimaryKey(User record);
 
     List<User> selectAllByStream();
+
+    List<User> selectAllByName(String name);
 }
