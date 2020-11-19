@@ -13,10 +13,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @ClassName: MybatisTest
@@ -115,6 +112,13 @@ public class MyBatisTest {
     public void testgetallbyprocmany() throws IOException {
         List<List<User>> userListList = userMapper.selectAllByProcMany();
         System.out.println(userListList.size());
+    }
+
+    @Test
+    public void testselectAllByCursor() throws IOException {
+        List<User> userList = new ArrayList<User>();
+        userMapper.selectAllByCursor("100",userList);
+        System.out.println(userList.size());
     }
 
 }

@@ -136,6 +136,12 @@
   <select id="selectAllByProcMany" resultMap="BaseResultMap,BaseResultMap2" statementType="CALLABLE">
         {call getallbyprocmany()}
   </select>
+  <select id="selectAllByCursor" statementType="CALLABLE" >
+          {call user_select_cursor(
+            #{vx_id,mode=IN,jdbcType=VARCHAR},
+            #{userList,mode=IN,jdbcType=CURSOR,javaType=ResultSet,resultMap=BaseResultMap}
+        )}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     <!--
       WARNING - @mbg.generated

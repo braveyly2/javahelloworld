@@ -105,4 +105,6 @@ public interface UserMapper {
     List<User> selectAllByProc();
 
     List<List<User>> selectAllByProcMany();
+
+    void selectAllByCursor(@Param("vx_id") String vx_id, @Param("userList") List<User> userList);
 }
