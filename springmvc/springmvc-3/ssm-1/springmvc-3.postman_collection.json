@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "b00cae3f-3300-4400-a045-9dbc861f7fb9",
+		"name": "springmvc-3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/transaction/testvalidator",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": 1,\r\n    \"userId\": 1,\r\n    \"date\": \"2020-11-23\",\r\n    \"price\": 8.9,\r\n    \"quantity\": 20,\r\n    \"amount\": 100.9,\r\n    \"email\": \"sjliwei@111.com\",\r\n    \"note\": \"liwei\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transaction/testvalidator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction",
+						"testvalidator"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
