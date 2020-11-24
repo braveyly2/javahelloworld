@@ -1,5 +1,7 @@
 package com.hust.entity;
 
+import com.hust.validator.ValidatorGroup1;
+import com.hust.validator.ValidatorGroup2;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.*;
@@ -22,9 +24,9 @@ public class TTransaction {
     @DecimalMin(value = "0.1")
     private Double price;
 
-    @Min(1)
-    @Max(100)
-    @NotNull
+    @Min(value=1,groups={ValidatorGroup1.class})
+    @Max(value=100,groups={ValidatorGroup1.class})
+    @NotNull(groups={ValidatorGroup1.class})
     private Integer quantity;
 
     @NotNull
@@ -36,7 +38,7 @@ public class TTransaction {
             ,message = "邮箱必须是xxx@xxx.xxx格式")
     private String email;
 
-    @Size(min=10,max=256,message="{items.name.size}")
+    @Size(min=10,max=256,message="{items.name.size}",groups={ValidatorGroup2.class})
     private String note;
 
     public Long getProductId() {
