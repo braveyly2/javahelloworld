@@ -1,5 +1,7 @@
 package com.hust.entity;
 
+import com.hust.validator.CaseMode;
+import com.hust.validator.CheckCase;
 import com.hust.validator.ValidatorGroup1;
 import com.hust.validator.ValidatorGroup2;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -29,9 +31,9 @@ public class TTransaction {
     @NotNull(groups={ValidatorGroup1.class})
     private Integer quantity;
 
-    @NotNull
-    @DecimalMax("500000.00")
-    @DecimalMin("1.00")
+    @NotNull(groups={ValidatorGroup2.class})
+    @DecimalMax(value="500000.00",groups={ValidatorGroup2.class})
+    @DecimalMin(value="1.00",groups={ValidatorGroup2.class})
     private Double amount;
 
     @Pattern(regexp = "^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*\\.[a-zA-Z0-9]{2,6}$"
@@ -39,6 +41,7 @@ public class TTransaction {
     private String email;
 
     @Size(min=10,max=256,message="{items.name.size}",groups={ValidatorGroup2.class})
+    @CheckCase(value = CaseMode.LOWER,message = "note必须是小写",groups={ValidatorGroup2.class})
     private String note;
 
     public Long getProductId() {

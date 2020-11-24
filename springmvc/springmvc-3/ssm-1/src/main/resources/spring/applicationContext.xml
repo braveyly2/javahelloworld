@@ -22,24 +22,7 @@
     <mvc:resources location="/js/" mapping="/js/**"/>
 
     <!--增加校验机制-->
-    <!-- 校验器，配置validator -->
-    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
-        <property name="providerClass" value="org.hibernate.validator.HibernateValidator"></property>
-        <property name="validationMessageSource" ref="validationMessageSource"></property>
-    </bean>
-    <!-- 配置validationMessageSource -->
-    <bean id="validationMessageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
-        <!-- 指定校验信息的资源文件的基本文件名称，不包括后缀，后缀默认是properties -->
-        <property name="basenames">
-            <list>
-                <value>classpath:validationMessageSource</value>
-            </list>
-        </property>
-        <!-- 指定文件的编码 -->
-        <property name="fileEncodings" value="utf8"></property>
-        <!-- 对资源文件内容缓存的时间，单位秒 -->
-        <property name="cacheSeconds" value="120"></property>
-    </bean>
+
     <!-- Configures the @Controller programming model
     <mvc:annotation-driven />-->
     <!-- ②：启动Spring MVC的注解功能，完成请求和注解POJO的映射 -->
