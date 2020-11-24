@@ -15,7 +15,7 @@ public class TTransaction {
 
     @Future
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @javax.validation.constraints.NotNull
+    @javax.validation.constraints.NotNull(message="{items.createtime.notnull}")
     private Date date;
 
     @NotNull
@@ -36,7 +36,7 @@ public class TTransaction {
             ,message = "邮箱必须是xxx@xxx.xxx格式")
     private String email;
 
-    @Size(min=0,max=256)
+    @Size(min=10,max=256,message="{items.name.size}")
     private String note;
 
     public Long getProductId() {
