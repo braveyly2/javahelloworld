@@ -8,13 +8,18 @@ import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 import org.springframework.web.servlet.view.xml.MappingJackson2XmlView;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -51,7 +56,7 @@ public class TTransactionController {
         return mv;
     }
 
-    @RequestMapping(value="/transaction/testMultiLogicalView",method= RequestMethod.POST)
+    @RequestMapping(value="/transaction/testMultiLogicalView",method= RequestMethod.GET)
     public ModelAndView testMultiLogicalView(){
         //ModelAndView mv = new ModelAndView();
         String name="liwei";
@@ -83,5 +88,30 @@ public class TTransactionController {
         }
         map.addAttribute("articles",articles);
         return "myXmlView";
+    }
+
+    @RequestMapping("/file-upload")
+    public ModelAndView upload(@RequestParam(value = "file", required = false) MultipartFile file,
+                               HttpServletRequest request, HttpSession session) {
+        // 文件不为空
+        if(!file.isEmpty()) {
+            // 文件存放路径
+            //String path = request.getServletContext().getRealPath("/");
+            String path="D:\\";
+            // 文件名称
+            String name = String.valueOf(new Date().getTime()+"_"+file.getOriginalFilename());
+            File destFile = new File(path,name);
+            // 转存文件
+            try {
+                file.transferTo(destFile);
+            } catch (IllegalStateException | IOException e) {
+                e.printStackTrace();
+            }
+            // 访问的url
+            String url = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/" + name;
+        }
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("123");
+        return mv;
     }
 }

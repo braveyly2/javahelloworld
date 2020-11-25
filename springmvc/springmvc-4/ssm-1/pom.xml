@@ -163,12 +163,14 @@
     </dependency>
 
     <!-- servlet -->
+    <!--
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
       <version>2.5</version>
       <scope>provided</scope>
     </dependency>
+    -->
     <!-- json数据 -->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
@@ -321,6 +323,13 @@
       <groupId>org.apache.poi</groupId>
       <artifactId>poi-ooxml-schemas</artifactId>
       <version>4.1.0</version>
+    </dependency>
+
+    <!-- 解决HttpServletRequest无法获取getServletContext问题-->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
     </dependency>
   </dependencies>
 
