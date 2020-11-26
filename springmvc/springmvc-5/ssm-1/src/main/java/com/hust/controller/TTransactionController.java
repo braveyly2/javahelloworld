@@ -32,4 +32,16 @@ public class TTransactionController {
         System.out.println(employee);
         return "userInfo";
     }
+
+    @RequestMapping(value="/transaction/testemployeemany",method= RequestMethod.GET)
+    public String testEmployeemany(@RequestParam("employee") Employee[] employeeArry){
+        System.out.println(employeeArry);
+        return "userInfo";
+    }
+
+    @RequestMapping(value="/transaction/testemployee2",method= RequestMethod.GET)
+    public String testEmployee2(@RequestBody Employee employee){
+        System.out.println(employee);
+        return "userInfo";
+    }
 }
