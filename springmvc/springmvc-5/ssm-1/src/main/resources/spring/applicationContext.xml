@@ -114,11 +114,11 @@
         <constructor-arg index="0" ref="sqlSessionFactory" />
     </bean>
 
-    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
         <property name="converters">
             <set>
-                <ref bean="employeeConverter"/>
-                <!-- <bean class="com.hust.converter.EmployeeConverter"/> //可以去掉@Component-->
+                <!--<ref bean="employeeConverter"/>-->
+                <bean class="com.hust.converter.EmployeeConverter" /> <!--//可以去掉@Component-->
             </set>
         </property>
     </bean>

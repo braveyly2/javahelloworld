@@ -5,7 +5,7 @@ import com.hust.entity.Employee;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
-@Component("employeeConverter")
+//@Component("employeeConverter")
 public class EmployeeConverter implements Converter<String, Employee> {
 
     @Override
