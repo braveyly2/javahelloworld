@@ -1,4 +1,4 @@
-package com.hust.config;
+package com.hust.global;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
