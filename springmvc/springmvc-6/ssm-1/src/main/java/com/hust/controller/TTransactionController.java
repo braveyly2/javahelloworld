@@ -3,12 +3,15 @@ package com.hust.controller;
 import com.hust.Exceptions.BaseException;
 import com.hust.Exceptions.MyException1;
 import com.hust.Exceptions.MyException2;
+import com.hust.entity.Student1;
+import com.hust.entity.Student2;
 import com.hust.entity.TTransaction;
 import com.hust.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,6 +24,21 @@ import java.util.Map;
 public class TTransactionController {
 
 
+    @InitBinder
+    public void initBinder(WebDataBinder binder) {
+        binder.setDisallowedFields("price");
+    }
+
+    @InitBinder("stu1")
+    public void init1(WebDataBinder binder) {
+        binder.setFieldDefaultPrefix("s1.");
+    }
+
+    @InitBinder("stu2")
+    public void init2(WebDataBinder binder) {
+        binder.setFieldDefaultPrefix("s2.");
+    }
+
     @RequestMapping(value="/transaction/testvalidator",method= RequestMethod.POST)
     @ResponseBody
     public String testValidator(@Valid @RequestBody TTransaction transaction, BindingResult bindingResult){
@@ -30,6 +48,21 @@ public class TTransactionController {
                 System.out.println(error.getDefaultMessage());
             }
         }
+        return "userInfo";
+    }
+
+    @RequestMapping(value="/transaction/testinitbinder1",method= RequestMethod.POST)
+    @ResponseBody
+    public String testInitBinder1(@RequestBody TTransaction transaction){
+        System.out.println(transaction);
+        return "userInfo";
+    }
+
+    @RequestMapping(value="/transaction/testinitbinder2",method= RequestMethod.POST)
+    @ResponseBody
+    public String testInitBinder2(Student1 stu1, @ModelAttribute("stu2") Student2 stu2){
+        System.out.println(stu1);
+        System.out.println(stu2);
         return "userInfo";
     }
 
