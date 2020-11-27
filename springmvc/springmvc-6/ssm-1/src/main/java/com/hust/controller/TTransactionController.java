@@ -7,6 +7,9 @@ import com.hust.entity.Student1;
 import com.hust.entity.Student2;
 import com.hust.entity.TTransaction;
 import com.hust.entity.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -18,11 +21,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.IOException;
+import java.util.Locale;
 import java.util.Map;
+import java.util.ResourceBundle;
 
 @Controller
 public class TTransactionController {
 
+    @Autowired
+    private MessageSource messageSource;
 
     @InitBinder
     public void initBinder(WebDataBinder binder) {
@@ -104,4 +111,19 @@ public class TTransactionController {
         System.out.println("---ControllerException Handler---Host {} invokes url {} ERROR: {}"+ e.getMessage());
         return e.getMessage();
     }
+
+    @RequestMapping("/page")
+    public String page(HttpServletRequest request) {
+        // 后台获取国际化区域
+        //Locale locale = LocaleContextHolder.getLocale();
+        // 获取国际化配置文件中设置的国际化消息，使用msg标志进行寻找
+        //String msg = messageSource.getMessage("msg", null, locale);
+        //System.out.println("msg=" + msg);
+        // 返回国际化视图
+
+        ResourceBundle bundle = ResourceBundle.getBundle("language.language",Locale.US);
+        System.out.println(bundle.getString("msg"));
+        return "international";
+    }
+
 }

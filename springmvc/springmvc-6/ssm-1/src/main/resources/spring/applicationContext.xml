@@ -79,6 +79,27 @@
         <property name="dataSource" ref="dataSource" />
     </bean>
 
+
+    <!-- 配置国际化开始-->
+    <!-- 1. 国际化配置文件源 ReloadableResourceBundleMessageSource支持动态加载-->
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <!-- 表示多语言配置文件在根路径下，以language开头的文件 -->
+        <property name="basename" value="classpath:language/language" />
+        <!-- <property name="basename" value="classpath:message" /> -->
+        <property name="useCodeAsDefaultMessage" value="true" />
+    </bean>
+    <!-- 2. 设置国际化拦截器，通过RequestParam方式请求时带上的标识国际化的字段language-->
+    <mvc:interceptors>
+        <bean id="localeChangeInterceptor"
+              class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+            <property name="paramName" value="language" />
+        </bean>
+    </mvc:interceptors>
+
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+        <property name="defaultLocale" value="zh_CN" />
+    </bean>
+
     <!-- 拦截器 -->
     <mvc:interceptors>
         <!-- 国际化操作拦截器 如果采用基于（请求/Session/Cookie）则必需配置 -->
