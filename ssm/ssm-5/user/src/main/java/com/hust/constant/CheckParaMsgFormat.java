@@ -18,5 +18,6 @@ public interface CheckParaMsgFormat {
     int USER_ADDRESS_LEN = 500;
     int SN_LEN = 30;
     int MD5_LEN = 32;
-    int AES_LEN = 64;//前端传递加密后是44
+    // 前端传递加密后是44
+    int AES_LEN = 64;
 }
