@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="dc3-api-auth" />
+        <module name="dc3-auth" />
+        <module name="dc3-base" />
+        <module name="dc3-config" />
+        <module name="dc3-core" />
+        <module name="dc3-register" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="dc3-api-auth" target="1.8" />
+      <module name="dc3-auth" target="1.8" />
+      <module name="dc3-base" target="1.8" />
+      <module name="dc3-config" target="1.8" />
+      <module name="dc3-core" target="1.8" />
+      <module name="dc3-register" target="1.8" />
+      <module name="lw" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

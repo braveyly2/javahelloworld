@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dc3-api-auth/dc3-api-auth.iml" filepath="$PROJECT_DIR$/dc3-api-auth/dc3-api-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dc3-auth/dc3-auth.iml" filepath="$PROJECT_DIR$/dc3-auth/dc3-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dc3-base/dc3-base.iml" filepath="$PROJECT_DIR$/dc3-base/dc3-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dc3-config/dc3-config.iml" filepath="$PROJECT_DIR$/dc3-config/dc3-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dc3-core/dc3-core.iml" filepath="$PROJECT_DIR$/dc3-core/dc3-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dc3-register/dc3-register.iml" filepath="$PROJECT_DIR$/dc3-register/dc3-register.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lw.iml" filepath="$PROJECT_DIR$/lw.iml" />
+    </modules>
+  </component>
+</project>

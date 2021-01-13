@@ -1,0 +1,78 @@
+server:
+  port: 8301
+  undertow:
+    threads:
+      io: 2
+      worker: 20
+    buffer-size: 512
+  thread:
+    prefix: dc3-thread-
+    core-pool-size: 4
+    maximum-pool-size: 1024
+    keep-alive-time: 10
+
+spring:
+  application:
+    name: dc3-auth
+  main:
+    allow-bean-definition-overriding: true
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+  redis:
+    database: 1
+  cache:
+    redis:
+      time-to-live: 60S
+  transaction:
+    rollback-on-commit-failure: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://127.0.0.1:3307/dc3?allowPublicKeyRetrieval=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    sql-script-encoding: utf-8
+    username: root
+    password: dc3
+    hikari:
+      pool-name: dc3-hikaricp
+      max-lifetime: 1765000
+      maximum-pool-size: 64
+      minimum-idle: 4
+
+logging:
+  level:
+    com.dc3: DEBUG
+  file:
+    name: dc3/logs/center/${spring.application.name}.log
+
+
+eureka:
+  environment: dc3
+  data-center: https://gitee.com/pnoker
+  instance:
+    prefer-ip-address: true
+    status-page-url-path: /actuator/info
+    health-check-url-path: /actuator/health
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 15
+  client:
+    region: dc3
+    availability-zones:
+      dc3: defaultZone
+    prefer-same-zone-eureka: true
+    registry-fetch-interval-seconds: 5
+    service-url:
+      #defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@dc3-register:8100/eureka/
+      defaultZone: http://dc3:dc3@127.0.0.1:8011/eureka/
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath*:/mapping
+  global-config:
+    banner: false
+    db-config:
+      table-prefix: dc3_
+      logic-delete-value: 1
+      logic-not-delete-value: 0
