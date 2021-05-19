@@ -28,6 +28,8 @@
         <module>provider</module>
         <module>consumer-resttemplate</module>
         <module>consumer-feign</module>
+        <module>nacos-client</module>
+        <module>sentineldemo</module>
     </modules>
 
     <dependencies>
