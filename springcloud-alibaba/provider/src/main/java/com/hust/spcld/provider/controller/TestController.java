@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class TestController {
-    @GetMapping("/serverhello")
+    @GetMapping("/server/serverhello")
     public String serverHello(@RequestParam String content){
         return "provider hello  " + content;
     }

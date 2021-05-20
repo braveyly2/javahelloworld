@@ -22,9 +22,9 @@ public class TestController {
     @Autowired
     WebClient.Builder webClientBuilder;
 
-    @GetMapping("/clienthello")
+    @GetMapping("/client/clienthello")
     public String clientHello(@RequestParam String content){
-        String result = restTemplate.getForObject("http://provider/serverhello?content="+content, String.class);
+        String result = restTemplate.getForObject("http://provider/server/serverhello?content="+content, String.class);
         return "Return : " + result;
     }
 
