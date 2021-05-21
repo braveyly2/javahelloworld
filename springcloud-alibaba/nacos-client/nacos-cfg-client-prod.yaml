@@ -1,0 +1,14 @@
+config.info: hust
+# 阿里云飞燕平台配置
+aliyun:
+  living:
+    # 项目id
+    projectId: a123GDV4QBp7WkhH
+    # 数据同步
+    amqpAppKey: 32509722
+    amqpAppSecret: 07b4be50629b3aa89db979c06a3982e6
+    # 云端接口调用
+    serviceAppKey: 32364152
+    serviceAppSecret: 5065894e7c205c6c9c7044f9d9c8fbc4
+    # 自有账号体系
+    openIdAppKey: 32538487
