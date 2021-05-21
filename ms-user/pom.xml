@@ -60,7 +60,7 @@
             <fcmjava-core.version>2.5</fcmjava-core.version>
             <fcmjava-client.version>2.5</fcmjava-client.version>
             <Zabbix4j.version>0.1.9</Zabbix4j.version>
-            <commons-fileupload.version>1.3.1</commons-fileupload.version>
+            <commons-fileupload.version>1.3.3</commons-fileupload.version>
             <junit.version>4.12</junit.version>
             <guava.version>26.0-jre</guava.version>
             <mybatis-spring-boot-starter-test.version>1.3.2</mybatis-spring-boot-starter-test.version>
